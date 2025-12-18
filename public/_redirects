@@ -1,0 +1,80 @@
+# Stardew Price DB Redirects
+# 将鱼类从 /item/ 重定向到 /fishing/
+
+# 鱼类重定向 (Fish redirects)
+/item/pufferfish/ /fishing/pufferfish/ 301
+/item/sturgeon/ /fishing/sturgeon/ 301
+/item/lava-eel/ /fishing/lava-eel/ 301
+/item/legend/ /fishing/legend/ 301
+/item/mutant-carp/ /fishing/mutant-carp/ 301
+/item/crimsonfish/ /fishing/crimsonfish/ 301
+/item/angler/ /fishing/angler/ 301
+/item/glacierfish/ /fishing/glacierfish/ 301
+/item/catfish/ /fishing/catfish/ 301
+/item/octopus/ /fishing/octopus/ 301
+/item/super-cucumber/ /fishing/super-cucumber/ 301
+/item/salmon/ /fishing/salmon/ 301
+/item/tuna/ /fishing/tuna/ 301
+/item/largemouth-bass/ /fishing/largemouth-bass/ 301
+/item/smallmouth-bass/ /fishing/smallmouth-bass/ 301
+/item/rainbow-trout/ /fishing/rainbow-trout/ 301
+/item/tiger-trout/ /fishing/tiger-trout/ 301
+/item/walleye/ /fishing/walleye/ 301
+/item/perch/ /fishing/perch/ 301
+/item/red-mullet/ /fishing/red-mullet/ 301
+/item/bream/ /fishing/bream/ 301
+/item/sunfish/ /fishing/sunfish/ 301
+/item/shad/ /fishing/shad/ 301
+/item/dorado/ /fishing/dorado/ 301
+/item/albacore/ /fishing/albacore/ 301
+/item/woodskip/ /fishing/woodskip/ 301
+/item/ghostfish/ /fishing/ghostfish/ 301
+/item/stonefish/ /fishing/stonefish/ 301
+/item/ice-pip/ /fishing/ice-pip/ 301
+/item/sandfish/ /fishing/sandfish/ 301
+/item/scorpion-carp/ /fishing/scorpion-carp/ 301
+/item/sardine/ /fishing/sardine/ 301
+/item/tilapia/ /fishing/tilapia/ 301
+/item/red-snapper/ /fishing/red-snapper/ 301
+/item/eel/ /fishing/eel/ 301
+/item/void-salmon/ /fishing/void-salmon/ 301
+/item/bullhead/ /fishing/bullhead/ 301
+/item/carp/ /fishing/carp/ 301
+/item/chub/ /fishing/chub/ 301
+
+# 蟹笼物品重定向到 fishing (Crab pot items)
+/item/lobster/ /fishing/lobster/ 301
+/item/crab/ /fishing/crab/ 301
+/item/crayfish/ /fishing/crayfish/ 301
+/item/shrimp/ /fishing/shrimp/ 301
+/item/snail/ /fishing/snail/ 301
+/item/periwinkle/ /fishing/periwinkle/ 301
+/item/mussel/ /fishing/mussel/ 301
+/item/clam/ /fishing/clam/ 301
+/item/oyster/ /fishing/oyster/ 301
+/item/cockle/ /fishing/cockle/ 301
+
+# 不存在的物品重定向到相关页面
+/item/orange/ /item/apricot/ 301
+/item/cherry/ /item/strawberry/ 301
+/item/apple/ /item/pomegranate/ 301
+/item/peach/ /item/apricot/ 301
+/item/pomegranate/ /item/starfruit/ 301
+/item/apricot/ /item/strawberry/ 301
+/item/wine/ /guide/keg-vs-jar/ 301
+/item/wine-silver/ /guide/keg-vs-jar/ 301
+/item/jelly/ /guide/keg-vs-jar/ 301
+/item/gold/ /guide/year-1-money/ 301
+/item/maki-roll/ /recipes/ 301
+/item/hay/ /guide/animal-profit/ 301
+/item/solar-essence/ /guide/skull-cavern/ 301
+/item/void-essence/ /guide/skull-cavern/ 301
+/item/bat-wing/ /guide/skull-cavern/ 301
+/item/slime/ /guide/skull-cavern/ 301
+/item/cave-carrot/ /guide/foraging-profit/ 301
+/item/sea-urchin/ /fishing/ 301
+/item/duck-feather/ /guide/animal-profit/ 301
+/item/large-egg-brown/ /guide/animal-profit/ 301
+
+# Cloudflare email protection (ignore)
+/cdn-cgi/* / 200

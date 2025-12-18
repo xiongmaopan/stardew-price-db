@@ -1,0 +1,1329 @@
+{
+  "version": "1.6",
+  "lastUpdated": "2025-12-09",
+  "recipes": [
+    {
+      "id": 1,
+      "name": "Fried Egg",
+      "slug": "fried-egg",
+      "description": "Sunny-side up.",
+      "sellPrice": 35,
+      "energy": 50,
+      "health": 22,
+      "source": "Starter Recipe",
+      "ingredients": [
+        { "item": "Egg", "quantity": 1 }
+      ],
+      "buffs": null,
+      "category": "Cooking"
+    },
+    {
+      "id": 2,
+      "name": "Omelet",
+      "slug": "omelet",
+      "description": "It's pretty good.",
+      "sellPrice": 125,
+      "energy": 100,
+      "health": 45,
+      "source": "The Queen of Sauce (Year 1, Spring 28)",
+      "ingredients": [
+        { "item": "Egg", "quantity": 1 },
+        { "item": "Milk", "quantity": 1 }
+      ],
+      "buffs": null,
+      "category": "Cooking"
+    },
+    {
+      "id": 3,
+      "name": "Salad",
+      "slug": "salad",
+      "description": "A healthy garden salad.",
+      "sellPrice": 110,
+      "energy": 113,
+      "health": 50,
+      "source": "Emily (3+ Hearts)",
+      "ingredients": [
+        { "item": "Leek", "quantity": 1 },
+        { "item": "Dandelion", "quantity": 1 },
+        { "item": "Vinegar", "quantity": 1 }
+      ],
+      "buffs": null,
+      "category": "Cooking"
+    },
+    {
+      "id": 4,
+      "name": "Cheese Cauliflower",
+      "slug": "cheese-cauliflower",
+      "description": "It smells great!",
+      "sellPrice": 300,
+      "energy": 175,
+      "health": 78,
+      "source": "Pam (3+ Hearts)",
+      "ingredients": [
+        { "item": "Cauliflower", "quantity": 1 },
+        { "item": "Cheese", "quantity": 1 }
+      ],
+      "buffs": null,
+      "category": "Cooking"
+    },
+    {
+      "id": 5,
+      "name": "Baked Fish",
+      "slug": "baked-fish",
+      "description": "Baked fish on a bed of herbs.",
+      "sellPrice": 100,
+      "energy": 75,
+      "health": 33,
+      "source": "The Queen of Sauce (Year 1, Summer 7)",
+      "ingredients": [
+        { "item": "Sunfish", "quantity": 1 },
+        { "item": "Bream", "quantity": 1 },
+        { "item": "Wheat Flour", "quantity": 1 }
+      ],
+      "buffs": null,
+      "category": "Cooking"
+    },
+    {
+      "id": 6,
+      "name": "Parsnip Soup",
+      "slug": "parsnip-soup",
+      "description": "It's fresh and hearty.",
+      "sellPrice": 120,
+      "energy": 85,
+      "health": 38,
+      "source": "Caroline (3+ Hearts)",
+      "ingredients": [
+        { "item": "Parsnip", "quantity": 1 },
+        { "item": "Milk", "quantity": 1 },
+        { "item": "Vinegar", "quantity": 1 }
+      ],
+      "buffs": null,
+      "category": "Cooking"
+    },
+    {
+      "id": 7,
+      "name": "Vegetable Medley",
+      "slug": "vegetable-medley",
+      "description": "This is very nutritious.",
+      "sellPrice": 120,
+      "energy": 165,
+      "health": 74,
+      "source": "Caroline (7+ Hearts)",
+      "ingredients": [
+        { "item": "Tomato", "quantity": 1 },
+        { "item": "Beet", "quantity": 1 }
+      ],
+      "buffs": null,
+      "category": "Cooking"
+    },
+    {
+      "id": 8,
+      "name": "Complete Breakfast",
+      "slug": "complete-breakfast",
+      "description": "You'll feel ready to take on the world!",
+      "sellPrice": 350,
+      "energy": 200,
+      "health": 90,
+      "source": "The Queen of Sauce (Year 2, Spring 21)",
+      "ingredients": [
+        { "item": "Fried Egg", "quantity": 1 },
+        { "item": "Milk", "quantity": 1 },
+        { "item": "Hashbrowns", "quantity": 1 },
+        { "item": "Pancakes", "quantity": 1 }
+      ],
+      "buffs": { "farming": 2, "duration": 600 },
+      "category": "Cooking"
+    },
+    {
+      "id": 9,
+      "name": "Fried Calamari",
+      "slug": "fried-calamari",
+      "description": "It's so chewy.",
+      "sellPrice": 150,
+      "energy": 80,
+      "health": 36,
+      "source": "Jodi (3+ Hearts)",
+      "ingredients": [
+        { "item": "Squid", "quantity": 1 },
+        { "item": "Wheat Flour", "quantity": 1 },
+        { "item": "Oil", "quantity": 1 }
+      ],
+      "buffs": null,
+      "category": "Cooking"
+    },
+    {
+      "id": 10,
+      "name": "Strange Bun",
+      "slug": "strange-bun",
+      "description": "What's inside?",
+      "sellPrice": 225,
+      "energy": 100,
+      "health": 45,
+      "source": "Shane (7+ Hearts)",
+      "ingredients": [
+        { "item": "Wheat Flour", "quantity": 1 },
+        { "item": "Periwinkle", "quantity": 1 },
+        { "item": "Void Mayonnaise", "quantity": 1 }
+      ],
+      "buffs": null,
+      "category": "Cooking"
+    },
+    {
+      "id": 11,
+      "name": "Lucky Lunch",
+      "slug": "lucky-lunch",
+      "description": "A special little meal.",
+      "sellPrice": 250,
+      "energy": 100,
+      "health": 45,
+      "source": "The Queen of Sauce (Year 2, Spring 28)",
+      "ingredients": [
+        { "item": "Sea Cucumber", "quantity": 1 },
+        { "item": "Tortilla", "quantity": 1 },
+        { "item": "Blue Jazz", "quantity": 1 }
+      ],
+      "buffs": { "luck": 3, "duration": 660 },
+      "category": "Cooking"
+    },
+    {
+      "id": 12,
+      "name": "Fried Mushroom",
+      "slug": "fried-mushroom",
+      "description": "Earthy and delicious.",
+      "sellPrice": 54,
+      "energy": 78,
+      "health": 35,
+      "source": "Demetrius (3+ Hearts)",
+      "ingredients": [
+        { "item": "Common Mushroom", "quantity": 1 },
+        { "item": "Morel", "quantity": 1 },
+        { "item": "Oil", "quantity": 1 }
+      ],
+      "buffs": null,
+      "category": "Cooking"
+    },
+    {
+      "id": 13,
+      "name": "Pizza",
+      "slug": "pizza",
+      "description": "It's popular for a reason.",
+      "sellPrice": 300,
+      "energy": 150,
+      "health": 67,
+      "source": "The Queen of Sauce (Year 2, Spring 7)",
+      "ingredients": [
+        { "item": "Wheat Flour", "quantity": 1 },
+        { "item": "Tomato", "quantity": 1 },
+        { "item": "Cheese", "quantity": 1 }
+      ],
+      "buffs": null,
+      "category": "Cooking"
+    },
+    {
+      "id": 14,
+      "name": "Bean Hotpot",
+      "slug": "bean-hotpot",
+      "description": "It sure is hearty.",
+      "sellPrice": 100,
+      "energy": 125,
+      "health": 56,
+      "source": "Clint (7+ Hearts)",
+      "ingredients": [
+        { "item": "Green Bean", "quantity": 2 }
+      ],
+      "buffs": null,
+      "category": "Cooking"
+    },
+    {
+      "id": 15,
+      "name": "Glazed Yams",
+      "slug": "glazed-yams",
+      "description": "Sweet and satisfying.",
+      "sellPrice": 200,
+      "energy": 175,
+      "health": 78,
+      "source": "The Queen of Sauce (Year 1, Fall 21)",
+      "ingredients": [
+        { "item": "Yam", "quantity": 1 },
+        { "item": "Sugar", "quantity": 1 }
+      ],
+      "buffs": null,
+      "category": "Cooking"
+    },
+    {
+      "id": 16,
+      "name": "Carp Surprise",
+      "slug": "carp-surprise",
+      "description": "It's a secret.",
+      "sellPrice": 150,
+      "energy": 90,
+      "health": 40,
+      "source": "The Queen of Sauce (Year 2, Summer 7)",
+      "ingredients": [
+        { "item": "Carp", "quantity": 4 }
+      ],
+      "buffs": null,
+      "category": "Cooking"
+    },
+    {
+      "id": 17,
+      "name": "Hashbrowns",
+      "slug": "hashbrowns",
+      "description": "Crispy and golden.",
+      "sellPrice": 120,
+      "energy": 90,
+      "health": 40,
+      "source": "The Queen of Sauce (Year 2, Spring 14)",
+      "ingredients": [
+        { "item": "Potato", "quantity": 1 },
+        { "item": "Oil", "quantity": 1 }
+      ],
+      "buffs": { "farming": 1, "duration": 330 },
+      "category": "Cooking"
+    },
+    {
+      "id": 18,
+      "name": "Pancakes",
+      "slug": "pancakes",
+      "description": "A fluffy stack of pancakes.",
+      "sellPrice": 80,
+      "energy": 90,
+      "health": 40,
+      "source": "The Queen of Sauce (Year 1, Summer 14)",
+      "ingredients": [
+        { "item": "Wheat Flour", "quantity": 1 },
+        { "item": "Egg", "quantity": 1 }
+      ],
+      "buffs": { "foraging": 2, "duration": 330 },
+      "category": "Cooking"
+    },
+    {
+      "id": 19,
+      "name": "Salmon Dinner",
+      "slug": "salmon-dinner",
+      "description": "The lemon really brings out the flavor.",
+      "sellPrice": 300,
+      "energy": 125,
+      "health": 56,
+      "source": "Gus (3+ Hearts)",
+      "ingredients": [
+        { "item": "Salmon", "quantity": 1 },
+        { "item": "Amaranth", "quantity": 1 },
+        { "item": "Kale", "quantity": 1 }
+      ],
+      "buffs": null,
+      "category": "Cooking"
+    },
+    {
+      "id": 20,
+      "name": "Fish Taco",
+      "slug": "fish-taco",
+      "description": "It smells delicious.",
+      "sellPrice": 500,
+      "energy": 165,
+      "health": 74,
+      "source": "Linus (7+ Hearts)",
+      "ingredients": [
+        { "item": "Tuna", "quantity": 1 },
+        { "item": "Tortilla", "quantity": 1 },
+        { "item": "Red Cabbage", "quantity": 1 },
+        { "item": "Mayonnaise", "quantity": 1 }
+      ],
+      "buffs": { "fishing": 2, "duration": 450 },
+      "category": "Cooking"
+    },
+    {
+      "id": 21,
+      "name": "Crispy Bass",
+      "slug": "crispy-bass",
+      "description": "Wow, the breading is perfect.",
+      "sellPrice": 150,
+      "energy": 90,
+      "health": 40,
+      "source": "Kent (3+ Hearts)",
+      "ingredients": [
+        { "item": "Largemouth Bass", "quantity": 1 },
+        { "item": "Wheat Flour", "quantity": 1 },
+        { "item": "Oil", "quantity": 1 }
+      ],
+      "buffs": null,
+      "category": "Cooking"
+    },
+    {
+      "id": 22,
+      "name": "Pepper Poppers",
+      "slug": "pepper-poppers",
+      "description": "Spicy, breaded, and wonderful.",
+      "sellPrice": 200,
+      "energy": 130,
+      "health": 58,
+      "source": "Shane (3+ Hearts)",
+      "ingredients": [
+        { "item": "Hot Pepper", "quantity": 1 },
+        { "item": "Cheese", "quantity": 1 }
+      ],
+      "buffs": { "farming": 2, "speed": 1, "duration": 430 },
+      "category": "Cooking"
+    },
+    {
+      "id": 23,
+      "name": "Bread",
+      "slug": "bread",
+      "description": "A crusty baguette.",
+      "sellPrice": 60,
+      "energy": 50,
+      "health": 22,
+      "source": "The Queen of Sauce (Year 1, Summer 28)",
+      "ingredients": [
+        { "item": "Wheat Flour", "quantity": 1 }
+      ],
+      "buffs": null,
+      "category": "Cooking"
+    },
+    {
+      "id": 24,
+      "name": "Tom Kha Soup",
+      "slug": "tom-kha-soup",
+      "description": "These flavors are incredible!",
+      "sellPrice": 250,
+      "energy": 175,
+      "health": 78,
+      "source": "Sandy (7+ Hearts)",
+      "ingredients": [
+        { "item": "Coconut", "quantity": 1 },
+        { "item": "Shrimp", "quantity": 1 },
+        { "item": "Common Mushroom", "quantity": 1 }
+      ],
+      "buffs": { "farming": 2, "foraging": 2, "duration": 420 },
+      "category": "Cooking"
+    },
+    {
+      "id": 25,
+      "name": "Trout Soup",
+      "slug": "trout-soup",
+      "description": "Pretty salty.",
+      "sellPrice": 100,
+      "energy": 100,
+      "health": 45,
+      "source": "The Queen of Sauce (Year 1, Fall 14)",
+      "ingredients": [
+        { "item": "Rainbow Trout", "quantity": 1 },
+        { "item": "Green Algae", "quantity": 1 }
+      ],
+      "buffs": { "fishing": 1, "duration": 250 },
+      "category": "Cooking"
+    },
+    {
+      "id": 26,
+      "name": "Chocolate Cake",
+      "slug": "chocolate-cake",
+      "description": "Rich and moist with a thick fudge icing.",
+      "sellPrice": 200,
+      "energy": 150,
+      "health": 67,
+      "source": "The Queen of Sauce (Year 1, Winter 14)",
+      "ingredients": [
+        { "item": "Wheat Flour", "quantity": 1 },
+        { "item": "Sugar", "quantity": 1 },
+        { "item": "Egg", "quantity": 1 }
+      ],
+      "buffs": null,
+      "category": "Cooking"
+    },
+    {
+      "id": 27,
+      "name": "Pink Cake",
+      "slug": "pink-cake",
+      "description": "There's little heart candies on top.",
+      "sellPrice": 480,
+      "energy": 250,
+      "health": 112,
+      "source": "The Queen of Sauce (Year 2, Summer 21)",
+      "ingredients": [
+        { "item": "Melon", "quantity": 1 },
+        { "item": "Wheat Flour", "quantity": 1 },
+        { "item": "Sugar", "quantity": 1 },
+        { "item": "Egg", "quantity": 1 }
+      ],
+      "buffs": null,
+      "category": "Cooking"
+    },
+    {
+      "id": 28,
+      "name": "Rhubarb Pie",
+      "slug": "rhubarb-pie",
+      "description": "Mmm, tangy and sweet.",
+      "sellPrice": 400,
+      "energy": 225,
+      "health": 101,
+      "source": "Marnie (7+ Hearts)",
+      "ingredients": [
+        { "item": "Rhubarb", "quantity": 1 },
+        { "item": "Wheat Flour", "quantity": 1 },
+        { "item": "Sugar", "quantity": 1 }
+      ],
+      "buffs": null,
+      "category": "Cooking"
+    },
+    {
+      "id": 29,
+      "name": "Cookie",
+      "slug": "cookie",
+      "description": "Very chewy.",
+      "sellPrice": 140,
+      "energy": 90,
+      "health": 40,
+      "source": "Evelyn (4+ Hearts)",
+      "ingredients": [
+        { "item": "Wheat Flour", "quantity": 1 },
+        { "item": "Sugar", "quantity": 1 },
+        { "item": "Egg", "quantity": 1 }
+      ],
+      "buffs": null,
+      "category": "Cooking"
+    },
+    {
+      "id": 30,
+      "name": "Spaghetti",
+      "slug": "spaghetti",
+      "description": "An old favorite.",
+      "sellPrice": 120,
+      "energy": 75,
+      "health": 33,
+      "source": "Lewis (3+ Hearts)",
+      "ingredients": [
+        { "item": "Wheat Flour", "quantity": 1 },
+        { "item": "Tomato", "quantity": 1 }
+      ],
+      "buffs": null,
+      "category": "Cooking"
+    },
+    {
+      "id": 31,
+      "name": "Fried Eel",
+      "slug": "fried-eel",
+      "description": "Greasy but flavorful.",
+      "sellPrice": 120,
+      "energy": 100,
+      "health": 45,
+      "source": "George (7+ Hearts)",
+      "ingredients": [
+        { "item": "Eel", "quantity": 1 },
+        { "item": "Oil", "quantity": 1 }
+      ],
+      "buffs": { "luck": 1, "duration": 420 },
+      "category": "Cooking"
+    },
+    {
+      "id": 32,
+      "name": "Spicy Eel",
+      "slug": "spicy-eel",
+      "description": "It's really spicy! Be careful.",
+      "sellPrice": 175,
+      "energy": 115,
+      "health": 51,
+      "source": "George (7+ Hearts)",
+      "ingredients": [
+        { "item": "Eel", "quantity": 1 },
+        { "item": "Hot Pepper", "quantity": 1 }
+      ],
+      "buffs": { "luck": 1, "speed": 1, "duration": 420 },
+      "category": "Cooking"
+    },
+    {
+      "id": 33,
+      "name": "Sashimi",
+      "slug": "sashimi",
+      "description": "Raw fish sliced into thin pieces.",
+      "sellPrice": 75,
+      "energy": 75,
+      "health": 33,
+      "source": "Linus (3+ Hearts)",
+      "ingredients": [
+        { "item": "Any Fish", "quantity": 1 }
+      ],
+      "buffs": null,
+      "category": "Cooking"
+    },
+    {
+      "id": 34,
+      "name": "Maki Roll",
+      "slug": "maki-roll",
+      "description": "Fish and rice wrapped in seaweed.",
+      "sellPrice": 220,
+      "energy": 100,
+      "health": 45,
+      "source": "The Queen of Sauce (Year 1, Summer 21)",
+      "ingredients": [
+        { "item": "Any Fish", "quantity": 1 },
+        { "item": "Seaweed", "quantity": 1 },
+        { "item": "Rice", "quantity": 1 }
+      ],
+      "buffs": null,
+      "category": "Cooking"
+    },
+    {
+      "id": 35,
+      "name": "Tortilla",
+      "slug": "tortilla",
+      "description": "Can be used as a wrap or eaten by itself.",
+      "sellPrice": 50,
+      "energy": 50,
+      "health": 22,
+      "source": "The Queen of Sauce (Year 1, Fall 7)",
+      "ingredients": [
+        { "item": "Corn", "quantity": 1 }
+      ],
+      "buffs": null,
+      "category": "Cooking"
+    },
+    {
+      "id": 36,
+      "name": "Red Plate",
+      "slug": "red-plate",
+      "description": "Full of antioxidants.",
+      "sellPrice": 400,
+      "energy": 240,
+      "health": 108,
+      "source": "Emily (7+ Hearts)",
+      "ingredients": [
+        { "item": "Red Cabbage", "quantity": 1 },
+        { "item": "Radish", "quantity": 1 }
+      ],
+      "buffs": { "maxEnergy": 50, "duration": 420 },
+      "category": "Cooking"
+    },
+    {
+      "id": 37,
+      "name": "Eggplant Parmesan",
+      "slug": "eggplant-parmesan",
+      "description": "Tangy, cheesy, and wonderful.",
+      "sellPrice": 200,
+      "energy": 175,
+      "health": 78,
+      "source": "Lewis (7+ Hearts)",
+      "ingredients": [
+        { "item": "Eggplant", "quantity": 1 },
+        { "item": "Tomato", "quantity": 1 }
+      ],
+      "buffs": { "mining": 1, "defense": 3, "duration": 280 },
+      "category": "Cooking"
+    },
+    {
+      "id": 38,
+      "name": "Rice Pudding",
+      "slug": "rice-pudding",
+      "description": "It's creamy, sweet, and delicious.",
+      "sellPrice": 260,
+      "energy": 115,
+      "health": 51,
+      "source": "Evelyn (7+ Hearts)",
+      "ingredients": [
+        { "item": "Milk", "quantity": 1 },
+        { "item": "Sugar", "quantity": 1 },
+        { "item": "Rice", "quantity": 1 }
+      ],
+      "buffs": null,
+      "category": "Cooking"
+    },
+    {
+      "id": 39,
+      "name": "Ice Cream",
+      "slug": "ice-cream",
+      "description": "It's hard to find someone who doesn't like this.",
+      "sellPrice": 120,
+      "energy": 100,
+      "health": 45,
+      "source": "Jodi (7+ Hearts)",
+      "ingredients": [
+        { "item": "Milk", "quantity": 1 },
+        { "item": "Sugar", "quantity": 1 }
+      ],
+      "buffs": null,
+      "category": "Cooking"
+    },
+    {
+      "id": 40,
+      "name": "Blueberry Tart",
+      "slug": "blueberry-tart",
+      "description": "It's subtle and refreshing.",
+      "sellPrice": 150,
+      "energy": 125,
+      "health": 56,
+      "source": "Pierre (3+ Hearts)",
+      "ingredients": [
+        { "item": "Blueberry", "quantity": 1 },
+        { "item": "Wheat Flour", "quantity": 1 },
+        { "item": "Sugar", "quantity": 1 },
+        { "item": "Egg", "quantity": 1 }
+      ],
+      "buffs": null,
+      "category": "Cooking"
+    },
+    {
+      "id": 41,
+      "name": "Autumn's Bounty",
+      "slug": "autumns-bounty",
+      "description": "A taste of the season.",
+      "sellPrice": 350,
+      "energy": 220,
+      "health": 99,
+      "source": "Demetrius (7+ Hearts)",
+      "ingredients": [
+        { "item": "Yam", "quantity": 1 },
+        { "item": "Pumpkin", "quantity": 1 }
+      ],
+      "buffs": { "foraging": 2, "defense": 2, "duration": 420 },
+      "category": "Cooking"
+    },
+    {
+      "id": 42,
+      "name": "Pumpkin Soup",
+      "slug": "pumpkin-soup",
+      "description": "A seasonal favorite.",
+      "sellPrice": 300,
+      "energy": 200,
+      "health": 90,
+      "source": "Robin (7+ Hearts)",
+      "ingredients": [
+        { "item": "Pumpkin", "quantity": 1 },
+        { "item": "Milk", "quantity": 1 }
+      ],
+      "buffs": { "luck": 2, "defense": 2, "duration": 420 },
+      "category": "Cooking"
+    },
+    {
+      "id": 43,
+      "name": "Super Meal",
+      "slug": "super-meal",
+      "description": "It's a really energizing meal.",
+      "sellPrice": 220,
+      "energy": 160,
+      "health": 72,
+      "source": "Kent (7+ Hearts)",
+      "ingredients": [
+        { "item": "Bok Choy", "quantity": 1 },
+        { "item": "Cranberries", "quantity": 1 },
+        { "item": "Artichoke", "quantity": 1 }
+      ],
+      "buffs": { "speed": 1, "maxEnergy": 40, "duration": 300 },
+      "category": "Cooking"
+    },
+    {
+      "id": 44,
+      "name": "Cranberry Sauce",
+      "slug": "cranberry-sauce",
+      "description": "A festive treat.",
+      "sellPrice": 120,
+      "energy": 125,
+      "health": 56,
+      "source": "Gus (7+ Hearts)",
+      "ingredients": [
+        { "item": "Cranberries", "quantity": 1 },
+        { "item": "Sugar", "quantity": 1 }
+      ],
+      "buffs": null,
+      "category": "Cooking"
+    },
+    {
+      "id": 45,
+      "name": "Stuffing",
+      "slug": "stuffing",
+      "description": "Ahh... the smell of warm bread and sage.",
+      "sellPrice": 165,
+      "energy": 170,
+      "health": 76,
+      "source": "Pam (7+ Hearts)",
+      "ingredients": [
+        { "item": "Bread", "quantity": 1 },
+        { "item": "Cranberries", "quantity": 1 },
+        { "item": "Hazelnut", "quantity": 1 }
+      ],
+      "buffs": null,
+      "category": "Cooking"
+    },
+    {
+      "id": 46,
+      "name": "Farmer's Lunch",
+      "slug": "farmers-lunch",
+      "description": "This'll keep you going.",
+      "sellPrice": 150,
+      "energy": 200,
+      "health": 90,
+      "source": "Farming Level 3",
+      "ingredients": [
+        { "item": "Omelet", "quantity": 1 },
+        { "item": "Parsnip", "quantity": 1 }
+      ],
+      "buffs": { "farming": 3, "duration": 330 },
+      "category": "Cooking"
+    },
+    {
+      "id": 47,
+      "name": "Survival Burger",
+      "slug": "survival-burger",
+      "description": "A convenient snack for the explorer.",
+      "sellPrice": 180,
+      "energy": 125,
+      "health": 56,
+      "source": "Foraging Level 2",
+      "ingredients": [
+        { "item": "Bread", "quantity": 1 },
+        { "item": "Cave Carrot", "quantity": 1 },
+        { "item": "Eggplant", "quantity": 1 }
+      ],
+      "buffs": { "foraging": 3, "duration": 330 },
+      "category": "Cooking"
+    },
+    {
+      "id": 48,
+      "name": "Dish O' The Sea",
+      "slug": "dish-o-the-sea",
+      "description": "This'll keep you warm in the cold sea air.",
+      "sellPrice": 220,
+      "energy": 125,
+      "health": 56,
+      "source": "Fishing Level 3",
+      "ingredients": [
+        { "item": "Sardine", "quantity": 2 },
+        { "item": "Hashbrowns", "quantity": 1 }
+      ],
+      "buffs": { "fishing": 3, "duration": 330 },
+      "category": "Cooking"
+    },
+    {
+      "id": 49,
+      "name": "Miner's Treat",
+      "slug": "miners-treat",
+      "description": "This should keep your energy up.",
+      "sellPrice": 200,
+      "energy": 125,
+      "health": 56,
+      "source": "Mining Level 3",
+      "ingredients": [
+        { "item": "Cave Carrot", "quantity": 2 },
+        { "item": "Sugar", "quantity": 1 },
+        { "item": "Milk", "quantity": 1 }
+      ],
+      "buffs": { "mining": 3, "magneticRadius": 32, "duration": 330 },
+      "category": "Cooking"
+    },
+    {
+      "id": 50,
+      "name": "Roots Platter",
+      "slug": "roots-platter",
+      "description": "This'll put some hair on your chest.",
+      "sellPrice": 100,
+      "energy": 125,
+      "health": 56,
+      "source": "Combat Level 3",
+      "ingredients": [
+        { "item": "Cave Carrot", "quantity": 1 },
+        { "item": "Winter Root", "quantity": 1 }
+      ],
+      "buffs": { "attack": 3, "duration": 330 },
+      "category": "Cooking"
+    },
+    {
+      "id": 51,
+      "name": "Seafoam Pudding",
+      "slug": "seafoam-pudding",
+      "description": "This briny pudding will really get you into the fishing mood!",
+      "sellPrice": 300,
+      "energy": 175,
+      "health": 78,
+      "source": "Fishing Level 9",
+      "ingredients": [
+        { "item": "Flounder", "quantity": 1 },
+        { "item": "Midnight Carp", "quantity": 1 },
+        { "item": "Squid Ink", "quantity": 1 }
+      ],
+      "buffs": { "fishing": 4, "duration": 600 },
+      "category": "Cooking"
+    },
+    {
+      "id": 52,
+      "name": "Pale Broth",
+      "slug": "pale-broth",
+      "description": "A delicate broth with a hint of sulfur.",
+      "sellPrice": 150,
+      "energy": 125,
+      "health": 56,
+      "source": "The Queen of Sauce (Year 2, Fall 7)",
+      "ingredients": [
+        { "item": "White Algae", "quantity": 2 }
+      ],
+      "buffs": null,
+      "category": "Cooking"
+    },
+    {
+      "id": 53,
+      "name": "Plum Pudding",
+      "slug": "plum-pudding",
+      "description": "A traditional holiday treat.",
+      "sellPrice": 260,
+      "energy": 150,
+      "health": 67,
+      "source": "The Queen of Sauce (Year 1, Winter 7)",
+      "ingredients": [
+        { "item": "Wild Plum", "quantity": 2 },
+        { "item": "Wheat Flour", "quantity": 1 },
+        { "item": "Sugar", "quantity": 1 }
+      ],
+      "buffs": null,
+      "category": "Cooking"
+    },
+    {
+      "id": 54,
+      "name": "Artichoke Dip",
+      "slug": "artichoke-dip",
+      "description": "It's cool and refreshing.",
+      "sellPrice": 210,
+      "energy": 100,
+      "health": 45,
+      "source": "The Queen of Sauce (Year 1, Fall 28)",
+      "ingredients": [
+        { "item": "Artichoke", "quantity": 1 },
+        { "item": "Milk", "quantity": 1 }
+      ],
+      "buffs": null,
+      "category": "Cooking"
+    },
+    {
+      "id": 55,
+      "name": "Stir Fry",
+      "slug": "stir-fry",
+      "description": "Julienned vegetables on a bed of rice.",
+      "sellPrice": 335,
+      "energy": 165,
+      "health": 74,
+      "source": "The Queen of Sauce (Year 1, Spring 7)",
+      "ingredients": [
+        { "item": "Cave Carrot", "quantity": 1 },
+        { "item": "Common Mushroom", "quantity": 1 },
+        { "item": "Kale", "quantity": 1 },
+        { "item": "Oil", "quantity": 1 }
+      ],
+      "buffs": null,
+      "category": "Cooking"
+    },
+    {
+      "id": 56,
+      "name": "Roasted Hazelnuts",
+      "slug": "roasted-hazelnuts",
+      "description": "The roasting brings out the rich, nutty flavor.",
+      "sellPrice": 270,
+      "energy": 140,
+      "health": 63,
+      "source": "The Queen of Sauce (Year 2, Fall 28)",
+      "ingredients": [
+        { "item": "Hazelnut", "quantity": 3 }
+      ],
+      "buffs": null,
+      "category": "Cooking"
+    },
+    {
+      "id": 57,
+      "name": "Poppyseed Muffin",
+      "slug": "poppyseed-muffin",
+      "description": "It has a soothing effect.",
+      "sellPrice": 250,
+      "energy": 150,
+      "health": 67,
+      "source": "The Queen of Sauce (Year 2, Winter 7)",
+      "ingredients": [
+        { "item": "Poppy", "quantity": 1 },
+        { "item": "Wheat Flour", "quantity": 1 },
+        { "item": "Sugar", "quantity": 1 }
+      ],
+      "buffs": null,
+      "category": "Cooking"
+    },
+    {
+      "id": 58,
+      "name": "Chowder",
+      "slug": "chowder",
+      "description": "A perfect way to warm up after a cold night at sea.",
+      "sellPrice": 135,
+      "energy": 225,
+      "health": 101,
+      "source": "Willy (3+ Hearts)",
+      "ingredients": [
+        { "item": "Clam", "quantity": 1 },
+        { "item": "Milk", "quantity": 1 }
+      ],
+      "buffs": { "fishing": 1, "duration": 900 },
+      "category": "Cooking"
+    },
+    {
+      "id": 59,
+      "name": "Lobster Bisque",
+      "slug": "lobster-bisque",
+      "description": "This delicate soup is a secret family recipe of Willy's.",
+      "sellPrice": 205,
+      "energy": 225,
+      "health": 101,
+      "source": "Willy (9+ Hearts) / The Queen of Sauce (Year 2, Winter 14)",
+      "ingredients": [
+        { "item": "Lobster", "quantity": 1 },
+        { "item": "Milk", "quantity": 1 }
+      ],
+      "buffs": { "fishing": 3, "maxEnergy": 50, "duration": 900 },
+      "category": "Cooking"
+    },
+    {
+      "id": 60,
+      "name": "Escargot",
+      "slug": "escargot",
+      "description": "Butter-soaked snails cooked to perfection.",
+      "sellPrice": 125,
+      "energy": 225,
+      "health": 101,
+      "source": "Willy (5+ Hearts)",
+      "ingredients": [
+        { "item": "Snail", "quantity": 1 },
+        { "item": "Garlic", "quantity": 1 }
+      ],
+      "buffs": { "fishing": 2, "duration": 900 },
+      "category": "Cooking"
+    },
+    {
+      "id": 61,
+      "name": "Fish Stew",
+      "slug": "fish-stew",
+      "description": "It smells a lot like the sea. Tastes like it, too.",
+      "sellPrice": 175,
+      "energy": 225,
+      "health": 101,
+      "source": "Willy (7+ Hearts)",
+      "ingredients": [
+        { "item": "Crayfish", "quantity": 1 },
+        { "item": "Mussel", "quantity": 1 },
+        { "item": "Periwinkle", "quantity": 1 },
+        { "item": "Tomato", "quantity": 1 }
+      ],
+      "buffs": { "fishing": 3, "duration": 900 },
+      "category": "Cooking"
+    },
+    {
+      "id": 62,
+      "name": "Maple Bar",
+      "slug": "maple-bar",
+      "description": "It's a sweet doughnut topped with a rich maple glaze.",
+      "sellPrice": 300,
+      "energy": 225,
+      "health": 101,
+      "source": "The Queen of Sauce (Year 2, Summer 14)",
+      "ingredients": [
+        { "item": "Maple Syrup", "quantity": 1 },
+        { "item": "Sugar", "quantity": 1 },
+        { "item": "Wheat Flour", "quantity": 1 }
+      ],
+      "buffs": { "farming": 1, "fishing": 1, "mining": 1, "duration": 900 },
+      "category": "Cooking"
+    },
+    {
+      "id": 63,
+      "name": "Crab Cakes",
+      "slug": "crab-cakes",
+      "description": "Crab, bread crumbs, and egg formed into patties then fried to a golden brown.",
+      "sellPrice": 275,
+      "energy": 225,
+      "health": 101,
+      "source": "The Queen of Sauce (Year 2, Fall 21)",
+      "ingredients": [
+        { "item": "Crab", "quantity": 1 },
+        { "item": "Wheat Flour", "quantity": 1 },
+        { "item": "Egg", "quantity": 1 },
+        { "item": "Oil", "quantity": 1 }
+      ],
+      "buffs": null,
+      "category": "Cooking"
+    },
+    {
+      "id": 64,
+      "name": "Shrimp Cocktail",
+      "slug": "shrimp-cocktail",
+      "description": "A chilled dish featuring a lip-smacking sauce.",
+      "sellPrice": 160,
+      "energy": 225,
+      "health": 101,
+      "source": "The Queen of Sauce (Year 2, Winter 28)",
+      "ingredients": [
+        { "item": "Tomato", "quantity": 1 },
+        { "item": "Shrimp", "quantity": 1 },
+        { "item": "Wild Horseradish", "quantity": 1 }
+      ],
+      "buffs": { "luck": 1, "duration": 690 },
+      "category": "Cooking"
+    },
+    {
+      "id": 65,
+      "name": "Ginger Ale",
+      "slug": "ginger-ale",
+      "description": "A zesty soda known for its soothing effect on the stomach.",
+      "sellPrice": 200,
+      "energy": 25,
+      "health": 11,
+      "source": "Dwarf Shop",
+      "ingredients": [
+        { "item": "Ginger", "quantity": 3 },
+        { "item": "Sugar", "quantity": 1 }
+      ],
+      "buffs": { "luck": 1, "duration": 450 },
+      "buffNote": "Immunity to Nauseated debuff",
+      "category": "Cooking"
+    },
+    {
+      "id": 66,
+      "name": "Banana Pudding",
+      "slug": "banana-pudding",
+      "description": "A creamy dessert with layers of sweet banana.",
+      "sellPrice": 260,
+      "energy": 180,
+      "health": 81,
+      "source": "Island Trader",
+      "ingredients": [
+        { "item": "Banana", "quantity": 1 },
+        { "item": "Milk", "quantity": 1 },
+        { "item": "Sugar", "quantity": 1 }
+      ],
+      "buffs": null,
+      "category": "Cooking"
+    },
+    {
+      "id": 67,
+      "name": "Mango Sticky Rice",
+      "slug": "mango-sticky-rice",
+      "description": "Sweet mango with a bed of sticky rice infused with coconut.",
+      "sellPrice": 250,
+      "energy": 228,
+      "health": 102,
+      "source": "Leo (7+ Hearts)",
+      "ingredients": [
+        { "item": "Mango", "quantity": 1 },
+        { "item": "Coconut", "quantity": 1 },
+        { "item": "Rice", "quantity": 1 }
+      ],
+      "buffs": null,
+      "category": "Cooking"
+    },
+    {
+      "id": 68,
+      "name": "Poi",
+      "slug": "poi",
+      "description": "A traditional food with a unique, creamy texture.",
+      "sellPrice": 400,
+      "energy": 175,
+      "health": 78,
+      "source": "Island Trader",
+      "ingredients": [
+        { "item": "Taro Root", "quantity": 4 }
+      ],
+      "buffs": null,
+      "category": "Cooking"
+    },
+    {
+      "id": 69,
+      "name": "Tropical Curry",
+      "slug": "tropical-curry",
+      "description": "An exotic, fragrant curry served over rice.",
+      "sellPrice": 500,
+      "energy": 175,
+      "health": 78,
+      "source": "Ginger Island Resort",
+      "ingredients": [
+        { "item": "Coconut", "quantity": 1 },
+        { "item": "Pineapple", "quantity": 1 },
+        { "item": "Hot Pepper", "quantity": 1 }
+      ],
+      "buffs": { "foraging": 4, "duration": 480 },
+      "category": "Cooking"
+    },
+    {
+      "id": 70,
+      "name": "Squid Ink Ravioli",
+      "slug": "squid-ink-ravioli",
+      "description": "Temporarily makes you feel stronger.",
+      "sellPrice": 150,
+      "energy": 125,
+      "health": 56,
+      "source": "Combat Level 9",
+      "ingredients": [
+        { "item": "Squid Ink", "quantity": 1 },
+        { "item": "Wheat Flour", "quantity": 1 },
+        { "item": "Tomato", "quantity": 1 }
+      ],
+      "buffs": { "mining": 1, "attack": 1, "duration": 280 },
+      "category": "Cooking"
+    },
+    {
+      "id": 71,
+      "name": "Pumpkin Pie",
+      "slug": "pumpkin-pie",
+      "description": "Silky pumpkin cream in a flaky crust.",
+      "sellPrice": 385,
+      "energy": 225,
+      "health": 101,
+      "source": "The Queen of Sauce (Year 1, Winter 21)",
+      "ingredients": [
+        { "item": "Pumpkin", "quantity": 1 },
+        { "item": "Wheat Flour", "quantity": 1 },
+        { "item": "Milk", "quantity": 1 },
+        { "item": "Sugar", "quantity": 1 }
+      ],
+      "buffs": null,
+      "category": "Cooking"
+    },
+    {
+      "id": 72,
+      "name": "Radish Salad",
+      "slug": "radish-salad",
+      "description": "The radishes are so crisp!",
+      "sellPrice": 300,
+      "energy": 175,
+      "health": 78,
+      "source": "The Queen of Sauce (Year 1, Spring 21)",
+      "ingredients": [
+        { "item": "Oil", "quantity": 1 },
+        { "item": "Vinegar", "quantity": 1 },
+        { "item": "Radish", "quantity": 1 }
+      ],
+      "buffs": null,
+      "category": "Cooking"
+    },
+    {
+      "id": 73,
+      "name": "Fruit Salad",
+      "slug": "fruit-salad",
+      "description": "A delicious combination of summer fruits.",
+      "sellPrice": 450,
+      "energy": 263,
+      "health": 118,
+      "source": "The Queen of Sauce (Year 2, Fall 7)",
+      "ingredients": [
+        { "item": "Blueberry", "quantity": 1 },
+        { "item": "Melon", "quantity": 1 },
+        { "item": "Apricot", "quantity": 1 }
+      ],
+      "buffs": null,
+      "category": "Cooking"
+    },
+    {
+      "id": 74,
+      "name": "Blackberry Cobbler",
+      "slug": "blackberry-cobbler",
+      "description": "There's nothing quite like it.",
+      "sellPrice": 260,
+      "energy": 175,
+      "health": 78,
+      "source": "The Queen of Sauce (Year 2, Fall 14)",
+      "ingredients": [
+        { "item": "Blackberry", "quantity": 2 },
+        { "item": "Sugar", "quantity": 1 },
+        { "item": "Wheat Flour", "quantity": 1 }
+      ],
+      "buffs": null,
+      "category": "Cooking"
+    },
+    {
+      "id": 75,
+      "name": "Cranberry Candy",
+      "slug": "cranberry-candy",
+      "description": "It's sweet enough to mask the bitter fruit.",
+      "sellPrice": 175,
+      "energy": 175,
+      "health": 78,
+      "source": "The Queen of Sauce (Year 1, Winter 28)",
+      "ingredients": [
+        { "item": "Cranberries", "quantity": 1 },
+        { "item": "Apple", "quantity": 1 },
+        { "item": "Sugar", "quantity": 1 }
+      ],
+      "buffs": null,
+      "category": "Cooking"
+    },
+    {
+      "id": 76,
+      "name": "Bruschetta",
+      "slug": "bruschetta",
+      "description": "Roasted tomatoes on a crisp white bread.",
+      "sellPrice": 210,
+      "energy": 113,
+      "health": 50,
+      "source": "The Queen of Sauce (Year 2, Summer 28)",
+      "ingredients": [
+        { "item": "Bread", "quantity": 1 },
+        { "item": "Oil", "quantity": 1 },
+        { "item": "Tomato", "quantity": 1 }
+      ],
+      "buffs": null,
+      "category": "Cooking"
+    },
+    {
+      "id": 77,
+      "name": "Coleslaw",
+      "slug": "coleslaw",
+      "description": "It's light and refreshing.",
+      "sellPrice": 345,
+      "energy": 175,
+      "health": 78,
+      "source": "The Queen of Sauce (Year 1, Spring 14)",
+      "ingredients": [
+        { "item": "Red Cabbage", "quantity": 1 },
+        { "item": "Vinegar", "quantity": 1 },
+        { "item": "Mayonnaise", "quantity": 1 }
+      ],
+      "buffs": null,
+      "category": "Cooking"
+    },
+    {
+      "id": 78,
+      "name": "Fiddlehead Risotto",
+      "slug": "fiddlehead-risotto",
+      "description": "A creamy rice dish served with sauteed fern heads. It's a little bland.",
+      "sellPrice": 350,
+      "energy": 225,
+      "health": 101,
+      "source": "The Queen of Sauce (Year 2, Winter 21)",
+      "ingredients": [
+        { "item": "Oil", "quantity": 1 },
+        { "item": "Fiddlehead Fern", "quantity": 1 },
+        { "item": "Garlic", "quantity": 1 }
+      ],
+      "buffs": null,
+      "category": "Cooking"
+    },
+    {
+      "id": 79,
+      "name": "Moss Soup",
+      "slug": "moss-soup",
+      "description": "Earthy and warm.",
+      "sellPrice": 96,
+      "energy": 90,
+      "health": 40,
+      "source": "Foraging Level 4",
+      "ingredients": [
+        { "item": "Moss", "quantity": 20 },
+        { "item": "Vinegar", "quantity": 1 }
+      ],
+      "buffs": { "maxEnergy": 30, "duration": 330 },
+      "category": "Cooking"
+    },
+    {
+      "id": 80,
+      "name": "Triple Shot Espresso",
+      "slug": "triple-shot-espresso",
+      "description": "It's more potent than regular coffee!",
+      "sellPrice": 450,
+      "energy": 200,
+      "health": 90,
+      "source": "Stardrop Saloon for 5,000g",
+      "ingredients": [
+        { "item": "Coffee", "quantity": 3 }
+      ],
+      "buffs": { "speed": 2, "duration": 600 },
+      "category": "Cooking"
+    }
+  ]
+}

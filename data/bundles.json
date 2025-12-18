@@ -1,0 +1,726 @@
+{
+  "version": "1.6",
+  "lastUpdated": "2025-12-09",
+  "bundles": [
+    {
+      "id": 1,
+      "name": "Spring Crops Bundle",
+      "slug": "spring-crops-bundle",
+      "room": "Pantry",
+      "roomSlug": "pantry",
+      "description": "A bundle of spring crops. Complete to help restore the Pantry.",
+      "itemsRequired": 4,
+      "reward": {
+        "item": "Speed-Gro",
+        "quantity": 20
+      },
+      "items": [
+        { "name": "Parsnip", "quantity": 1, "quality": "gold", "source": "Farming (Spring)" },
+        { "name": "Green Bean", "quantity": 1, "quality": "gold", "source": "Farming (Spring)" },
+        { "name": "Cauliflower", "quantity": 1, "quality": "gold", "source": "Farming (Spring)" },
+        { "name": "Potato", "quantity": 1, "quality": "gold", "source": "Farming (Spring)" }
+      ],
+      "tips": "Plant cauliflower early - it takes 12 days to grow. Use fertilizer for gold quality crops.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 2,
+      "name": "Summer Crops Bundle",
+      "slug": "summer-crops-bundle",
+      "room": "Pantry",
+      "roomSlug": "pantry",
+      "description": "A bundle of summer crops for the Pantry restoration.",
+      "itemsRequired": 4,
+      "reward": {
+        "item": "Quality Fertilizer",
+        "quantity": 20
+      },
+      "items": [
+        { "name": "Tomato", "quantity": 1, "quality": "gold", "source": "Farming (Summer)" },
+        { "name": "Hot Pepper", "quantity": 1, "quality": "gold", "source": "Farming (Summer)" },
+        { "name": "Blueberry", "quantity": 1, "quality": "gold", "source": "Farming (Summer)" },
+        { "name": "Melon", "quantity": 1, "quality": "gold", "source": "Farming (Summer)" }
+      ],
+      "tips": "Blueberries are very profitable! Melons take 12 days - plant by Summer 16.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 3,
+      "name": "Fall Crops Bundle",
+      "slug": "fall-crops-bundle",
+      "room": "Pantry",
+      "roomSlug": "pantry",
+      "description": "A bundle of fall crops to complete the Pantry.",
+      "itemsRequired": 4,
+      "reward": {
+        "item": "Bee House",
+        "quantity": 1
+      },
+      "items": [
+        { "name": "Corn", "quantity": 1, "quality": "gold", "source": "Farming (Summer/Fall)" },
+        { "name": "Eggplant", "quantity": 1, "quality": "gold", "source": "Farming (Fall)" },
+        { "name": "Pumpkin", "quantity": 1, "quality": "gold", "source": "Farming (Fall)" },
+        { "name": "Yam", "quantity": 1, "quality": "gold", "source": "Farming (Fall)" }
+      ],
+      "tips": "Corn can be planted in Summer and harvested in Fall. Pumpkins take 13 days.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 4,
+      "name": "Quality Crops Bundle",
+      "slug": "quality-crops-bundle",
+      "room": "Pantry",
+      "roomSlug": "pantry",
+      "description": "High quality crops from your farm.",
+      "itemsRequired": 3,
+      "reward": {
+        "item": "Preserves Jar",
+        "quantity": 1
+      },
+      "items": [
+        { "name": "Parsnip", "quantity": 5, "quality": "gold", "source": "Farming (Spring)" },
+        { "name": "Melon", "quantity": 5, "quality": "gold", "source": "Farming (Summer)" },
+        { "name": "Pumpkin", "quantity": 5, "quality": "gold", "source": "Farming (Fall)" },
+        { "name": "Corn", "quantity": 5, "quality": "gold", "source": "Farming (Summer/Fall)" }
+      ],
+      "tips": "Use Deluxe Speed-Gro and Quality Fertilizer. The Agriculturist profession helps with growth speed.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": 5,
+      "name": "Animal Bundle",
+      "slug": "animal-bundle",
+      "room": "Pantry",
+      "roomSlug": "pantry",
+      "description": "Products from happy farm animals.",
+      "itemsRequired": 5,
+      "reward": {
+        "item": "Cheese Press",
+        "quantity": 1
+      },
+      "items": [
+        { "name": "Large Milk", "quantity": 1, "quality": "any", "source": "Cow (high friendship)" },
+        { "name": "Large Egg (Brown)", "quantity": 1, "quality": "any", "source": "Brown Chicken (high friendship)" },
+        { "name": "Large Egg", "quantity": 1, "quality": "any", "source": "White Chicken (high friendship)" },
+        { "name": "Large Goat Milk", "quantity": 1, "quality": "any", "source": "Goat (high friendship)" },
+        { "name": "Wool", "quantity": 1, "quality": "any", "source": "Sheep or Rabbit" },
+        { "name": "Duck Egg", "quantity": 1, "quality": "any", "source": "Duck" }
+      ],
+      "tips": "Pet your animals daily! High friendship = large products. Build a Deluxe Coop/Barn for ducks and goats.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": 6,
+      "name": "Artisan Bundle",
+      "slug": "artisan-bundle",
+      "room": "Pantry",
+      "roomSlug": "pantry",
+      "description": "Processed artisan goods from the farm.",
+      "itemsRequired": 6,
+      "reward": {
+        "item": "Keg",
+        "quantity": 1
+      },
+      "items": [
+        { "name": "Truffle Oil", "quantity": 1, "quality": "any", "source": "Oil Maker (Truffle)" },
+        { "name": "Cloth", "quantity": 1, "quality": "any", "source": "Loom (Wool)" },
+        { "name": "Goat Cheese", "quantity": 1, "quality": "any", "source": "Cheese Press (Goat Milk)" },
+        { "name": "Cheese", "quantity": 1, "quality": "any", "source": "Cheese Press (Milk)" },
+        { "name": "Honey", "quantity": 1, "quality": "any", "source": "Bee House" },
+        { "name": "Jelly", "quantity": 1, "quality": "any", "source": "Preserves Jar (Fruit)" },
+        { "name": "Apple", "quantity": 1, "quality": "any", "source": "Apple Tree (Fall)" },
+        { "name": "Apricot", "quantity": 1, "quality": "any", "source": "Apricot Tree (Spring)" },
+        { "name": "Orange", "quantity": 1, "quality": "any", "source": "Orange Tree (Summer)" },
+        { "name": "Peach", "quantity": 1, "quality": "any", "source": "Peach Tree (Summer)" },
+        { "name": "Pomegranate", "quantity": 1, "quality": "any", "source": "Pomegranate Tree (Fall)" },
+        { "name": "Cherry", "quantity": 1, "quality": "any", "source": "Cherry Tree (Spring)" }
+      ],
+      "tips": "Buy fruit tree saplings from Pierre in Year 1 - they take 28 days to mature. A pig finds truffles.",
+      "difficulty": "Hard"
+    },
+    {
+      "id": 7,
+      "name": "River Fish Bundle",
+      "slug": "river-fish-bundle",
+      "room": "Fish Tank",
+      "roomSlug": "fish-tank",
+      "description": "Fish found in the river.",
+      "itemsRequired": 4,
+      "reward": {
+        "item": "Bait",
+        "quantity": 30
+      },
+      "items": [
+        { "name": "Sunfish", "quantity": 1, "quality": "any", "source": "River (Spring/Summer, 6am-7pm)" },
+        { "name": "Catfish", "quantity": 1, "quality": "any", "source": "River (Spring/Fall, rain, 6am-12am)" },
+        { "name": "Shad", "quantity": 1, "quality": "any", "source": "River (Spring/Summer/Fall, rain, 9am-2am)" },
+        { "name": "Tiger Trout", "quantity": 1, "quality": "any", "source": "River (Fall/Winter, 6am-7pm)" }
+      ],
+      "tips": "Catfish only appears in rain! Check TV for weather forecast. Tiger Trout needs Fall or Winter.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": 8,
+      "name": "Lake Fish Bundle",
+      "slug": "lake-fish-bundle",
+      "room": "Fish Tank",
+      "roomSlug": "fish-tank",
+      "description": "Fish found in the mountain lake.",
+      "itemsRequired": 4,
+      "reward": {
+        "item": "Dressed Spinner",
+        "quantity": 1
+      },
+      "items": [
+        { "name": "Largemouth Bass", "quantity": 1, "quality": "any", "source": "Mountain Lake (all seasons, 6am-7pm)" },
+        { "name": "Carp", "quantity": 1, "quality": "any", "source": "Mountain Lake (all seasons, anytime)" },
+        { "name": "Bullhead", "quantity": 1, "quality": "any", "source": "Mountain Lake (all seasons, anytime)" },
+        { "name": "Sturgeon", "quantity": 1, "quality": "any", "source": "Mountain Lake (Summer/Winter, 6am-7pm)" }
+      ],
+      "tips": "Sturgeon is tricky - Summer or Winter only, and only during the day.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 9,
+      "name": "Ocean Fish Bundle",
+      "slug": "ocean-fish-bundle",
+      "room": "Fish Tank",
+      "roomSlug": "fish-tank",
+      "description": "Fish found in the ocean.",
+      "itemsRequired": 4,
+      "reward": {
+        "item": "Warp Totem: Beach",
+        "quantity": 5
+      },
+      "items": [
+        { "name": "Sardine", "quantity": 1, "quality": "any", "source": "Ocean (Spring/Fall/Winter, 6am-7pm)" },
+        { "name": "Tuna", "quantity": 1, "quality": "any", "source": "Ocean (Summer/Winter, 6am-7pm)" },
+        { "name": "Red Snapper", "quantity": 1, "quality": "any", "source": "Ocean (Summer/Fall, rain, 6am-7pm)" },
+        { "name": "Tilapia", "quantity": 1, "quality": "any", "source": "Ocean (Summer/Fall, 6am-2pm)" }
+      ],
+      "tips": "Red Snapper needs rain in Summer or Fall. Tuna is easiest in Summer.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": 10,
+      "name": "Night Fishing Bundle",
+      "slug": "night-fishing-bundle",
+      "room": "Fish Tank",
+      "roomSlug": "fish-tank",
+      "description": "Fish that come out at night.",
+      "itemsRequired": 3,
+      "reward": {
+        "item": "Small Glow Ring",
+        "quantity": 1
+      },
+      "items": [
+        { "name": "Walleye", "quantity": 1, "quality": "any", "source": "River/Mountain Lake (Fall, rain, 12pm-2am)" },
+        { "name": "Bream", "quantity": 1, "quality": "any", "source": "River (all seasons, 6pm-2am)" },
+        { "name": "Eel", "quantity": 1, "quality": "any", "source": "Ocean (Spring/Fall, rain, 4pm-2am)" }
+      ],
+      "tips": "Walleye and Eel require rain. Fish at night after 6pm for Bream.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": 11,
+      "name": "Crab Pot Bundle",
+      "slug": "crab-pot-bundle",
+      "room": "Fish Tank",
+      "roomSlug": "fish-tank",
+      "description": "Creatures caught in crab pots.",
+      "itemsRequired": 5,
+      "reward": {
+        "item": "Crab Pot",
+        "quantity": 3
+      },
+      "items": [
+        { "name": "Lobster", "quantity": 1, "quality": "any", "source": "Crab Pot (Ocean)" },
+        { "name": "Crayfish", "quantity": 1, "quality": "any", "source": "Crab Pot (Freshwater)" },
+        { "name": "Crab", "quantity": 1, "quality": "any", "source": "Crab Pot (Ocean)" },
+        { "name": "Cockle", "quantity": 1, "quality": "any", "source": "Crab Pot (Ocean)" },
+        { "name": "Mussel", "quantity": 1, "quality": "any", "source": "Crab Pot (Ocean)" },
+        { "name": "Shrimp", "quantity": 1, "quality": "any", "source": "Crab Pot (Ocean)" },
+        { "name": "Snail", "quantity": 1, "quality": "any", "source": "Crab Pot (Freshwater)" },
+        { "name": "Periwinkle", "quantity": 1, "quality": "any", "source": "Crab Pot (Freshwater)" },
+        { "name": "Oyster", "quantity": 1, "quality": "any", "source": "Crab Pot (Ocean)" },
+        { "name": "Clam", "quantity": 1, "quality": "any", "source": "Beach foraging" }
+      ],
+      "tips": "Place crab pots in ocean for most variety. Luremaster profession = no bait needed!",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 12,
+      "name": "Specialty Fish Bundle",
+      "slug": "specialty-fish-bundle",
+      "room": "Fish Tank",
+      "roomSlug": "fish-tank",
+      "description": "Rare and unusual fish.",
+      "itemsRequired": 4,
+      "reward": {
+        "item": "Dish O' The Sea",
+        "quantity": 5
+      },
+      "items": [
+        { "name": "Pufferfish", "quantity": 1, "quality": "any", "source": "Ocean (Summer, 12pm-4pm, sunny)" },
+        { "name": "Ghostfish", "quantity": 1, "quality": "any", "source": "Mines (floors 20-60)" },
+        { "name": "Sandfish", "quantity": 1, "quality": "any", "source": "Desert (6am-8pm)" },
+        { "name": "Woodskip", "quantity": 1, "quality": "any", "source": "Secret Woods pond" }
+      ],
+      "tips": "Pufferfish is very specific - sunny Summer days, 12pm-4pm only. Need Desert access for Sandfish.",
+      "difficulty": "Hard"
+    },
+    {
+      "id": 13,
+      "name": "Construction Bundle",
+      "slug": "construction-bundle",
+      "room": "Crafts Room",
+      "roomSlug": "crafts-room",
+      "description": "Materials for construction.",
+      "itemsRequired": 4,
+      "reward": {
+        "item": "Charcoal Kiln",
+        "quantity": 1
+      },
+      "items": [
+        { "name": "Wood", "quantity": 99, "quality": "any", "source": "Chopping trees" },
+        { "name": "Stone", "quantity": 99, "quality": "any", "source": "Breaking rocks" },
+        { "name": "Hardwood", "quantity": 10, "quality": "any", "source": "Secret Woods, Large Stumps/Logs" },
+        { "name": "Wood", "quantity": 99, "quality": "any", "source": "Chopping trees" }
+      ],
+      "tips": "Visit the Secret Woods daily for 6 hardwood. Large stumps on your farm also drop hardwood.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 14,
+      "name": "Exotic Foraging Bundle",
+      "slug": "exotic-foraging-bundle",
+      "room": "Crafts Room",
+      "roomSlug": "crafts-room",
+      "description": "Rare foraged items.",
+      "itemsRequired": 5,
+      "reward": {
+        "item": "Autumn's Bounty",
+        "quantity": 5
+      },
+      "items": [
+        { "name": "Coconut", "quantity": 1, "quality": "any", "source": "Desert, Oasis Shop" },
+        { "name": "Cactus Fruit", "quantity": 1, "quality": "any", "source": "Desert" },
+        { "name": "Cave Carrot", "quantity": 1, "quality": "any", "source": "Mines (tilling dirt)" },
+        { "name": "Red Mushroom", "quantity": 1, "quality": "any", "source": "Mines, Secret Woods, Fall Farm Cave" },
+        { "name": "Purple Mushroom", "quantity": 1, "quality": "any", "source": "Mines (floors 81-119)" },
+        { "name": "Maple Syrup", "quantity": 1, "quality": "any", "source": "Tapper on Maple Tree" },
+        { "name": "Oak Resin", "quantity": 1, "quality": "any", "source": "Tapper on Oak Tree" },
+        { "name": "Pine Tar", "quantity": 1, "quality": "any", "source": "Tapper on Pine Tree" },
+        { "name": "Morel", "quantity": 1, "quality": "any", "source": "Secret Woods, Farm Cave (Spring)" }
+      ],
+      "tips": "Start tappers ASAP - they take 7-9 days. Desert access needed for Coconut and Cactus Fruit.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": 15,
+      "name": "Spring Foraging Bundle",
+      "slug": "spring-foraging-bundle",
+      "room": "Crafts Room",
+      "roomSlug": "crafts-room",
+      "description": "Items found in spring.",
+      "itemsRequired": 4,
+      "reward": {
+        "item": "Spring Seeds",
+        "quantity": 30
+      },
+      "items": [
+        { "name": "Wild Horseradish", "quantity": 1, "quality": "any", "source": "Foraging (Spring)" },
+        { "name": "Daffodil", "quantity": 1, "quality": "any", "source": "Foraging (Spring)" },
+        { "name": "Leek", "quantity": 1, "quality": "any", "source": "Foraging (Spring)" },
+        { "name": "Dandelion", "quantity": 1, "quality": "any", "source": "Foraging (Spring)" }
+      ],
+      "tips": "Check the whole map daily in Spring. These are common and easy to find.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 16,
+      "name": "Summer Foraging Bundle",
+      "slug": "summer-foraging-bundle",
+      "room": "Crafts Room",
+      "roomSlug": "crafts-room",
+      "description": "Items found in summer.",
+      "itemsRequired": 3,
+      "reward": {
+        "item": "Summer Seeds",
+        "quantity": 30
+      },
+      "items": [
+        { "name": "Grape", "quantity": 1, "quality": "any", "source": "Foraging (Summer)" },
+        { "name": "Spice Berry", "quantity": 1, "quality": "any", "source": "Foraging (Summer)" },
+        { "name": "Sweet Pea", "quantity": 1, "quality": "any", "source": "Foraging (Summer)" }
+      ],
+      "tips": "Summer forageables spawn on the beach and forest. Check daily!",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 17,
+      "name": "Fall Foraging Bundle",
+      "slug": "fall-foraging-bundle",
+      "room": "Crafts Room",
+      "roomSlug": "crafts-room",
+      "description": "Items found in fall.",
+      "itemsRequired": 4,
+      "reward": {
+        "item": "Fall Seeds",
+        "quantity": 30
+      },
+      "items": [
+        { "name": "Common Mushroom", "quantity": 1, "quality": "any", "source": "Foraging (Fall)" },
+        { "name": "Wild Plum", "quantity": 1, "quality": "any", "source": "Foraging (Fall)" },
+        { "name": "Hazelnut", "quantity": 1, "quality": "any", "source": "Foraging (Fall)" },
+        { "name": "Blackberry", "quantity": 1, "quality": "any", "source": "Foraging (Fall, Blackberry Season 8-11)" }
+      ],
+      "tips": "Blackberry Season (Fall 8-11) spawns tons of blackberries. Hazelnuts appear on bushes.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 18,
+      "name": "Winter Foraging Bundle",
+      "slug": "winter-foraging-bundle",
+      "room": "Crafts Room",
+      "roomSlug": "crafts-room",
+      "description": "Items found in winter.",
+      "itemsRequired": 4,
+      "reward": {
+        "item": "Winter Seeds",
+        "quantity": 30
+      },
+      "items": [
+        { "name": "Winter Root", "quantity": 1, "quality": "any", "source": "Foraging (Winter) / Hoe dirt" },
+        { "name": "Crystal Fruit", "quantity": 1, "quality": "any", "source": "Foraging (Winter)" },
+        { "name": "Snow Yam", "quantity": 1, "quality": "any", "source": "Foraging (Winter) / Hoe dirt" },
+        { "name": "Crocus", "quantity": 1, "quality": "any", "source": "Foraging (Winter)" }
+      ],
+      "tips": "Use your hoe on dirt/sand patches in Winter to dig up Winter Root and Snow Yam.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 19,
+      "name": "Blacksmith's Bundle",
+      "slug": "blacksmiths-bundle",
+      "room": "Boiler Room",
+      "roomSlug": "boiler-room",
+      "description": "Metal bars for the blacksmith.",
+      "itemsRequired": 3,
+      "reward": {
+        "item": "Furnace",
+        "quantity": 1
+      },
+      "items": [
+        { "name": "Copper Bar", "quantity": 1, "quality": "any", "source": "Furnace (5 Copper Ore + 1 Coal)" },
+        { "name": "Iron Bar", "quantity": 1, "quality": "any", "source": "Furnace (5 Iron Ore + 1 Coal)" },
+        { "name": "Gold Bar", "quantity": 1, "quality": "any", "source": "Furnace (5 Gold Ore + 1 Coal)" }
+      ],
+      "tips": "Mine floors 1-40 for Copper, 41-80 for Iron, 81+ for Gold. Smelt ores in a Furnace.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 20,
+      "name": "Geologist's Bundle",
+      "slug": "geologists-bundle",
+      "room": "Boiler Room",
+      "roomSlug": "boiler-room",
+      "description": "Gems and minerals.",
+      "itemsRequired": 4,
+      "reward": {
+        "item": "Omni Geode",
+        "quantity": 5
+      },
+      "items": [
+        { "name": "Quartz", "quantity": 1, "quality": "any", "source": "Mines (all floors)" },
+        { "name": "Earth Crystal", "quantity": 1, "quality": "any", "source": "Mines (floors 1-40), Geodes" },
+        { "name": "Frozen Tear", "quantity": 1, "quality": "any", "source": "Mines (floors 41-80), Frozen Geodes" },
+        { "name": "Fire Quartz", "quantity": 1, "quality": "any", "source": "Mines (floors 81+), Magma Geodes" }
+      ],
+      "tips": "Each crystal type matches the mine section. Break geodes at Clint's for missing ones.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 21,
+      "name": "Adventurer's Bundle",
+      "slug": "adventurers-bundle",
+      "room": "Boiler Room",
+      "roomSlug": "boiler-room",
+      "description": "Monster loot from the mines.",
+      "itemsRequired": 2,
+      "reward": {
+        "item": "Small Magnet Ring",
+        "quantity": 1
+      },
+      "items": [
+        { "name": "Slime", "quantity": 99, "quality": "any", "source": "Slimes (all floors)" },
+        { "name": "Bat Wing", "quantity": 10, "quality": "any", "source": "Bats (floors 41-80, Skull Cavern)" },
+        { "name": "Solar Essence", "quantity": 1, "quality": "any", "source": "Ghosts, Squid Kids, Metal Heads" },
+        { "name": "Void Essence", "quantity": 1, "quality": "any", "source": "Shadow Brutes/Shamans (floors 81+)" }
+      ],
+      "tips": "Void/Solar Essence drop from specific monsters. Bring food for deep mine runs!",
+      "difficulty": "Medium"
+    },
+    {
+      "id": 22,
+      "name": "Chef's Bundle",
+      "slug": "chefs-bundle",
+      "room": "Bulletin Board",
+      "roomSlug": "bulletin-board",
+      "description": "Ingredients for cooking.",
+      "itemsRequired": 6,
+      "reward": {
+        "item": "Pink Cake",
+        "quantity": 3
+      },
+      "items": [
+        { "name": "Maple Syrup", "quantity": 1, "quality": "any", "source": "Tapper on Maple Tree" },
+        { "name": "Fiddlehead Fern", "quantity": 1, "quality": "any", "source": "Secret Woods (Summer)" },
+        { "name": "Truffle", "quantity": 1, "quality": "any", "source": "Pig (outside, not raining)" },
+        { "name": "Poppy", "quantity": 1, "quality": "any", "source": "Farming (Summer)" },
+        { "name": "Maki Roll", "quantity": 1, "quality": "any", "source": "Cooking (Fish + Seaweed + Rice)" },
+        { "name": "Fried Egg", "quantity": 1, "quality": "any", "source": "Cooking (1 Egg)" }
+      ],
+      "tips": "Fiddlehead Fern only in Summer Secret Woods. Need a pig for Truffle - that's expensive!",
+      "difficulty": "Hard"
+    },
+    {
+      "id": 23,
+      "name": "Dye Bundle",
+      "slug": "dye-bundle",
+      "room": "Bulletin Board",
+      "roomSlug": "bulletin-board",
+      "description": "Colorful items for dyeing.",
+      "itemsRequired": 6,
+      "reward": {
+        "item": "Seed Maker",
+        "quantity": 1
+      },
+      "items": [
+        { "name": "Red Mushroom", "quantity": 1, "quality": "any", "source": "Mines, Secret Woods, Farm Cave" },
+        { "name": "Sea Urchin", "quantity": 1, "quality": "any", "source": "Beach foraging (Summer)" },
+        { "name": "Sunflower", "quantity": 1, "quality": "any", "source": "Farming (Summer/Fall)" },
+        { "name": "Duck Feather", "quantity": 1, "quality": "any", "source": "Duck (high friendship)" },
+        { "name": "Aquamarine", "quantity": 1, "quality": "any", "source": "Mines (floors 41+), Gem Nodes" },
+        { "name": "Red Cabbage", "quantity": 1, "quality": "any", "source": "Farming (Summer, Year 2+)" }
+      ],
+      "tips": "Red Cabbage seeds only available Year 2! Plan ahead or check Traveling Cart.",
+      "difficulty": "Hard"
+    },
+    {
+      "id": 24,
+      "name": "Field Research Bundle",
+      "slug": "field-research-bundle",
+      "room": "Bulletin Board",
+      "roomSlug": "bulletin-board",
+      "description": "Items for scientific research.",
+      "itemsRequired": 4,
+      "reward": {
+        "item": "Recycling Machine",
+        "quantity": 1
+      },
+      "items": [
+        { "name": "Purple Mushroom", "quantity": 1, "quality": "any", "source": "Mines (floors 81+), Farm Cave" },
+        { "name": "Nautilus Shell", "quantity": 1, "quality": "any", "source": "Beach foraging (Winter)" },
+        { "name": "Chub", "quantity": 1, "quality": "any", "source": "Mountain Lake/River (all seasons)" },
+        { "name": "Frozen Geode", "quantity": 1, "quality": "any", "source": "Mines (floors 41-80)" }
+      ],
+      "tips": "Nautilus Shell only in Winter on the beach. Chub is easy - fish anywhere.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": 25,
+      "name": "Fodder Bundle",
+      "slug": "fodder-bundle",
+      "room": "Bulletin Board",
+      "roomSlug": "bulletin-board",
+      "description": "Feed for farm animals.",
+      "itemsRequired": 3,
+      "reward": {
+        "item": "Heater",
+        "quantity": 1
+      },
+      "items": [
+        { "name": "Wheat", "quantity": 10, "quality": "any", "source": "Farming (Summer/Fall)" },
+        { "name": "Hay", "quantity": 10, "quality": "any", "source": "Silo, Marnie's Shop" },
+        { "name": "Apple", "quantity": 3, "quality": "any", "source": "Apple Tree (Fall)" }
+      ],
+      "tips": "Build a Silo before cutting grass! Wheat gives hay when harvested with a scythe.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 26,
+      "name": "Enchanter's Bundle",
+      "slug": "enchanters-bundle",
+      "room": "Bulletin Board",
+      "roomSlug": "bulletin-board",
+      "description": "Magical items.",
+      "itemsRequired": 4,
+      "reward": {
+        "item": "Gold Bar",
+        "quantity": 5
+      },
+      "items": [
+        { "name": "Oak Resin", "quantity": 1, "quality": "any", "source": "Tapper on Oak Tree" },
+        { "name": "Wine", "quantity": 1, "quality": "any", "source": "Keg (any Fruit)" },
+        { "name": "Rabbit's Foot", "quantity": 1, "quality": "any", "source": "Rabbit (high friendship/luck)" },
+        { "name": "Pomegranate", "quantity": 1, "quality": "any", "source": "Pomegranate Tree (Fall)" }
+      ],
+      "tips": "Rabbit's Foot is rare! High friendship + high luck days help. Wine from any fruit works.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": 27,
+      "name": "2,500 Gold Bundle",
+      "slug": "2500-gold-bundle",
+      "room": "Vault",
+      "roomSlug": "vault",
+      "description": "A donation of 2,500g.",
+      "itemsRequired": 1,
+      "reward": {
+        "item": "Chocolate Cake",
+        "quantity": 3
+      },
+      "items": [
+        { "name": "Gold", "quantity": 2500, "quality": "any", "source": "Selling items" }
+      ],
+      "tips": "Just pay the gold! The easiest bundle if you have money.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 28,
+      "name": "5,000 Gold Bundle",
+      "slug": "5000-gold-bundle",
+      "room": "Vault",
+      "roomSlug": "vault",
+      "description": "A donation of 5,000g.",
+      "itemsRequired": 1,
+      "reward": {
+        "item": "Quality Fertilizer",
+        "quantity": 30
+      },
+      "items": [
+        { "name": "Gold", "quantity": 5000, "quality": "any", "source": "Selling items" }
+      ],
+      "tips": "Focus on profitable crops and artisan goods to save up.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 29,
+      "name": "10,000 Gold Bundle",
+      "slug": "10000-gold-bundle",
+      "room": "Vault",
+      "roomSlug": "vault",
+      "description": "A donation of 10,000g.",
+      "itemsRequired": 1,
+      "reward": {
+        "item": "Lightning Rod",
+        "quantity": 1
+      },
+      "items": [
+        { "name": "Gold", "quantity": 10000, "quality": "any", "source": "Selling items" }
+      ],
+      "tips": "Ancient Fruit Wine or Starfruit Wine are great money makers.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": 30,
+      "name": "25,000 Gold Bundle",
+      "slug": "25000-gold-bundle",
+      "room": "Vault",
+      "roomSlug": "vault",
+      "description": "A donation of 25,000g.",
+      "itemsRequired": 1,
+      "reward": {
+        "item": "Crystalarium",
+        "quantity": 1
+      },
+      "items": [
+        { "name": "Gold", "quantity": 25000, "quality": "any", "source": "Selling items" }
+      ],
+      "tips": "This is the final Vault bundle. The Crystalarium duplicates gems - very useful!",
+      "difficulty": "Medium"
+    },
+    {
+      "id": 31,
+      "name": "The Missing Bundle",
+      "slug": "missing-bundle",
+      "room": "Abandoned JojaMart",
+      "roomSlug": "abandoned-jojamart",
+      "description": "A special bundle that appears after completing the Community Center.",
+      "itemsRequired": 5,
+      "reward": {
+        "item": "Movie Theater",
+        "quantity": 1
+      },
+      "items": [
+        { "name": "Wine (Silver)", "quantity": 1, "quality": "silver", "source": "Keg (aged in Cask)" },
+        { "name": "Dinosaur Mayonnaise", "quantity": 1, "quality": "any", "source": "Mayonnaise Machine (Dinosaur Egg)" },
+        { "name": "Prismatic Shard", "quantity": 1, "quality": "any", "source": "Mystic Stone, Monsters, Omni Geodes" },
+        { "name": "Ancient Fruit", "quantity": 5, "quality": "gold", "source": "Ancient Seeds (Seed Maker)" },
+        { "name": "Void Salmon", "quantity": 1, "quality": "gold", "source": "Witch's Swamp (any season)" },
+        { "name": "Caviar", "quantity": 1, "quality": "any", "source": "Preserves Jar (Sturgeon Roe)" }
+      ],
+      "tips": "This is post-game content! Requires Dinosaur Egg, Ancient Seeds, and Witch's Swamp access.",
+      "difficulty": "Very Hard"
+    }
+  ],
+  "rooms": [
+    {
+      "slug": "pantry",
+      "name": "Pantry",
+      "description": "Farm-related bundles - crops, animal products, and artisan goods.",
+      "reward": "Greenhouse - Grow crops year-round!",
+      "bundles": 6,
+      "icon": "🌾"
+    },
+    {
+      "slug": "fish-tank",
+      "name": "Fish Tank",
+      "description": "All fishing-related bundles.",
+      "reward": "Glittering Boulder Removed - Access to panning spots!",
+      "bundles": 6,
+      "icon": "🐟"
+    },
+    {
+      "slug": "crafts-room",
+      "name": "Crafts Room",
+      "description": "Foraging and construction bundles.",
+      "reward": "Bridge Repaired - Access to the Quarry!",
+      "bundles": 6,
+      "icon": "🪓"
+    },
+    {
+      "slug": "boiler-room",
+      "name": "Boiler Room",
+      "description": "Mining and monster-hunting bundles.",
+      "reward": "Minecarts Repaired - Fast travel around the valley!",
+      "bundles": 3,
+      "icon": "⛏️"
+    },
+    {
+      "slug": "bulletin-board",
+      "name": "Bulletin Board",
+      "description": "Various items from around the valley.",
+      "reward": "Friendship Boost - +2 hearts with all villagers!",
+      "bundles": 5,
+      "icon": "📋"
+    },
+    {
+      "slug": "vault",
+      "name": "Vault",
+      "description": "Gold donations to fund repairs.",
+      "reward": "Bus Repaired - Access to the Calico Desert!",
+      "bundles": 4,
+      "icon": "💰"
+    },
+    {
+      "slug": "abandoned-jojamart",
+      "name": "Abandoned JojaMart",
+      "description": "A special post-game bundle location.",
+      "reward": "Movie Theater - A new social venue!",
+      "bundles": 1,
+      "icon": "🎬"
+    }
+  ]
+}

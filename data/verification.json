@@ -1,0 +1,25 @@
+{
+  "lastVerified": "2025-12-07T00:00:00Z",
+  "gameVersion": "1.6.14",
+  "dataSource": "Stardew Valley Wiki",
+  "verificationStatus": "manual",
+  "nextVerificationDue": "2025-12-14T00:00:00Z",
+  "changelog": [
+    {
+      "date": "2025-12-07",
+      "action": "initial",
+      "note": "Initial data entry based on Stardew Valley Wiki"
+    }
+  ],
+  "spotChecks": [
+    { "item": "Parsnip", "field": "basePrice", "expected": 35, "verified": true },
+    { "item": "Cauliflower", "field": "basePrice", "expected": 175, "verified": true },
+    { "item": "Strawberry", "field": "basePrice", "expected": 120, "verified": true },
+    { "item": "Starfruit", "field": "basePrice", "expected": 750, "verified": true },
+    { "item": "Ancient Fruit", "field": "basePrice", "expected": 550, "verified": true },
+    { "item": "Wine formula", "field": "multiplier", "expected": 3, "verified": true },
+    { "item": "Jelly formula", "field": "formula", "expected": "base*2+50", "verified": true },
+    { "item": "Artisan bonus", "field": "multiplier", "expected": 1.4, "verified": true },
+    { "item": "Tiller bonus", "field": "percentage", "expected": 10, "verified": true }
+  ]
+}

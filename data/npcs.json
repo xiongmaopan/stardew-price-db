@@ -1,0 +1,698 @@
+{
+  "version": "1.6",
+  "lastUpdated": "2025-12-07",
+  "npcs": [
+    {
+      "id": 1,
+      "name": "Abigail",
+      "slug": "abigail",
+      "birthday": "Fall 13",
+      "location": "Pierre's General Store",
+      "marriageable": true,
+      "description": "Abigail lives at the general store with her parents. She has an interest in the occult and adventuring.",
+      "gifts": {
+        "love": ["Amethyst", "Banana Pudding", "Blackberry Cobbler", "Chocolate Cake", "Pufferfish", "Pumpkin", "Spicy Eel"],
+        "like": ["Quartz", "Ancient Fruit", "Coconut", "Cactus Fruit"],
+        "neutral": ["All Eggs", "All Fruit"],
+        "dislike": ["Sugar", "Holly"],
+        "hate": ["Clay", "Wild Horseradish"]
+      },
+      "schedule": "Often found in her room playing video games, at the graveyard, or exploring the mines.",
+      "heartEvents": [
+        {"hearts": 2, "location": "Pierre's Store", "description": "Playing her flute in her room"},
+        {"hearts": 4, "location": "Mountain Lake", "description": "Playing her flute by the lake"},
+        {"hearts": 6, "location": "Your House", "description": "Visit about her adventuring dreams"},
+        {"hearts": 8, "location": "Mines", "description": "Adventure together in the mines"},
+        {"hearts": 10, "location": "Mountain", "description": "Confession by the lake at night"}
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Alex",
+      "slug": "alex",
+      "birthday": "Summer 13",
+      "location": "1 River Road",
+      "marriageable": true,
+      "description": "Alex loves sports and dreams of becoming a professional athlete. He lives with his grandparents.",
+      "gifts": {
+        "love": ["Complete Breakfast", "Salmon Dinner"],
+        "like": ["All Eggs"],
+        "neutral": ["All Fruit"],
+        "dislike": ["Holly"],
+        "hate": ["Quartz"]
+      },
+      "schedule": "Works out at the beach in summer, practices gridball near his house.",
+      "heartEvents": [
+        {"hearts": 2, "location": "Beach", "description": "Working out on the beach"},
+        {"hearts": 4, "location": "River Road", "description": "Talking about his dreams"},
+        {"hearts": 6, "location": "Beach", "description": "Discussion about his mother"},
+        {"hearts": 8, "location": "Beach", "description": "Saloon incident aftermath"},
+        {"hearts": 10, "location": "Beach", "description": "Romantic moment at the beach"}
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Elliott",
+      "slug": "elliott",
+      "birthday": "Fall 5",
+      "location": "Elliott's Cabin (Beach)",
+      "marriageable": true,
+      "description": "Elliott lives alone in a cabin on the beach. He's a writer working on his first novel.",
+      "gifts": {
+        "love": ["Crab Cakes", "Duck Feather", "Lobster", "Pomegranate", "Squid Ink", "Tom Kha Soup"],
+        "like": ["All Fruit", "Octopus"],
+        "neutral": ["All Vegetables"],
+        "dislike": ["Amaranth", "Quartz"],
+        "hate": ["Pizza", "Sea Cucumber"]
+      },
+      "schedule": "Usually found in his cabin or at the beach pier.",
+      "heartEvents": [
+        {"hearts": 2, "location": "Beach", "description": "Writing at the beach"},
+        {"hearts": 4, "location": "Elliott's Cabin", "description": "Reading poetry"},
+        {"hearts": 6, "location": "Saloon", "description": "Piano performance"},
+        {"hearts": 8, "location": "Museum", "description": "Book reading event"},
+        {"hearts": 10, "location": "Beach", "description": "Romantic boat ride"}
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Emily",
+      "slug": "emily",
+      "birthday": "Spring 27",
+      "location": "2 Willow Lane",
+      "marriageable": true,
+      "description": "Emily is a creative spirit who works at the Stardrop Saloon. She loves making clothes and crystals.",
+      "gifts": {
+        "love": ["Amethyst", "Aquamarine", "Cloth", "Emerald", "Jade", "Ruby", "Survival Burger", "Topaz", "Wool"],
+        "like": ["Daffodil", "Quartz"],
+        "neutral": ["All Gems"],
+        "dislike": ["Salmonberry", "Fried Eel"],
+        "hate": ["Fish Taco", "Ice Cream", "Rice Pudding"]
+      },
+      "schedule": "Works at the Saloon in the evenings.",
+      "heartEvents": [
+        {"hearts": 2, "location": "Emily's House", "description": "Dream sequence with crystals"},
+        {"hearts": 4, "location": "Emily's House", "description": "Sewing project invitation"},
+        {"hearts": 6, "location": "Emily's House", "description": "Camping trip planning"},
+        {"hearts": 8, "location": "Secret Woods", "description": "Camping adventure"},
+        {"hearts": 10, "location": "Emily's House", "description": "Star reading confession"}
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Haley",
+      "slug": "haley",
+      "birthday": "Spring 14",
+      "location": "2 Willow Lane",
+      "marriageable": true,
+      "description": "Haley is Emily's sister. She loves photography and sunflowers.",
+      "gifts": {
+        "love": ["Coconut", "Fruit Salad", "Pink Cake", "Sunflower"],
+        "like": ["Daffodil"],
+        "neutral": ["All Fruit"],
+        "dislike": ["Clay"],
+        "hate": ["Prismatic Shard", "Wild Horseradish", "All Fish"]
+      },
+      "schedule": "Often found taking photos around town or sunbathing at the beach.",
+      "heartEvents": [
+        {"hearts": 2, "location": "Haley's House", "description": "Complaining about chores"},
+        {"hearts": 4, "location": "Beach", "description": "Photography session"},
+        {"hearts": 6, "location": "Alex's House", "description": "Developing photos together"},
+        {"hearts": 8, "location": "Forest", "description": "Lost in the forest"},
+        {"hearts": 10, "location": "Haley's House", "description": "Dark room confession"}
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Harvey",
+      "slug": "harvey",
+      "birthday": "Winter 14",
+      "location": "Medical Clinic",
+      "marriageable": true,
+      "description": "Harvey is the town doctor. He's a caring professional who worries about everyone's health.",
+      "gifts": {
+        "love": ["Coffee", "Pickles", "Super Meal", "Truffle Oil", "Wine"],
+        "like": ["All Fruit", "Chanterelle", "Daffodil", "Duck Egg", "Goat Milk"],
+        "neutral": ["All Vegetables"],
+        "dislike": ["Coral", "Nautilus Shell"],
+        "hate": ["All Universal Hates"]
+      },
+      "schedule": "Works at the clinic, often in his apartment above.",
+      "heartEvents": [
+        {"hearts": 2, "location": "Clinic", "description": "Examining radio equipment"},
+        {"hearts": 4, "location": "Clinic", "description": "Discussion about his practice"},
+        {"hearts": 6, "location": "Clinic", "description": "Emergency medical situation"},
+        {"hearts": 8, "location": "Railroad", "description": "Hot air balloon ride"},
+        {"hearts": 10, "location": "Clinic", "description": "Romantic moment in his apartment"}
+      ]
+    },
+    {
+      "id": 7,
+      "name": "Leah",
+      "slug": "leah",
+      "birthday": "Winter 23",
+      "location": "Leah's Cottage (Forest)",
+      "marriageable": true,
+      "description": "Leah lives in a small cottage in the forest. She's a talented sculptor.",
+      "gifts": {
+        "love": ["Goat Cheese", "Poppyseed Muffin", "Salad", "Stir Fry", "Truffle", "Vegetable Medley", "Wine"],
+        "like": ["All Eggs", "All Fruit", "All Milk", "All Mushrooms", "Driftwood"],
+        "neutral": ["All Vegetables"],
+        "dislike": ["Bread", "Oil", "Pizza"],
+        "hate": ["Void Egg"]
+      },
+      "schedule": "Often at her cottage sculpting or foraging in the forest.",
+      "heartEvents": [
+        {"hearts": 2, "location": "Forest", "description": "Sculpting in the forest"},
+        {"hearts": 4, "location": "Leah's Cottage", "description": "Ex-partner phone call"},
+        {"hearts": 6, "location": "Leah's Cottage", "description": "Discussing her art career"},
+        {"hearts": 8, "location": "Town", "description": "Art show event"},
+        {"hearts": 10, "location": "Forest", "description": "Picnic by the pond"}
+      ]
+    },
+    {
+      "id": 8,
+      "name": "Maru",
+      "slug": "maru",
+      "birthday": "Summer 10",
+      "location": "24 Mountain Road",
+      "marriageable": true,
+      "description": "Maru is a bright young woman who works as a nurse and loves inventing gadgets.",
+      "gifts": {
+        "love": ["Battery Pack", "Cauliflower", "Cheese Cauliflower", "Diamond", "Gold Bar", "Iridium Bar", "Miner's Treat", "Pepper Poppers", "Rhubarb Pie", "Strawberry"],
+        "like": ["Copper Bar", "Iron Bar", "Oak Resin", "Pine Tar", "Quartz"],
+        "neutral": ["All Vegetables"],
+        "dislike": ["All Universal Dislikes"],
+        "hate": ["Holly", "Honey", "Pickles"]
+      },
+      "schedule": "Works at the clinic, also found in the lab or stargazing.",
+      "heartEvents": [
+        {"hearts": 2, "location": "Maru's House", "description": "Working on an invention"},
+        {"hearts": 4, "location": "Clinic", "description": "Conversation about her work"},
+        {"hearts": 6, "location": "Maru's House", "description": "Telescope observation"},
+        {"hearts": 8, "location": "Maru's House", "description": "Robot demonstration"},
+        {"hearts": 10, "location": "Mountain", "description": "Stargazing confession"}
+      ]
+    },
+    {
+      "id": 9,
+      "name": "Penny",
+      "slug": "penny",
+      "birthday": "Fall 2",
+      "location": "Trailer (near Museum)",
+      "marriageable": true,
+      "description": "Penny lives in a trailer with her mother Pam. She tutors Jas and Vincent.",
+      "gifts": {
+        "love": ["Diamond", "Emerald", "Melon", "Poppy", "Poppyseed Muffin", "Red Plate", "Roots Platter", "Sandfish", "Tom Kha Soup"],
+        "like": ["All Books", "Dandelion", "Leek", "All Milk"],
+        "neutral": ["All Vegetables"],
+        "dislike": ["Grape", "Hops"],
+        "hate": ["Beer", "Mead", "Pale Ale", "Rabbit's Foot", "Wine"]
+      },
+      "schedule": "Tutors children at the museum library, often found reading.",
+      "heartEvents": [
+        {"hearts": 2, "location": "Town", "description": "Teaching the kids"},
+        {"hearts": 4, "location": "Trailer", "description": "Cleaning the trailer"},
+        {"hearts": 6, "location": "Trailer", "description": "Dealing with Pam"},
+        {"hearts": 8, "location": "Bathhouse", "description": "Field trip with the kids"},
+        {"hearts": 10, "location": "Forest", "description": "Romantic moment by the tree"}
+      ]
+    },
+    {
+      "id": 10,
+      "name": "Sam",
+      "slug": "sam",
+      "birthday": "Summer 17",
+      "location": "1 Willow Lane",
+      "marriageable": true,
+      "description": "Sam loves skateboarding and playing music with his band.",
+      "gifts": {
+        "love": ["Cactus Fruit", "Maple Bar", "Pizza", "Tigerseye"],
+        "like": ["All Eggs", "Joja Cola"],
+        "neutral": ["All Fruit"],
+        "dislike": ["All Universal Dislikes"],
+        "hate": ["Duck Mayonnaise", "Mayonnaise"]
+      },
+      "schedule": "Often skateboarding in town or practicing with his band.",
+      "heartEvents": [
+        {"hearts": 2, "location": "Beach", "description": "Band practice discussion"},
+        {"hearts": 4, "location": "Sam's House", "description": "Helping with his band"},
+        {"hearts": 6, "location": "Town", "description": "Skateboarding mishap"},
+        {"hearts": 8, "location": "Sam's House", "description": "Secret visit at night"},
+        {"hearts": 10, "location": "Beach", "description": "Band concert at the beach"}
+      ]
+    },
+    {
+      "id": 11,
+      "name": "Sebastian",
+      "slug": "sebastian",
+      "birthday": "Winter 10",
+      "location": "24 Mountain Road",
+      "marriageable": true,
+      "description": "Sebastian is a freelance programmer who dreams of moving to the city. He enjoys his motorcycle.",
+      "gifts": {
+        "love": ["Frozen Tear", "Obsidian", "Pumpkin Soup", "Sashimi", "Void Egg"],
+        "like": ["Flounder", "Quartz"],
+        "neutral": ["All Fruit"],
+        "dislike": ["All Universal Dislikes"],
+        "hate": ["Clay", "Complete Breakfast", "Farmer's Lunch", "Omelet"]
+      },
+      "schedule": "Usually in his room programming, by the lake at night, or riding his motorcycle.",
+      "heartEvents": [
+        {"hearts": 2, "location": "Sebastian's Room", "description": "Working on the computer"},
+        {"hearts": 4, "location": "Mountain", "description": "By the lake at night"},
+        {"hearts": 6, "location": "Sebastian's Room", "description": "Talking about his dreams"},
+        {"hearts": 8, "location": "Beach", "description": "Motorcycle ride at night"},
+        {"hearts": 10, "location": "Mountain", "description": "Rainy day confession"}
+      ]
+    },
+    {
+      "id": 12,
+      "name": "Shane",
+      "slug": "shane",
+      "birthday": "Spring 20",
+      "location": "Marnie's Ranch",
+      "marriageable": true,
+      "description": "Shane works at JojaMart and struggles with depression. He has a passion for raising chickens.",
+      "gifts": {
+        "love": ["Beer", "Hot Pepper", "Pepper Poppers", "Pizza"],
+        "like": ["All Eggs", "All Fruit"],
+        "neutral": ["All Vegetables"],
+        "dislike": ["Quartz"],
+        "hate": ["Pickles", "Seaweed"]
+      },
+      "schedule": "Works at JojaMart, often at the saloon in the evening, or by the cliffs.",
+      "heartEvents": [
+        {"hearts": 2, "location": "Marnie's Ranch", "description": "Feeding his chickens"},
+        {"hearts": 4, "location": "Saloon", "description": "Drinking alone"},
+        {"hearts": 6, "location": "Cliffs", "description": "Critical moment at the cliffs"},
+        {"hearts": 7, "location": "Hospital", "description": "Hospital recovery"},
+        {"hearts": 8, "location": "Marnie's Ranch", "description": "Showing his blue chickens"},
+        {"hearts": 10, "location": "Beach", "description": "Gridball game"}
+      ]
+    },
+    {
+      "id": 13,
+      "name": "Caroline",
+      "slug": "caroline",
+      "birthday": "Winter 7",
+      "location": "Pierre's General Store",
+      "marriageable": false,
+      "description": "Caroline is Pierre's wife and Abigail's mother. She maintains a secret tea garden.",
+      "gifts": {
+        "love": ["Fish Taco", "Green Tea", "Summer Spangle", "Tropical Curry"],
+        "like": ["Daffodil"],
+        "neutral": ["All Vegetables"],
+        "dislike": ["All Universal Dislikes"],
+        "hate": ["Amaranth"]
+      },
+      "schedule": "Usually at Pierre's store or in her tea garden.",
+      "heartEvents": []
+    },
+    {
+      "id": 14,
+      "name": "Clint",
+      "slug": "clint",
+      "birthday": "Winter 26",
+      "location": "Blacksmith Shop",
+      "marriageable": false,
+      "description": "Clint is the town blacksmith. He has a crush on Emily but struggles to express it.",
+      "gifts": {
+        "love": ["Amethyst", "Aquamarine", "Artichoke Dip", "Emerald", "Fiddlehead Risotto", "Gold Bar", "Iridium Bar", "Jade", "Omni Geode", "Ruby", "Topaz"],
+        "like": ["Copper Bar", "Iron Bar"],
+        "neutral": ["All Vegetables"],
+        "dislike": ["All Universal Dislikes"],
+        "hate": ["All Universal Hates"]
+      },
+      "schedule": "Works at the blacksmith shop from 9am to 4pm.",
+      "heartEvents": []
+    },
+    {
+      "id": 15,
+      "name": "Demetrius",
+      "slug": "demetrius",
+      "birthday": "Summer 19",
+      "location": "24 Mountain Road",
+      "marriageable": false,
+      "description": "Demetrius is a scientist who studies the local flora and fauna. He's Maru's father.",
+      "gifts": {
+        "love": ["Bean Hotpot", "Ice Cream", "Rice Pudding", "Strawberry"],
+        "like": ["All Eggs", "All Fruit", "Purple Mushroom"],
+        "neutral": ["All Vegetables"],
+        "dislike": ["All Universal Dislikes"],
+        "hate": ["Holly"]
+      },
+      "schedule": "Often found in his lab at home or doing field research.",
+      "heartEvents": []
+    },
+    {
+      "id": 16,
+      "name": "Evelyn",
+      "slug": "evelyn",
+      "birthday": "Winter 20",
+      "location": "1 River Road",
+      "marriageable": false,
+      "description": "Evelyn is Alex's grandmother. She loves gardening and baking.",
+      "gifts": {
+        "love": ["Beet", "Chocolate Cake", "Diamond", "Fairy Rose", "Stuffing", "Tulip"],
+        "like": ["All Milk"],
+        "neutral": ["All Vegetables"],
+        "dislike": ["All Universal Dislikes"],
+        "hate": ["Fried Eel", "Maki Roll", "Salmon Dinner"]
+      },
+      "schedule": "Often found tending her garden.",
+      "heartEvents": []
+    },
+    {
+      "id": 17,
+      "name": "George",
+      "slug": "george",
+      "birthday": "Fall 24",
+      "location": "1 River Road",
+      "marriageable": false,
+      "description": "George is Alex's grandfather. He's grumpy but has a softer side.",
+      "gifts": {
+        "love": ["Fried Mushroom", "Leek"],
+        "like": ["Daffodil"],
+        "neutral": ["All Vegetables"],
+        "dislike": ["All Universal Dislikes"],
+        "hate": ["Clay"]
+      },
+      "schedule": "Usually at home watching TV.",
+      "heartEvents": []
+    },
+    {
+      "id": 18,
+      "name": "Gus",
+      "slug": "gus",
+      "birthday": "Summer 8",
+      "location": "Stardrop Saloon",
+      "marriageable": false,
+      "description": "Gus owns the Stardrop Saloon. He's a friendly bartender who cares about the community.",
+      "gifts": {
+        "love": ["Diamond", "Escargot", "Fish Taco", "Orange", "Tropical Curry"],
+        "like": ["Daffodil"],
+        "neutral": ["All Vegetables"],
+        "dislike": ["All Universal Dislikes"],
+        "hate": ["Coleslaw"]
+      },
+      "schedule": "Works at the Saloon from noon until late.",
+      "heartEvents": []
+    },
+    {
+      "id": 19,
+      "name": "Jas",
+      "slug": "jas",
+      "birthday": "Summer 4",
+      "location": "Marnie's Ranch",
+      "marriageable": false,
+      "description": "Jas is a young girl who lives with her aunt Marnie. She's friends with Vincent.",
+      "gifts": {
+        "love": ["Ancient Doll", "Fairy Box", "Fairy Rose", "Pink Cake", "Plum Pudding"],
+        "like": ["Coconut", "Daffodil"],
+        "neutral": ["All Vegetables"],
+        "dislike": ["All Universal Dislikes"],
+        "hate": ["Clay"]
+      },
+      "schedule": "Often playing with Vincent or attending lessons with Penny.",
+      "heartEvents": []
+    },
+    {
+      "id": 20,
+      "name": "Jodi",
+      "slug": "jodi",
+      "birthday": "Fall 11",
+      "location": "1 Willow Lane",
+      "marriageable": false,
+      "description": "Jodi is Sam and Vincent's mother. Her husband Kent returns in Year 2.",
+      "gifts": {
+        "love": ["Chocolate Cake", "Crispy Bass", "Diamond", "Eggplant Parmesan", "Fried Eel", "Pancakes", "Rhubarb Pie", "Vegetable Medley"],
+        "like": ["All Eggs", "All Fruit", "All Milk"],
+        "neutral": ["All Vegetables"],
+        "dislike": ["All Universal Dislikes"],
+        "hate": ["All Universal Hates"]
+      },
+      "schedule": "Usually at home or shopping at Pierre's.",
+      "heartEvents": []
+    },
+    {
+      "id": 21,
+      "name": "Kent",
+      "slug": "kent",
+      "birthday": "Spring 4",
+      "location": "1 Willow Lane",
+      "marriageable": false,
+      "description": "Kent returns from military service in Year 2. He struggles with PTSD.",
+      "gifts": {
+        "love": ["Fiddlehead Risotto", "Roasted Hazelnuts"],
+        "like": ["Daffodil", "All Eggs", "All Fruit"],
+        "neutral": ["All Vegetables"],
+        "dislike": ["All Universal Dislikes"],
+        "hate": ["Sashimi", "Tortilla"]
+      },
+      "schedule": "Arrives Spring 1 Year 2. Often walking around town.",
+      "heartEvents": []
+    },
+    {
+      "id": 22,
+      "name": "Krobus",
+      "slug": "krobus",
+      "birthday": "Winter 1",
+      "location": "Sewers",
+      "marriageable": false,
+      "description": "Krobus is a shadow creature in the sewers. He can become your roommate.",
+      "gifts": {
+        "love": ["Diamond", "Iridium Bar", "Pumpkin", "Void Egg", "Void Mayonnaise", "Wild Horseradish"],
+        "like": ["Gold Bar", "Quartz"],
+        "neutral": ["All Vegetables"],
+        "dislike": ["All Universal Dislikes"],
+        "hate": ["All Cooking"]
+      },
+      "schedule": "Always in the sewers, sells items on certain days.",
+      "heartEvents": []
+    },
+    {
+      "id": 23,
+      "name": "Leo",
+      "slug": "leo",
+      "birthday": "Summer 26",
+      "location": "Ginger Island",
+      "marriageable": false,
+      "description": "Leo is a young boy who lives on Ginger Island with parrots.",
+      "gifts": {
+        "love": ["Duck Feather", "Mango", "Ostrich Egg", "Poi"],
+        "like": ["All Fruit"],
+        "neutral": ["All Vegetables"],
+        "dislike": ["All Universal Dislikes"],
+        "hate": ["All Universal Hates"]
+      },
+      "schedule": "On Ginger Island initially, moves to the mountain treehouse later.",
+      "heartEvents": []
+    },
+    {
+      "id": 24,
+      "name": "Lewis",
+      "slug": "lewis",
+      "birthday": "Spring 7",
+      "location": "Mayor's Manor",
+      "marriageable": false,
+      "description": "Lewis is the mayor of Pelican Town. He has a secret relationship with Marnie.",
+      "gifts": {
+        "love": ["Autumn's Bounty", "Glazed Yams", "Green Tea", "Hot Pepper", "Vegetable Medley"],
+        "like": ["Blueberry", "Cactus Fruit", "Coconut"],
+        "neutral": ["All Vegetables"],
+        "dislike": ["All Universal Dislikes"],
+        "hate": ["Quartz"]
+      },
+      "schedule": "Often at the Mayor's Manor or walking through town.",
+      "heartEvents": []
+    },
+    {
+      "id": 25,
+      "name": "Linus",
+      "slug": "linus",
+      "birthday": "Winter 3",
+      "location": "Tent (Mountain)",
+      "marriageable": false,
+      "description": "Linus lives in a tent on the mountain. He values the simple life.",
+      "gifts": {
+        "love": ["Blueberry Tart", "Cactus Fruit", "Coconut", "Dish O' The Sea", "Yam"],
+        "like": ["All Eggs", "All Fruit", "All Milk"],
+        "neutral": ["All Vegetables"],
+        "dislike": ["All Universal Dislikes"],
+        "hate": ["All Universal Hates"]
+      },
+      "schedule": "Lives in tent on the mountain, forages for food.",
+      "heartEvents": []
+    },
+    {
+      "id": 26,
+      "name": "Marnie",
+      "slug": "marnie",
+      "birthday": "Fall 18",
+      "location": "Marnie's Ranch",
+      "marriageable": false,
+      "description": "Marnie runs the animal ranch. She has a secret relationship with Lewis.",
+      "gifts": {
+        "love": ["Diamond", "Farmer's Lunch", "Pink Cake", "Pumpkin Pie"],
+        "like": ["All Eggs", "All Milk", "Quartz"],
+        "neutral": ["All Vegetables"],
+        "dislike": ["All Universal Dislikes"],
+        "hate": ["All Universal Hates"]
+      },
+      "schedule": "Usually at her shop (not always at the counter!).",
+      "heartEvents": []
+    },
+    {
+      "id": 27,
+      "name": "Pam",
+      "slug": "pam",
+      "birthday": "Spring 18",
+      "location": "Trailer / Bus Stop",
+      "marriageable": false,
+      "description": "Pam is Penny's mother. She drives the bus to the Desert.",
+      "gifts": {
+        "love": ["Beer", "Cactus Fruit", "Glazed Yams", "Mead", "Pale Ale", "Parsnip", "Parsnip Soup"],
+        "like": ["All Fruit", "All Milk"],
+        "neutral": ["All Vegetables"],
+        "dislike": ["All Universal Dislikes"],
+        "hate": ["All Universal Hates"]
+      },
+      "schedule": "Drives the bus during the day, at the Saloon in the evening.",
+      "heartEvents": []
+    },
+    {
+      "id": 28,
+      "name": "Pierre",
+      "slug": "pierre",
+      "birthday": "Spring 26",
+      "location": "Pierre's General Store",
+      "marriageable": false,
+      "description": "Pierre runs the general store. He's competitive with Morris from JojaMart.",
+      "gifts": {
+        "love": ["Fried Calamari"],
+        "like": ["Daffodil", "Dandelion", "All Eggs", "All Milk"],
+        "neutral": ["All Vegetables"],
+        "dislike": ["Corn", "Garlic"],
+        "hate": ["Tortilla"]
+      },
+      "schedule": "Works at his store most days (closed Wednesday).",
+      "heartEvents": []
+    },
+    {
+      "id": 29,
+      "name": "Robin",
+      "slug": "robin",
+      "birthday": "Fall 21",
+      "location": "24 Mountain Road",
+      "marriageable": false,
+      "description": "Robin is the town carpenter. She builds farm buildings and upgrades your house.",
+      "gifts": {
+        "love": ["Goat Cheese", "Peach", "Spaghetti"],
+        "like": ["All Fruit", "Hardwood", "Quartz", "All Milk"],
+        "neutral": ["All Vegetables"],
+        "dislike": ["All Universal Dislikes"],
+        "hate": ["All Universal Hates"]
+      },
+      "schedule": "Works at her shop from 9am to 5pm (closed Tuesday).",
+      "heartEvents": []
+    },
+    {
+      "id": 30,
+      "name": "Sandy",
+      "slug": "sandy",
+      "birthday": "Fall 15",
+      "location": "Oasis (Desert)",
+      "marriageable": false,
+      "description": "Sandy runs the Oasis shop in the Calico Desert. She's friends with Emily.",
+      "gifts": {
+        "love": ["Crocus", "Daffodil", "Mango Sticky Rice", "Sweet Pea", "Tom Kha Soup"],
+        "like": ["All Fruit", "Goat Milk", "Wool"],
+        "neutral": ["All Vegetables"],
+        "dislike": ["All Universal Dislikes"],
+        "hate": ["All Universal Hates"]
+      },
+      "schedule": "Always at the Oasis in the desert.",
+      "heartEvents": []
+    },
+    {
+      "id": 31,
+      "name": "Vincent",
+      "slug": "vincent",
+      "birthday": "Spring 10",
+      "location": "1 Willow Lane",
+      "marriageable": false,
+      "description": "Vincent is a young boy, Sam's little brother. He's friends with Jas.",
+      "gifts": {
+        "love": ["Cranberry Candy", "Ginger Ale", "Grape", "Pink Cake", "Snail"],
+        "like": ["Coconut", "Daffodil"],
+        "neutral": ["All Vegetables"],
+        "dislike": ["All Universal Dislikes"],
+        "hate": ["All Universal Hates"]
+      },
+      "schedule": "Often playing with Jas or attending lessons.",
+      "heartEvents": []
+    },
+    {
+      "id": 32,
+      "name": "Willy",
+      "slug": "willy",
+      "birthday": "Summer 24",
+      "location": "Fish Shop (Beach)",
+      "marriageable": false,
+      "description": "Willy is the local fisherman who runs the fish shop on the beach.",
+      "gifts": {
+        "love": ["Catfish", "Diamond", "Gold Bar", "Iridium Bar", "Mead", "Octopus", "Pumpkin", "Sea Cucumber", "Sturgeon"],
+        "like": ["Quartz", "Tiger Trout"],
+        "neutral": ["All Fish"],
+        "dislike": ["All Universal Dislikes"],
+        "hate": ["All Universal Hates"]
+      },
+      "schedule": "Works at his shop from 9am to 5pm.",
+      "heartEvents": []
+    },
+    {
+      "id": 33,
+      "name": "Wizard",
+      "slug": "wizard",
+      "birthday": "Winter 17",
+      "location": "Wizard's Tower",
+      "marriageable": false,
+      "description": "The Wizard (M. Rasmodius) lives in the tower south of town and studies magic.",
+      "gifts": {
+        "love": ["Purple Mushroom", "Solar Essence", "Super Cucumber", "Void Essence"],
+        "like": ["All Geode Minerals", "Quartz"],
+        "neutral": ["All Vegetables"],
+        "dislike": ["All Universal Dislikes"],
+        "hate": ["All Universal Hates"]
+      },
+      "schedule": "Usually in his tower researching magic.",
+      "heartEvents": []
+    },
+    {
+      "id": 34,
+      "name": "Dwarf",
+      "slug": "dwarf",
+      "birthday": "Summer 22",
+      "location": "Eastern Cave (Mines)",
+      "marriageable": false,
+      "description": "The Dwarf lives in the mines. You need the Dwarvish Translation Guide to understand him.",
+      "gifts": {
+        "love": ["Amethyst", "Aquamarine", "Emerald", "Jade", "Lemon Stone", "Omni Geode", "Ruby", "Topaz"],
+        "like": ["All Artifacts", "Quartz"],
+        "neutral": ["All Vegetables"],
+        "dislike": ["All Universal Dislikes"],
+        "hate": ["All Universal Hates"]
+      },
+      "schedule": "Always in the eastern cave entrance in the mines.",
+      "heartEvents": []
+    }
+  ],
+  "universalGifts": {
+    "love": ["Golden Pumpkin", "Magic Rock Candy", "Pearl", "Prismatic Shard", "Rabbit's Foot"],
+    "like": ["Most Artisan Goods", "Most Cooking", "Flowers", "Gems", "Vegetables"],
+    "neutral": ["Milk", "Eggs", "Most Fish", "Fruit"],
+    "dislike": ["Bait", "Bombs", "Geodes", "Monster Loot"],
+    "hate": ["Trash Items", "Holly", "Void Mayonnaise"]
+  }
+}

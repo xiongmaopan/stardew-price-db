@@ -1,0 +1,606 @@
+{
+  "version": "1.6",
+  "lastUpdated": "2025-12-09",
+  "strategies": {
+    "fried-egg": {
+      "proTip": "Your first recipe - cook eggs instead of selling raw. 35g sell vs 50g raw egg, but +50 energy makes it valuable early game when food is scarce.",
+      "strategyNote": "Keep 1-2 cooked for energy in mines. As you get better food sources, sell eggs raw or process into Mayo (190g base).",
+      "bestUse": "Early game energy",
+      "profitTip": "Raw egg sells higher. Cook only for personal use.",
+      "pairsWellWith": "Mine exploration, early foraging trips",
+      "difficulty": "Starter"
+    },
+    "omelet": {
+      "proTip": "Wait for Queen of Sauce Year 1 Spring 28. Egg + Milk = 100 energy. Better than fried egg but milk has better uses (Cheese = 230g).",
+      "strategyNote": "Decent mid-game food but Cheese is more profitable than Omelet. Cook for personal use only, never sell.",
+      "bestUse": "Personal energy recovery",
+      "profitTip": "Make Cheese instead. 125g omelet vs 230g cheese from same milk.",
+      "pairsWellWith": "Skull Cavern runs when you need quick energy",
+      "difficulty": "Easy"
+    },
+    "salad": {
+      "proTip": "Get from Emily at 3 hearts. Uses foraged items (Leek + Dandelion) that are easy Spring finds. 113 energy is solid.",
+      "strategyNote": "One of the best early-game recipes using free foraged ingredients. Stock up on Leeks and Dandelions in Spring for year-round salads.",
+      "bestUse": "Budget energy food",
+      "profitTip": "Never sell - the ingredients are worth more as energy than gold.",
+      "pairsWellWith": "Spring foraging, budget mine runs",
+      "difficulty": "Easy"
+    },
+    "cheese-cauliflower": {
+      "proTip": "Pam 3 hearts recipe. Cauliflower (175g raw, 262g gold) + Cheese (230g) = 300g dish. Math doesn't favor cooking.",
+      "strategyNote": "This is a trap recipe for profit. Only cook for gifting (Lewis loves it) or personal use. Sell ingredients separately.",
+      "bestUse": "Gifting to Lewis",
+      "profitTip": "AVOID cooking for profit. Raw ingredients sell for more.",
+      "pairsWellWith": "Lewis birthday (Spring 7), friendship grinding",
+      "difficulty": "Easy"
+    },
+    "baked-fish": {
+      "proTip": "Queen of Sauce Year 1 Summer 7. Uses common fish (Sunfish + Bream). 75 energy is mediocre but ingredients are easy.",
+      "strategyNote": "Filler recipe. The fish are worth more in Fish Ponds or sold raw. Only cook if you have excess common fish.",
+      "bestUse": "Using up common fish",
+      "profitTip": "Put Bream in Fish Pond instead - produces Roe worth more long-term.",
+      "pairsWellWith": "Cleaning out fishing inventory",
+      "difficulty": "Easy"
+    },
+    "parsnip-soup": {
+      "proTip": "Caroline 3 hearts. Uses Parsnip + Milk + Vinegar. Only 85 energy. Parsnips are better sold or gifted to Pam.",
+      "strategyNote": "Weak recipe. Parsnips sell for 35g raw, Gold quality 52g. The milk alone is worth more as cheese.",
+      "bestUse": "Pam gifts (she loves Parsnip)",
+      "profitTip": "Skip this recipe entirely for profit.",
+      "pairsWellWith": "Early Spring when you have excess parsnips",
+      "difficulty": "Easy"
+    },
+    "vegetable-medley": {
+      "proTip": "Caroline 7 hearts. Tomato + Beet = 120 energy. Both vegetables are common crops. Decent everyday food.",
+      "strategyNote": "Solid recipe once you have Beets (Fall Year 1 or later from Oasis). Keep a stack for mining.",
+      "bestUse": "Everyday energy food",
+      "profitTip": "Cook for use, not profit. Ingredients sell higher raw.",
+      "pairsWellWith": "Fall harvest surplus, mine preparation",
+      "difficulty": "Easy"
+    },
+    "complete-breakfast": {
+      "proTip": "Queen of Sauce Year 2 Spring 21. THE breakfast. +2 Farming buff for 7 min. Stack with Coffee for speed.",
+      "strategyNote": "One of the best buff foods. Farming buff helps with watering efficiency and crop quality. Make this your daily morning meal.",
+      "bestUse": "Daily farming buff",
+      "profitTip": "Never sell. The farming buff is invaluable during harvest seasons.",
+      "pairsWellWith": "Coffee (speed), Harvest days, Ginger Island farming",
+      "difficulty": "Medium"
+    },
+    "fried-calamari": {
+      "proTip": "Jodi 3 hearts. Squid (night ocean fishing) + Wheat Flour + Oil. 80 energy, no buffs. Squid is rare.",
+      "strategyNote": "Not worth the Squid. Squid sells for 80g and is used in Squid Ink Ravioli (better recipe). Skip this.",
+      "bestUse": "Using excess Squid",
+      "profitTip": "Save Squid for Fish Pond (produces Squid Ink) or Squid Ink Ravioli.",
+      "pairsWellWith": "Night fishing surplus",
+      "difficulty": "Medium"
+    },
+    "lucky-lunch": {
+      "proTip": "Queen of Sauce Year 2 Spring 28. +3 Luck for 11 minutes. ESSENTIAL for Skull Cavern. Sea Cucumber + Tortilla + Blue Jazz.",
+      "strategyNote": "THE Skull Cavern recipe. +3 Luck dramatically increases iridium node spawns and ladder chances. Always bring 5-10 for deep runs.",
+      "bestUse": "Skull Cavern iridium farming",
+      "profitTip": "Never sell. The luck buff is worth far more than any sell price.",
+      "pairsWellWith": "Spicy Eel (speed + luck stack), Coffee, Staircases",
+      "difficulty": "Medium"
+    },
+    "spicy-eel": {
+      "proTip": "George 7 hearts OR Serpent drops in Skull Cavern. +1 Luck +1 Speed. THE meta Skull Cavern food.",
+      "strategyNote": "Best all-around buff food. Luck + Speed in one meal. Serpents drop it frequently - save every one you get.",
+      "bestUse": "Skull Cavern, general exploration",
+      "profitTip": "NEVER sell. This is your premium buff food. Hoard all Spicy Eel from Serpent drops.",
+      "pairsWellWith": "Coffee (speed stacks), Lucky Lunch (luck stacks for mega runs)",
+      "difficulty": "Medium"
+    },
+    "sashimi": {
+      "proTip": "Linus 3 hearts. ANY fish = 75 energy. Use trash fish like Carp, Bream. Best early energy food.",
+      "strategyNote": "Game-changing recipe. Turn worthless fish into energy. Carp (30g) becomes 75 energy. Essential for mine runs.",
+      "bestUse": "Converting cheap fish to energy",
+      "profitTip": "Use lowest value fish. Carp, Bream, Chub are ideal candidates.",
+      "pairsWellWith": "Budget Skull Cavern runs, any exploration",
+      "difficulty": "Easy"
+    },
+    "maki-roll": {
+      "proTip": "Queen of Sauce Year 1 Summer 21. Fish + Seaweed + Rice. 100 energy. Seaweed is free from beach/fishing.",
+      "strategyNote": "Good recipe but Sashimi is often better (fewer ingredients). Use if you have excess Rice and Seaweed.",
+      "bestUse": "Using up Seaweed stockpile",
+      "profitTip": "Cook for use, Sashimi is more efficient for pure energy.",
+      "pairsWellWith": "Beach foraging days",
+      "difficulty": "Easy"
+    },
+    "pizza": {
+      "proTip": "Queen of Sauce Year 2 Spring 7 OR Saloon 600g. Wheat Flour + Tomato + Cheese. 150 energy, no buff.",
+      "strategyNote": "Decent everyday food. Buy from Saloon when lazy. The recipe is better value long-term if you farm ingredients.",
+      "bestUse": "Quick high-energy food",
+      "profitTip": "Don't sell. Better than buying from Saloon at 600g.",
+      "pairsWellWith": "Lazy days, Saloon alternative",
+      "difficulty": "Easy"
+    },
+    "pumpkin-pie": {
+      "proTip": "Queen of Sauce Year 1 Winter 21. Pumpkin + Wheat Flour + Milk + Sugar. 225 energy. Fall prep required.",
+      "strategyNote": "High energy but Pumpkin sells for 320g raw. Only cook for gifts (universal like) or if you have Gold+ Pumpkins for Giant Pumpkin attempts.",
+      "bestUse": "Universal liked gift",
+      "profitTip": "Pumpkins are worth more raw. Cook only excess from Giant Pumpkin harvests.",
+      "pairsWellWith": "Fall harvest surplus, winter gift prep",
+      "difficulty": "Medium"
+    },
+    "cranberry-sauce": {
+      "proTip": "Gus 7 hearts. Cranberries + Sugar. 125 energy. Cranberries regrow so you'll have tons.",
+      "strategyNote": "Good use for excess Cranberries after you've processed main harvest into Wine/Jelly. Quick to make.",
+      "bestUse": "Using Cranberry surplus",
+      "profitTip": "Wine and Jelly are more profitable. Cook sauce only from excess.",
+      "pairsWellWith": "Fall Cranberry harvest overflow",
+      "difficulty": "Easy"
+    },
+    "stuffing": {
+      "proTip": "Pam 7 hearts. Bread + Cranberries + Hazelnut. 170 energy. The Hazelnut is the bottleneck.",
+      "strategyNote": "Good Fall recipe since Hazelnuts drop from bushes. Bread is cheap (100g Saloon). Solid energy for exploration.",
+      "bestUse": "Fall foraging utilization",
+      "profitTip": "Better than selling ingredients separately. Good profit recipe.",
+      "pairsWellWith": "Fall foraging trips, mine preparation",
+      "difficulty": "Medium"
+    },
+    "farmers-lunch": {
+      "proTip": "Farming Level 3 reward. Omelet + Parsnip. +3 Farming buff for 5 min 35 sec. Cheap farming buff.",
+      "strategyNote": "Budget version of Complete Breakfast. Use for quick farming tasks. +3 Farming improves hoe efficiency.",
+      "bestUse": "Quick farming buff, hoe efficiency",
+      "profitTip": "Never sell. Use for personal farming boost.",
+      "pairsWellWith": "Planting days, quick harvests",
+      "difficulty": "Easy"
+    },
+    "survival-burger": {
+      "proTip": "Foraging Level 2 reward. Bread + Cave Carrot + Eggplant. +3 Foraging buff for 5 min 35 sec.",
+      "strategyNote": "The foraging buff helps find more forage items AND improves axe efficiency. Great for hardwood runs.",
+      "bestUse": "Foraging buff, Secret Woods runs",
+      "profitTip": "Never sell. Use for foraging trips and tree chopping.",
+      "pairsWellWith": "Secret Woods hardwood farming, foraging routes",
+      "difficulty": "Easy"
+    },
+    "dish-o-the-sea": {
+      "proTip": "Fishing Level 3 reward. Sardine + Hashbrowns. +3 Fishing buff for 5 min 35 sec. ESSENTIAL for hard fish.",
+      "strategyNote": "Must-have for catching difficult fish. +3 Fishing makes the bar significantly larger. Stock up before going for legendaries.",
+      "bestUse": "Catching difficult fish, legendaries prep",
+      "profitTip": "Never sell. The fishing buff is critical for rare catches.",
+      "pairsWellWith": "Legendary fish attempts, Lava Eel, Octopus",
+      "difficulty": "Easy"
+    },
+    "miners-treat": {
+      "proTip": "Mining Level 3 reward. Cave Carrot + Sugar + Milk. +3 Mining buff for 5 min 35 sec.",
+      "strategyNote": "+3 Mining makes pickaxe more efficient. Useful for breaking rocks faster. Not as essential as Dish o The Sea.",
+      "bestUse": "Mining efficiency, Skull Cavern rock breaking",
+      "profitTip": "Cook for personal use during mine runs.",
+      "pairsWellWith": "Skull Cavern, Volcano Dungeon, node farming",
+      "difficulty": "Easy"
+    },
+    "roots-platter": {
+      "proTip": "Combat Level 3 reward. Cave Carrot + Winter Root. +3 Attack buff for 5 min 35 sec.",
+      "strategyNote": "+3 Attack is significant damage boost. Cave Carrot from mines, Winter Root from Winter foraging/hoeing.",
+      "bestUse": "Combat buff for dangerous areas",
+      "profitTip": "Save for Skull Cavern or Volcano combat.",
+      "pairsWellWith": "Skull Cavern Serpents, Volcano Dungeon enemies",
+      "difficulty": "Easy"
+    },
+    "seafoam-pudding": {
+      "proTip": "Fishing Level 9 reward. Flounder + Midnight Carp + Squid. +4 Fishing buff for 10 min. THE fishing food.",
+      "strategyNote": "Best fishing buff in the game. +4 Fishing is massive. Save exclusively for legendary fish and the hardest catches.",
+      "bestUse": "Legendary fish, hardest catches only",
+      "profitTip": "NEVER waste on easy fish. Reserve for Legend, Glacierfish, Crimsonfish.",
+      "pairsWellWith": "All legendary fish attempts, Lava Eel",
+      "difficulty": "Hard"
+    },
+    "pepper-poppers": {
+      "proTip": "Shane 3 hearts. Hot Pepper + Cheese. +2 Speed +1 Farming for 7 min. Speed buff is the star.",
+      "strategyNote": "Good speed buff food. Hot Peppers are easy to grow. Speed helps cover ground faster.",
+      "bestUse": "Speed buff, farm traversal",
+      "profitTip": "Cook for use, especially for large farm layouts.",
+      "pairsWellWith": "Large farm management, quick errands",
+      "difficulty": "Easy"
+    },
+    "maple-bar": {
+      "proTip": "Queen of Sauce Year 2 Summer 14. Maple Syrup + Sugar + Wheat Flour. +1 Farming +1 Fishing +1 Mining for 16 min 47 sec.",
+      "strategyNote": "Jack of all trades buff. Long duration is nice. Maple Syrup takes 9 days per tap, so plan ahead.",
+      "bestUse": "Multi-task days",
+      "profitTip": "Good for days mixing fishing and mining.",
+      "pairsWellWith": "Mixed activity days, all-around buff needs",
+      "difficulty": "Medium"
+    },
+    "plum-pudding": {
+      "proTip": "Queen of Sauce Year 1 Winter 7. Wild Plum x2 + Wheat Flour + Sugar. 100 energy, no buff.",
+      "strategyNote": "Uses Fall forage (Wild Plums). Decent Winter recipe when forage is scarce. Stock up on Wild Plums in Fall.",
+      "bestUse": "Winter energy food from stored Fall forage",
+      "profitTip": "Not for profit. Use to convert stored plums to energy.",
+      "pairsWellWith": "Winter mining, stored Fall forage",
+      "difficulty": "Easy"
+    },
+    "artichoke-dip": {
+      "proTip": "Queen of Sauce Year 1 Fall 28. Artichoke + Milk. 100 energy. Artichoke is Year 2 crop.",
+      "strategyNote": "Can't make until Year 2 when Artichokes unlock at Pierre's. Not particularly special but uses excess artichokes.",
+      "bestUse": "Using Artichoke surplus",
+      "profitTip": "Artichokes sell for 160g. Dip for personal use only.",
+      "pairsWellWith": "Year 2 Fall harvest",
+      "difficulty": "Easy"
+    },
+    "stir-fry": {
+      "proTip": "Queen of Sauce Year 1 Spring 7. Cave Carrot + Common Mushroom + Kale + Oil. 335 energy. HUGE value.",
+      "strategyNote": "Excellent energy-to-ingredient ratio. Cave Carrots from mines, Mushrooms from Fall/Cave. Kale is cheap Spring crop.",
+      "bestUse": "High energy everyday food",
+      "profitTip": "One of the best energy returns. Make lots for Skull Cavern.",
+      "pairsWellWith": "Deep Skull Cavern runs, multi-day trips",
+      "difficulty": "Medium"
+    },
+    "roasted-hazelnuts": {
+      "proTip": "Queen of Sauce Year 2 Summer 28. Hazelnut x3. 70 energy. Simple Fall forage recipe.",
+      "strategyNote": "Quick use for Hazelnut stockpile. Not amazing but converts abundant Fall forage to portable energy.",
+      "bestUse": "Quick Hazelnut conversion",
+      "profitTip": "Hazelnuts are worth more in other recipes. Use only if you have tons.",
+      "pairsWellWith": "Fall foraging surplus",
+      "difficulty": "Easy"
+    },
+    "poppyseed-muffin": {
+      "proTip": "Queen of Sauce Year 2 Winter 7. Poppy + Wheat Flour + Sugar. 250 energy. Poppy is Summer flower.",
+      "strategyNote": "High energy, but Poppy sells for 140g. Only cook if you have excess Poppies after Penny gifts (she loves them).",
+      "bestUse": "High energy food from Summer flower",
+      "profitTip": "Penny loves Poppy. Gift first, cook excess only.",
+      "pairsWellWith": "Post-Penny friendship Poppy surplus",
+      "difficulty": "Medium"
+    },
+    "triple-shot-espresso": {
+      "proTip": "Buy recipe from Saloon 5000g. Coffee x3. +1 Speed for 4 min 12 sec. Speed stacks with food!",
+      "strategyNote": "ESSENTIAL. Speed stacks with other food buffs. Always have Coffee or Espresso active. Make Coffee from Coffee Beans in Keg.",
+      "bestUse": "Speed buff, always active",
+      "profitTip": "Never sell. Speed saves time = more profit long-term.",
+      "pairsWellWith": "EVERYTHING. Always have speed buff active.",
+      "difficulty": "Easy"
+    },
+    "cookie": {
+      "proTip": "Evelyn 4 hearts. Wheat Flour + Sugar + Egg. 90 energy. Simple, uses basic ingredients.",
+      "strategyNote": "Good early-mid game snack. Ingredients are all easy to acquire. Not amazing but reliable.",
+      "bestUse": "Simple everyday snack",
+      "profitTip": "Cook for personal use, ingredients are cheap.",
+      "pairsWellWith": "Basic energy needs, early game",
+      "difficulty": "Easy"
+    },
+    "ice-cream": {
+      "proTip": "Buy recipe from Saloon 2000g. Milk + Sugar. 100 energy. Simple Summer treat.",
+      "strategyNote": "Easy to make, uses common ingredients. Good for everyday energy. Also sold at Festival stands.",
+      "bestUse": "Simple energy food",
+      "profitTip": "Make instead of buying at 250g each.",
+      "pairsWellWith": "Summer activities, basic energy needs",
+      "difficulty": "Easy"
+    },
+    "blueberry-tart": {
+      "proTip": "Pierre 3 hearts. Blueberry + Wheat Flour + Sugar + Egg. 125 energy. Uses Summer crop.",
+      "strategyNote": "Good way to use Blueberries not going to Wine. Solid energy but Wine is more profitable for main harvest.",
+      "bestUse": "Using Blueberry surplus",
+      "profitTip": "Make Wine from main harvest. Tarts from extras only.",
+      "pairsWellWith": "Summer Blueberry overflow",
+      "difficulty": "Easy"
+    },
+    "crab-cakes": {
+      "proTip": "Queen of Sauce Year 2 Fall 21. Crab + Wheat Flour + Egg + Oil. 225 energy +1 Speed +1 Defense.",
+      "strategyNote": "Great combo of energy AND buffs. Crabs from Crab Pots or Beach. The Speed buff is valuable.",
+      "bestUse": "Combat exploration with speed",
+      "profitTip": "Cook for use, great buff combination.",
+      "pairsWellWith": "Mine exploration, Skull Cavern",
+      "difficulty": "Medium"
+    },
+    "fish-taco": {
+      "proTip": "Linus 7 hearts. Tuna + Tortilla + Red Cabbage + Mayo. 165 energy +2 Fishing for 7 min.",
+      "strategyNote": "Solid fishing buff food. Tuna is common Ocean fish. Use when Dish o The Sea isn't enough.",
+      "bestUse": "Sustained fishing buff",
+      "profitTip": "Cook for fishing trips, especially multi-catch sessions.",
+      "pairsWellWith": "Extended fishing sessions, Summer ocean fishing",
+      "difficulty": "Medium"
+    },
+    "chowder": {
+      "proTip": "Willy 3 hearts. Clam + Milk. 225 energy. Clams are common beach forage.",
+      "strategyNote": "Excellent energy from free beach Clams. One of the best energy-per-rarity ratios. Stock up on Clams!",
+      "bestUse": "High energy from beach forage",
+      "profitTip": "One of the best value recipes. Clams are nearly worthless raw.",
+      "pairsWellWith": "Beach foraging, mine preparation",
+      "difficulty": "Easy"
+    },
+    "fish-stew": {
+      "proTip": "Willy 7 hearts. Crayfish + Mussel + Periwinkle + Tomato. 225 energy +3 Fishing for 16 min.",
+      "strategyNote": "Long duration fishing buff. All shellfish from Crab Pots. Set up pots and accumulate ingredients over time.",
+      "bestUse": "Long fishing sessions",
+      "profitTip": "Crab Pot shells have little other use. Great conversion to buff food.",
+      "pairsWellWith": "Legendary fish marathons, extended fishing trips",
+      "difficulty": "Medium"
+    },
+    "escargot": {
+      "proTip": "Willy 5 hearts. Snail + Garlic. 225 energy +2 Fishing for 16 min 47 sec.",
+      "strategyNote": "Snails from Crab Pots in freshwater. Good fishing buff with long duration. Garlic is easy Spring crop.",
+      "bestUse": "Fishing buff from Crab Pot byproduct",
+      "profitTip": "Snails are worthless otherwise. Great conversion.",
+      "pairsWellWith": "River fishing, freshwater Crab Pot setup",
+      "difficulty": "Easy"
+    },
+    "lobster-bisque": {
+      "proTip": "Willy 9 hearts OR Queen of Sauce Year 2 Winter 14. Lobster + Milk. 225 energy +3 Fishing +50 Max Energy.",
+      "strategyNote": "Premium fishing buff with max energy boost. Lobsters from Crab Pots. Save for important fishing sessions.",
+      "bestUse": "Premium fishing buff",
+      "profitTip": "Lobsters sell for 120g. Cook for buff, not profit.",
+      "pairsWellWith": "Legendary fish attempts, important catches",
+      "difficulty": "Medium"
+    },
+    "pale-broth": {
+      "proTip": "Stardrop Saloon 1000g after Community Center. Ghost Fish x2. 150 energy +2 Mining for 7 min.",
+      "strategyNote": "Ghost Fish are mine floor 20-60 fish. Mining buff helps in Skull Cavern. Good use for otherwise meh fish.",
+      "bestUse": "Mining buff from common mine fish",
+      "profitTip": "Ghost Fish (45g) are better as broth than sold.",
+      "pairsWellWith": "Skull Cavern mining, iridium node breaking",
+      "difficulty": "Easy"
+    },
+    "algae-soup": {
+      "proTip": "Fishing Level 6 reward. Green Algae x4. 100 energy. Uses fishing byproduct.",
+      "strategyNote": "Green Algae is worthless (15g). Convert to energy instead of selling. Free energy source.",
+      "bestUse": "Converting fishing trash to energy",
+      "profitTip": "Never sell Algae. Always cook into soup.",
+      "pairsWellWith": "Fishing sessions, free energy generation",
+      "difficulty": "Easy"
+    },
+    "tom-kha-soup": {
+      "proTip": "Sandy (mail at 7 hearts). Coconut + Shrimp + Common Mushroom. 175 energy +2 Farming +2 Foraging for 7 min.",
+      "strategyNote": "Unique dual buff. Coconuts from Desert palm trees (shake them!). Shrimp from Ocean Crab Pots.",
+      "bestUse": "Dual farming/foraging buff",
+      "profitTip": "Great buff combo, make for personal use.",
+      "pairsWellWith": "Days mixing farming and foraging, Ginger Island",
+      "difficulty": "Medium"
+    },
+    "trout-soup": {
+      "proTip": "Queen of Sauce Year 1 Fall 14. Rainbow Trout + Green Algae. 100 energy +1 Fishing for 4 min 39 sec.",
+      "strategyNote": "Budget fishing buff. Rainbow Trout is Summer river fish. Short duration but uses cheap ingredients.",
+      "bestUse": "Budget fishing buff",
+      "profitTip": "Use when you don't want to waste better buff food.",
+      "pairsWellWith": "Casual fishing, non-legendary targets",
+      "difficulty": "Easy"
+    },
+    "chocolate-cake": {
+      "proTip": "Queen of Sauce Year 1 Winter 14. Wheat Flour + Sugar + Egg. 250 energy. Universal like gift.",
+      "strategyNote": "High energy AND universal liked gift. Great for friendship grinding. The villager loves list excludes only a few.",
+      "bestUse": "Universal gift, high energy",
+      "profitTip": "One of best gift foods. Make extras for birthdays.",
+      "pairsWellWith": "Friendship grinding, birthday prep",
+      "difficulty": "Easy"
+    },
+    "pink-cake": {
+      "proTip": "Queen of Sauce Year 2 Summer 21. Melon + Wheat Flour + Sugar + Egg. 250 energy. Universal like gift.",
+      "strategyNote": "Same as Chocolate Cake but needs Melon. Make when you have Summer Melon surplus after Giant Melon attempts.",
+      "bestUse": "Universal gift from Summer crop",
+      "profitTip": "Chocolate Cake is easier to make year-round.",
+      "pairsWellWith": "Summer Melon surplus, gift prep",
+      "difficulty": "Medium"
+    },
+    "rhubarb-pie": {
+      "proTip": "Marnie 7 hearts. Rhubarb + Wheat Flour + Sugar. 250 energy. Rhubarb from Desert Oasis Spring.",
+      "strategyNote": "Requires Desert access for Rhubarb seeds. Good energy but Rhubarb sells for 220g raw. Cook only excess.",
+      "bestUse": "Using Rhubarb surplus",
+      "profitTip": "Raw Rhubarb or Wine is more profitable. Cook excess only.",
+      "pairsWellWith": "Spring Desert crop surplus",
+      "difficulty": "Medium"
+    },
+    "red-plate": {
+      "proTip": "Emily 7 hearts. Red Cabbage + Radish. 240 energy +50 Max Energy for 3 min 30 sec.",
+      "strategyNote": "Max Energy buff is unique. Both crops are Summer. The 50 extra max energy helps for tough runs.",
+      "bestUse": "Max energy boost for tough content",
+      "profitTip": "Unique buff worth cooking for.",
+      "pairsWellWith": "Skull Cavern deep runs, max stamina situations",
+      "difficulty": "Medium"
+    },
+    "fruit-salad": {
+      "proTip": "Queen of Sauce Year 2 Fall 7. Blueberry + Melon + Apricot. 263 energy. Uses Summer fruits.",
+      "strategyNote": "High energy but ingredients have better uses (Wine). Make from excess fruit not going to Kegs.",
+      "bestUse": "High energy from Summer fruit surplus",
+      "profitTip": "Wine is more profitable. Cook only extras.",
+      "pairsWellWith": "Summer fruit overflow after Keg production",
+      "difficulty": "Medium"
+    },
+    "rice-pudding": {
+      "proTip": "Evelyn 7 hearts. Milk + Sugar + Rice. 115 energy, no buff. Uses Unmilled Rice.",
+      "strategyNote": "Simple recipe. Rice from River fishing or Rice Shoots. Not amazing but uses ingredients with few other uses.",
+      "bestUse": "Using Rice crop",
+      "profitTip": "Rice doesn't have many uses. Decent conversion.",
+      "pairsWellWith": "Spring Rice farming surplus",
+      "difficulty": "Easy"
+    },
+    "radish-salad": {
+      "proTip": "Queen of Sauce Year 1 Spring 21. Radish + Oil + Vinegar. 300 energy. Summer crop.",
+      "strategyNote": "Excellent energy from Summer Radish. 300 energy is one of the highest. Radishes are cheap (40 seeds).",
+      "bestUse": "High energy food from common crop",
+      "profitTip": "One of the best energy/cost ratios. Make lots.",
+      "pairsWellWith": "Summer harvest, Skull Cavern prep",
+      "difficulty": "Easy"
+    },
+    "pumpkin-soup": {
+      "proTip": "Robin 7 hearts. Pumpkin + Milk. 200 energy +2 Defense +2 Luck for 7 min 41 sec.",
+      "strategyNote": "LUCK BUFF! +2 Luck is excellent for Skull Cavern. Pumpkins are Fall crop. Stock up before Winter.",
+      "bestUse": "Luck buff for Skull Cavern",
+      "profitTip": "The luck buff makes this worth cooking despite Pumpkin value (320g).",
+      "pairsWellWith": "Skull Cavern iridium farming, ladder luck",
+      "difficulty": "Medium"
+    },
+    "super-meal": {
+      "proTip": "Kent (mail Year 2) OR Queen of Sauce Year 2 Summer 7. Bok Choy + Cranberries + Artichoke. +40 Max Energy +1 Speed for 3 min 30 sec.",
+      "strategyNote": "Requires Year 2 crops (Artichoke). Speed + Max Energy is nice combo. Make when you have all ingredients.",
+      "bestUse": "Speed with max energy boost",
+      "profitTip": "Good buff combination, cook for personal use.",
+      "pairsWellWith": "Large farm traversal, stamina-heavy days",
+      "difficulty": "Medium"
+    },
+    "hashbrowns": {
+      "proTip": "Queen of Sauce Year 2 Spring 14 OR buy from Saloon. Potato + Oil. 90 energy +1 Farming for 5 min 35 sec.",
+      "strategyNote": "Cheap farming buff. Potatoes are Spring staple. Oil from making Mayo. Great early game buff food.",
+      "bestUse": "Budget farming buff",
+      "profitTip": "Cheap to make, good daily farming boost.",
+      "pairsWellWith": "Daily farming, planting days",
+      "difficulty": "Easy"
+    },
+    "pancakes": {
+      "proTip": "Queen of Sauce Year 1 Summer 14. Wheat Flour + Egg. 90 energy +2 Foraging for 11 min.",
+      "strategyNote": "Long foraging buff from simple ingredients. Great for foraging routes and Secret Woods trips.",
+      "bestUse": "Foraging buff, Secret Woods",
+      "profitTip": "Simple to make, good foraging boost.",
+      "pairsWellWith": "Foraging days, Secret Woods hardwood runs",
+      "difficulty": "Easy"
+    },
+    "salmon-dinner": {
+      "proTip": "Gus 3 hearts. Salmon + Amaranth + Kale. 125 energy +1 Fishing for 5 min 35 sec.",
+      "strategyNote": "Uses Fall crops (Amaranth, Kale) and Fall fish (Salmon). Decent fishing buff but Dish o The Sea is often better.",
+      "bestUse": "Fall fishing buff option",
+      "profitTip": "Make when you have ingredient surplus.",
+      "pairsWellWith": "Fall fishing trips",
+      "difficulty": "Easy"
+    },
+    "crispy-bass": {
+      "proTip": "Kent (mail Year 2). Largemouth Bass + Wheat Flour + Oil. 150 energy. Uses common fish.",
+      "strategyNote": "Largemouth Bass is everywhere (Mountain Lake). Good use for common fish. Better than selling bass raw (100g).",
+      "bestUse": "Converting common fish to energy",
+      "profitTip": "Better than selling raw bass. Good conversion.",
+      "pairsWellWith": "Mountain Lake fishing surplus",
+      "difficulty": "Easy"
+    },
+    "bread": {
+      "proTip": "Queen of Sauce Year 1 Summer 28 OR buy from Saloon 100g. Wheat Flour. 50 energy. Simplest recipe.",
+      "strategyNote": "Buy from Saloon unless you have excess Wheat. 50 energy for 100g is poor. Used in other recipes mainly.",
+      "bestUse": "Ingredient for other recipes",
+      "profitTip": "Buy from Saloon, don't waste Wheat Flour.",
+      "pairsWellWith": "Making Stuffing, other bread-requiring recipes",
+      "difficulty": "Starter"
+    },
+    "tortilla": {
+      "proTip": "Queen of Sauce Year 1 Fall 7 OR buy from Saloon 100g. Corn. 50 energy. Used in recipes.",
+      "strategyNote": "Like Bread, mainly an ingredient. Buy from Saloon or cook from excess Corn. Fish Taco and Lucky Lunch need it.",
+      "bestUse": "Ingredient for Lucky Lunch",
+      "profitTip": "Keep some for Lucky Lunch production.",
+      "pairsWellWith": "Lucky Lunch crafting, Fish Taco",
+      "difficulty": "Easy"
+    },
+    "strange-bun": {
+      "proTip": "Shane 7 hearts. Wheat Flour + Periwinkle + Void Mayonnaise. 225 energy. Weird recipe.",
+      "strategyNote": "Void Mayonnaise from Void Eggs. Interesting but not particularly useful. Make for completion.",
+      "bestUse": "Recipe completion",
+      "profitTip": "Void Mayo has better uses. Make once for completion.",
+      "pairsWellWith": "Recipe achievement, void egg surplus",
+      "difficulty": "Medium"
+    },
+    "glazed-yams": {
+      "proTip": "Queen of Sauce Year 1 Fall 21. Yam + Sugar. 200 energy. Fall crop recipe.",
+      "strategyNote": "Solid energy from Fall Yams. Yams sell for 160g, so cooking is decent conversion to energy.",
+      "bestUse": "Fall energy food",
+      "profitTip": "Good energy conversion from Yams.",
+      "pairsWellWith": "Fall harvest surplus, winter prep",
+      "difficulty": "Easy"
+    },
+    "fried-mushroom": {
+      "proTip": "Demetrius 3 hearts. Common Mushroom + Morel + Oil. 135 energy +2 Attack for 7 min.",
+      "strategyNote": "Attack buff from forage! Morel is Spring forage. Good combat food for early game.",
+      "bestUse": "Combat buff from foraged mushrooms",
+      "profitTip": "Morel sells for 150g. Cook if you need attack buff.",
+      "pairsWellWith": "Mine combat, early Skull Cavern attempts",
+      "difficulty": "Medium"
+    },
+    "bruschetta": {
+      "proTip": "Gus 7 hearts. Bread + Oil + Tomato. 113 energy. Simple Summer recipe.",
+      "strategyNote": "Nothing special. Make if you have ingredients and need energy. Tomatoes have better uses (Ketchup).",
+      "bestUse": "Simple energy food",
+      "profitTip": "Tomatoes are better as Ketchup (270g Artisan).",
+      "pairsWellWith": "Tomato surplus after processing",
+      "difficulty": "Easy"
+    },
+    "coleslaw": {
+      "proTip": "Queen of Sauce Year 2 Spring 14. Red Cabbage + Vinegar + Mayonnaise. 145 energy. Uses Summer crop.",
+      "strategyNote": "Red Cabbage is Summer Year 2 crop. Not great value - Red Cabbage sells for 260g raw.",
+      "bestUse": "Using Red Cabbage surplus",
+      "profitTip": "Red Cabbage is worth more raw or as Wine.",
+      "pairsWellWith": "Summer Year 2 crop overflow",
+      "difficulty": "Easy"
+    },
+    "fiddlehead-risotto": {
+      "proTip": "Queen of Sauce Year 2 Fall 28. Oil + Fiddlehead Fern + Garlic. 350 energy +30 Max Energy. MASSIVE ENERGY.",
+      "strategyNote": "350 energy is HUGE. Fiddlehead Fern is Summer Secret Woods forage. Stock up in Summer for year-round use.",
+      "bestUse": "Maximum energy recovery",
+      "profitTip": "One of the highest energy foods. Worth making.",
+      "pairsWellWith": "Deep Skull Cavern runs, marathon sessions",
+      "difficulty": "Medium"
+    },
+    "bean-hotpot": {
+      "proTip": "Clint 7 hearts. Green Bean x2. 100 energy +30 Max Energy for 5 min 35 sec.",
+      "strategyNote": "Max Energy buff from cheap Spring beans. Green Beans regrow so you'll have plenty.",
+      "bestUse": "Max energy buff from Spring crop",
+      "profitTip": "Green Beans are cheap. Good buff conversion.",
+      "pairsWellWith": "Stamina-heavy days, exploration",
+      "difficulty": "Easy"
+    },
+    "eggplant-parmesan": {
+      "proTip": "Lewis 7 hearts. Eggplant + Tomato. 175 energy +1 Mining +3 Defense for 4 min 39 sec.",
+      "strategyNote": "Mining and Defense from Summer/Fall crops. Decent for mine protection.",
+      "bestUse": "Mining with defense buff",
+      "profitTip": "Good buff combination for mine safety.",
+      "pairsWellWith": "Skull Cavern, dangerous mine floors",
+      "difficulty": "Easy"
+    },
+    "autumn-bounty": {
+      "proTip": "Demetrius 7 hearts. Yam + Pumpkin. 220 energy +2 Foraging +2 Defense for 7 min 41 sec.",
+      "strategyNote": "Uses two valuable Fall crops but dual buffs are good. Make from excess Fall harvest.",
+      "bestUse": "Dual foraging/defense buff",
+      "profitTip": "Crops are valuable. Cook only from surplus.",
+      "pairsWellWith": "Dangerous foraging areas, fall activities",
+      "difficulty": "Medium"
+    },
+    "squid-ink-ravioli": {
+      "proTip": "Combat Level 9 reward. Squid Ink + Wheat Flour + Tomato. 175 energy +1 Mining for 4 min 39 sec.",
+      "strategyNote": "Squid Ink from Squid Fish Pond (at population 9+). Mining buff is nice but Ink has other uses.",
+      "bestUse": "Using Squid Ink production",
+      "profitTip": "Squid Ink used in other recipes. Make from excess.",
+      "pairsWellWith": "Squid Fish Pond production surplus",
+      "difficulty": "Medium"
+    },
+    "ginger-ale": {
+      "proTip": "Dwarf Shop. Ginger x3 + Sugar. 25 energy but main use is Nausea immunity!",
+      "strategyNote": "PREVENTS NAUSEA. Essential for Skull Cavern when fighting Haunted Skulls. Ginger from Ginger Island.",
+      "bestUse": "Nausea immunity in Skull Cavern",
+      "profitTip": "The nausea immunity is invaluable. Keep stock.",
+      "pairsWellWith": "Skull Cavern, Haunted Skull encounters",
+      "difficulty": "Easy"
+    },
+    "banana-pudding": {
+      "proTip": "Ginger Island Resort 30 Golden Walnuts. Banana + Milk + Sugar. 145 energy +1 Luck +1 Defense for 7 min 41 sec.",
+      "strategyNote": "Luck buff from Ginger Island! Bananas from Island trees or Banana Tree. Good alternative to Lucky Lunch.",
+      "bestUse": "Luck buff alternative",
+      "profitTip": "Bananas are valuable (150g) but luck buff is worth it.",
+      "pairsWellWith": "Skull Cavern, Ginger Island activities",
+      "difficulty": "Medium"
+    },
+    "mango-sticky-rice": {
+      "proTip": "Leo 7 hearts. Mango + Coconut + Rice. 228 energy +30 Max Energy. Island ingredients.",
+      "strategyNote": "All ingredients from Ginger Island. High energy with max energy boost. Good Island food.",
+      "bestUse": "High energy from Island ingredients",
+      "profitTip": "Use Island crops that you have surplus of.",
+      "pairsWellWith": "Ginger Island exploration, Volcano Dungeon",
+      "difficulty": "Medium"
+    },
+    "poi": {
+      "proTip": "Leo 3 hearts. Taro Root x4. 75 energy. Simple Island recipe.",
+      "strategyNote": "Uses Taro Root from Ginger Island farming. Not amazing but converts excess Taro to energy.",
+      "bestUse": "Using Taro Root surplus",
+      "profitTip": "Taro sells for 100g. Cook only excess.",
+      "pairsWellWith": "Ginger Island farming surplus",
+      "difficulty": "Easy"
+    },
+    "tropical-curry": {
+      "proTip": "Ginger Island Resort. Coconut + Pineapple + Hot Pepper. 475 energy +4 Foraging for 5 min 16 sec.",
+      "strategyNote": "475 ENERGY! One of the highest in the game. +4 Foraging is massive. Premium Ginger Island recipe.",
+      "bestUse": "Maximum energy and foraging buff",
+      "profitTip": "Pineapple is valuable but this is worth it.",
+      "pairsWellWith": "Ginger Island foraging, energy-intensive tasks",
+      "difficulty": "Hard"
+    },
+    "moss-soup": {
+      "proTip": "1.6 new recipe from Krobus Shop. Moss x20. 100 energy. Uses tree moss.",
+      "strategyNote": "1.6 addition. Moss from trees is plentiful once you have many trees. Good conversion.",
+      "bestUse": "Converting Moss to energy",
+      "profitTip": "Moss has few uses. Good conversion recipe.",
+      "pairsWellWith": "Tree farm maintenance, moss surplus",
+      "difficulty": "Easy"
+    }
+  }
+}

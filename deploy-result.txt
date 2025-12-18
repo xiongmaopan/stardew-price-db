@@ -1,0 +1,10 @@
+﻿
+ 鉀咃笍 wrangler 4.51.0 (update available 4.55.0)
+鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€
+Uploading... (1182/1182)
+鉁?Success! Uploaded 0 files (1182 already uploaded) (0.71 sec)
+
+鉁?Uploading _headers
+鉁?Uploading _redirects
+馃寧 Deploying...
+鉁?Deployment complete! Take a peek over at https://0aaa74c2.stardew-price-db.pages.dev

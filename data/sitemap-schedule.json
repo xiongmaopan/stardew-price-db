@@ -1,0 +1,2788 @@
+{
+  "createdAt": "2025-12-18",
+  "totalPages": 397,
+  "pagesPerDay": 5,
+  "publishedCount": 5,
+  "lastPublishDate": "2025-12-18",
+  "pages": [
+    {
+      "url": "/",
+      "priority": 1,
+      "scheduledDay": 0,
+      "published": true,
+      "publishedAt": "2025-12-18"
+    },
+    {
+      "url": "/guide/",
+      "priority": 1,
+      "scheduledDay": 0,
+      "published": true,
+      "publishedAt": "2025-12-18"
+    },
+    {
+      "url": "/fishing/",
+      "priority": 1,
+      "scheduledDay": 0,
+      "published": true,
+      "publishedAt": "2025-12-18"
+    },
+    {
+      "url": "/gifts/",
+      "priority": 1,
+      "scheduledDay": 0,
+      "published": true,
+      "publishedAt": "2025-12-18"
+    },
+    {
+      "url": "/bundles/",
+      "priority": 1,
+      "scheduledDay": 0,
+      "published": true,
+      "publishedAt": "2025-12-18"
+    },
+    {
+      "url": "/recipes/",
+      "priority": 1,
+      "scheduledDay": 1,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/calculator/spring/",
+      "priority": 1,
+      "scheduledDay": 1,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/calculator/summer/",
+      "priority": 1,
+      "scheduledDay": 1,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/calculator/fall/",
+      "priority": 1,
+      "scheduledDay": 1,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/calculator/winter/",
+      "priority": 1,
+      "scheduledDay": 1,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/calculator/greenhouse/",
+      "priority": 1,
+      "scheduledDay": 2,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/guide/most-profitable-crops/",
+      "priority": 1,
+      "scheduledDay": 2,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/guide/keg-vs-jar/",
+      "priority": 1,
+      "scheduledDay": 2,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/guide/ancient-fruit/",
+      "priority": 1,
+      "scheduledDay": 2,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/guide/greenhouse-layout/",
+      "priority": 1,
+      "scheduledDay": 2,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/guide/animal-profit/",
+      "priority": 1,
+      "scheduledDay": 3,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/guide/mining-profit/",
+      "priority": 1,
+      "scheduledDay": 3,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/guide/best-fish-pond/",
+      "priority": 1,
+      "scheduledDay": 3,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/guide/year-1-money/",
+      "priority": 1,
+      "scheduledDay": 3,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/guide/community-center/",
+      "priority": 1,
+      "scheduledDay": 3,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/guide/best-gifts/",
+      "priority": 0.8,
+      "scheduledDay": 4,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/guide/foraging-profit/",
+      "priority": 0.8,
+      "scheduledDay": 4,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/guide/skull-cavern/",
+      "priority": 0.8,
+      "scheduledDay": 4,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/item/parsnip/",
+      "priority": 0.8,
+      "scheduledDay": 4,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/item/green-bean/",
+      "priority": 0.8,
+      "scheduledDay": 4,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/item/cauliflower/",
+      "priority": 0.8,
+      "scheduledDay": 5,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/item/potato/",
+      "priority": 0.8,
+      "scheduledDay": 5,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/item/kale/",
+      "priority": 0.8,
+      "scheduledDay": 5,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/item/garlic/",
+      "priority": 0.8,
+      "scheduledDay": 5,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/item/rhubarb/",
+      "priority": 0.8,
+      "scheduledDay": 5,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/item/strawberry/",
+      "priority": 0.8,
+      "scheduledDay": 6,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/item/coffee-bean/",
+      "priority": 0.8,
+      "scheduledDay": 6,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/item/blue-jazz/",
+      "priority": 0.8,
+      "scheduledDay": 6,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/item/tulip/",
+      "priority": 0.8,
+      "scheduledDay": 6,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/item/melon/",
+      "priority": 0.8,
+      "scheduledDay": 6,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/item/tomato/",
+      "priority": 0.8,
+      "scheduledDay": 7,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/item/hot-pepper/",
+      "priority": 0.8,
+      "scheduledDay": 7,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/item/blueberry/",
+      "priority": 0.8,
+      "scheduledDay": 7,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/item/corn/",
+      "priority": 0.8,
+      "scheduledDay": 7,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/item/radish/",
+      "priority": 0.8,
+      "scheduledDay": 7,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/item/wheat/",
+      "priority": 0.8,
+      "scheduledDay": 8,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/item/red-cabbage/",
+      "priority": 0.8,
+      "scheduledDay": 8,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/item/starfruit/",
+      "priority": 0.8,
+      "scheduledDay": 8,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/item/hops/",
+      "priority": 0.8,
+      "scheduledDay": 8,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/item/summer-spangle/",
+      "priority": 0.8,
+      "scheduledDay": 8,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/item/poppy/",
+      "priority": 0.8,
+      "scheduledDay": 9,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/item/pumpkin/",
+      "priority": 0.8,
+      "scheduledDay": 9,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/item/eggplant/",
+      "priority": 0.8,
+      "scheduledDay": 9,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/item/amaranth/",
+      "priority": 0.8,
+      "scheduledDay": 9,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/item/grape/",
+      "priority": 0.8,
+      "scheduledDay": 9,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/item/yam/",
+      "priority": 0.6,
+      "scheduledDay": 10,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/item/cranberries/",
+      "priority": 0.6,
+      "scheduledDay": 10,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/item/artichoke/",
+      "priority": 0.6,
+      "scheduledDay": 10,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/item/bok-choy/",
+      "priority": 0.6,
+      "scheduledDay": 10,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/item/fairy-rose/",
+      "priority": 0.6,
+      "scheduledDay": 10,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/item/sunflower/",
+      "priority": 0.6,
+      "scheduledDay": 11,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/item/sweet-gem-berry/",
+      "priority": 0.6,
+      "scheduledDay": 11,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/item/ancient-fruit/",
+      "priority": 0.6,
+      "scheduledDay": 11,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/item/pineapple/",
+      "priority": 0.6,
+      "scheduledDay": 11,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/item/taro-root/",
+      "priority": 0.6,
+      "scheduledDay": 11,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/item/pufferfish/",
+      "priority": 0.6,
+      "scheduledDay": 12,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/item/sturgeon/",
+      "priority": 0.6,
+      "scheduledDay": 12,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/item/lava-eel/",
+      "priority": 0.6,
+      "scheduledDay": 12,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/item/legend/",
+      "priority": 0.6,
+      "scheduledDay": 12,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/item/mutant-carp/",
+      "priority": 0.6,
+      "scheduledDay": 12,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/item/crimsonfish/",
+      "priority": 0.6,
+      "scheduledDay": 13,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/item/angler-fish/",
+      "priority": 0.6,
+      "scheduledDay": 13,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/item/glacierfish/",
+      "priority": 0.6,
+      "scheduledDay": 13,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/item/catfish/",
+      "priority": 0.6,
+      "scheduledDay": 13,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/item/octopus/",
+      "priority": 0.6,
+      "scheduledDay": 13,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/item/super-cucumber/",
+      "priority": 0.6,
+      "scheduledDay": 14,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/item/truffle/",
+      "priority": 0.6,
+      "scheduledDay": 14,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/item/morel/",
+      "priority": 0.6,
+      "scheduledDay": 14,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/fishing/pufferfish/",
+      "priority": 0.6,
+      "scheduledDay": 14,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/fishing/sturgeon/",
+      "priority": 0.6,
+      "scheduledDay": 14,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/fishing/lava-eel/",
+      "priority": 0.6,
+      "scheduledDay": 15,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/fishing/legend/",
+      "priority": 0.6,
+      "scheduledDay": 15,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/fishing/mutant-carp/",
+      "priority": 0.6,
+      "scheduledDay": 15,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/fishing/crimsonfish/",
+      "priority": 0.6,
+      "scheduledDay": 15,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/fishing/angler-fish/",
+      "priority": 0.6,
+      "scheduledDay": 15,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/fishing/glacierfish/",
+      "priority": 0.6,
+      "scheduledDay": 16,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/fishing/catfish/",
+      "priority": 0.6,
+      "scheduledDay": 16,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/fishing/octopus/",
+      "priority": 0.6,
+      "scheduledDay": 16,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/fishing/super-cucumber/",
+      "priority": 0.6,
+      "scheduledDay": 16,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/fishing/salmon/",
+      "priority": 0.6,
+      "scheduledDay": 16,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/fishing/tuna/",
+      "priority": 0.6,
+      "scheduledDay": 17,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/fishing/largemouth-bass/",
+      "priority": 0.6,
+      "scheduledDay": 17,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/fishing/smallmouth-bass/",
+      "priority": 0.6,
+      "scheduledDay": 17,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/fishing/rainbow-trout/",
+      "priority": 0.6,
+      "scheduledDay": 17,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/fishing/tiger-trout/",
+      "priority": 0.6,
+      "scheduledDay": 17,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/fishing/walleye/",
+      "priority": 0.6,
+      "scheduledDay": 18,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/fishing/perch/",
+      "priority": 0.6,
+      "scheduledDay": 18,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/fishing/pike/",
+      "priority": 0.6,
+      "scheduledDay": 18,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/fishing/sardine/",
+      "priority": 0.6,
+      "scheduledDay": 18,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/fishing/red-snapper/",
+      "priority": 0.6,
+      "scheduledDay": 18,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/fishing/red-mullet/",
+      "priority": 0.6,
+      "scheduledDay": 19,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/fishing/sea-cucumber/",
+      "priority": 0.6,
+      "scheduledDay": 19,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/fishing/eel/",
+      "priority": 0.6,
+      "scheduledDay": 19,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/fishing/carp/",
+      "priority": 0.6,
+      "scheduledDay": 19,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/fishing/bullhead/",
+      "priority": 0.6,
+      "scheduledDay": 19,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/fishing/bream/",
+      "priority": 0.6,
+      "scheduledDay": 20,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/fishing/sunfish/",
+      "priority": 0.6,
+      "scheduledDay": 20,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/fishing/shad/",
+      "priority": 0.6,
+      "scheduledDay": 20,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/fishing/halibut/",
+      "priority": 0.6,
+      "scheduledDay": 20,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/fishing/lingcod/",
+      "priority": 0.6,
+      "scheduledDay": 20,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/fishing/squid/",
+      "priority": 0.6,
+      "scheduledDay": 21,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/fishing/tilapia/",
+      "priority": 0.6,
+      "scheduledDay": 21,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/fishing/dorado/",
+      "priority": 0.6,
+      "scheduledDay": 21,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/fishing/albacore/",
+      "priority": 0.6,
+      "scheduledDay": 21,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/fishing/woodskip/",
+      "priority": 0.6,
+      "scheduledDay": 21,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/fishing/ghostfish/",
+      "priority": 0.6,
+      "scheduledDay": 22,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/fishing/stonefish/",
+      "priority": 0.6,
+      "scheduledDay": 22,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/fishing/ice-pip/",
+      "priority": 0.6,
+      "scheduledDay": 22,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/fishing/scorpion-carp/",
+      "priority": 0.6,
+      "scheduledDay": 22,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/fishing/sandfish/",
+      "priority": 0.6,
+      "scheduledDay": 22,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/fishing/midnight-carp/",
+      "priority": 0.6,
+      "scheduledDay": 23,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/fishing/spook-fish/",
+      "priority": 0.6,
+      "scheduledDay": 23,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/fishing/blobfish/",
+      "priority": 0.6,
+      "scheduledDay": 23,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/fishing/midnight-squid/",
+      "priority": 0.6,
+      "scheduledDay": 23,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/fishing/crab/",
+      "priority": 0.6,
+      "scheduledDay": 23,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/fishing/lobster/",
+      "priority": 0.6,
+      "scheduledDay": 24,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/fishing/shrimp/",
+      "priority": 0.6,
+      "scheduledDay": 24,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/fishing/crayfish/",
+      "priority": 0.6,
+      "scheduledDay": 24,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/fishing/snail/",
+      "priority": 0.6,
+      "scheduledDay": 24,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/fishing/periwinkle/",
+      "priority": 0.6,
+      "scheduledDay": 24,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/fishing/mussel/",
+      "priority": 0.6,
+      "scheduledDay": 25,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/fishing/oyster/",
+      "priority": 0.6,
+      "scheduledDay": 25,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/fishing/cockle/",
+      "priority": 0.6,
+      "scheduledDay": 25,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/fishing/clam/",
+      "priority": 0.6,
+      "scheduledDay": 25,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/fishing/coral/",
+      "priority": 0.6,
+      "scheduledDay": 25,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/fishing/sea-urchin/",
+      "priority": 0.6,
+      "scheduledDay": 26,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/fishing/stingray/",
+      "priority": 0.6,
+      "scheduledDay": 26,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/fishing/lionfish/",
+      "priority": 0.6,
+      "scheduledDay": 26,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/fishing/blue-discus/",
+      "priority": 0.6,
+      "scheduledDay": 26,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/fishing/son-of-crimsonfish/",
+      "priority": 0.6,
+      "scheduledDay": 26,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/fishing/ms-angler/",
+      "priority": 0.6,
+      "scheduledDay": 27,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/fishing/legend-ii/",
+      "priority": 0.6,
+      "scheduledDay": 27,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/fishing/glacierfish-jr/",
+      "priority": 0.6,
+      "scheduledDay": 27,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/fishing/radioactive-carp/",
+      "priority": 0.6,
+      "scheduledDay": 27,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/fishing/goby/",
+      "priority": 0.6,
+      "scheduledDay": 27,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/gift/abigail/",
+      "priority": 0.6,
+      "scheduledDay": 28,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/gift/alex/",
+      "priority": 0.6,
+      "scheduledDay": 28,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/gift/elliott/",
+      "priority": 0.6,
+      "scheduledDay": 28,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/gift/emily/",
+      "priority": 0.6,
+      "scheduledDay": 28,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/gift/haley/",
+      "priority": 0.6,
+      "scheduledDay": 28,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/gift/harvey/",
+      "priority": 0.6,
+      "scheduledDay": 29,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/gift/leah/",
+      "priority": 0.6,
+      "scheduledDay": 29,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/gift/maru/",
+      "priority": 0.6,
+      "scheduledDay": 29,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/gift/penny/",
+      "priority": 0.6,
+      "scheduledDay": 29,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/gift/sam/",
+      "priority": 0.6,
+      "scheduledDay": 29,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/gift/sebastian/",
+      "priority": 0.6,
+      "scheduledDay": 30,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/gift/shane/",
+      "priority": 0.6,
+      "scheduledDay": 30,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/gift/caroline/",
+      "priority": 0.6,
+      "scheduledDay": 30,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/gift/clint/",
+      "priority": 0.6,
+      "scheduledDay": 30,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/gift/demetrius/",
+      "priority": 0.6,
+      "scheduledDay": 30,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/gift/evelyn/",
+      "priority": 0.6,
+      "scheduledDay": 31,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/gift/george/",
+      "priority": 0.6,
+      "scheduledDay": 31,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/gift/gus/",
+      "priority": 0.6,
+      "scheduledDay": 31,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/gift/jas/",
+      "priority": 0.6,
+      "scheduledDay": 31,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/gift/jodi/",
+      "priority": 0.6,
+      "scheduledDay": 31,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/gift/kent/",
+      "priority": 0.6,
+      "scheduledDay": 32,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/gift/krobus/",
+      "priority": 0.6,
+      "scheduledDay": 32,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/gift/leo/",
+      "priority": 0.6,
+      "scheduledDay": 32,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/gift/lewis/",
+      "priority": 0.6,
+      "scheduledDay": 32,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/gift/linus/",
+      "priority": 0.6,
+      "scheduledDay": 32,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/gift/marnie/",
+      "priority": 0.6,
+      "scheduledDay": 33,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/gift/pam/",
+      "priority": 0.6,
+      "scheduledDay": 33,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/gift/pierre/",
+      "priority": 0.6,
+      "scheduledDay": 33,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/gift/robin/",
+      "priority": 0.6,
+      "scheduledDay": 33,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/gift/sandy/",
+      "priority": 0.6,
+      "scheduledDay": 33,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/gift/vincent/",
+      "priority": 0.6,
+      "scheduledDay": 34,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/gift/willy/",
+      "priority": 0.6,
+      "scheduledDay": 34,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/gift/wizard/",
+      "priority": 0.6,
+      "scheduledDay": 34,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/gift/dwarf/",
+      "priority": 0.6,
+      "scheduledDay": 34,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/item/chanterelle/",
+      "priority": 0.6,
+      "scheduledDay": 34,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/item/common-mushroom/",
+      "priority": 0.6,
+      "scheduledDay": 35,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/item/purple-mushroom/",
+      "priority": 0.6,
+      "scheduledDay": 35,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/item/diamond/",
+      "priority": 0.6,
+      "scheduledDay": 35,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/item/ruby/",
+      "priority": 0.6,
+      "scheduledDay": 35,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/item/emerald/",
+      "priority": 0.6,
+      "scheduledDay": 35,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/item/jade/",
+      "priority": 0.6,
+      "scheduledDay": 36,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/item/prismatic-shard/",
+      "priority": 0.6,
+      "scheduledDay": 36,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/item/large-milk/",
+      "priority": 0.6,
+      "scheduledDay": 36,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/item/large-egg/",
+      "priority": 0.6,
+      "scheduledDay": 36,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/item/duck-egg/",
+      "priority": 0.6,
+      "scheduledDay": 36,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/item/goat-milk/",
+      "priority": 0.6,
+      "scheduledDay": 37,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/item/large-goat-milk/",
+      "priority": 0.6,
+      "scheduledDay": 37,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/item/wool/",
+      "priority": 0.6,
+      "scheduledDay": 37,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/item/rabbits-foot/",
+      "priority": 0.6,
+      "scheduledDay": 37,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/item/dinosaur-egg/",
+      "priority": 0.6,
+      "scheduledDay": 37,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/item/void-egg/",
+      "priority": 0.6,
+      "scheduledDay": 38,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/item/golden-egg/",
+      "priority": 0.6,
+      "scheduledDay": 38,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/item/ostrich-egg/",
+      "priority": 0.6,
+      "scheduledDay": 38,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/item/milk/",
+      "priority": 0.6,
+      "scheduledDay": 38,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/item/egg/",
+      "priority": 0.6,
+      "scheduledDay": 38,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/item/caviar/",
+      "priority": 0.6,
+      "scheduledDay": 39,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/item/aged-roe/",
+      "priority": 0.6,
+      "scheduledDay": 39,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/item/pale-ale/",
+      "priority": 0.6,
+      "scheduledDay": 39,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/item/beer/",
+      "priority": 0.6,
+      "scheduledDay": 39,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/item/mead/",
+      "priority": 0.6,
+      "scheduledDay": 39,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/item/cheese/",
+      "priority": 0.6,
+      "scheduledDay": 40,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/item/goat-cheese/",
+      "priority": 0.6,
+      "scheduledDay": 40,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/item/mayonnaise/",
+      "priority": 0.6,
+      "scheduledDay": 40,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/item/duck-mayonnaise/",
+      "priority": 0.6,
+      "scheduledDay": 40,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/item/void-mayonnaise/",
+      "priority": 0.6,
+      "scheduledDay": 40,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/item/dinosaur-mayonnaise/",
+      "priority": 0.6,
+      "scheduledDay": 41,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/item/truffle-oil/",
+      "priority": 0.6,
+      "scheduledDay": 41,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/item/cloth/",
+      "priority": 0.6,
+      "scheduledDay": 41,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/item/honey/",
+      "priority": 0.6,
+      "scheduledDay": 41,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/item/fairy-honey/",
+      "priority": 0.6,
+      "scheduledDay": 41,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/item/coffee/",
+      "priority": 0.6,
+      "scheduledDay": 42,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/item/triple-shot-espresso/",
+      "priority": 0.6,
+      "scheduledDay": 42,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/item/maple-syrup/",
+      "priority": 0.6,
+      "scheduledDay": 42,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/item/oak-resin/",
+      "priority": 0.6,
+      "scheduledDay": 42,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/item/pine-tar/",
+      "priority": 0.6,
+      "scheduledDay": 42,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/item/sap/",
+      "priority": 0.6,
+      "scheduledDay": 43,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/item/hardwood/",
+      "priority": 0.6,
+      "scheduledDay": 43,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/item/wood/",
+      "priority": 0.6,
+      "scheduledDay": 43,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/item/stone/",
+      "priority": 0.6,
+      "scheduledDay": 43,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/item/fiber/",
+      "priority": 0.6,
+      "scheduledDay": 43,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/item/coal/",
+      "priority": 0.6,
+      "scheduledDay": 44,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/item/copper-ore/",
+      "priority": 0.6,
+      "scheduledDay": 44,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/item/iron-ore/",
+      "priority": 0.6,
+      "scheduledDay": 44,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/item/gold-ore/",
+      "priority": 0.6,
+      "scheduledDay": 44,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/item/iridium-ore/",
+      "priority": 0.6,
+      "scheduledDay": 44,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/item/copper-bar/",
+      "priority": 0.6,
+      "scheduledDay": 45,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/item/iron-bar/",
+      "priority": 0.6,
+      "scheduledDay": 45,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/item/gold-bar/",
+      "priority": 0.6,
+      "scheduledDay": 45,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/item/iridium-bar/",
+      "priority": 0.6,
+      "scheduledDay": 45,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/item/radioactive-bar/",
+      "priority": 0.6,
+      "scheduledDay": 45,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/item/quartz/",
+      "priority": 0.6,
+      "scheduledDay": 46,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/item/fire-quartz/",
+      "priority": 0.6,
+      "scheduledDay": 46,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/item/frozen-tear/",
+      "priority": 0.6,
+      "scheduledDay": 46,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/item/earth-crystal/",
+      "priority": 0.6,
+      "scheduledDay": 46,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/item/amethyst/",
+      "priority": 0.6,
+      "scheduledDay": 46,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/item/aquamarine/",
+      "priority": 0.6,
+      "scheduledDay": 47,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/item/topaz/",
+      "priority": 0.6,
+      "scheduledDay": 47,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/item/spring-onion/",
+      "priority": 0.6,
+      "scheduledDay": 47,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/item/daffodil/",
+      "priority": 0.6,
+      "scheduledDay": 47,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/item/leek/",
+      "priority": 0.6,
+      "scheduledDay": 47,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/item/dandelion/",
+      "priority": 0.6,
+      "scheduledDay": 48,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/item/wild-horseradish/",
+      "priority": 0.6,
+      "scheduledDay": 48,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/item/salmonberry/",
+      "priority": 0.6,
+      "scheduledDay": 48,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/item/spice-berry/",
+      "priority": 0.6,
+      "scheduledDay": 48,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/item/grape-forage/",
+      "priority": 0.6,
+      "scheduledDay": 48,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/item/sweet-pea/",
+      "priority": 0.6,
+      "scheduledDay": 49,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/item/fiddlehead-fern/",
+      "priority": 0.6,
+      "scheduledDay": 49,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/item/red-mushroom/",
+      "priority": 0.6,
+      "scheduledDay": 49,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/item/wild-plum/",
+      "priority": 0.6,
+      "scheduledDay": 49,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/item/hazelnut/",
+      "priority": 0.6,
+      "scheduledDay": 49,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/item/blackberry/",
+      "priority": 0.6,
+      "scheduledDay": 50,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/item/holly/",
+      "priority": 0.6,
+      "scheduledDay": 50,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/item/crystal-fruit/",
+      "priority": 0.6,
+      "scheduledDay": 50,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/item/snow-yam/",
+      "priority": 0.6,
+      "scheduledDay": 50,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/item/winter-root/",
+      "priority": 0.6,
+      "scheduledDay": 50,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/item/crocus/",
+      "priority": 0.6,
+      "scheduledDay": 51,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/item/nautilus-shell/",
+      "priority": 0.6,
+      "scheduledDay": 51,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/item/rainbow-shell/",
+      "priority": 0.6,
+      "scheduledDay": 51,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/item/coconut/",
+      "priority": 0.6,
+      "scheduledDay": 51,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/item/cactus-fruit/",
+      "priority": 0.6,
+      "scheduledDay": 51,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/item/ginger/",
+      "priority": 0.6,
+      "scheduledDay": 52,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/item/magma-cap/",
+      "priority": 0.6,
+      "scheduledDay": 52,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/item/battery-pack/",
+      "priority": 0.6,
+      "scheduledDay": 52,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/item/refined-quartz/",
+      "priority": 0.6,
+      "scheduledDay": 52,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/item/oil/",
+      "priority": 0.6,
+      "scheduledDay": 52,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/item/sugar/",
+      "priority": 0.6,
+      "scheduledDay": 53,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/item/wheat-flour/",
+      "priority": 0.6,
+      "scheduledDay": 53,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/item/rice/",
+      "priority": 0.6,
+      "scheduledDay": 53,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/item/vinegar/",
+      "priority": 0.6,
+      "scheduledDay": 53,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/item/geode/",
+      "priority": 0.6,
+      "scheduledDay": 53,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/item/frozen-geode/",
+      "priority": 0.6,
+      "scheduledDay": 54,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/item/magma-geode/",
+      "priority": 0.6,
+      "scheduledDay": 54,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/item/omni-geode/",
+      "priority": 0.6,
+      "scheduledDay": 54,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/item/golden-pumpkin/",
+      "priority": 0.6,
+      "scheduledDay": 54,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/item/pearl/",
+      "priority": 0.6,
+      "scheduledDay": 54,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/item/strange-bun/",
+      "priority": 0.6,
+      "scheduledDay": 55,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/item/fried-egg/",
+      "priority": 0.6,
+      "scheduledDay": 55,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/item/lucky-lunch/",
+      "priority": 0.6,
+      "scheduledDay": 55,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/item/spicy-eel/",
+      "priority": 0.6,
+      "scheduledDay": 55,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/item/crab-cakes/",
+      "priority": 0.6,
+      "scheduledDay": 55,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/item/dish-o-the-sea/",
+      "priority": 0.6,
+      "scheduledDay": 56,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/item/seafoam-pudding/",
+      "priority": 0.6,
+      "scheduledDay": 56,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/item/pumpkin-pie/",
+      "priority": 0.6,
+      "scheduledDay": 56,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/item/banana/",
+      "priority": 0.6,
+      "scheduledDay": 56,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/item/mango/",
+      "priority": 0.6,
+      "scheduledDay": 56,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/item/qi-fruit/",
+      "priority": 0.6,
+      "scheduledDay": 57,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/recipe/fried-egg/",
+      "priority": 0.6,
+      "scheduledDay": 57,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/recipe/omelet/",
+      "priority": 0.6,
+      "scheduledDay": 57,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/recipe/salad/",
+      "priority": 0.6,
+      "scheduledDay": 57,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/recipe/cheese-cauliflower/",
+      "priority": 0.6,
+      "scheduledDay": 57,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/recipe/baked-fish/",
+      "priority": 0.6,
+      "scheduledDay": 58,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/recipe/parsnip-soup/",
+      "priority": 0.6,
+      "scheduledDay": 58,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/recipe/vegetable-medley/",
+      "priority": 0.6,
+      "scheduledDay": 58,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/recipe/complete-breakfast/",
+      "priority": 0.6,
+      "scheduledDay": 58,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/recipe/fried-calamari/",
+      "priority": 0.6,
+      "scheduledDay": 58,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/recipe/strange-bun/",
+      "priority": 0.6,
+      "scheduledDay": 59,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/recipe/lucky-lunch/",
+      "priority": 0.6,
+      "scheduledDay": 59,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/recipe/fried-mushroom/",
+      "priority": 0.6,
+      "scheduledDay": 59,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/recipe/pizza/",
+      "priority": 0.6,
+      "scheduledDay": 59,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/recipe/bean-hotpot/",
+      "priority": 0.6,
+      "scheduledDay": 59,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/recipe/glazed-yams/",
+      "priority": 0.6,
+      "scheduledDay": 60,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/recipe/carp-surprise/",
+      "priority": 0.6,
+      "scheduledDay": 60,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/recipe/hashbrowns/",
+      "priority": 0.6,
+      "scheduledDay": 60,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/recipe/pancakes/",
+      "priority": 0.6,
+      "scheduledDay": 60,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/recipe/salmon-dinner/",
+      "priority": 0.6,
+      "scheduledDay": 60,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/recipe/fish-taco/",
+      "priority": 0.6,
+      "scheduledDay": 61,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/recipe/crispy-bass/",
+      "priority": 0.6,
+      "scheduledDay": 61,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/recipe/pepper-poppers/",
+      "priority": 0.6,
+      "scheduledDay": 61,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/recipe/bread/",
+      "priority": 0.6,
+      "scheduledDay": 61,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/recipe/tom-kha-soup/",
+      "priority": 0.6,
+      "scheduledDay": 61,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/recipe/trout-soup/",
+      "priority": 0.6,
+      "scheduledDay": 62,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/recipe/chocolate-cake/",
+      "priority": 0.6,
+      "scheduledDay": 62,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/recipe/pink-cake/",
+      "priority": 0.6,
+      "scheduledDay": 62,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/recipe/rhubarb-pie/",
+      "priority": 0.6,
+      "scheduledDay": 62,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/recipe/cookie/",
+      "priority": 0.6,
+      "scheduledDay": 62,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/recipe/spaghetti/",
+      "priority": 0.6,
+      "scheduledDay": 63,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/recipe/fried-eel/",
+      "priority": 0.6,
+      "scheduledDay": 63,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/recipe/spicy-eel/",
+      "priority": 0.6,
+      "scheduledDay": 63,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/recipe/sashimi/",
+      "priority": 0.6,
+      "scheduledDay": 63,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/recipe/maki-roll/",
+      "priority": 0.6,
+      "scheduledDay": 63,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/recipe/tortilla/",
+      "priority": 0.6,
+      "scheduledDay": 64,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/recipe/red-plate/",
+      "priority": 0.6,
+      "scheduledDay": 64,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/recipe/eggplant-parmesan/",
+      "priority": 0.6,
+      "scheduledDay": 64,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/recipe/rice-pudding/",
+      "priority": 0.6,
+      "scheduledDay": 64,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/recipe/ice-cream/",
+      "priority": 0.6,
+      "scheduledDay": 64,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/recipe/blueberry-tart/",
+      "priority": 0.6,
+      "scheduledDay": 65,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/recipe/autumns-bounty/",
+      "priority": 0.6,
+      "scheduledDay": 65,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/recipe/pumpkin-soup/",
+      "priority": 0.6,
+      "scheduledDay": 65,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/recipe/super-meal/",
+      "priority": 0.6,
+      "scheduledDay": 65,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/recipe/cranberry-sauce/",
+      "priority": 0.6,
+      "scheduledDay": 65,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/recipe/stuffing/",
+      "priority": 0.6,
+      "scheduledDay": 66,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/recipe/farmers-lunch/",
+      "priority": 0.6,
+      "scheduledDay": 66,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/recipe/survival-burger/",
+      "priority": 0.6,
+      "scheduledDay": 66,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/recipe/dish-o-the-sea/",
+      "priority": 0.6,
+      "scheduledDay": 66,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/recipe/miners-treat/",
+      "priority": 0.6,
+      "scheduledDay": 66,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/recipe/roots-platter/",
+      "priority": 0.6,
+      "scheduledDay": 67,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/recipe/seafoam-pudding/",
+      "priority": 0.6,
+      "scheduledDay": 67,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/recipe/pale-broth/",
+      "priority": 0.6,
+      "scheduledDay": 67,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/recipe/plum-pudding/",
+      "priority": 0.6,
+      "scheduledDay": 67,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/recipe/artichoke-dip/",
+      "priority": 0.6,
+      "scheduledDay": 67,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/recipe/stir-fry/",
+      "priority": 0.6,
+      "scheduledDay": 68,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/recipe/roasted-hazelnuts/",
+      "priority": 0.6,
+      "scheduledDay": 68,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/recipe/poppyseed-muffin/",
+      "priority": 0.6,
+      "scheduledDay": 68,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/recipe/chowder/",
+      "priority": 0.6,
+      "scheduledDay": 68,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/recipe/lobster-bisque/",
+      "priority": 0.6,
+      "scheduledDay": 68,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/recipe/escargot/",
+      "priority": 0.6,
+      "scheduledDay": 69,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/recipe/fish-stew/",
+      "priority": 0.6,
+      "scheduledDay": 69,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/recipe/maple-bar/",
+      "priority": 0.6,
+      "scheduledDay": 69,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/recipe/crab-cakes/",
+      "priority": 0.6,
+      "scheduledDay": 69,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/recipe/shrimp-cocktail/",
+      "priority": 0.6,
+      "scheduledDay": 69,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/recipe/ginger-ale/",
+      "priority": 0.6,
+      "scheduledDay": 70,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/recipe/banana-pudding/",
+      "priority": 0.6,
+      "scheduledDay": 70,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/recipe/mango-sticky-rice/",
+      "priority": 0.6,
+      "scheduledDay": 70,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/recipe/poi/",
+      "priority": 0.6,
+      "scheduledDay": 70,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/recipe/tropical-curry/",
+      "priority": 0.6,
+      "scheduledDay": 70,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/recipe/squid-ink-ravioli/",
+      "priority": 0.6,
+      "scheduledDay": 71,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/recipe/pumpkin-pie/",
+      "priority": 0.6,
+      "scheduledDay": 71,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/recipe/radish-salad/",
+      "priority": 0.6,
+      "scheduledDay": 71,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/recipe/fruit-salad/",
+      "priority": 0.6,
+      "scheduledDay": 71,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/recipe/blackberry-cobbler/",
+      "priority": 0.6,
+      "scheduledDay": 71,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/recipe/cranberry-candy/",
+      "priority": 0.6,
+      "scheduledDay": 72,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/recipe/bruschetta/",
+      "priority": 0.6,
+      "scheduledDay": 72,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/recipe/coleslaw/",
+      "priority": 0.6,
+      "scheduledDay": 72,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/recipe/fiddlehead-risotto/",
+      "priority": 0.6,
+      "scheduledDay": 72,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/recipe/moss-soup/",
+      "priority": 0.6,
+      "scheduledDay": 72,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/recipe/triple-shot-espresso/",
+      "priority": 0.6,
+      "scheduledDay": 73,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/bundle/spring-crops-bundle/",
+      "priority": 0.6,
+      "scheduledDay": 73,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/bundle/summer-crops-bundle/",
+      "priority": 0.6,
+      "scheduledDay": 73,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/bundle/fall-crops-bundle/",
+      "priority": 0.6,
+      "scheduledDay": 73,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/bundle/quality-crops-bundle/",
+      "priority": 0.6,
+      "scheduledDay": 73,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/bundle/animal-bundle/",
+      "priority": 0.6,
+      "scheduledDay": 74,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/bundle/artisan-bundle/",
+      "priority": 0.6,
+      "scheduledDay": 74,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/bundle/river-fish-bundle/",
+      "priority": 0.6,
+      "scheduledDay": 74,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/bundle/lake-fish-bundle/",
+      "priority": 0.6,
+      "scheduledDay": 74,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/bundle/ocean-fish-bundle/",
+      "priority": 0.6,
+      "scheduledDay": 74,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/bundle/night-fishing-bundle/",
+      "priority": 0.6,
+      "scheduledDay": 75,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/bundle/crab-pot-bundle/",
+      "priority": 0.6,
+      "scheduledDay": 75,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/bundle/specialty-fish-bundle/",
+      "priority": 0.6,
+      "scheduledDay": 75,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/bundle/construction-bundle/",
+      "priority": 0.6,
+      "scheduledDay": 75,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/bundle/exotic-foraging-bundle/",
+      "priority": 0.6,
+      "scheduledDay": 75,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/bundle/spring-foraging-bundle/",
+      "priority": 0.6,
+      "scheduledDay": 76,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/bundle/summer-foraging-bundle/",
+      "priority": 0.6,
+      "scheduledDay": 76,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/bundle/fall-foraging-bundle/",
+      "priority": 0.6,
+      "scheduledDay": 76,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/bundle/winter-foraging-bundle/",
+      "priority": 0.6,
+      "scheduledDay": 76,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/bundle/blacksmiths-bundle/",
+      "priority": 0.6,
+      "scheduledDay": 76,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/bundle/geologists-bundle/",
+      "priority": 0.6,
+      "scheduledDay": 77,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/bundle/adventurers-bundle/",
+      "priority": 0.6,
+      "scheduledDay": 77,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/bundle/chefs-bundle/",
+      "priority": 0.6,
+      "scheduledDay": 77,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/bundle/dye-bundle/",
+      "priority": 0.6,
+      "scheduledDay": 77,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/bundle/field-research-bundle/",
+      "priority": 0.6,
+      "scheduledDay": 77,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/bundle/fodder-bundle/",
+      "priority": 0.6,
+      "scheduledDay": 78,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/bundle/enchanters-bundle/",
+      "priority": 0.6,
+      "scheduledDay": 78,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/bundle/2500-gold-bundle/",
+      "priority": 0.6,
+      "scheduledDay": 78,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/bundle/5000-gold-bundle/",
+      "priority": 0.6,
+      "scheduledDay": 78,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/bundle/10000-gold-bundle/",
+      "priority": 0.6,
+      "scheduledDay": 78,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/bundle/25000-gold-bundle/",
+      "priority": 0.6,
+      "scheduledDay": 79,
+      "published": false,
+      "publishedAt": null
+    },
+    {
+      "url": "/bundle/missing-bundle/",
+      "priority": 0.6,
+      "scheduledDay": 79,
+      "published": false,
+      "publishedAt": null
+    }
+  ]
+}

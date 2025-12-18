@@ -1,0 +1,329 @@
+{
+  "version": "1.6",
+  "lastUpdated": "2025-12-09",
+  "strategies": {
+    "spring-crops-bundle": {
+      "proTip": "This is your FIRST bundle to complete. Plant all 4 crops on Day 1 of Spring Year 1. Use Basic Fertilizer on every tile - you need GOLD quality. Cauliflower is the bottleneck at 12 days growth.",
+      "strategyNote": "Priority order: Cauliflower (plant by Spring 16), then Potato, Green Bean, Parsnip. If you miss gold quality, don't stress - you have Spring Year 2. The 20 Speed-Gro reward is excellent for Summer crops.",
+      "yearOneStrategy": "100% achievable Year 1 Spring. Buy seeds Day 1, use fertilizer, water daily. Farming Level 0 can still get gold quality with Basic Fertilizer.",
+      "commonMistake": "Forgetting fertilizer! Without it, gold quality is RNG-dependent. Basic Fertilizer from Sap is free.",
+      "rewardValue": "20 Speed-Gro saves 2000g and speeds up Summer crops significantly. Use on Melons or Starfruit.",
+      "difficulty": "Easy",
+      "alternativeSource": "Traveling Cart sometimes sells gold quality crops - check every Friday/Sunday."
+    },
+    "summer-crops-bundle": {
+      "proTip": "Melon is the 12-day bottleneck. Plant by Summer 16 at latest. Hot Peppers regrow - plant early and harvest multiple times for gold quality chances.",
+      "strategyNote": "Blueberries are the easiest - they regrow and give 3 berries per harvest. Multiple chances for gold. Tomatoes also regrow. Focus fertilizer on Melon.",
+      "yearOneStrategy": "Easy Year 1. Hot Pepper and Blueberry regrow, giving multiple gold quality attempts. Melon needs fertilizer priority.",
+      "commonMistake": "Planting Melon too late. Summer 17+ means no harvest before Fall. Also forgetting that Hot Peppers need 5 days initial + 3 day regrow.",
+      "rewardValue": "20 Quality Fertilizer is huge! That's 2000g saved. Use on Fall Pumpkins for the Quality Crops Bundle.",
+      "difficulty": "Easy",
+      "alternativeSource": "Hot Peppers from Traveling Cart are rare but possible. Oasis sells Melon seeds if Pierre runs out."
+    },
+    "fall-crops-bundle": {
+      "proTip": "CORN CAN BE PLANTED IN SUMMER! Start Corn on Summer 1 for Fall gold quality harvest. This spreads your workload and corn regrows.",
+      "strategyNote": "Pumpkin is 13 days - must plant by Fall 15. Yam and Eggplant are both 10 days. Corn planted in Summer continues into Fall.",
+      "yearOneStrategy": "Plant Corn Summer 1, it survives season change. Fall: prioritize Pumpkin (longest growth). Bee House reward unlocks passive honey income.",
+      "commonMistake": "Missing the Pumpkin deadline. Fall 16+ planting = no harvest. Also forgetting Corn can start in Summer.",
+      "rewardValue": "Bee House produces honey worth 100-680g depending on nearby flowers. Fairy Rose honey is 680g! Place near flower patches.",
+      "difficulty": "Easy",
+      "alternativeSource": "Traveling Cart occasionally has fall crops. Corn especially common since it's also Summer."
+    },
+    "quality-crops-bundle": {
+      "proTip": "You only need 3 of 4 crop types. Skip the hardest one for your situation. Most players skip Corn (need 5 gold from same harvest is tough) or Melon.",
+      "strategyNote": "This bundle needs 5 GOLD of each type, not just 1. Requires serious fertilizer investment. Deluxe Speed-Gro + Quality Fertilizer combo is ideal but expensive.",
+      "yearOneStrategy": "Achievable Year 1 with planning. Parsnip: plant 15+ with fertilizer Spring. Pumpkin: plant 15+ Fall 1. Pick two of Melon/Corn based on your luck.",
+      "commonMistake": "Underestimating the 5 gold requirement. You need to plant significantly more than 5 of each crop. Expect 30-50% gold rate with fertilizer.",
+      "rewardValue": "Preserves Jar is ESSENTIAL for profit. Turns 50g Blueberry into 150g jelly. Every farmer needs multiple Preserves Jars.",
+      "difficulty": "Medium",
+      "alternativeSource": "NO alternative - you must grow these yourself. Quality crops cannot be purchased anywhere."
+    },
+    "animal-bundle": {
+      "proTip": "Build Coop first (Year 1 Spring), then Barn. Large eggs from happy chickens, Large milk from happy cows. Friendship = quality. Pet and talk to animals DAILY.",
+      "strategyNote": "Wool needs Sheep (Deluxe Barn) or Rabbit (Deluxe Coop). Duck eggs need Ducks (Big Coop). Plan your building upgrades early.",
+      "yearOneStrategy": "Coop Spring, Big Coop Summer (for Ducks), Barn Fall, Big Barn Winter. Deluxe Barn for Sheep by Year 2 Spring for Wool.",
+      "commonMistake": "Neglecting animal friendship. Low hearts = no large products. Also: Wool requires Deluxe-tier buildings which many players delay.",
+      "rewardValue": "Cheese Press turns 500g Large Milk into 345g Cheese (or 483g gold). Not the best ROI but needed for recipes and gifts.",
+      "difficulty": "Medium",
+      "alternativeSource": "Large Eggs/Milk from Traveling Cart occasionally. Duck Eggs rare but possible. Wool almost never appears."
+    },
+    "artisan-bundle": {
+      "proTip": "GET A PIG ASAP. Truffle Oil is the hardest item - needs Pig (Deluxe Barn, 16000g animal). Start barn upgrades early Year 1.",
+      "strategyNote": "Apple/Pomegranate need fruit trees (28 days to mature). Plant Spring 1 Year 1 for Fall harvest. Jelly/Pickles are easy filler.",
+      "yearOneStrategy": "Tight but possible. Fruit trees Spring 1, Barn upgrades through year, Pig by Fall/Winter. Oil Maker from Farming 8. Truffle hunting in Year 2 Spring.",
+      "commonMistake": "Not planting fruit trees early enough. 28 days = plant by Spring 1 for Fall fruit. Also underestimating Pig cost (16000g + Deluxe Barn).",
+      "rewardValue": "KEG is the BEST reward in the game! Turns 50g Wheat into 200g Beer, 750g Starfruit into 2250g Wine. Game-changing for profit.",
+      "difficulty": "Hard",
+      "alternativeSource": "Traveling Cart: Truffle Oil occasionally appears (expensive but saves a season). Fruit tree products never appear."
+    },
+    "river-fish-bundle": {
+      "proTip": "Catfish is RAIN ONLY. Check weather forecast night before - if rain tomorrow, prioritize fishing. Shad is Fall-only, plan ahead.",
+      "strategyNote": "Sunfish (Spring/Summer day), Catfish (rain only), Shad (Fall only), Tiger Trout (Fall/Winter). Spread across seasons.",
+      "yearOneStrategy": "Spring: Sunfish easy. Summer: pray for rain for Catfish. Fall: Shad + Tiger Trout. If no Summer rain, wait for Fall rain for Catfish.",
+      "commonMistake": "Ignoring weather. Catfish ONLY spawns in rain. Also forgetting Shad is Fall-exclusive - miss it and wait a whole year.",
+      "rewardValue": "30 Bait saves 150g and early fishing time. Not huge but helpful for more Catfish attempts.",
+      "difficulty": "Medium",
+      "alternativeSource": "Catfish from Traveling Cart is your BEST backup. Check every Friday/Sunday if you missed rainy days."
+    },
+    "lake-fish-bundle": {
+      "proTip": "Sturgeon is Summer/Winter Mountain Lake, 6am-7pm. One of the harder bundle fish at 78 difficulty. Use Cork Bobber and +Fishing food.",
+      "strategyNote": "Largemouth Bass (all seasons), Carp (all seasons/easy), Bullhead (all seasons), Sturgeon (Summer/Winter, hard). Sturgeon is the bottleneck.",
+      "yearOneStrategy": "Get easy fish (Carp, Bullhead, Bass) whenever. Save Sturgeon for Winter when you have better fishing skill and tackle.",
+      "commonMistake": "Attempting Sturgeon at low Fishing level. Wait until Level 6+ with Cork Bobber. Use Dish o' The Sea food buff.",
+      "rewardValue": "Dressed Spinner is a solid tackle - increases bite rate by 25%. Good for grinding fishing XP or specific rare fish.",
+      "difficulty": "Medium",
+      "alternativeSource": "Sturgeon appears on Traveling Cart occasionally. Expensive but saves frustration if fishing isn't your thing."
+    },
+    "ocean-fish-bundle": {
+      "proTip": "Pufferfish is the HARDEST. Summer ONLY, 12pm-4pm ONLY, SUNNY only. That's a 4-hour window on sunny Summer days. Plan dedicated trips.",
+      "strategyNote": "Sardine (all seasons, easy), Tuna (Summer/Winter), Red Snapper (Summer/Fall, rain), Tilapia (Summer/Fall), Pufferfish (Summer, sun, 12-4pm).",
+      "yearOneStrategy": "Pufferfish is do-or-die in Summer Year 1. Check forecast for sunny days, be at ocean by 12pm. Other fish are flexible.",
+      "commonMistake": "Missing Pufferfish window. If you don't get it Summer Year 1, you wait an ENTIRE YEAR. It's 80 difficulty too.",
+      "rewardValue": "5 Warp Totem: Beach saves tons of time. Each totem worth 200g+ in time savings. Great for shell collecting and fishing.",
+      "difficulty": "Hard",
+      "alternativeSource": "Pufferfish on Traveling Cart is EXTREMELY rare but possible. Your best backup if Summer ends."
+    },
+    "night-fishing-bundle": {
+      "proTip": "All these fish spawn 12am-2am window. Walleye needs RAIN + Fall. Bream is easy filler. Eel is Spring/Fall.",
+      "strategyNote": "Walleye (Fall, rain, night), Bream (all seasons, night, easy), Eel (Spring/Fall, night). Check weather for Fall rain nights.",
+      "yearOneStrategy": "Bream whenever you fish at night. Eel in Spring or Fall nights. Walleye requires Fall + Rain + Night - limited windows.",
+      "commonMistake": "Forgetting Walleye's triple requirement: Fall + Rain + Night. Miss all Fall rainy nights and you wait a year.",
+      "rewardValue": "Small Glow Ring lights up 5 tiles around you. Helpful for night fishing and mine navigation. Stacks with other rings.",
+      "difficulty": "Medium",
+      "alternativeSource": "Walleye occasionally on Traveling Cart. Eel too. Bream too easy to need alternatives."
+    },
+    "specialty-fish-bundle": {
+      "proTip": "SANDFISH from Desert Pond requires Bus Repair (42,500g Vault). Plan your gold income. Woodskip is Secret Woods only (need Steel Axe).",
+      "strategyNote": "Pufferfish (covered in Ocean), Sandfish (Desert), Woodskip (Secret Woods pond), Ghostfish (Mines floor 20-60).",
+      "yearOneStrategy": "Rush Bus Repair for Sandfish access. Get Steel Axe for Secret Woods ASAP. Ghostfish easy once in mines.",
+      "commonMistake": "Forgetting Sandfish needs Desert access. 42,500g is steep Year 1. Also Steel Axe needed for Secret Woods.",
+      "rewardValue": "5 Dish o' The Sea gives +3 Fishing for 5.5 minutes each. Essential for legendary fish attempts. Save these!",
+      "difficulty": "Hard",
+      "alternativeSource": "Sandfish and Woodskip occasionally on Traveling Cart. Pufferfish extremely rare. Ghostfish uncommon."
+    },
+    "crab-pot-bundle": {
+      "proTip": "Only need 5 of 10 items - pick the easiest! Crab Pots in ocean AND freshwater. Check pots DAILY or creatures despawn.",
+      "strategyNote": "Ocean: Lobster, Crab, Shrimp, Oyster, Mussel. Freshwater: Crayfish, Snail, Periwinkle. Cockle from Beach foraging.",
+      "yearOneStrategy": "Craft 3+ Crab Pots once Fishing Level 3. Place in ocean AND river. Clam from beach foraging. Easy 5/10 in first month.",
+      "commonMistake": "Only placing ocean pots. Freshwater has exclusive catches (Snail, Crayfish, Periwinkle) you might need.",
+      "rewardValue": "3 Crab Pots save 4500g worth of resources. Place immediately for more catches. Luremaster profession makes them bait-free.",
+      "difficulty": "Easy",
+      "alternativeSource": "Lobster and Crab appear on Traveling Cart. Freshwater catches too. But pots are easier."
+    },
+    "spring-foraging-bundle": {
+      "proTip": "All items spawn naturally in Spring. Check Cindersap Forest, Mountain, Bus Stop daily. Wild Horseradish near farm.",
+      "strategyNote": "Leek (forest), Daffodil (everywhere), Dandelion (everywhere), Wild Horseradish (mountain/bus stop). All common Spring forage.",
+      "yearOneStrategy": "Complete this in first week easily. Just explore and pick everything. No planning needed.",
+      "commonMistake": "Selling forage items before completing bundle. Keep one of each until bundle done.",
+      "rewardValue": "30 Spring Seeds grow Wild Horseradish, Leek, Daffodil, Dandelion. Each worth 20-80g. Good early Spring income.",
+      "difficulty": "Easy",
+      "alternativeSource": "These items are SO common, no alternative needed. Just explore."
+    },
+    "summer-foraging-bundle": {
+      "proTip": "Sweet Pea spawns Railroad Area - unlocked Summer 3 from earthquake. Spice Berry in forest. Grape spawns everywhere late Summer.",
+      "strategyNote": "Grape (everywhere), Spice Berry (forest), Sweet Pea (railroad, mountains). All common but need to explore different areas.",
+      "yearOneStrategy": "Railroad opens Summer 3. Check it daily for Sweet Pea. Grape and Spice Berry while walking around.",
+      "commonMistake": "Not checking Railroad area. Sweet Pea is almost exclusively there. Opens Summer 3 Year 1.",
+      "rewardValue": "30 Summer Seeds grow random summer forage. Each harvest 30-80g. Good passive income while farming.",
+      "difficulty": "Easy",
+      "alternativeSource": "All items appear on Traveling Cart occasionally. But foraging is free and easy."
+    },
+    "fall-foraging-bundle": {
+      "proTip": "Common Mushroom and Chanterelle in Secret Woods daily. Hazelnut from bushes (shake them!). Wild Plum everywhere.",
+      "strategyNote": "Common Mushroom (Secret Woods, forest), Chanterelle (Secret Woods), Wild Plum (everywhere), Hazelnut (bushes).",
+      "yearOneStrategy": "Secret Woods access (Steel Axe by Summer) makes this trivial. Multiple spawns daily of mushrooms.",
+      "commonMistake": "Not shaking bushes for Hazelnut. They look like regular bushes but give forage. Also: need Axe upgrade for Secret Woods.",
+      "rewardValue": "30 Fall Seeds grow Hazelnut, Chanterelle, etc. Each 50-160g. Plant immediately for extra Fall income.",
+      "difficulty": "Easy",
+      "alternativeSource": "Mushrooms appear on Traveling Cart. Hazelnuts from shaking forest bushes everywhere."
+    },
+    "winter-foraging-bundle": {
+      "proTip": "Crystal Fruit and Snow Yam from artifact spots (worm tiles). Crocus spawns naturally. Winter Root from hoeing snow.",
+      "strategyNote": "Winter Root (hoe dirt/snow), Crystal Fruit (artifact spots), Crocus (foraging), Snow Yam (artifact spots).",
+      "yearOneStrategy": "Hoe EVERY artifact spot you see. Crystal Fruit and Snow Yam mainly from those. Crocus just walking around.",
+      "commonMistake": "Ignoring artifact spots in Winter. They give different loot than other seasons - forage items!",
+      "rewardValue": "30 Winter Seeds = passive Winter crop! Each harvest 50-150g. ONLY way to farm in Winter normally.",
+      "difficulty": "Easy",
+      "alternativeSource": "All items on Traveling Cart. But hoeing artifact spots is reliable and free."
+    },
+    "construction-bundle": {
+      "proTip": "Stone and Wood from farm/mines. Hardwood from Secret Woods (6 daily) or Mahogany Trees. 99 Fiber from weeds.",
+      "strategyNote": "Wood (99), Stone (99), Hardwood (10). Wood and Stone from normal play. Hardwood needs Secret Woods access.",
+      "yearOneStrategy": "Natural accumulation through farming. Hardwood: Secret Woods daily (Steel Axe) or Large Stumps on farm.",
+      "commonMistake": "Using all Hardwood before bundle. Save at least 10! Large Stump spawns on farm give Hardwood too.",
+      "rewardValue": "Charcoal Kiln turns 10 Wood into 1 Coal. Essential for smelting. Coal sells 150g. Good passive coal income.",
+      "difficulty": "Easy",
+      "alternativeSource": "Robin sells Stone 100g each if desperate. Hardwood is the only hard resource."
+    },
+    "exotic-foraging-bundle": {
+      "proTip": "Coconut and Cactus Fruit from Desert (need Bus Repair). Cave Carrot from mines. Red Mushroom from mines/forest.",
+      "strategyNote": "Need Desert access for Coconut and Cactus Fruit. Morel is Spring Secret Woods. Cave Carrot mines 10-20.",
+      "yearOneStrategy": "Desert access (42,500g) is the bottleneck. Rush it if completing bundles is priority. Other items easy.",
+      "commonMistake": "Delaying Desert access too long. Coconut/Cactus Fruit only there. Purple Mushroom rare - check Mines floor 81+.",
+      "rewardValue": "5 Autumn's Bounty food! +2 Defense +2 Foraging for 7 min each. Save for difficult foraging or combat.",
+      "difficulty": "Hard",
+      "alternativeSource": "Coconut and Cactus Fruit on Traveling Cart occasionally. Red/Purple Mushroom too. Cave Carrot never."
+    },
+    "blacksmiths-bundle": {
+      "proTip": "Copper/Iron/Gold Bars from smelting ore in Furnace. Build Furnace ASAP from Clint (unlocks at Mining 1 after finding copper ore).",
+      "strategyNote": "Each bar needs 5 ore + 1 coal. Copper: floors 2-39, Iron: 41-79, Gold: 81-119. Plan mining trips by floor.",
+      "yearOneStrategy": "Mine consistently. Copper by Spring, Iron by Summer, Gold by Fall. 1 bar each is trivial if you mine regularly.",
+      "commonMistake": "Waiting too long to build Furnace. Every ore without smelting is wasted time. Get Furnace immediately.",
+      "rewardValue": "Furnace saves building one yourself. Place it immediately and smelt constantly.",
+      "difficulty": "Easy",
+      "alternativeSource": "Bars occasionally on Traveling Cart (300-750g each). Or Clint breaks geodes that sometimes contain ore."
+    },
+    "geologists-bundle": {
+      "proTip": "All from Geodes! Break geodes at Clint (25g each). Regular geodes floor 1-39, Frozen 41-79, Magma 81-119, Omni everywhere.",
+      "strategyNote": "Quartz from mining/geodes. Earth Crystal from Geodes/Duggies. Frozen Tear from Frozen Geodes. Fire Quartz from Magma Geodes.",
+      "yearOneStrategy": "Save ALL geodes, break at Clint. You'll naturally get these through normal mining progression.",
+      "commonMistake": "Not breaking geodes regularly. They stack up and you miss bundle items. Break 10+ at a time when visiting Clint.",
+      "rewardValue": "5 Omni Geodes can contain ANYTHING - iridium ore, prismatic shard chance, artifacts. Very valuable.",
+      "difficulty": "Easy",
+      "alternativeSource": "All items on Traveling Cart. Quartz and Earth Crystal very common. Frozen Tear/Fire Quartz less so."
+    },
+    "adventurers-bundle": {
+      "proTip": "All monster drops! Slime (Green Slimes floor 1-39), Bat Wing (Bats floor 30-50), Solar Essence (Ghosts/Squid Kids 80+), Void Essence (Shadow monsters 80+).",
+      "strategyNote": "99 Slime is lots of green slime kills. 10 Bat Wings easy. Solar/Void from deeper floors need combat preparation.",
+      "yearOneStrategy": "Farm early floors for Slime/Bat Wing. Deeper exploration Summer/Fall for Essence when you have better weapons.",
+      "commonMistake": "Underestimating 99 Slime requirement. That's 50+ slime kills. Also: Shadow monsters hit hard, bring food.",
+      "rewardValue": "Small Magnet Ring increases pickup radius. Stacks with other magnet effects. Helpful for mining.",
+      "difficulty": "Medium",
+      "alternativeSource": "Krobus sells Void Essence (Monday). Solar Essence rarer but occasionally on Traveling Cart."
+    },
+    "chefs-bundle": {
+      "proTip": "Fiddlehead Fern is SECRET WOODS SUMMER ONLY. Very limited spawn window! Poppy needs seeds from Pierre or JojaMart.",
+      "strategyNote": "Maki Roll (Queen of Sauce Y1), Fried Egg (starter recipe), Poppy (Summer flower), Fiddlehead Fern (Secret Woods Summer).",
+      "yearOneStrategy": "Get to Secret Woods before Summer for Fiddlehead. Watch Queen of Sauce Summer 21 for Maki Roll recipe.",
+      "commonMistake": "Missing Fiddlehead Fern! Only spawns Secret Woods in Summer. Miss it = wait entire year. High priority.",
+      "rewardValue": "3 Pink Cakes = universal liked gift. 250 energy each. Good for gifting and emergencies.",
+      "difficulty": "Medium",
+      "alternativeSource": "Fiddlehead Fern on Traveling Cart is your ONLY backup. Check every Friday/Sunday in Summer."
+    },
+    "dye-bundle": {
+      "proTip": "Red Mushroom from Mines floor 80+. Sea Urchin from Beach (Summer+ or Submarine ride). Sunflower needs seeds.",
+      "strategyNote": "Red Mushroom (mines/Secret Woods), Sea Urchin (beach, rare), Sunflower (Summer/Fall crop), Duck Feather (Ducks love you).",
+      "yearOneStrategy": "Sea Urchin hardest - rare beach spawn or Night Market submarine. Duck Feather needs Big Coop + happy ducks.",
+      "commonMistake": "Ignoring Sea Urchin. It's rare on beach. Night Market submarine (Winter 15-17) guarantees some.",
+      "rewardValue": "Seed Maker turns crops into seeds. Essential for ancient fruit, rare seeds. Huge money saver.",
+      "difficulty": "Medium",
+      "alternativeSource": "Sea Urchin on Traveling Cart. Duck Feather rare but appears. Red Mushroom common."
+    },
+    "field-research-bundle": {
+      "proTip": "Nautilus Shell is Winter Beach ONLY or Rain Totems in any season. Purple Mushroom from Mines 81+ or Mushroom Cave.",
+      "strategyNote": "Nautilus Shell (Winter beach), Chub (river, all seasons, easy), Frozen Geode (mines 41-79), Purple Mushroom (mines 81+).",
+      "yearOneStrategy": "Choose Mushroom Cave at Demetrius event - guarantees Purple Mushroom. Otherwise mines 81+ searching.",
+      "commonMistake": "Choosing Fruit Bat cave then struggling for Purple Mushroom. Mushroom Cave is MUCH better for bundles.",
+      "rewardValue": "Recycling Machine turns trash into resources. Broken CDs become Refined Quartz. Soggy Newspaper becomes Cloth/Torch.",
+      "difficulty": "Medium",
+      "alternativeSource": "Nautilus Shell and Purple Mushroom both appear on Traveling Cart. Prioritize if you chose Fruit Bats."
+    },
+    "fodder-bundle": {
+      "proTip": "All VERY easy. Wheat grows in 4 days (Summer/Fall). Hay from Silos when cutting grass. Apple needs Fall fruit tree.",
+      "strategyNote": "Wheat (4 day crop), Hay (from grass + Silo), Apple (fruit tree, Fall). Plant Apple tree Spring 1 Year 1!",
+      "yearOneStrategy": "Apple tree must be planted by Spring 1 to fruit in Fall Year 1. Wheat and Hay trivial.",
+      "commonMistake": "Forgetting to plant Apple tree early. 28 days to mature! Also: need Silo BEFORE cutting grass for Hay.",
+      "rewardValue": "Heater keeps animals happy in Winter. Saves 1000g and improves Winter animal product quality.",
+      "difficulty": "Easy",
+      "alternativeSource": "Apple on Traveling Cart occasionally. Hay from Marnie 50g each. Wheat trivial to grow."
+    },
+    "enchanters-bundle": {
+      "proTip": "Wine from any fruit in Keg (7 days). Rabbit's Foot needs max hearts Rabbit. Pomegranate from Fall fruit tree.",
+      "strategyNote": "Oak Resin (tapper, 7 days), Wine (keg any fruit), Rabbit's Foot (lucky happy rabbit), Pomegranate (Fall tree fruit).",
+      "yearOneStrategy": "Plant Pomegranate tree Spring 1. Start tapping Oak trees immediately. Rabbit's Foot is Year 2 usually.",
+      "commonMistake": "Pomegranate tree delay. Must plant by Spring 1 Year 1 for Fall harvest. Rabbit's Foot requires Deluxe Coop + time.",
+      "rewardValue": "5 Gold Bars = 2500g saved. Use immediately for tool upgrades or crafting.",
+      "difficulty": "Hard",
+      "alternativeSource": "Rabbit's Foot from Traveling Cart (rare!) or Serpent drops in Skull Cavern. Pomegranate from Cart too."
+    },
+    "2500-bundle": {
+      "proTip": "Just gold. Farm, fish, mine, sell. This is the easiest bundle if you have income flowing.",
+      "strategyNote": "Focus on high-value crops (Strawberries, Blueberries, Cranberries) and process with Preserves Jar/Keg.",
+      "yearOneStrategy": "Save money from Day 1. Spring Strawberries (Egg Festival), Summer Blueberries, Fall Cranberries. Should hit 2500g quickly.",
+      "commonMistake": "Spending all gold on upgrades before completing Vault. Balance investments with bundle progress.",
+      "rewardValue": "Chocolate Cake is universal liked gift. 250 energy. Nice bonus but gold is the real reward.",
+      "difficulty": "Easy",
+      "alternativeSource": "No alternative - you need to earn gold. But 2500g is trivial by mid-Spring Year 1."
+    },
+    "5000-bundle": {
+      "proTip": "Double the previous bundle. Continue farming staples. Process everything for higher value.",
+      "strategyNote": "Wine and Jelly sell for 3x raw value. Preserves Jar from Quality Crops bundle helps immensely.",
+      "yearOneStrategy": "Should have 5000g by Summer easily with consistent farming and selling. Mine for gems if farming is slow.",
+      "commonMistake": "Rushing this before other bundles that give useful rewards. Prioritize Preserves Jar first.",
+      "rewardValue": "30 Quality Fertilizer helps Quality Crops bundle or future gold-star farming.",
+      "difficulty": "Easy",
+      "alternativeSource": "No alternative needed. 5000g is easy money."
+    },
+    "10000-bundle": {
+      "proTip": "10,000g is where it starts to require actual saving. Don't buy unnecessary buildings or tools until this is done.",
+      "strategyNote": "Fall Cranberries processed through Preserves Jar can fund this easily. Or Summer Starfruit if Desert unlocked.",
+      "yearOneStrategy": "Achievable by Fall Year 1 with good crop management. Cranberry harvest + processing = 10k+ easily.",
+      "commonMistake": "Buying Deluxe Barn (25,000g) before finishing Vault. Prioritize bundle completion for Bus Repair.",
+      "rewardValue": "30 Bait is minimal. The real reward is progress toward Bus Repair (Desert access).",
+      "difficulty": "Easy",
+      "alternativeSource": "No alternative. But selling Ancient Fruit wine or Starfruit wine accelerates this significantly."
+    },
+    "25000-bundle": {
+      "proTip": "This is the BIG one. 25,000g requires dedicated saving. Don't blow money on decorations or unnecessary upgrades.",
+      "strategyNote": "Ancient Fruit wine, Starfruit wine, or mass Pale Ale production. Fishing legendary fish helps too (5000g Legend!).",
+      "yearOneStrategy": "Tough but possible by Winter Year 1. Requires optimal crop selection and minimal spending.",
+      "commonMistake": "Spending 10,000g on Deluxe Coop when you're 15,000g from Bus Repair. Prioritize Desert access.",
+      "rewardValue": "BUS REPAIR! Desert access unlocks Sandfish (bundle), Starfruit seeds (huge profit), Skull Cavern (iridium), Casino, Sandy's shop.",
+      "difficulty": "Medium",
+      "alternativeSource": "No alternative. But this is 100% worth rushing. Desert access is game-changing."
+    },
+    "missing-bundle": {
+      "proTip": "POST-GAME bundle! Only appears after Community Center completion. Requires rare items: Prismatic Shard, Dinosaur Egg, etc.",
+      "strategyNote": "Wine, Dinosaur Mayonnaise, Prismatic Shard, Caviar, Gold-quality Ancient Fruit. All end-game items.",
+      "yearOneStrategy": "Not possible Year 1. This is post-Community Center content. Focus on completing Community Center first.",
+      "commonMistake": "Worrying about this before finishing Community Center. It only unlocks AFTER full CC completion.",
+      "rewardValue": "MOVIE THEATER! Unlocks new social activities, special items, unique character events.",
+      "difficulty": "Very Hard",
+      "alternativeSource": "No alternatives. These are end-game items that require late-game content completion."
+    }
+  },
+  "roomStrategies": {
+    "pantry": {
+      "overview": "The Pantry focuses on farming and animals. Completing it unlocks the GREENHOUSE - grow any crop year-round!",
+      "completionOrder": "Spring → Summer → Fall → Quality Crops → Animal → Artisan. Plan fruit trees Day 1!",
+      "yearOneGuide": "All except Artisan Bundle achievable Year 1. Artisan needs Pig (Truffle Oil) which typically means Year 2.",
+      "reward": "GREENHOUSE unlocks growing crops in all seasons. Plant Ancient Fruit and forget about seasons forever.",
+      "priority": "HIGH - Greenhouse is one of the best rewards in the game. Rush this room."
+    },
+    "fish-tank": {
+      "overview": "Fishing bundles span all seasons and locations. Weather matters! Rainy days = Catfish/Walleye.",
+      "completionOrder": "Crab Pot → Easy fish → Seasonal fish → Specialty (needs Desert). Check weather daily!",
+      "yearOneGuide": "Possible Year 1 if you don't miss seasonal fish. Pufferfish (Summer sun) is the hardest window.",
+      "reward": "Glittering Boulder removed - pan for ore in rivers. Plus 5 Dressed Spinners.",
+      "priority": "MEDIUM - Panning is nice but not essential. Don't stress legendary fish."
+    },
+    "crafts-room": {
+      "overview": "Foraging bundles follow seasons. Construction and Exotic need Desert access for completion.",
+      "completionOrder": "Seasonal foraging → Construction → Exotic (needs Desert). Easy room overall.",
+      "yearOneGuide": "All except Exotic achievable Year 1 without Desert. Rush 42,500g for full completion.",
+      "reward": "BRIDGE TO QUARRY! Free high-quality ore and geodes daily. Big long-term value.",
+      "priority": "MEDIUM-HIGH - Quarry provides consistent resources. Worth completing for passive income."
+    },
+    "boiler-room": {
+      "overview": "Mining-focused bundles. All achievable through normal mining progression.",
+      "completionOrder": "Blacksmith → Geologist → Adventurer. Just mine consistently and you'll complete naturally.",
+      "yearOneGuide": "Easily done Year 1 Spring-Summer with regular mining. Slime (99) takes longest.",
+      "reward": "MINECARTS REPAIRED! Fast travel between Beach, Mines, Bus Stop, Town. Huge time saver.",
+      "priority": "HIGH - Minecarts are massive quality of life. Complete early for convenience."
+    },
+    "bulletin-board": {
+      "overview": "Miscellaneous items from cooking, foraging, animals. Most varied requirements.",
+      "completionOrder": "Chef's → Fodder → Field Research → Dye → Enchanter's. Plan fruit trees!",
+      "yearOneGuide": "Possible Year 1 with fruit tree planning. Rabbit's Foot often delays to Year 2.",
+      "reward": "FRIENDSHIP BOOST! +2 hearts with all non-dated villagers. Saves months of gifting.",
+      "priority": "MEDIUM - Friendship boost is nice but not essential for gameplay."
+    },
+    "vault": {
+      "overview": "Pure gold bundles. Total: 42,500g. Unlocks Desert access for Skull Cavern and more.",
+      "completionOrder": "2,500 → 5,000 → 10,000 → 25,000. Save consistently, don't overspend.",
+      "yearOneGuide": "Achievable by Fall-Winter Year 1 with good crop management. Prioritize income.",
+      "reward": "BUS REPAIRED! Desert access: Skull Cavern (iridium), Starfruit, Sandfish, Casino, Sandy.",
+      "priority": "HIGHEST - Desert access is game-changing. Rush this after essential bundles."
+    }
+  }
+}

@@ -1,0 +1,4 @@
+Starting test...
+Items loaded: 162
+Fish loaded: 67
+Test complete!

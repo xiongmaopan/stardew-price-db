@@ -1,0 +1,50 @@
+name: 🚀 Daily Sitemap Release
+
+on:
+  # 每天北京时间早上 8 点自动运行（UTC 0:00）
+  schedule:
+    - cron: '0 0 * * *'
+  
+  # 也可以手动触发
+  workflow_dispatch:
+
+jobs:
+  release-pages:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: 📥 Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+      
+      - name: 📦 Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+      
+      - name: 📚 Install dependencies
+        run: npm ci
+      
+      - name: 📅 Run daily sitemap release
+        run: node scripts/daily-publish.js
+      
+      - name: 🏗️ Build site
+        run: npm run build
+      
+      - name: 📤 Commit sitemap changes
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add data/sitemap-schedule.json public/sitemap-scheduled.xml || true
+          git diff --staged --quiet || git commit -m "🤖 Daily sitemap release - $(date +'%Y-%m-%d')"
+          git push || true
+      
+      - name: ☁️ Deploy to Cloudflare Pages
+        uses: cloudflare/pages-action@v1
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          projectName: stardew-price-db
+          directory: out

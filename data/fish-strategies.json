@@ -1,0 +1,341 @@
+{
+  "version": "1.6",
+  "lastUpdated": "2025-12-18",
+  "strategies": {
+    "pufferfish": {
+      "catchTip": "Fish for Pufferfish in the Ocean during Summer from 12:00 PM to 4:00 PM on Sunny days using a Steel Trap baited with Poppy Seeds.",
+      "profitNote": "Pufferfish are moderately profitable, but consider catching more common fish like Bass or Catfish for higher volume sales.",
+      "bestUse": "Optimal use: sell at the market for 200g each."
+    },
+    "sturgeon": {
+      "catchTip": "Use a Worm or Fly at Mountain Lake between 6:00 AM and 7:00 PM during Summer or Winter for the best chance to catch a Sturgeon.",
+      "profitNote": "Sturgeon is moderately profitable, selling for 200g each. Consider your time investment given its high difficulty level.",
+      "bestUse": "Sell for profit; Sturgeon does not have any special uses in recipes or as gifts."
+    },
+    "lava-eel": {
+      "catchTip": "Use a Fishing Rod and Worms at the Volcano Caldera during any season and time. The high difficulty requires precise timing and patience.",
+      "profitNote": "Lava Eels are valuable but rare; consider their scarcity when planning your fishing trips compared to more common fish.",
+      "bestUse": "Optimal use: Sell for profit or use in high-value recipes."
+    },
+    "legend": {
+      "catchTip": "Use a Worm or Fly as bait during rainy days in Spring from 6:00 AM to 8:00 PM at Mountain Lake.",
+      "profitNote": "The Legend is highly valuable but requires high skill and specific conditions, making it worth the effort for profit if you can catch it consistently.",
+      "bestUse": "Sell directly to the Traveling Merchant for the highest price."
+    },
+    "mutant-carp": {
+      "catchTip": "Use a Worm or Fly as bait. The Sewers can be slippery, so ensure your rod is well-balanced and ready to react quickly to bites.",
+      "profitNote": "Mutant Carp are valuable, but their high difficulty means they may not be the most profitable option compared to easier-to-catch fish.",
+      "bestUse": "Sell for a good profit or use in the Sewer Crawler recipe for a unique item."
+    },
+    "crimsonfish": {
+      "catchTip": "Use a Fishing Rod with a Glowing Bobber and Worms during the peak hours of 6:00 AM to 8:00 PM in Summer at East Beach.",
+      "profitNote": "Crimsonfish are highly valuable but challenging to catch; consider your time investment versus potential earnings compared to other fish.",
+      "bestUse": "Optimal use: Sell directly to the Traveling Merchant for the best price."
+    },
+    "angler-fish": {
+      "catchTip": "Use a Fishing Rod with a Worm as bait during the day in Fall at the Town River near JojaMart.",
+      "profitNote": "The Angler is highly valuable, making it worth fishing for profit compared to other fish.",
+      "bestUse": "Sell directly to the Traveling Merchant for the highest price."
+    },
+    "glacierfish": {
+      "catchTip": "Fish for Glacierfish in the Cindersap Forest's South Tip during Winter from 6:00 AM to 8:00 PM using a Steel Trap baited with a Steel Jelly.",
+      "profitNote": "Glacierfish are highly valuable at 1000g each, making them profitable despite the high difficulty.",
+      "bestUse": "Optimal use: Sell directly to the Traveling Merchant for the best price."
+    },
+    "catfish": {
+      "catchTip": "Fish for Catfish during rainy days in the River, Secret Woods, or Witch's Swamp between 6:00 AM and 12:00 AM using a Worm or Cricket as bait.",
+      "profitNote": "Catfish are moderately profitable, offering 200g each. Consider their availability and compare with other fish prices in your region.",
+      "bestUse": "Sell Catfish at the market for quick profit; they do not have any special uses in recipes or for gifting."
+    },
+    "octopus": {
+      "catchTip": "Fish for Octopus in the Ocean during Summer from 6:00 AM to 1:00 PM using a Strong Net and any bait. The high difficulty requires precise timing and patience.",
+      "profitNote": "While Octopus sells for 150g, consider its difficulty; compare with other fish available at similar times for better profitability.",
+      "bestUse": "Optimal use is selling for profit, but you can also gift it to friends for relationship points."
+    },
+    "super-cucumber": {
+      "catchTip": "Fish for Super Cucumber at night (6:00 PM - 2:00 AM) during Summer or Fall on the Ocean or Ginger Island using a Worm or Beetle.",
+      "profitNote": "Super Cucumber is moderately profitable with a base price of 250g, but consider the high difficulty and compare to other fish availability.",
+      "bestUse": "Optimal use is to sell for profit, as it does not have special uses in recipes or for gifting."
+    },
+    "salmon": {
+      "catchTip": "Fish for Salmon in the River during Fall between 6:00 AM and 7:00 PM using a Worm as bait. The difficulty is moderate, so ensure your fishing skill is at least 50.",
+      "profitNote": "Salmon are moderately profitable with a base price of 75g. Consider comparing this to other fish available in Fall for better profit margins.",
+      "bestUse": "Optimal use includes selling for profit or using them in recipes that require Salmon."
+    },
+    "tuna": {
+      "catchTip": "Fish for Tuna during the day (6:00 AM - 7:00 PM) in the Ocean or Ginger Island. Use a Strong Net and Squid as bait for better chances.",
+      "profitNote": "Tuna is moderately profitable, especially when compared to smaller fish like Bass or Trout. However, consider the time investment due to its high difficulty level.",
+      "bestUse": "Sell Tuna at the market for a good profit or use it in recipes that require high-value fish ingredients."
+    },
+    "largemouth-bass": {
+      "catchTip": "Fish for Largemouth Bass at Mountain Lake between 6:00 AM and 7:00 PM using a Worm as bait; they can be caught any day of the week and in any season.",
+      "profitNote": "Largemouth Bass are moderately profitable with a base price of 100g; consider their availability and compare with other fish prices in your region.",
+      "bestUse": "Optimal use is to sell for profit, though they can also be gifted or used in recipes if you have a need for them."
+    },
+    "smallmouth-bass": {
+      "catchTip": "Use a Worm or Fly at the Forest Pond during Spring or Fall for better chances of catching Smallmouth Bass.",
+      "profitNote": "Smallmouth Bass sells for 50g, which is decent but not exceptional; consider fishing for higher-value fish if you aim for profit.",
+      "bestUse": "Optimal use: Sell for profit or gift to a friend who enjoys fishing."
+    },
+    "rainbow-trout": {
+      "catchTip": "Fish for Rainbow Trout in the River or Mountain Lake during sunny days from 6:00 AM to 7:00 PM in Summer using a Worm or Fly.",
+      "profitNote": "Rainbow Trout is moderately profitable, offering 65g each. Consider its availability and compare with other fish prices.",
+      "bestUse": "Sell for profit or gift to friends for friendship points."
+    },
+    "tiger-trout": {
+      "catchTip": "Fish for Tiger Trout in the River during Fall or Winter between 6:00 AM and 7:00 PM using a Worm or Fly tackle.",
+      "profitNote": "Tiger Trout is moderately profitable, selling for 150g each. Consider its availability and compare with other fish prices.",
+      "bestUse": "Optimal use: Sell for profit or use in recipes if you have a need for it."
+    },
+    "walleye": {
+      "catchTip": "Fish for Walleye in the River, Mountain Lake, or Forest Pond during rainy days from 12:00 PM to 2:00 AM using a Worm or Fly.",
+      "profitNote": "Walleye sells for 105g, making it a decent catch but not the most profitable; consider other fish for higher returns.",
+      "bestUse": "Optimal use: Sell for profit or use in recipes requiring fresh fish."
+    },
+    "perch": {
+      "catchTip": "Use a Worm as bait in the River during Winter. Aim for calm weather to increase your chances.",
+      "profitNote": "Perch is moderately profitable, but consider other fish like Bass or Trout for higher returns.",
+      "bestUse": "Sell at the market for a decent profit or use in recipes for added value."
+    },
+    "pike": {
+      "catchTip": "Use a Worm as bait and cast near the edge of the River or Forest Pond during Summer or Winter. Aim for areas with deeper water.",
+      "profitNote": "Pike is moderately profitable, but consider catching higher-value fish like Carp or Sturgeon if available.",
+      "bestUse": "Sell at the market for a decent profit; not suitable for cooking or gifting."
+    },
+    "sardine": {
+      "catchTip": "Fish for Sardines in the Ocean between 6:00 AM and 7:00 PM during Spring, Fall, or Winter. Use a Worm as bait; it's effective and easy to obtain.",
+      "profitNote": "Sardines are not highly profitable due to their low base price of 40g. Consider them more for variety or early-game resources.",
+      "bestUse": "Sell Sardines for quick cash or use them in recipes that require basic fish."
+    },
+    "red-snapper": {
+      "catchTip": "Fish for Red Snapper during rainy days in the Ocean between 6:00 AM and 7:00 PM in Summer or Fall using a Worm as bait.",
+      "profitNote": "Red Snappers are moderately priced, making them decent for profit but not the best option compared to higher-value fish like the Salmon or Rainbow Trout.",
+      "bestUse": "Optimal use is to sell for profit, though they can also be gifted or used in cooking recipes."
+    },
+    "red-mullet": {
+      "catchTip": "Fish for Red Mullet during the day (6:00 AM - 7:00 PM) in the Ocean. Use a Worm as bait; it's effective and easy to obtain.",
+      "profitNote": "Red Mullet sells for 75g, which is decent but not exceptional. Consider fishing for higher-value fish like Pufferfish or Angelfish if you aim for maximum profit.",
+      "bestUse": "Sell at the market for quick cash or use in recipes that require fish."
+    },
+    "sea-cucumber": {
+      "catchTip": "Use a Strong Net with Worms as bait during the day in the Ocean from Fall to Winter.",
+      "profitNote": "Sea Cucumbers are moderately profitable; consider fishing for higher-value fish like Lobsters or Snails if available.",
+      "bestUse": "Sell at the market for a good profit, or use in recipes requiring seafood."
+    },
+    "eel": {
+      "catchTip": "Fish for Eels in the Ocean during rainy days from 4:00 PM to 2:00 AM using a Worm as bait. Aim for calm waters to reduce the difficulty.",
+      "profitNote": "Eels are moderately profitable, selling for 85g each. Consider their availability and compare with other fish prices in your region.",
+      "bestUse": "Sell Eels at the market for quick profit; they are not used in any recipes or pond events."
+    },
+    "carp": {
+      "catchTip": "Use a Worm or Fly at any time of day in the Mountain Lake, Secret Woods, or Sewers. Carp have a moderate difficulty level of 15, so ensure your rod is well-maintained.",
+      "profitNote": "Carp are not highly profitable due to their low base price of 30g. Consider fishing for more valuable fish like Bass or Walleye for better profits.",
+      "bestUse": "Best use: Sell for quick cash or use in recipes that require common fish."
+    },
+    "bullhead": {
+      "catchTip": "Use a Worm or Fly at Mountain Lake during any season and time for Bullheads. Aim for calm weather to increase your chances.",
+      "profitNote": "Bullheads are moderately priced and can be caught year-round, making them a steady but not highly profitable option compared to more rare fish.",
+      "bestUse": "Sell for consistent income or use in cooking recipes for a slight boost in value."
+    },
+    "bream": {
+      "catchTip": "Fish for Bream in the River between 6:00 PM and 2:00 AM during any season and weather. Use a Worm as bait; it's effective and easy to obtain.",
+      "profitNote": "Bream is moderately profitable with a base price of 45g. Consider catching it when you need easy-to-sell fish or when other fish are scarce.",
+      "bestUse": "Sell Bream for quick cash or use them in recipes that require freshwater fish."
+    },
+    "sunfish": {
+      "catchTip": "Fish for Sunfish in the River during sunny days from 6:00 AM to 7:00 PM. Use a basic fishing rod and any bait like Worms or Crickets.",
+      "profitNote": "Sunfish are not highly profitable due to their low base price of 30g. Consider fishing for more valuable species like Bass or Trout.",
+      "bestUse": "Best use is for selling, as they do not have special uses in recipes or for ponds."
+    },
+    "shad": {
+      "catchTip": "Fish for Shad during rainy days in the River between 9:00 AM and 2:00 AM using a Worm or Fly.",
+      "profitNote": "Shad are moderately profitable, especially early in the season when other fish are less common.",
+      "bestUse": "Sell at the market for a good price; they can also be used in recipes."
+    },
+    "halibut": {
+      "catchTip": "Fish for Halibut in the Ocean during 6:00 AM - 11:00 AM or 7:00 PM - 2:00 AM. Use a Fishing Rod with Worms as bait.",
+      "profitNote": "Halibut is moderately profitable, selling for 80g. Consider its availability against other fish like Bass or Trout.",
+      "bestUse": "Sell at the market for quick profit; it's not used in any recipes or for ponds."
+    },
+    "lingcod": {
+      "catchTip": "Use a Worm or Beetle as bait in the River or Mountain Lake during Winter. Lingcod have a high difficulty of 85, so ensure your fishing skill is maxed out and cast accurately.",
+      "profitNote": "Lingcod are moderately profitable at 120g each, but consider other fish like Sturgeon or Walleye for higher profits if you're focusing on money.",
+      "bestUse": "Optimal use: Sell for profit or gift to friends for relationship boosts."
+    },
+    "squid": {
+      "catchTip": "Fish for Squid in the Ocean between 6:00 PM and 2:00 AM during Winter. Use a Fishing Rod with a Worm as bait.",
+      "profitNote": "Squid are moderately profitable at 80g each, but consider other fish like Lobster or Angler for higher profits.",
+      "bestUse": "Optimal use is selling, as they do not have special recipes or uses in the game."
+    },
+    "tilapia": {
+      "catchTip": "Fish for Tilapia in the Ocean between 6:00 AM and 2:00 PM during Summer or Fall. Use a Worm as bait; it's effective and easy to obtain.",
+      "profitNote": "Tilapia sells for 75g each, making it a decent catch for profit, especially if you can find multiple in a short time.",
+      "bestUse": "Optimal use is selling for profit, but they can also be used in recipes or gifted to villagers."
+    },
+    "dorado": {
+      "catchTip": "Use a Worm or Fly at Forest Pond during Summer between 6:00 AM and 7:00 PM for the best chance to catch a Dorado.",
+      "profitNote": "Dorado sells for 100g, making it a decent catch but not the most profitable. Consider fishing for higher-value fish like the Rainbow Trout or King Salmon if you aim for maximum profit.",
+      "bestUse": "Optimal use is to sell for profit, though you can also gift it to friends for relationship points."
+    },
+    "albacore": {
+      "catchTip": "Fish for Albacore in the Ocean during Fall or Winter between 6:00 AM - 11:00 AM or 6:00 PM - 2:00 AM using a Steel Trap baited with Herring.",
+      "profitNote": "Albacore is moderately profitable, but consider the time investment due to its difficulty level of 60. Compare with other fish like Tuna for higher profits.",
+      "bestUse": "Sell Albacore for quick cash; it's not used in any recipes or for ponds."
+    },
+    "woodskip": {
+      "catchTip": "Fish for Woodskip in the Secret Woods using a Worm as bait during any season and time of day. The difficulty is moderate, so ensure your fishing skills are at least 50.",
+      "profitNote": "Woodskip sells for 75g, which is decent but not exceptional. Consider if there are higher-value fish available in the same location or season.",
+      "bestUse": "Optimal use is to sell for profit, though you can also gift it to friends or use it in recipes if you prefer."
+    },
+    "ghostfish": {
+      "catchTip": "Use a Fishing Rod with a Nightcrawler as bait at the Mines on Floor 20, 60. The Ghostfish can be caught at any time and in any weather, but targeting the night might increase your chances due to its ghostly nature.",
+      "profitNote": "While the Ghostfish is not extremely valuable, it can be useful for certain recipes or as a gift. It's not the most profitable fish, so consider other high-value options for consistent income.",
+      "bestUse": "Optimal use: Gift to Willy for friendship points or use in recipes that require rare fish."
+    },
+    "stonefish": {
+      "catchTip": "Use a Fishing Rod with a Worm or Cricket as bait. Aim for the deepest part of the mine floor, near the edges where walls meet the floor.",
+      "profitNote": "Stonefish is moderately profitable, especially early in the game when higher-value fish are scarce. However, consider the time investment in reaching Floor 20.",
+      "bestUse": "Sell at the market for quick profit or use in cooking recipes that require rare ingredients."
+    },
+    "ice-pip": {
+      "catchTip": "Use a Fishing Rod with a lure like the Glowworm or Nightcrawler. The Ice Pip is found in the Mines on Floor 60, and due to its high difficulty, patience and precise timing are crucial.",
+      "profitNote": "The Ice Pip is valuable at 500g, but consider the time and effort required compared to other fish like the Rainbow Trout or Walleye.",
+      "bestUse": "Optimal use: Sell for profit; it's a good candidate for the Fish Tank if you aim to fill it with rare fish."
+    },
+    "scorpion-carp": {
+      "catchTip": "Fish for Scorpion Carp in the Desert from 6:00 AM to 8:00 PM during any season using a Fishing Rod with a Worm as bait. The high difficulty requires precise timing and patience.",
+      "profitNote": "While Scorpion Carp are valuable at 150g, consider the time investment due to their high difficulty compared to easier fish like Bass or Trout.",
+      "bestUse": "Optimal use is selling for profit, though they can also be gifted to friends for friendship points."
+    },
+    "sandfish": {
+      "catchTip": "Use a Worm or Beetle as bait during the day in the Desert from 6:00 AM to 8:00 PM.",
+      "profitNote": "Sandfish is moderately profitable; consider its availability and compare prices with other fish.",
+      "bestUse": "Sell at the market for a decent profit."
+    },
+    "midnight-carp": {
+      "catchTip": "Fish for Midnight Carp at Mountain Lake or Ginger Island between 10:00 PM and 2:00 AM during Fall or Winter using a Worm as bait.",
+      "profitNote": "Midnight Carp sells for 150g, which is decent but not exceptional; consider if you have other high-value fish to catch.",
+      "bestUse": "Optimal use: sell for profit or gift to friends for friendship points."
+    },
+    "spook-fish": {
+      "catchTip": "Fish for Spook Fish at the Night Market during Winter from 5:00 PM to 2:00 AM using a Fishing Rod and any bait.",
+      "profitNote": "Spook Fish are worth 220g each, making them profitable but not as high as some other rare fish.",
+      "bestUse": "Optimal use: Sell for profit or use in cooking recipes for additional value."
+    },
+    "blobfish": {
+      "catchTip": "Fish for Blobfish at the Night Market between 5:00 PM and 2:00 AM during Winter. Use a Strong Net and any bait.",
+      "profitNote": "Blobfish are valuable but not as profitable as some other rare fish. Consider your time investment versus potential earnings.",
+      "bestUse": "Optimal use is selling for 500g, though you can also gift it for relationship points."
+    },
+    "midnight-squid": {
+      "catchTip": "Fish for Midnight Squid at the Night Market between 5:00 PM and 2:00 AM during Winter using a Fishing Rod and any bait.",
+      "profitNote": "Midnight Squid is moderately priced at 100g; consider its availability and compare with other fish for better profit opportunities.",
+      "bestUse": "Sell the Midnight Squid for quick cash or use it in recipes if you have a need for it."
+    },
+    "crab": {
+      "catchTip": "Use a Strong Net with Worms as bait in the Ocean at any time of day or night during any season.",
+      "profitNote": "Crabs are moderately profitable, selling for 100g each, but consider fishing for more valuable fish like Red Snapper or Lobster if you aim for higher profits.",
+      "bestUse": "Optimal use: Sell for quick profit or use in recipes requiring seafood."
+    },
+    "lobster": {
+      "catchTip": "Use a Lobster Pot in the Ocean during any season and time. Aim for deeper waters near the bottom of the map for better chances.",
+      "profitNote": "Lobsters are moderately profitable, selling for 120g each. They are a good option but not the most lucrative compared to higher-value fish like Salmon or Sturgeon.",
+      "bestUse": "Optimal use is to sell for profit, though they can also be used in recipes or gifted to friends for friendship points."
+    },
+    "shrimp": {
+      "catchTip": "Use a Fly Rod with Worms as bait in the Ocean at night during any season for better chances of catching Shrimp.",
+      "profitNote": "Shrimp are moderately profitable, especially early in the game when you can sell them for 60g each.",
+      "bestUse": "Sell directly to the shop for quick profit or use in recipes requiring seafood."
+    },
+    "crayfish": {
+      "catchTip": "Use a Fishing Rod with any bait in the River, Forest Pond, or Mountain Lake at any time of day or season.",
+      "profitNote": "Crayfish are moderately profitable, selling for 75g each. Consider fishing for them if you need quick cash or have limited space for more valuable fish.",
+      "bestUse": "Sell for profit or use in cooking recipes that require freshwater fish."
+    },
+    "snail": {
+      "catchTip": "Use a Worm as bait at the River, Forest Pond, or Mountain Lake. Snails can be caught at any time of day or night, regardless of season or weather.",
+      "profitNote": "Snails are moderately profitable, offering 65g each. They are not the highest earners but are consistent throughout the year.",
+      "bestUse": "Sell for profit or use in recipes that require snails."
+    },
+    "periwinkle": {
+      "catchTip": "Use a Worm as bait in the River, Forest Pond, or Mountain Lake at any time of day or season. The Periwinkle is not particularly difficult to catch.",
+      "profitNote": "While the Periwinkle is easy to catch, its base price of 20g is relatively low compared to other fish. Consider focusing on higher-value catches for better profit.",
+      "bestUse": "Optimal use is to sell for quick cash or use in recipes if you have a need for it."
+    },
+    "mussel": {
+      "catchTip": "Use a Strong Fishing Rod with any bait in the Ocean at any time of day during any season and weather condition.",
+      "profitNote": "Mussels are not highly profitable due to their low base price; consider focusing on more valuable fish for better earnings.",
+      "bestUse": "Sell for quick cash or use in cooking recipes that require seafood."
+    },
+    "oyster": {
+      "catchTip": "Use a Fishing Rod and any bait in the Ocean at any time of day or season. Oysters are relatively easy to catch due to their abundance.",
+      "profitNote": "Oysters are not highly profitable compared to other fish, but they can be useful for recipes or gifts.",
+      "bestUse": "Optimal use: Use in recipes or give as gifts to villagers for friendship points."
+    },
+    "cockle": {
+      "catchTip": "Use a basic fishing rod and any bait at the Ocean during any season and time. Cockles are easy to catch.",
+      "profitNote": "Cockles are not highly profitable; consider fishing for more valuable fish like Red Snapper or Salmon for better earnings.",
+      "bestUse": "Sell for quick cash or use in recipes that require seafood."
+    },
+    "clam": {
+      "catchTip": "Use a Worm as bait at the Beach; Clams can be caught any time of day, but they are more common during low tide.",
+      "profitNote": "Clams are moderately profitable, especially early in the game when you need money. However, they are not as valuable as some other fish.",
+      "bestUse": "Optimal use is to sell them for quick cash or use them in recipes like Fried Clams."
+    },
+    "coral": {
+      "catchTip": "Use a Fly Rod with a Worm as bait at the Beach or Ginger Island during Summer. Aim for calm weather to increase your chances.",
+      "profitNote": "Coral is moderately profitable, selling for 80g each. Consider comparing catches with other summer fish like Angler or Red Snapper for better profits.",
+      "bestUse": "Optimal use: Sell directly to the shop for quick profit."
+    },
+    "sea-urchin": {
+      "catchTip": "Use a Strong Fishing Rod with any bait. Sea Urchins can be tricky as they require precise timing to catch.",
+      "profitNote": "Sea Urchins are valuable, but compare their price to other summer beach catches like Angelfish or Red Snapper for better profitability.",
+      "bestUse": "Optimal use: sell directly for profit; not suitable for cooking or gifting."
+    },
+    "stingray": {
+      "catchTip": "Fish for Stingrays at Ginger Island during the night from 6:00 PM to 2:00 AM using a Fishing Rod and any bait. The high difficulty requires precise timing and patience.",
+      "profitNote": "Stingrays are moderately profitable, selling for 180g each. Consider their rarity and compare to other fish availability and prices.",
+      "bestUse": "Optimal use is to sell for profit, as they do not have special recipes or uses beyond selling."
+    },
+    "lionfish": {
+      "catchTip": "Use a Worm or Fly at any time of day on Ginger Island. Aim for calm waters as rough seas can make it harder to catch.",
+      "profitNote": "Lionfish are moderately priced and not very common, so they are decent for profit but not the best option compared to more valuable fish like the Red Snapper or Walleye.",
+      "bestUse": "Sell for profit; they are not required for any recipes or events."
+    },
+    "blue-discus": {
+      "catchTip": "Fish for Blue Discus on Ginger Island between 6:00 AM and 8:00 PM during any season and weather. Use a Worm or Beetle as bait; the difficulty is moderate, so ensure your fishing skills are at least 60.",
+      "profitNote": "Blue Discus sells for 120g, making it a decent catch for profit, especially if you can find other high-value fish to compare it against.",
+      "bestUse": "Optimal use: sell for profit or gift to a friend who enjoys rare fish."
+    },
+    "son-of-crimsonfish": {
+      "catchTip": "Fish for the Son of Crimsonfish during summer between 6:00 AM and 8:00 PM in the ocean using a Nightcrawler as bait; the high difficulty requires precise timing and patience.",
+      "profitNote": "Given its high base price of 1500g, it is worth fishing for profit, especially if you can catch multiple, but consider other fish availability and prices.",
+      "bestUse": "Optimal use: sell directly for profit; it does not have any special uses in recipes or for gifting."
+    },
+    "ms-angler": {
+      "catchTip": "Use a Fishing Rod with a Worm or Cricket as bait during the day in the River. Aim for early morning or late afternoon when the river is less crowded.",
+      "profitNote": "Ms. Angler is highly valuable at 900g, making her a good catch for profit, especially if you can find her early in the season.",
+      "bestUse": "Optimal use: Sell directly to the Stardew Valley Museum for 1000g or sell to the shop for 900g."
+    },
+    "legend-ii": {
+      "catchTip": "Fish for Legend II in Mountain Lake during rainy days from 6:00 AM to 8:00 PM in Spring using a Worm as bait. The high difficulty requires precise timing and patience.",
+      "profitNote": "While Legend II is valuable, its rarity and high difficulty make it less profitable compared to more common fish. Consider your time investment.",
+      "bestUse": "Optimal use: Sell at the Traveling Merchant for the best price or gift to a friend for relationship points."
+    },
+    "glacierfish-jr": {
+      "catchTip": "Fish for Glacierfish Jr. in the Forest River during Winter from 6:00 AM to 8:00 PM using a Fishing Rod with any bait; the high difficulty requires precise timing and patience.",
+      "profitNote": "Glacierfish Jr. is valuable at 1000g, making it worth fishing for profit, especially if you can catch multiple without spending too much time.",
+      "bestUse": "Optimal use: sell directly for profit; consider gifting to friends for relationship boosts."
+    },
+    "radioactive-carp": {
+      "catchTip": "Use a Worm or Beetle as bait in the Sewers during any season and time. The high difficulty requires precise timing and patience.",
+      "profitNote": "While valuable, consider the time investment due to its high difficulty compared to other fish.",
+      "bestUse": "Sell for profit; its high base price justifies the effort."
+    },
+    "goby": {
+      "catchTip": "Use a Fly Rod with Worms at Ginger Island during any season and time for the easiest catch of Goby.",
+      "profitNote": "Goby is not highly profitable due to its low base price; consider it more for variety or early-game resources.",
+      "bestUse": "Optimal use: Sell for quick cash or use as bait for higher-value fish."
+    }
+  }
+}

@@ -1,0 +1,936 @@
+{
+  "version": "1.6",
+  "lastUpdated": "2025-12-07",
+  "fertilizers": [
+    { "id": "none", "name": "No Fertilizer", "growthBonus": 0, "qualityBonus": 0, "cost": 0 },
+    { "id": "speed-gro", "name": "Speed-Gro", "growthBonus": 0.10, "qualityBonus": 0, "cost": 100 },
+    { "id": "deluxe-speed-gro", "name": "Deluxe Speed-Gro", "growthBonus": 0.25, "qualityBonus": 0, "cost": 150 },
+    { "id": "hyper-speed-gro", "name": "Hyper Speed-Gro", "growthBonus": 0.33, "qualityBonus": 0, "cost": 70 },
+    { "id": "basic-fertilizer", "name": "Basic Fertilizer", "growthBonus": 0, "qualityBonus": 1, "cost": 100 },
+    { "id": "quality-fertilizer", "name": "Quality Fertilizer", "growthBonus": 0, "qualityBonus": 2, "cost": 150 },
+    { "id": "deluxe-fertilizer", "name": "Deluxe Fertilizer", "growthBonus": 0, "qualityBonus": 3, "cost": 70 }
+  ],
+  "professions": [
+    { "id": "none", "name": "No Profession", "bonus": 0, "appliesTo": [], "description": "No profession bonus" },
+    { "id": "tiller", "name": "Tiller", "bonus": 0.10, "appliesTo": ["Crops"], "description": "+10% sell price for crops" },
+    { "id": "artisan", "name": "Artisan", "bonus": 0.40, "appliesTo": ["Artisan Goods"], "description": "+40% sell price for artisan goods" },
+    { "id": "agriculturist", "name": "Agriculturist", "growthBonus": 0.10, "appliesTo": ["Crops"], "description": "Crops grow 10% faster" },
+    { "id": "angler", "name": "Angler", "bonus": 0.25, "appliesTo": ["Fish"], "description": "+25% sell price for fish" },
+    { "id": "rancher", "name": "Rancher", "bonus": 0.20, "appliesTo": ["Animal Products"], "description": "+20% sell price for animal products" }
+  ],
+  "seasons": ["Spring", "Summer", "Fall", "Winter", "Greenhouse"],
+  "items": [
+    {
+      "id": 1, "name": "Parsnip", "slug": "parsnip", "category": "Crops", "subcategory": "Vegetable",
+      "season": ["Spring"], "basePrice": 35, "seedPrice": 20, "seedSource": "Pierre's Store",
+      "growthTime": 4, "regrows": false,
+      "description": "A spring tuber closely related to the carrot. It has an earthy taste and is full of nutrients.",
+      "processing": { "jarPrice": 120, "jarProduct": "Pickles", "kegPrice": 78, "kegProduct": "Juice", "kegTime": 4, "jarTime": 3 }
+    },
+    {
+      "id": 2, "name": "Green Bean", "slug": "green-bean", "category": "Crops", "subcategory": "Vegetable",
+      "season": ["Spring"], "basePrice": 40, "seedPrice": 60, "seedSource": "Pierre's Store",
+      "growthTime": 10, "regrows": true, "regrowTime": 3,
+      "description": "A popular garden plant. The young pods are crunchy and delicious.",
+      "processing": { "jarPrice": 130, "jarProduct": "Pickles", "kegPrice": 90, "kegProduct": "Juice", "kegTime": 4, "jarTime": 3 }
+    },
+    {
+      "id": 3, "name": "Cauliflower", "slug": "cauliflower", "category": "Crops", "subcategory": "Vegetable",
+      "season": ["Spring"], "basePrice": 175, "seedPrice": 80, "seedSource": "Pierre's Store",
+      "growthTime": 12, "regrows": false, "isGiantCrop": true,
+      "description": "Valuable, but slow-growing. Despite its pale color, the florets are full of nutrients.",
+      "processing": { "jarPrice": 400, "jarProduct": "Pickles", "kegPrice": 393, "kegProduct": "Juice", "kegTime": 4, "jarTime": 3 }
+    },
+    {
+      "id": 4, "name": "Potato", "slug": "potato", "category": "Crops", "subcategory": "Vegetable",
+      "season": ["Spring"], "basePrice": 80, "seedPrice": 50, "seedSource": "Pierre's Store",
+      "growthTime": 6, "regrows": false, "extraHarvestChance": 0.25,
+      "description": "A brown tuber with excellent keeping qualities. Very versatile in cooking.",
+      "processing": { "jarPrice": 210, "jarProduct": "Pickles", "kegPrice": 180, "kegProduct": "Juice", "kegTime": 4, "jarTime": 3 }
+    },
+    {
+      "id": 5, "name": "Kale", "slug": "kale", "category": "Crops", "subcategory": "Vegetable",
+      "season": ["Spring"], "basePrice": 110, "seedPrice": 70, "seedSource": "Pierre's Store",
+      "growthTime": 6, "regrows": false,
+      "description": "The waxy leaves are great for cooking. High in fiber and vitamins.",
+      "processing": { "jarPrice": 270, "jarProduct": "Pickles", "kegPrice": 247, "kegProduct": "Juice", "kegTime": 4, "jarTime": 3 }
+    },
+    {
+      "id": 6, "name": "Garlic", "slug": "garlic", "category": "Crops", "subcategory": "Vegetable",
+      "season": ["Spring"], "basePrice": 60, "seedPrice": 40, "seedSource": "Pierre's Store (Year 2+)",
+      "growthTime": 4, "regrows": false,
+      "description": "Adds a wonderful flavor to dishes. High-quality garlic can be pretty spicy.",
+      "processing": { "jarPrice": 170, "jarProduct": "Pickles", "kegPrice": 135, "kegProduct": "Juice", "kegTime": 4, "jarTime": 3 }
+    },
+    {
+      "id": 7, "name": "Rhubarb", "slug": "rhubarb", "category": "Crops", "subcategory": "Fruit",
+      "season": ["Spring"], "basePrice": 220, "seedPrice": 100, "seedSource": "Oasis",
+      "growthTime": 13, "regrows": false,
+      "description": "The stalks are extremely tart, but make a great dessert when sweetened.",
+      "processing": { "jarPrice": 490, "jarProduct": "Jelly", "kegPrice": 660, "kegProduct": "Wine", "kegTime": 7, "jarTime": 3 }
+    },
+    {
+      "id": 8, "name": "Strawberry", "slug": "strawberry", "category": "Crops", "subcategory": "Fruit",
+      "season": ["Spring"], "basePrice": 120, "seedPrice": 100, "seedSource": "Egg Festival",
+      "growthTime": 8, "regrows": true, "regrowTime": 4,
+      "description": "A sweet and juicy favorite with a hint of tartness.",
+      "processing": { "jarPrice": 290, "jarProduct": "Jelly", "kegPrice": 360, "kegProduct": "Wine", "kegTime": 7, "jarTime": 3 }
+    },
+    {
+      "id": 9, "name": "Coffee Bean", "slug": "coffee-bean", "category": "Crops", "subcategory": "Special",
+      "season": ["Spring", "Summer"], "basePrice": 15, "seedPrice": 15, "seedSource": "Self-seeding (or Traveling Cart 2500g)",
+      "growthTime": 10, "regrows": true, "regrowTime": 2, "harvestYield": 4,
+      "description": "Plant in spring or summer to grow a coffee plant. Harvested beans can be replanted. Place 5 in a Keg to make Coffee (150g).",
+      "processing": { "kegPrice": 150, "kegProduct": "Coffee (x5 beans)", "kegTime": 2 },
+      "notes": "Self-seeding crop. Initial purchase from Traveling Cart costs 2500g, but harvested beans can be replanted for free."
+    },
+    {
+      "id": 10, "name": "Blue Jazz", "slug": "blue-jazz", "category": "Crops", "subcategory": "Flower",
+      "season": ["Spring"], "basePrice": 50, "seedPrice": 30, "seedSource": "Pierre's Store",
+      "growthTime": 7, "regrows": false,
+      "description": "The flower grows best in the cool spring air. It has a pleasant juniper-like smell."
+    },
+    {
+      "id": 11, "name": "Tulip", "slug": "tulip", "category": "Crops", "subcategory": "Flower",
+      "season": ["Spring"], "basePrice": 30, "seedPrice": 20, "seedSource": "Pierre's Store",
+      "growthTime": 6, "regrows": false,
+      "description": "The colorful, cup-shaped flower has a very faint sweet scent."
+    },
+    {
+      "id": 12, "name": "Melon", "slug": "melon", "category": "Crops", "subcategory": "Fruit",
+      "season": ["Summer"], "basePrice": 250, "seedPrice": 80, "seedSource": "Pierre's Store",
+      "growthTime": 12, "regrows": false, "isGiantCrop": true,
+      "description": "A refreshing summer treat with a signature sweet flavor.",
+      "processing": { "jarPrice": 550, "jarProduct": "Jelly", "kegPrice": 750, "kegProduct": "Wine", "kegTime": 7, "jarTime": 3 }
+    },
+    {
+      "id": 13, "name": "Tomato", "slug": "tomato", "category": "Crops", "subcategory": "Vegetable",
+      "season": ["Summer"], "basePrice": 60, "seedPrice": 50, "seedSource": "Pierre's Store",
+      "growthTime": 11, "regrows": true, "regrowTime": 4,
+      "description": "Rich and slightly tangy, the tomato has a wide variety of culinary uses.",
+      "processing": { "jarPrice": 170, "jarProduct": "Pickles", "kegPrice": 135, "kegProduct": "Juice", "kegTime": 4, "jarTime": 3 }
+    },
+    {
+      "id": 14, "name": "Hot Pepper", "slug": "hot-pepper", "category": "Crops", "subcategory": "Fruit",
+      "season": ["Summer"], "basePrice": 40, "seedPrice": 40, "seedSource": "Pierre's Store",
+      "growthTime": 5, "regrows": true, "regrowTime": 3,
+      "description": "Fiery, with a hint of sweetness. Cooking with peppers is risky, rewarding.",
+      "processing": { "jarPrice": 130, "jarProduct": "Jelly", "kegPrice": 120, "kegProduct": "Wine", "kegTime": 7, "jarTime": 3 }
+    },
+    {
+      "id": 15, "name": "Blueberry", "slug": "blueberry", "category": "Crops", "subcategory": "Fruit",
+      "season": ["Summer"], "basePrice": 50, "seedPrice": 80, "seedSource": "Pierre's Store",
+      "growthTime": 13, "regrows": true, "regrowTime": 4, "harvestYield": 3,
+      "description": "A popular berry reported to have many health benefits. The blue skin has the highest nutritional value.",
+      "processing": { "jarPrice": 150, "jarProduct": "Jelly", "kegPrice": 150, "kegProduct": "Wine", "kegTime": 7, "jarTime": 3 }
+    },
+    {
+      "id": 16, "name": "Corn", "slug": "corn", "category": "Crops", "subcategory": "Vegetable",
+      "season": ["Summer", "Fall"], "basePrice": 50, "seedPrice": 150, "seedSource": "Pierre's Store",
+      "growthTime": 14, "regrows": true, "regrowTime": 4,
+      "description": "One of the most popular grains. The sweet, fresh cobs are a favorite summer treat.",
+      "processing": { "jarPrice": 150, "jarProduct": "Pickles", "kegPrice": 100, "kegProduct": "Oil", "kegTime": 1, "jarTime": 3 }
+    },
+    {
+      "id": 17, "name": "Radish", "slug": "radish", "category": "Crops", "subcategory": "Vegetable",
+      "season": ["Summer"], "basePrice": 90, "seedPrice": 40, "seedSource": "Pierre's Store",
+      "growthTime": 6, "regrows": false,
+      "description": "A pungent root vegetable with red skin. Its spiciness is often underestimated.",
+      "processing": { "jarPrice": 230, "jarProduct": "Pickles", "kegPrice": 202, "kegProduct": "Juice", "kegTime": 4, "jarTime": 3 }
+    },
+    {
+      "id": 18, "name": "Wheat", "slug": "wheat", "category": "Crops", "subcategory": "Grain",
+      "season": ["Summer", "Fall"], "basePrice": 25, "seedPrice": 10, "seedSource": "Pierre's Store",
+      "growthTime": 4, "regrows": false, "harvestTool": "Scythe",
+      "description": "One of the most widely cultivated grains. Makes a fine flour.",
+      "processing": { "kegPrice": 200, "kegProduct": "Beer", "kegTime": 1.75 }
+    },
+    {
+      "id": 19, "name": "Red Cabbage", "slug": "red-cabbage", "category": "Crops", "subcategory": "Vegetable",
+      "season": ["Summer"], "basePrice": 260, "seedPrice": 100, "seedSource": "Pierre's Store (Year 2+)",
+      "growthTime": 9, "regrows": false,
+      "description": "Often used in salads and coleslaws. The color can range from purple to red.",
+      "processing": { "jarPrice": 570, "jarProduct": "Pickles", "kegPrice": 585, "kegProduct": "Juice", "kegTime": 4, "jarTime": 3 }
+    },
+    {
+      "id": 20, "name": "Starfruit", "slug": "starfruit", "category": "Crops", "subcategory": "Fruit",
+      "season": ["Summer"], "basePrice": 750, "seedPrice": 400, "seedSource": "Oasis",
+      "growthTime": 13, "regrows": false,
+      "description": "An extremely juicy fruit that grows in hot, humid weather. Slightly sour with an underlying sweetness.",
+      "processing": { "jarPrice": 1550, "jarProduct": "Jelly", "kegPrice": 2250, "kegProduct": "Wine", "kegTime": 7, "jarTime": 3 }
+    },
+    {
+      "id": 21, "name": "Hops", "slug": "hops", "category": "Crops", "subcategory": "Special",
+      "season": ["Summer"], "basePrice": 25, "seedPrice": 60, "seedSource": "Pierre's Store",
+      "growthTime": 11, "regrows": true, "regrowTime": 1, "isTrellis": true,
+      "description": "A bitter, tangy flower used to flavor beer.",
+      "processing": { "kegPrice": 300, "kegProduct": "Pale Ale", "kegTime": 1.5 }
+    },
+    {
+      "id": 22, "name": "Summer Spangle", "slug": "summer-spangle", "category": "Crops", "subcategory": "Flower",
+      "season": ["Summer"], "basePrice": 90, "seedPrice": 50, "seedSource": "Pierre's Store",
+      "growthTime": 8, "regrows": false,
+      "description": "A brilliant tropical flower with warm, vibrant colors."
+    },
+    {
+      "id": 23, "name": "Poppy", "slug": "poppy", "category": "Crops", "subcategory": "Flower",
+      "season": ["Summer"], "basePrice": 140, "seedPrice": 100, "seedSource": "Pierre's Store",
+      "growthTime": 7, "regrows": false,
+      "description": "In addition to its delicate flower, the poppy has culinary and medicinal uses."
+    },
+    {
+      "id": 24, "name": "Pumpkin", "slug": "pumpkin", "category": "Crops", "subcategory": "Vegetable",
+      "season": ["Fall"], "basePrice": 320, "seedPrice": 100, "seedSource": "Pierre's Store",
+      "growthTime": 13, "regrows": false, "isGiantCrop": true,
+      "description": "A fall favorite, grown for its sweet flesh and seeds. Also makes a great decoration.",
+      "processing": { "jarPrice": 690, "jarProduct": "Pickles", "kegPrice": 720, "kegProduct": "Juice", "kegTime": 4, "jarTime": 3 }
+    },
+    {
+      "id": 25, "name": "Eggplant", "slug": "eggplant", "category": "Crops", "subcategory": "Vegetable",
+      "season": ["Fall"], "basePrice": 60, "seedPrice": 20, "seedSource": "Pierre's Store",
+      "growthTime": 5, "regrows": true, "regrowTime": 5,
+      "description": "A rich, purple vegetable with a smooth, supple skin. Has a slightly bitter taste.",
+      "processing": { "jarPrice": 170, "jarProduct": "Pickles", "kegPrice": 135, "kegProduct": "Juice", "kegTime": 4, "jarTime": 3 }
+    },
+    {
+      "id": 26, "name": "Amaranth", "slug": "amaranth", "category": "Crops", "subcategory": "Grain",
+      "season": ["Fall"], "basePrice": 150, "seedPrice": 70, "seedSource": "Pierre's Store",
+      "growthTime": 7, "regrows": false,
+      "description": "A brilliant fuchsia crop that makes a colorful addition to any dish.",
+      "processing": { "jarPrice": 350, "jarProduct": "Pickles", "kegPrice": 337, "kegProduct": "Juice", "kegTime": 4, "jarTime": 3 }
+    },
+    {
+      "id": 27, "name": "Grape", "slug": "grape", "category": "Crops", "subcategory": "Fruit",
+      "season": ["Fall"], "basePrice": 80, "seedPrice": 60, "seedSource": "Pierre's Store",
+      "growthTime": 10, "regrows": true, "regrowTime": 3, "isTrellis": true,
+      "description": "A sweet cluster of fruit.",
+      "processing": { "jarPrice": 210, "jarProduct": "Jelly", "kegPrice": 240, "kegProduct": "Wine", "kegTime": 7, "jarTime": 3 }
+    },
+    {
+      "id": 28, "name": "Yam", "slug": "yam", "category": "Crops", "subcategory": "Vegetable",
+      "season": ["Fall"], "basePrice": 160, "seedPrice": 60, "seedSource": "Pierre's Store",
+      "growthTime": 10, "regrows": false,
+      "description": "A starchy tuber with a pinkish hue.",
+      "processing": { "jarPrice": 370, "jarProduct": "Pickles", "kegPrice": 360, "kegProduct": "Juice", "kegTime": 4, "jarTime": 3 }
+    },
+    {
+      "id": 29, "name": "Cranberries", "slug": "cranberries", "category": "Crops", "subcategory": "Fruit",
+      "season": ["Fall"], "basePrice": 75, "seedPrice": 240, "seedSource": "Pierre's Store",
+      "growthTime": 7, "regrows": true, "regrowTime": 5, "harvestYield": 2,
+      "description": "These tart red berries are a traditional wintertime treat.",
+      "processing": { "jarPrice": 200, "jarProduct": "Jelly", "kegPrice": 225, "kegProduct": "Wine", "kegTime": 7, "jarTime": 3 }
+    },
+    {
+      "id": 30, "name": "Artichoke", "slug": "artichoke", "category": "Crops", "subcategory": "Vegetable",
+      "season": ["Fall"], "basePrice": 160, "seedPrice": 30, "seedSource": "Pierre's Store (Year 2+)",
+      "growthTime": 8, "regrows": false,
+      "description": "A leafy green vegetable with a slightly nutty taste.",
+      "processing": { "jarPrice": 370, "jarProduct": "Pickles", "kegPrice": 360, "kegProduct": "Juice", "kegTime": 4, "jarTime": 3 }
+    },
+    {
+      "id": 31, "name": "Bok Choy", "slug": "bok-choy", "category": "Crops", "subcategory": "Vegetable",
+      "season": ["Fall"], "basePrice": 80, "seedPrice": 50, "seedSource": "Pierre's Store",
+      "growthTime": 4, "regrows": false,
+      "description": "The tender leaves are a staple in stir fries.",
+      "processing": { "jarPrice": 210, "jarProduct": "Pickles", "kegPrice": 180, "kegProduct": "Juice", "kegTime": 4, "jarTime": 3 }
+    },
+    {
+      "id": 32, "name": "Fairy Rose", "slug": "fairy-rose", "category": "Crops", "subcategory": "Flower",
+      "season": ["Fall"], "basePrice": 290, "seedPrice": 200, "seedSource": "Pierre's Store",
+      "growthTime": 12, "regrows": false,
+      "description": "An old villager's tale says that the weights of a Fairy Rose will bring good luck."
+    },
+    {
+      "id": 33, "name": "Sunflower", "slug": "sunflower", "category": "Crops", "subcategory": "Flower",
+      "season": ["Summer", "Fall"], "basePrice": 80, "seedPrice": 200, "seedSource": "Pierre's Store",
+      "growthTime": 8, "regrows": false, "dropsSeed": true,
+      "description": "A sunny flower commonly seen in the summer. Can produce sunflower seeds when harvested."
+    },
+    {
+      "id": 34, "name": "Sweet Gem Berry", "slug": "sweet-gem-berry", "category": "Crops", "subcategory": "Fruit",
+      "season": ["Fall"], "basePrice": 3000, "seedPrice": 1000, "seedSource": "Traveling Cart",
+      "growthTime": 24, "regrows": false,
+      "description": "It's by far the sweetest thing you've ever smelled."
+    },
+    {
+      "id": 35, "name": "Ancient Fruit", "slug": "ancient-fruit", "category": "Crops", "subcategory": "Fruit",
+      "season": ["Spring", "Summer", "Fall"], "basePrice": 550, "seedPrice": 0, "seedSource": "Seed Maker",
+      "growthTime": 28, "regrows": true, "regrowTime": 7,
+      "description": "It's been dormant for eons.",
+      "processing": { "jarPrice": 1150, "jarProduct": "Jelly", "kegPrice": 1650, "kegProduct": "Wine", "kegTime": 7, "jarTime": 3 }
+    },
+    {
+      "id": 36, "name": "Pineapple", "slug": "pineapple", "category": "Crops", "subcategory": "Fruit",
+      "season": ["Summer"], "basePrice": 300, "seedPrice": 240, "seedSource": "Island Trader",
+      "growthTime": 14, "regrows": true, "regrowTime": 7,
+      "description": "A tropical fruit with a tangy flavor.",
+      "processing": { "jarPrice": 650, "jarProduct": "Jelly", "kegPrice": 900, "kegProduct": "Wine", "kegTime": 7, "jarTime": 3 }
+    },
+    {
+      "id": 37, "name": "Taro Root", "slug": "taro-root", "category": "Crops", "subcategory": "Vegetable",
+      "season": ["Summer"], "basePrice": 100, "seedPrice": 20, "seedSource": "Island Trader",
+      "growthTime": 10, "regrows": false,
+      "description": "This starchy root can be grown in wet or dry soil.",
+      "processing": { "jarPrice": 250, "jarProduct": "Pickles", "kegPrice": 225, "kegProduct": "Juice", "kegTime": 4, "jarTime": 3 }
+    },
+    {
+      "id": 38, "name": "Pufferfish", "slug": "pufferfish", "category": "Fish", "subcategory": "Ocean",
+      "season": ["Summer"], "basePrice": 200, "location": "Ocean", "time": "12pm - 4pm", "weather": "Sunny",
+      "difficulty": 80,
+      "description": "Inflates when threatened."
+    },
+    {
+      "id": 39, "name": "Sturgeon", "slug": "sturgeon", "category": "Fish", "subcategory": "Lake",
+      "season": ["Summer", "Winter"], "basePrice": 200, "location": "Mountain Lake", "time": "6am - 7pm", "weather": "Any",
+      "difficulty": 78,
+      "description": "An ancient bottom-feeder with a streamlined body.",
+      "processing": { "machine": "Fish Pond", "product": "Sturgeon Roe → Caviar", "price": 500 }
+    },
+    {
+      "id": 40, "name": "Lava Eel", "slug": "lava-eel", "category": "Fish", "subcategory": "Special",
+      "season": ["Spring", "Summer", "Fall", "Winter"], "basePrice": 700, "location": "Mines (Floor 100), Volcano Caldera", "time": "Any", "weather": "Any",
+      "difficulty": 90,
+      "description": "It can somehow survive in pools of molten lava."
+    },
+    {
+      "id": 41, "name": "Legend", "slug": "legend", "category": "Fish", "subcategory": "Legendary",
+      "season": ["Spring"], "basePrice": 5000, "location": "Mountain Lake", "time": "6am - 8pm", "weather": "Rainy",
+      "difficulty": 110, "fishingLevel": 10,
+      "description": "The king of all fish! They say he's been alive for eons."
+    },
+    {
+      "id": 42, "name": "Mutant Carp", "slug": "mutant-carp", "category": "Fish", "subcategory": "Legendary",
+      "season": ["Spring", "Summer", "Fall", "Winter"], "basePrice": 1000, "location": "Sewers", "time": "Any", "weather": "Any",
+      "difficulty": 80,
+      "description": "The strange waters of the sewers have turned this carp into a monster."
+    },
+    {
+      "id": 43, "name": "Crimsonfish", "slug": "crimsonfish", "category": "Fish", "subcategory": "Legendary",
+      "season": ["Summer"], "basePrice": 1500, "location": "Ocean (East Beach)", "time": "6am - 8pm", "weather": "Any",
+      "difficulty": 95, "fishingLevel": 5,
+      "description": "Lives deep in the ocean but likes to come up to the surface."
+    },
+    {
+      "id": 44, "name": "Angler", "slug": "angler-fish", "category": "Fish", "subcategory": "Legendary",
+      "season": ["Fall"], "basePrice": 900, "location": "Town River (North of JojaMart)", "time": "6am - 8pm", "weather": "Any",
+      "difficulty": 85, "fishingLevel": 3,
+      "description": "Uses a luminescent dangler to attract prey."
+    },
+    {
+      "id": 45, "name": "Glacierfish", "slug": "glacierfish", "category": "Fish", "subcategory": "Legendary",
+      "season": ["Winter"], "basePrice": 1000, "location": "Cindersap Forest (South)", "time": "6am - 8pm", "weather": "Any",
+      "difficulty": 100, "fishingLevel": 6,
+      "description": "Builds its nest on the underside of glaciers."
+    },
+    {
+      "id": 46, "name": "Catfish", "slug": "catfish", "category": "Fish", "subcategory": "River",
+      "season": ["Spring", "Summer", "Fall"], "basePrice": 200, "location": "River, Secret Woods", "time": "6am - 12am", "weather": "Rainy",
+      "difficulty": 75,
+      "description": "A whiskered bottom-feeder that feeds on small molluscs."
+    },
+    {
+      "id": 47, "name": "Octopus", "slug": "octopus", "category": "Fish", "subcategory": "Ocean",
+      "season": ["Summer"], "basePrice": 150, "location": "Ocean", "time": "6am - 1pm", "weather": "Any",
+      "difficulty": 95,
+      "description": "A mysterious and intelligent creature."
+    },
+    {
+      "id": 48, "name": "Super Cucumber", "slug": "super-cucumber", "category": "Fish", "subcategory": "Ocean",
+      "season": ["Summer", "Fall"], "basePrice": 250, "location": "Ocean", "time": "6pm - 2am", "weather": "Any",
+      "difficulty": 80,
+      "description": "A rare, purple variety of sea cucumber."
+    },
+    {
+      "id": 49, "name": "Truffle", "slug": "truffle", "category": "Animal Products", "subcategory": "Pig",
+      "season": ["Spring", "Summer", "Fall"], "basePrice": 625, "source": "Pig (foraging)",
+      "description": "A gourmet type of mushroom with a unique taste.",
+      "processing": { "machine": "Oil Maker", "product": "Truffle Oil", "price": 1065, "time": 6 }
+    },
+    {
+      "id": 50, "name": "Morel", "slug": "morel", "category": "Forage", "subcategory": "Mushroom",
+      "season": ["Spring"], "basePrice": 150, "location": "Secret Woods, Farm Cave (Mushroom)",
+      "description": "Sought after for its unique flavor."
+    },
+    {
+      "id": 51, "name": "Chanterelle", "slug": "chanterelle", "category": "Forage", "subcategory": "Mushroom",
+      "season": ["Fall"], "basePrice": 160, "location": "Secret Woods",
+      "description": "A delicious mushroom with a fruity smell."
+    },
+    {
+      "id": 52, "name": "Common Mushroom", "slug": "common-mushroom", "category": "Forage", "subcategory": "Mushroom",
+      "season": ["Fall"], "basePrice": 40, "location": "Secret Woods, Farm Cave",
+      "description": "Slightly nutty with good texture."
+    },
+    {
+      "id": 53, "name": "Purple Mushroom", "slug": "purple-mushroom", "category": "Forage", "subcategory": "Mushroom",
+      "season": ["Spring", "Summer", "Fall", "Winter"], "basePrice": 250, "location": "Mines, Skull Cavern",
+      "description": "A rare mushroom found deep in caves."
+    },
+    {
+      "id": 54, "name": "Diamond", "slug": "diamond", "category": "Minerals", "subcategory": "Gem",
+      "basePrice": 750, "source": "Mines (50+), Geodes, Panning",
+      "description": "A rare and valuable gem."
+    },
+    {
+      "id": 55, "name": "Ruby", "slug": "ruby", "category": "Minerals", "subcategory": "Gem",
+      "basePrice": 250, "source": "Mines (80+), Geodes",
+      "description": "A precious stone that is sought after for its luster and brilliant color."
+    },
+    {
+      "id": 56, "name": "Emerald", "slug": "emerald", "category": "Minerals", "subcategory": "Gem",
+      "basePrice": 250, "source": "Mines (80+), Geodes",
+      "description": "A precious stone with a brilliant green color."
+    },
+    {
+      "id": 57, "name": "Jade", "slug": "jade", "category": "Minerals", "subcategory": "Gem",
+      "basePrice": 200, "source": "Mines (40+), Geodes",
+      "description": "A pale green ornamental stone."
+    },
+    {
+      "id": 58, "name": "Prismatic Shard", "slug": "prismatic-shard", "category": "Minerals", "subcategory": "Gem",
+      "basePrice": 2000, "source": "Mystic Stone, Skull Cavern, Monsters",
+      "description": "A very rare and powerful substance with unknown origins."
+    },
+    {
+      "id": 59, "name": "Large Milk", "slug": "large-milk", "category": "Animal Products", "subcategory": "Cow",
+      "basePrice": 190, "source": "Cow (high friendship)",
+      "description": "A large jug of cow's milk.",
+      "processing": { "machine": "Cheese Press", "product": "Cheese (Gold)", "price": 345, "time": 3.3 }
+    },
+    {
+      "id": 60, "name": "Large Egg", "slug": "large-egg", "category": "Animal Products", "subcategory": "Chicken",
+      "basePrice": 95, "source": "Chicken (high friendship)",
+      "description": "A large white egg.",
+      "processing": { "machine": "Mayonnaise Machine", "product": "Mayonnaise (Gold)", "price": 285, "time": 3 }
+    },
+    {
+      "id": 61, "name": "Duck Egg", "slug": "duck-egg", "category": "Animal Products", "subcategory": "Duck",
+      "basePrice": 95, "source": "Duck",
+      "description": "It's a bit larger than a chicken egg.",
+      "processing": { "machine": "Mayonnaise Machine", "product": "Duck Mayonnaise", "price": 375, "time": 3 }
+    },
+    {
+      "id": 62, "name": "Goat Milk", "slug": "goat-milk", "category": "Animal Products", "subcategory": "Goat",
+      "basePrice": 225, "source": "Goat",
+      "description": "The milk of a goat.",
+      "processing": { "machine": "Cheese Press", "product": "Goat Cheese", "price": 400, "time": 3.3 }
+    },
+    {
+      "id": 63, "name": "Large Goat Milk", "slug": "large-goat-milk", "category": "Animal Products", "subcategory": "Goat",
+      "basePrice": 345, "source": "Goat (high friendship)",
+      "description": "A large jug of goat's milk.",
+      "processing": { "machine": "Cheese Press", "product": "Goat Cheese (Gold)", "price": 600, "time": 3.3 }
+    },
+    {
+      "id": 64, "name": "Wool", "slug": "wool", "category": "Animal Products", "subcategory": "Sheep/Rabbit",
+      "basePrice": 340, "source": "Sheep, Rabbit",
+      "description": "Soft, fluffy wool.",
+      "processing": { "machine": "Loom", "product": "Cloth", "price": 470, "time": 4 }
+    },
+    {
+      "id": 65, "name": "Rabbit's Foot", "slug": "rabbits-foot", "category": "Animal Products", "subcategory": "Rabbit",
+      "basePrice": 565, "source": "Rabbit (high friendship)",
+      "description": "Some say it's lucky."
+    },
+    {
+      "id": 66, "name": "Dinosaur Egg", "slug": "dinosaur-egg", "category": "Animal Products", "subcategory": "Dinosaur",
+      "basePrice": 350, "source": "Dinosaur, Fishing Treasure, Artifact Spot",
+      "description": "A giant dino egg... The shell isite likeite'site!",
+      "processing": { "machine": "Mayonnaise Machine", "product": "Dinosaur Mayonnaise", "price": 800, "time": 3 }
+    },
+    {
+      "id": 67, "name": "Void Egg", "slug": "void-egg", "category": "Animal Products", "subcategory": "Void Chicken",
+      "basePrice": 65, "source": "Void Chicken",
+      "description": "A purplish egg from a very strange chicken.",
+      "processing": { "machine": "Mayonnaise Machine", "product": "Void Mayonnaise", "price": 275, "time": 3 }
+    },
+    {
+      "id": 68, "name": "Golden Egg", "slug": "golden-egg", "category": "Animal Products", "subcategory": "Golden Chicken",
+      "basePrice": 500, "source": "Golden Chicken",
+      "description": "A dazzling, golden egg.",
+      "processing": { "machine": "Mayonnaise Machine", "product": "Gold Mayonnaise (x3)", "price": 855, "time": 3 }
+    },
+    {
+      "id": 69, "name": "Ostrich Egg", "slug": "ostrich-egg", "category": "Animal Products", "subcategory": "Ostrich",
+      "basePrice": 600, "source": "Ostrich",
+      "description": "The world's largest egg!",
+      "processing": { "machine": "Mayonnaise Machine", "product": "Mayonnaise (x10)", "price": 1000, "time": 3 }
+    },
+    {
+      "id": 70, "name": "Milk", "slug": "milk", "category": "Animal Products", "subcategory": "Cow",
+      "basePrice": 125, "source": "Cow",
+      "description": "A jug of cow's milk.",
+      "processing": { "machine": "Cheese Press", "product": "Cheese", "price": 230, "time": 3.3 }
+    },
+    {
+      "id": 71, "name": "Egg", "slug": "egg", "category": "Animal Products", "subcategory": "Chicken",
+      "basePrice": 50, "source": "Chicken",
+      "description": "A regular white egg.",
+      "processing": { "machine": "Mayonnaise Machine", "product": "Mayonnaise", "price": 190, "time": 3 }
+    },
+    {
+      "id": 72, "name": "Caviar", "slug": "caviar", "category": "Artisan Goods", "subcategory": "Fish Product",
+      "basePrice": 500, "source": "Sturgeon Roe + Preserves Jar",
+      "description": "The cured roe of a Sturgeon fish. Considered a luxury item."
+    },
+    {
+      "id": 73, "name": "Aged Roe", "slug": "aged-roe", "category": "Artisan Goods", "subcategory": "Fish Product",
+      "basePrice": 0, "source": "Fish Roe + Preserves Jar",
+      "description": "Fish eggs aged in salt. Value varies by fish type. Base = 2x roe price + 60g."
+    },
+    {
+      "id": 74, "name": "Pale Ale", "slug": "pale-ale", "category": "Artisan Goods", "subcategory": "Beverage",
+      "basePrice": 300, "source": "Hops + Keg",
+      "description": "Drink in moderation."
+    },
+    {
+      "id": 75, "name": "Beer", "slug": "beer", "category": "Artisan Goods", "subcategory": "Beverage",
+      "basePrice": 200, "source": "Wheat + Keg",
+      "description": "A refreshing cold pint."
+    },
+    {
+      "id": 76, "name": "Mead", "slug": "mead", "category": "Artisan Goods", "subcategory": "Beverage",
+      "basePrice": 200, "source": "Honey + Keg",
+      "description": "A fermented beverage made from honey. Drink in moderation."
+    },
+    {
+      "id": 77, "name": "Cheese", "slug": "cheese", "category": "Artisan Goods", "subcategory": "Dairy",
+      "basePrice": 230, "source": "Milk + Cheese Press",
+      "description": "A slice of hard cheese."
+    },
+    {
+      "id": 78, "name": "Goat Cheese", "slug": "goat-cheese", "category": "Artisan Goods", "subcategory": "Dairy",
+      "basePrice": 400, "source": "Goat Milk + Cheese Press",
+      "description": "Soft cheese made from goat's milk."
+    },
+    {
+      "id": 79, "name": "Mayonnaise", "slug": "mayonnaise", "category": "Artisan Goods", "subcategory": "Egg Product",
+      "basePrice": 190, "source": "Egg + Mayonnaise Machine",
+      "description": "It looks delicious!"
+    },
+    {
+      "id": 80, "name": "Duck Mayonnaise", "slug": "duck-mayonnaise", "category": "Artisan Goods", "subcategory": "Egg Product",
+      "basePrice": 375, "source": "Duck Egg + Mayonnaise Machine",
+      "description": "It's a rich golden yellow."
+    },
+    {
+      "id": 81, "name": "Void Mayonnaise", "slug": "void-mayonnaise", "category": "Artisan Goods", "subcategory": "Egg Product",
+      "basePrice": 275, "source": "Void Egg + Mayonnaise Machine",
+      "description": "A thick, black paste that smells like burnt hair."
+    },
+    {
+      "id": 82, "name": "Dinosaur Mayonnaise", "slug": "dinosaur-mayonnaise", "category": "Artisan Goods", "subcategory": "Egg Product",
+      "basePrice": 800, "source": "Dinosaur Egg + Mayonnaise Machine",
+      "description": "It's thick and creamy with a vivid green hue. Probably not toxic."
+    },
+    {
+      "id": 83, "name": "Truffle Oil", "slug": "truffle-oil", "category": "Artisan Goods", "subcategory": "Oil",
+      "basePrice": 1065, "source": "Truffle + Oil Maker",
+      "description": "A gourmet cooking ingredient."
+    },
+    {
+      "id": 84, "name": "Cloth", "slug": "cloth", "category": "Artisan Goods", "subcategory": "Textile",
+      "basePrice": 470, "source": "Wool + Loom",
+      "description": "A bolt of fine wool cloth."
+    },
+    {
+      "id": 85, "name": "Honey", "slug": "honey", "category": "Artisan Goods", "subcategory": "Bee Product",
+      "basePrice": 100, "source": "Bee House",
+      "description": "A sweet syrupy treat. Value varies by nearby flower type."
+    },
+    {
+      "id": 86, "name": "Fairy Honey", "slug": "fairy-honey", "category": "Artisan Goods", "subcategory": "Bee Product",
+      "basePrice": 680, "source": "Bee House + Fairy Rose",
+      "description": "Honey infused with the essence of Fairy Rose flowers."
+    },
+    {
+      "id": 87, "name": "Coffee", "slug": "coffee", "category": "Artisan Goods", "subcategory": "Beverage",
+      "basePrice": 150, "source": "5 Coffee Beans + Keg",
+      "description": "A fragrant, bitter brew. Gives +1 Speed for 1:23."
+    },
+    {
+      "id": 88, "name": "Triple Shot Espresso", "slug": "triple-shot-espresso", "category": "Artisan Goods", "subcategory": "Beverage",
+      "basePrice": 450, "source": "3 Coffee + ??? (special)",
+      "description": "Gives +1 Speed for 4:12."
+    },
+    {
+      "id": 89, "name": "Maple Syrup", "slug": "maple-syrup", "category": "Artisan Goods", "subcategory": "Tree Product",
+      "basePrice": 200, "source": "Tapper on Maple Tree",
+      "description": "A sweet syrup with a unique flavor."
+    },
+    {
+      "id": 90, "name": "Oak Resin", "slug": "oak-resin", "category": "Artisan Goods", "subcategory": "Tree Product",
+      "basePrice": 150, "source": "Tapper on Oak Tree",
+      "description": "A sticky substance with a characteristic scent."
+    },
+    {
+      "id": 91, "name": "Pine Tar", "slug": "pine-tar", "category": "Artisan Goods", "subcategory": "Tree Product",
+      "basePrice": 100, "source": "Tapper on Pine Tree",
+      "description": "A pungent, antiseptic resin."
+    },
+    {
+      "id": 92, "name": "Sap", "slug": "sap", "category": "Resources", "subcategory": "Tree Product",
+      "basePrice": 2, "source": "Chopping Trees",
+      "description": "A sticky substance found inside trees."
+    },
+    {
+      "id": 93, "name": "Hardwood", "slug": "hardwood", "category": "Resources", "subcategory": "Wood",
+      "basePrice": 15, "source": "Large Stumps, Logs, Mahogany Trees",
+      "description": "A special type of wood with superior strength."
+    },
+    {
+      "id": 94, "name": "Wood", "slug": "wood", "category": "Resources", "subcategory": "Wood",
+      "basePrice": 2, "source": "Chopping Trees",
+      "description": "A sturdy, versatile building material."
+    },
+    {
+      "id": 95, "name": "Stone", "slug": "stone", "category": "Resources", "subcategory": "Mining",
+      "basePrice": 2, "source": "Mining Rocks",
+      "description": "A common material used for building."
+    },
+    {
+      "id": 96, "name": "Fiber", "slug": "fiber", "category": "Resources", "subcategory": "Farming",
+      "basePrice": 1, "source": "Cutting Weeds, Fiber Seeds",
+      "description": "Raw plant fiber. Useful for crafting."
+    },
+    {
+      "id": 97, "name": "Coal", "slug": "coal", "category": "Resources", "subcategory": "Mining",
+      "basePrice": 15, "source": "Mining, Dust Sprites, Charcoal Kiln",
+      "description": "A smoldering heap of useful fuel."
+    },
+    {
+      "id": 98, "name": "Copper Ore", "slug": "copper-ore", "category": "Resources", "subcategory": "Ore",
+      "basePrice": 5, "source": "Mines (Floors 1-39)",
+      "description": "A common ore with many practical uses.",
+      "processing": { "machine": "Furnace", "product": "Copper Bar", "price": 60, "time": 0.5, "coalRequired": 1 }
+    },
+    {
+      "id": 99, "name": "Iron Ore", "slug": "iron-ore", "category": "Resources", "subcategory": "Ore",
+      "basePrice": 10, "source": "Mines (Floors 40-79)",
+      "description": "A fairly common ore with many uses.",
+      "processing": { "machine": "Furnace", "product": "Iron Bar", "price": 120, "time": 2, "coalRequired": 1 }
+    },
+    {
+      "id": 100, "name": "Gold Ore", "slug": "gold-ore", "category": "Resources", "subcategory": "Ore",
+      "basePrice": 25, "source": "Mines (Floors 80+), Skull Cavern",
+      "description": "A precious ore that can be smelted into bars.",
+      "processing": { "machine": "Furnace", "product": "Gold Bar", "price": 250, "time": 5, "coalRequired": 1 }
+    },
+    {
+      "id": 101, "name": "Iridium Ore", "slug": "iridium-ore", "category": "Resources", "subcategory": "Ore",
+      "basePrice": 100, "source": "Skull Cavern, Magma Geodes",
+      "description": "An extremely rare and valuable ore.",
+      "processing": { "machine": "Furnace", "product": "Iridium Bar", "price": 1000, "time": 8, "coalRequired": 1 }
+    },
+    {
+      "id": 102, "name": "Copper Bar", "slug": "copper-bar", "category": "Resources", "subcategory": "Bar",
+      "basePrice": 60, "source": "Furnace (5 Copper Ore + 1 Coal)",
+      "description": "A bar of pure copper."
+    },
+    {
+      "id": 103, "name": "Iron Bar", "slug": "iron-bar", "category": "Resources", "subcategory": "Bar",
+      "basePrice": 120, "source": "Furnace (5 Iron Ore + 1 Coal)",
+      "description": "A bar of pure iron."
+    },
+    {
+      "id": 104, "name": "Gold Bar", "slug": "gold-bar", "category": "Resources", "subcategory": "Bar",
+      "basePrice": 250, "source": "Furnace (5 Gold Ore + 1 Coal)",
+      "description": "A bar of pure gold."
+    },
+    {
+      "id": 105, "name": "Iridium Bar", "slug": "iridium-bar", "category": "Resources", "subcategory": "Bar",
+      "basePrice": 1000, "source": "Furnace (5 Iridium Ore + 1 Coal)",
+      "description": "A bar of pure iridium."
+    },
+    {
+      "id": 106, "name": "Radioactive Bar", "slug": "radioactive-bar", "category": "Resources", "subcategory": "Bar",
+      "basePrice": 3000, "source": "Furnace (5 Radioactive Ore + 1 Coal)",
+      "description": "It emits a faint green glow."
+    },
+    {
+      "id": 107, "name": "Quartz", "slug": "quartz", "category": "Minerals", "subcategory": "Gem",
+      "basePrice": 25, "source": "Mines (all levels)",
+      "description": "A fairly common mineral with many industrial uses."
+    },
+    {
+      "id": 108, "name": "Fire Quartz", "slug": "fire-quartz", "category": "Minerals", "subcategory": "Gem",
+      "basePrice": 100, "source": "Mines (Floors 80+), Magma Geodes",
+      "description": "A dangerousite when heated."
+    },
+    {
+      "id": 109, "name": "Frozen Tear", "slug": "frozen-tear", "category": "Minerals", "subcategory": "Gem",
+      "basePrice": 75, "source": "Mines (Floors 40-79), Dust Sprites",
+      "description": "A crystal formed from frozen water."
+    },
+    {
+      "id": 110, "name": "Earth Crystal", "slug": "earth-crystal", "category": "Minerals", "subcategory": "Gem",
+      "basePrice": 50, "source": "Mines (Floors 1-39), Duggies",
+      "description": "A crystal formed from compressed earth."
+    },
+    {
+      "id": 111, "name": "Amethyst", "slug": "amethyst", "category": "Minerals", "subcategory": "Gem",
+      "basePrice": 100, "source": "Mining, Geodes",
+      "description": "A purple variety of quartz."
+    },
+    {
+      "id": 112, "name": "Aquamarine", "slug": "aquamarine", "category": "Minerals", "subcategory": "Gem",
+      "basePrice": 180, "source": "Mining, Geodes",
+      "description": "A shimmery blue-green gem."
+    },
+    {
+      "id": 113, "name": "Topaz", "slug": "topaz", "category": "Minerals", "subcategory": "Gem",
+      "basePrice": 80, "source": "Mining, Geodes",
+      "description": "A fairly common gem."
+    },
+    {
+      "id": 114, "name": "Spring Onion", "slug": "spring-onion", "category": "Forage", "subcategory": "Spring",
+      "season": ["Spring"], "basePrice": 8, "location": "Cindersap Forest (south)",
+      "description": "Found wild in spring. Grows in the forest."
+    },
+    {
+      "id": 115, "name": "Daffodil", "slug": "daffodil", "category": "Forage", "subcategory": "Spring",
+      "season": ["Spring"], "basePrice": 30, "location": "Pelican Town, Bus Stop",
+      "description": "A cheerful spring flower."
+    },
+    {
+      "id": 116, "name": "Leek", "slug": "leek", "category": "Forage", "subcategory": "Spring",
+      "season": ["Spring"], "basePrice": 60, "location": "Mountain, Backwoods",
+      "description": "A tasty relative of the onion."
+    },
+    {
+      "id": 117, "name": "Dandelion", "slug": "dandelion", "category": "Forage", "subcategory": "Spring",
+      "season": ["Spring"], "basePrice": 40, "location": "Pelican Town",
+      "description": "Not actually a flower. It's a taproot vegetable."
+    },
+    {
+      "id": 118, "name": "Wild Horseradish", "slug": "wild-horseradish", "category": "Forage", "subcategory": "Spring",
+      "season": ["Spring"], "basePrice": 50, "location": "Backwoods, Mountain",
+      "description": "A spicy root found in spring."
+    },
+    {
+      "id": 119, "name": "Salmonberry", "slug": "salmonberry", "category": "Forage", "subcategory": "Spring",
+      "season": ["Spring"], "basePrice": 5, "location": "Bushes (Spring 15-18)",
+      "description": "A berry found in spring. Has a light taste."
+    },
+    {
+      "id": 120, "name": "Spice Berry", "slug": "spice-berry", "category": "Forage", "subcategory": "Summer",
+      "season": ["Summer"], "basePrice": 80, "location": "Beach, Backwoods",
+      "description": "Tastes peppery with a hint of sweetness."
+    },
+    {
+      "id": 121, "name": "Grape", "slug": "grape-forage", "category": "Forage", "subcategory": "Summer",
+      "season": ["Summer"], "basePrice": 80, "location": "Mountain, Backwoods",
+      "description": "A sweet summer fruit."
+    },
+    {
+      "id": 122, "name": "Sweet Pea", "slug": "sweet-pea", "category": "Forage", "subcategory": "Summer",
+      "season": ["Summer"], "basePrice": 50, "location": "Pelican Town, Railroad",
+      "description": "A fragrant summer flower."
+    },
+    {
+      "id": 123, "name": "Fiddlehead Fern", "slug": "fiddlehead-fern", "category": "Forage", "subcategory": "Summer",
+      "season": ["Summer"], "basePrice": 90, "location": "Secret Woods",
+      "description": "The young fronds have a distinctive coil pattern."
+    },
+    {
+      "id": 124, "name": "Red Mushroom", "slug": "red-mushroom", "category": "Forage", "subcategory": "Summer",
+      "season": ["Summer", "Fall"], "basePrice": 75, "location": "Secret Woods, Mines",
+      "description": "A poisonous mushroom. Handle with care."
+    },
+    {
+      "id": 125, "name": "Wild Plum", "slug": "wild-plum", "category": "Forage", "subcategory": "Fall",
+      "season": ["Fall"], "basePrice": 80, "location": "Mountain, Bus Stop",
+      "description": "Found in the fall. Tangy and sweet."
+    },
+    {
+      "id": 126, "name": "Hazelnut", "slug": "hazelnut", "category": "Forage", "subcategory": "Fall",
+      "season": ["Fall"], "basePrice": 90, "location": "Backwoods, Bus Stop",
+      "description": "A nut wrapped in a leafy husk."
+    },
+    {
+      "id": 127, "name": "Blackberry", "slug": "blackberry", "category": "Forage", "subcategory": "Fall",
+      "season": ["Fall"], "basePrice": 20, "location": "Bushes (Fall 8-11)",
+      "description": "An intensely sweet berry."
+    },
+    {
+      "id": 128, "name": "Holly", "slug": "holly", "category": "Forage", "subcategory": "Winter",
+      "season": ["Winter"], "basePrice": 80, "location": "Bus Stop, Secret Woods",
+      "description": "The leaves and berries make a popular winter decoration."
+    },
+    {
+      "id": 129, "name": "Crystal Fruit", "slug": "crystal-fruit", "category": "Forage", "subcategory": "Winter",
+      "season": ["Winter"], "basePrice": 150, "location": "Pelican Town, Bus Stop",
+      "description": "A delicate fruit that grows in winter."
+    },
+    {
+      "id": 130, "name": "Snow Yam", "slug": "snow-yam", "category": "Forage", "subcategory": "Winter",
+      "season": ["Winter"], "basePrice": 100, "location": "Beach (artifact spots)",
+      "description": "A starchy tuber that grows in winter."
+    },
+    {
+      "id": 131, "name": "Winter Root", "slug": "winter-root", "category": "Forage", "subcategory": "Winter",
+      "season": ["Winter"], "basePrice": 70, "location": "Pelican Town (artifact spots)",
+      "description": "A root grown in winter. Can be found by digging in snow."
+    },
+    {
+      "id": 132, "name": "Crocus", "slug": "crocus", "category": "Forage", "subcategory": "Winter",
+      "season": ["Winter"], "basePrice": 60, "location": "Railroad, Backwoods",
+      "description": "A flower that can survive even in winter."
+    },
+    {
+      "id": 133, "name": "Nautilus Shell", "slug": "nautilus-shell", "category": "Forage", "subcategory": "Winter",
+      "season": ["Winter"], "basePrice": 120, "location": "Beach",
+      "description": "An intricate shell from a nautilus."
+    },
+    {
+      "id": 134, "name": "Rainbow Shell", "slug": "rainbow-shell", "category": "Forage", "subcategory": "Summer",
+      "season": ["Summer"], "basePrice": 300, "location": "Beach",
+      "description": "It's extremely rare. The colors are beautiful."
+    },
+    {
+      "id": 135, "name": "Coconut", "slug": "coconut", "category": "Forage", "subcategory": "Desert",
+      "season": ["Spring", "Summer", "Fall", "Winter"], "basePrice": 100, "location": "Desert",
+      "description": "A versatile palm tree fruit."
+    },
+    {
+      "id": 136, "name": "Cactus Fruit", "slug": "cactus-fruit", "category": "Forage", "subcategory": "Desert",
+      "season": ["Spring", "Summer", "Fall", "Winter"], "basePrice": 75, "location": "Desert",
+      "description": "A sweet fruit from a prickly cactus."
+    },
+    {
+      "id": 137, "name": "Ginger", "slug": "ginger", "category": "Forage", "subcategory": "Ginger Island",
+      "season": ["Spring", "Summer", "Fall", "Winter"], "basePrice": 60, "location": "Ginger Island",
+      "description": "A spicy root used in many cuisines."
+    },
+    {
+      "id": 138, "name": "Magma Cap", "slug": "magma-cap", "category": "Forage", "subcategory": "Ginger Island",
+      "season": ["Spring", "Summer", "Fall", "Winter"], "basePrice": 400, "location": "Volcano Dungeon",
+      "description": "A rare mushroom that thrives in volcanic temperatures."
+    },
+    {
+      "id": 139, "name": "Battery Pack", "slug": "battery-pack", "category": "Resources", "subcategory": "Crafted",
+      "basePrice": 500, "source": "Lightning Rod, Solar Panel",
+      "description": "A charged battery. Useful for crafting."
+    },
+    {
+      "id": 140, "name": "Refined Quartz", "slug": "refined-quartz", "category": "Resources", "subcategory": "Crafted",
+      "basePrice": 50, "source": "Furnace (Quartz or Fire Quartz)",
+      "description": "A more pure form of quartz."
+    },
+    {
+      "id": 141, "name": "Oil", "slug": "oil", "category": "Artisan Goods", "subcategory": "Oil",
+      "basePrice": 100, "source": "Oil Maker (Corn, Sunflower Seeds, Sunflower)",
+      "description": "All-purpose cooking oil."
+    },
+    {
+      "id": 142, "name": "Sugar", "slug": "sugar", "category": "Cooking", "subcategory": "Ingredient",
+      "basePrice": 100, "source": "Pierre's Store, Mill (Beet)",
+      "description": "Sweetens the flavor of any dish."
+    },
+    {
+      "id": 143, "name": "Wheat Flour", "slug": "wheat-flour", "category": "Cooking", "subcategory": "Ingredient",
+      "basePrice": 100, "source": "Pierre's Store, Mill (Wheat)",
+      "description": "A finely ground flour made from wheat."
+    },
+    {
+      "id": 144, "name": "Rice", "slug": "rice", "category": "Cooking", "subcategory": "Ingredient",
+      "basePrice": 100, "source": "Pierre's Store, Mill (Unmilled Rice)",
+      "description": "A versatile grain."
+    },
+    {
+      "id": 145, "name": "Vinegar", "slug": "vinegar", "category": "Cooking", "subcategory": "Ingredient",
+      "basePrice": 200, "source": "Pierre's Store",
+      "description": "An acidic liquid used for cooking."
+    },
+    {
+      "id": 146, "name": "Geode", "slug": "geode", "category": "Minerals", "subcategory": "Geode",
+      "basePrice": 50, "source": "Mines (Floors 1-39)",
+      "description": "A rock that Clint can open for you."
+    },
+    {
+      "id": 147, "name": "Frozen Geode", "slug": "frozen-geode", "category": "Minerals", "subcategory": "Geode",
+      "basePrice": 100, "source": "Mines (Floors 40-79)",
+      "description": "A rock that contains frozen minerals."
+    },
+    {
+      "id": 148, "name": "Magma Geode", "slug": "magma-geode", "category": "Minerals", "subcategory": "Geode",
+      "basePrice": 150, "source": "Mines (Floors 80+), Volcano",
+      "description": "A geode formed from volcanic rock."
+    },
+    {
+      "id": 149, "name": "Omni Geode", "slug": "omni-geode", "category": "Minerals", "subcategory": "Geode",
+      "basePrice": 0, "source": "Mines, Skull Cavern, Panning",
+      "description": "A mysterious geode that could contain almost anything."
+    },
+    {
+      "id": 150, "name": "Golden Pumpkin", "slug": "golden-pumpkin", "category": "Special", "subcategory": "Festival",
+      "basePrice": 2500, "source": "Spirit's Eve Maze",
+      "description": "A valuable prize from the Spirit's Eve festival."
+    },
+    {
+      "id": 151, "name": "Pearl", "slug": "pearl", "category": "Special", "subcategory": "Rare",
+      "basePrice": 2500, "source": "Night Market Mermaid, Blobfish Pond",
+      "description": "A rare gem."
+    },
+    {
+      "id": 152, "name": "Strange Bun", "slug": "strange-bun", "category": "Cooking", "subcategory": "Cooked",
+      "basePrice": 225, "source": "Cooking (Wheat Flour, Periwinkle, Void Mayonnaise)",
+      "description": "What's inside? You have no idea."
+    },
+    {
+      "id": 153, "name": "Fried Egg", "slug": "fried-egg", "category": "Cooking", "subcategory": "Cooked",
+      "basePrice": 35, "source": "Cooking (Egg)",
+      "description": "A basic breakfast staple."
+    },
+    {
+      "id": 154, "name": "Lucky Lunch", "slug": "lucky-lunch", "category": "Cooking", "subcategory": "Cooked",
+      "basePrice": 250, "source": "Cooking (Sea Cucumber, Tortilla, Blue Jazz)",
+      "description": "A special dish that increases luck (+3 Luck)."
+    },
+    {
+      "id": 155, "name": "Spicy Eel", "slug": "spicy-eel", "category": "Cooking", "subcategory": "Cooked",
+      "basePrice": 175, "source": "Cooking (Eel, Hot Pepper)",
+      "description": "Increases speed and luck. (+1 Luck, +1 Speed)"
+    },
+    {
+      "id": 156, "name": "Crab Cakes", "slug": "crab-cakes", "category": "Cooking", "subcategory": "Cooked",
+      "basePrice": 275, "source": "Cooking (Crab, Wheat Flour, Egg, Oil)",
+      "description": "Increases speed and defense. (+1 Speed, +1 Defense)"
+    },
+    {
+      "id": 157, "name": "Dish o' The Sea", "slug": "dish-o-the-sea", "category": "Cooking", "subcategory": "Cooked",
+      "basePrice": 220, "source": "Cooking (Sardine, Hashbrowns)",
+      "description": "Boosts fishing skill. (+3 Fishing)"
+    },
+    {
+      "id": 158, "name": "Seafoam Pudding", "slug": "seafoam-pudding", "category": "Cooking", "subcategory": "Cooked",
+      "basePrice": 300, "source": "Cooking (Flounder, Midnight Carp, Squid Ink)",
+      "description": "The best fishing food. (+4 Fishing)"
+    },
+    {
+      "id": 159, "name": "Pumpkin Pie", "slug": "pumpkin-pie", "category": "Cooking", "subcategory": "Cooked",
+      "basePrice": 385, "source": "Cooking (Pumpkin, Wheat Flour, Milk, Sugar)",
+      "description": "A traditional fall dessert."
+    },
+    {
+      "id": 160, "name": "Banana", "slug": "banana", "category": "Crops", "subcategory": "Fruit",
+      "season": ["Summer"], "basePrice": 150, "seedPrice": 250, "seedSource": "Island Trader",
+      "growthTime": 28, "regrows": true, "regrowTime": 4,
+      "description": "A tropical fruit with a creamy texture.",
+      "processing": { "jarPrice": 350, "jarProduct": "Jelly", "kegPrice": 450, "kegProduct": "Wine", "kegTime": 7, "jarTime": 3 }
+    },
+    {
+      "id": 161, "name": "Mango", "slug": "mango", "category": "Crops", "subcategory": "Fruit",
+      "season": ["Summer"], "basePrice": 130, "seedPrice": 0, "seedSource": "Mango Tree (Ginger Island)",
+      "growthTime": 28, "regrows": false,
+      "description": "A sweet tropical stone fruit.",
+      "processing": { "jarPrice": 310, "jarProduct": "Jelly", "kegPrice": 390, "kegProduct": "Wine", "kegTime": 7, "jarTime": 3 }
+    },
+    {
+      "id": 162, "name": "Qi Fruit", "slug": "qi-fruit", "category": "Crops", "subcategory": "Special",
+      "season": ["Spring", "Summer", "Fall", "Winter"], "basePrice": 1, "seedPrice": 0, "seedSource": "Qi's Crop Quest",
+      "growthTime": 4, "regrows": false,
+      "description": "Mr. Qi's special request crop. Worth almost nothing."
+    }
+  ]
+}
