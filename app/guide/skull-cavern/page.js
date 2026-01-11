@@ -1,4 +1,4 @@
-﻿import Link from 'next/link';
+import Link from 'next/link';
 
 export const metadata = {
   title: 'Skull Cavern Guide - Floor 100+ Strategy | Stardew Valley 1.6',
@@ -23,7 +23,7 @@ const faqSchema = {
       name: 'How do I reach floor 100 in Skull Cavern?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Wait for a very lucky day, warp to the Desert at 6 AM, bring 100+ Mega Bombs and 50-100 Staircases. Use staircases on monster/spiral floors, bomb open areas to find holes that skip 3-15 floors. Stack Coffee with Spicy Eel for speed and luck buffs.',
+        text: 'Wait for a very lucky day (spirits are very happy), warp to the Desert at 6 AM using a Desert Warp Totem, bring 100+ Mega Bombs and 50-100 Staircases. Use staircases on monster/spiral floors, bomb open areas to find shafts that skip 3-15 floors. Stack Coffee with Spicy Eel for speed and luck buffs.',
       },
     },
     {
@@ -31,15 +31,15 @@ const faqSchema = {
       name: 'What is the best weapon for Skull Cavern?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'The Galaxy Sword is the best accessible weapon, obtained by bringing a Prismatic Shard to the Three Pillars in the Desert. The Infinity Blade (upgraded Galaxy Sword) is the ultimate weapon but requires Cinder Shards from Ginger Island.',
+        text: 'The Galaxy Sword is the best accessible weapon, obtained by bringing a Prismatic Shard to the Three Pillars in the Calico Desert. The Infinity Blade (upgraded Galaxy Sword at Volcano Forge) is the ultimate weapon but requires Cinder Shards from Ginger Island.',
       },
     },
     {
       '@type': 'Question',
-      name: 'How do I get infinite staircases for Skull Cavern?',
+      name: 'How do I get unlimited staircases for Skull Cavern?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Place Jade in Crystallariums (replicates every 1.5 days). Trade Jade to the Desert Trader on Sundays for Staircases at 1:1 ratio. With 10+ Crystallariums, you can generate 40+ staircases per week.',
+        text: 'Place Jade in Crystallariums (replicates every 1 day 14 hours). Trade Jade to the Desert Trader on Sundays for Staircases at 1:1 ratio. With 10+ Crystallariums producing Jade, you can generate 40+ staircases per week for free.',
       },
     },
   ],
@@ -79,7 +79,7 @@ export default function SkullCavernGuide() {
         <article>
           {/* Hero Section */}
           <div className="bg-gradient-to-r from-purple-600 to-indigo-700 rounded-2xl p-8 mb-10 text-white shadow-xl">
-            <h1 className="text-4xl font-bold mb-4">Skull Cavern Strategy Guide</h1>
+            <h1 className="text-4xl font-bold mb-4">💀 Skull Cavern Strategy Guide</h1>
             <p className="text-xl text-purple-100 leading-relaxed">
               Reach floor 100+ consistently with the right preparation. This guide covers optimal 
               loadouts, bomb strategies, luck mechanics, and Iridium farming techniques for Stardew Valley 1.6.
@@ -89,7 +89,7 @@ export default function SkullCavernGuide() {
           {/* Requirements Alert */}
           <div className="bg-gradient-to-r from-red-500 to-orange-500 rounded-xl p-6 mb-10 text-white shadow-lg">
             <div className="flex items-start gap-4">
-              <span className="text-3xl">Bus</span>
+              <span className="text-3xl">🚌</span>
               <div>
                 <h3 className="font-bold text-lg mb-1">Unlock Requirements</h3>
                 <p className="text-red-100">
@@ -102,60 +102,49 @@ export default function SkullCavernGuide() {
 
           {/* Quick Navigation */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10">
-            <a href="#checklist" className="bg-white border-2 border-slate-200 rounded-xl p-4 text-center hover:border-purple-400 hover:shadow-lg transition-all group">
-              <div className="text-3xl mb-2 group-hover:scale-110 transition-transform">Checklist</div>
-              <div className="font-semibold text-slate-700 text-sm">Pre-Run Checklist</div>
-            </a>
-            <a href="#loadout" className="bg-white border-2 border-slate-200 rounded-xl p-4 text-center hover:border-purple-400 hover:shadow-lg transition-all group">
-              <div className="text-3xl mb-2 group-hover:scale-110 transition-transform">Gear</div>
-              <div className="font-semibold text-slate-700 text-sm">Loadout</div>
-            </a>
-            <a href="#strategy" className="bg-white border-2 border-slate-200 rounded-xl p-4 text-center hover:border-purple-400 hover:shadow-lg transition-all group">
-              <div className="text-3xl mb-2 group-hover:scale-110 transition-transform">Bombs</div>
-              <div className="font-semibold text-slate-700 text-sm">Strategy</div>
-            </a>
-            <a href="#luck" className="bg-white border-2 border-slate-200 rounded-xl p-4 text-center hover:border-purple-400 hover:shadow-lg transition-all group">
-              <div className="text-3xl mb-2 group-hover:scale-110 transition-transform">Luck</div>
-              <div className="font-semibold text-slate-700 text-sm">Luck Guide</div>
-            </a>
+            {[
+              { icon: '📋', label: 'Pre-Run Checklist', href: '#checklist' },
+              { icon: '⚔️', label: 'Loadout', href: '#loadout' },
+              { icon: '💣', label: 'Strategy', href: '#strategy' },
+              { icon: '🍀', label: 'Luck Guide', href: '#luck' },
+            ].map((item) => (
+              <a
+                key={item.label}
+                href={item.href}
+                className="bg-white border-2 border-slate-200 rounded-xl p-4 text-center hover:border-purple-400 hover:shadow-lg transition-all group"
+              >
+                <div className="text-3xl mb-2 group-hover:scale-110 transition-transform">{item.icon}</div>
+                <div className="font-semibold text-slate-700 text-sm">{item.label}</div>
+              </a>
+            ))}
           </div>
 
           {/* Pre-Run Checklist */}
           <section id="checklist" className="mb-12">
             <h2 className="text-2xl font-bold text-slate-800 mb-6 flex items-center gap-2">
-              <span className="text-purple-500">Step 1</span> Pre-Run Checklist
+              <span className="text-purple-500">📋</span> Pre-Run Checklist
             </h2>
             
             <div className="bg-gradient-to-br from-purple-50 to-indigo-50 rounded-xl p-6 border border-purple-100">
               <div className="grid gap-4">
-                <div className="flex items-start gap-4 bg-white rounded-lg p-4 shadow-sm">
-                  <div className="w-10 h-10 bg-purple-500 text-white rounded-full flex items-center justify-center font-bold text-lg flex-shrink-0">1</div>
-                  <div>
-                    <div className="font-bold text-slate-800">Check TV Fortune</div>
-                    <div className="text-slate-600 text-sm">Spirits are very happy is the best day for Skull Cavern</div>
+                {[
+                  { step: 1, icon: '📺', title: 'Check TV Fortune', desc: '"Spirits are very happy" is the best day for Skull Cavern' },
+                  { step: 2, icon: '🍀', title: 'Eat Lucky Lunch', desc: '+3 Luck buff before warping (or Spicy Eel for +1 Luck +1 Speed)' },
+                  { step: 3, icon: '✨', title: 'Warp at 6:00 AM', desc: 'Use Desert Warp Totem - Bus arrives at 10:00 AM (loses 4 hours of mining)' },
+                  { step: 4, icon: '☕', title: 'Drink Coffee', desc: 'Speed buff stacks with food buffs - essential for deep runs' },
+                ].map((item) => (
+                  <div key={item.step} className="flex items-start gap-4 bg-white rounded-lg p-4 shadow-sm">
+                    <div className="w-10 h-10 bg-purple-500 text-white rounded-full flex items-center justify-center font-bold text-lg flex-shrink-0">
+                      {item.step}
+                    </div>
+                    <div>
+                      <div className="font-bold text-slate-800 flex items-center gap-2">
+                        <span>{item.icon}</span> {item.title}
+                      </div>
+                      <div className="text-slate-600 text-sm">{item.desc}</div>
+                    </div>
                   </div>
-                </div>
-                <div className="flex items-start gap-4 bg-white rounded-lg p-4 shadow-sm">
-                  <div className="w-10 h-10 bg-purple-500 text-white rounded-full flex items-center justify-center font-bold text-lg flex-shrink-0">2</div>
-                  <div>
-                    <div className="font-bold text-slate-800">Eat Lucky Lunch</div>
-                    <div className="text-slate-600 text-sm">+3 Luck buff before warping (or Spicy Eel for +1 Luck +1 Speed)</div>
-                  </div>
-                </div>
-                <div className="flex items-start gap-4 bg-white rounded-lg p-4 shadow-sm">
-                  <div className="w-10 h-10 bg-purple-500 text-white rounded-full flex items-center justify-center font-bold text-lg flex-shrink-0">3</div>
-                  <div>
-                    <div className="font-bold text-slate-800">Warp at 6:00 AM</div>
-                    <div className="text-slate-600 text-sm">Use Desert Warp Totem - the Bus wastes 1 hour of mining time</div>
-                  </div>
-                </div>
-                <div className="flex items-start gap-4 bg-white rounded-lg p-4 shadow-sm">
-                  <div className="w-10 h-10 bg-purple-500 text-white rounded-full flex items-center justify-center font-bold text-lg flex-shrink-0">4</div>
-                  <div>
-                    <div className="font-bold text-slate-800">Drink Coffee</div>
-                    <div className="text-slate-600 text-sm">Speed buff stacks with food buffs - essential for deep runs</div>
-                  </div>
-                </div>
+                ))}
               </div>
             </div>
           </section>
@@ -163,7 +152,7 @@ export default function SkullCavernGuide() {
           {/* Optimal Loadout */}
           <section id="loadout" className="mb-12">
             <h2 className="text-2xl font-bold text-slate-800 mb-6 flex items-center gap-2">
-              <span className="text-purple-500">Gear</span> Optimal Loadout
+              <span className="text-purple-500">⚔️</span> Optimal Loadout
             </h2>
 
             <div className="overflow-x-auto rounded-xl border border-slate-200 shadow-sm mb-6">
@@ -176,26 +165,18 @@ export default function SkullCavernGuide() {
                   </tr>
                 </thead>
                 <tbody>
-                  <tr className="border-t border-slate-200 bg-purple-50">
-                    <td className="px-4 py-3 font-medium">Weapon</td>
-                    <td className="px-4 py-3 font-semibold text-purple-700">Galaxy Sword / Infinity Blade</td>
-                    <td className="px-4 py-3 text-slate-600">Prismatic Shard at Desert Pillars</td>
-                  </tr>
-                  <tr className="border-t border-slate-200 bg-white">
-                    <td className="px-4 py-3 font-medium">Boots</td>
-                    <td className="px-4 py-3 font-semibold text-purple-700">Space Boots</td>
-                    <td className="px-4 py-3 text-slate-600">Skull Cavern drop (+4 Def, +4 Immunity)</td>
-                  </tr>
-                  <tr className="border-t border-slate-200 bg-slate-50">
-                    <td className="px-4 py-3 font-medium">Ring 1</td>
-                    <td className="px-4 py-3 font-semibold text-purple-700">Iridium Band</td>
-                    <td className="px-4 py-3 text-slate-600">Craft (5 Iridium Bars) or Volcano forge</td>
-                  </tr>
-                  <tr className="border-t border-slate-200 bg-purple-50">
-                    <td className="px-4 py-3 font-medium">Ring 2</td>
-                    <td className="px-4 py-3 font-semibold text-purple-700">Lucky Ring</td>
-                    <td className="px-4 py-3 text-slate-600">Special Order reward (+1 Luck)</td>
-                  </tr>
+                  {[
+                    { slot: '🗡️ Weapon', item: 'Galaxy Sword / Infinity Blade', how: 'Prismatic Shard at Desert Pillars', highlight: true },
+                    { slot: '👢 Boots', item: 'Space Boots', how: 'Skull Cavern drop (+4 Def, +4 Immunity)' },
+                    { slot: '💍 Ring 1', item: 'Iridium Band', how: 'Craft (5 Iridium Bars) or Volcano forge' },
+                    { slot: '💍 Ring 2', item: 'Lucky Ring', how: "Special Order reward (+1 Luck)", highlight: true },
+                  ].map((row, i) => (
+                    <tr key={i} className={`border-t border-slate-200 ${row.highlight ? 'bg-purple-50' : i % 2 === 0 ? 'bg-white' : 'bg-slate-50'}`}>
+                      <td className="px-4 py-3 font-medium">{row.slot}</td>
+                      <td className="px-4 py-3 font-semibold text-purple-700">{row.item}</td>
+                      <td className="px-4 py-3 text-slate-600">{row.how}</td>
+                    </tr>
+                  ))}
                 </tbody>
               </table>
             </div>
@@ -203,28 +184,23 @@ export default function SkullCavernGuide() {
             {/* Ring Forging Callout */}
             <div className="bg-gradient-to-r from-amber-100 to-yellow-100 rounded-xl p-6 border border-amber-200">
               <h3 className="font-bold text-amber-800 mb-3 flex items-center gap-2">
-                <span className="text-2xl">Fire</span> Ring Forging (1.5+)
+                <span className="text-2xl">🔥</span> Ring Forging (1.5+)
               </h3>
               <p className="text-amber-700 mb-4">
                 Combine two rings at the Volcano Forge for powerful hybrid effects:
               </p>
               <div className="grid md:grid-cols-2 gap-3">
-                <div className="bg-white/70 rounded-lg p-3">
-                  <div className="font-semibold text-amber-900 text-sm">Iridium Band + Lucky Ring</div>
-                  <div className="text-amber-700 text-xs">Light, magnet, attack bonus, +1 Luck</div>
-                </div>
-                <div className="bg-white/70 rounded-lg p-3">
-                  <div className="font-semibold text-amber-900 text-sm">Iridium Band + Napalm Ring</div>
-                  <div className="text-amber-700 text-xs">Monsters explode on death - clears floors fast</div>
-                </div>
-                <div className="bg-white/70 rounded-lg p-3">
-                  <div className="font-semibold text-amber-900 text-sm">Burglar Ring + Lucky Ring</div>
-                  <div className="text-amber-700 text-xs">Better monster drops with luck bonus</div>
-                </div>
-                <div className="bg-white/70 rounded-lg p-3">
-                  <div className="font-semibold text-amber-900 text-sm">Slime Charmer + Iridium Band</div>
-                  <div className="text-amber-700 text-xs">Ignore slimes completely while mining</div>
-                </div>
+                {[
+                  { combo: 'Iridium Band + Lucky Ring', effect: 'Light, magnet, attack bonus, +1 Luck' },
+                  { combo: 'Iridium Band + Napalm Ring', effect: 'Monsters explode on death - clears floors fast' },
+                  { combo: 'Burglar Ring + Lucky Ring', effect: 'Better monster drops with luck bonus' },
+                  { combo: 'Slime Charmer + Iridium Band', effect: 'Ignore slimes completely while mining' },
+                ].map((item, i) => (
+                  <div key={i} className="bg-white/70 rounded-lg p-3">
+                    <div className="font-semibold text-amber-900 text-sm">{item.combo}</div>
+                    <div className="text-amber-700 text-xs">{item.effect}</div>
+                  </div>
+                ))}
               </div>
             </div>
           </section>
@@ -232,7 +208,7 @@ export default function SkullCavernGuide() {
           {/* Consumables */}
           <section className="mb-12">
             <h2 className="text-2xl font-bold text-slate-800 mb-6 flex items-center gap-2">
-              <span className="text-purple-500">Bag</span> Essential Consumables
+              <span className="text-purple-500">🎒</span> Essential Consumables
             </h2>
 
             <div className="overflow-x-auto rounded-xl border border-slate-200 shadow-sm mb-6">
@@ -245,31 +221,19 @@ export default function SkullCavernGuide() {
                   </tr>
                 </thead>
                 <tbody>
-                  <tr className="border-t border-slate-200 bg-emerald-50">
-                    <td className="px-4 py-3 font-medium">Mega Bomb</td>
-                    <td className="px-4 py-3 text-slate-600">Clears large area of rocks instantly</td>
-                    <td className="px-4 py-3 text-right font-bold text-emerald-600">100+</td>
-                  </tr>
-                  <tr className="border-t border-slate-200 bg-emerald-50">
-                    <td className="px-4 py-3 font-medium">Staircase</td>
-                    <td className="px-4 py-3 text-slate-600">Skip any floor instantly</td>
-                    <td className="px-4 py-3 text-right font-bold text-emerald-600">50-100</td>
-                  </tr>
-                  <tr className="border-t border-slate-200 bg-white">
-                    <td className="px-4 py-3 font-medium">Coffee</td>
-                    <td className="px-4 py-3 text-slate-600">+1 Speed (stacks with food buffs)</td>
-                    <td className="px-4 py-3 text-right font-bold text-slate-700">10-20</td>
-                  </tr>
-                  <tr className="border-t border-slate-200 bg-slate-50">
-                    <td className="px-4 py-3 font-medium">Spicy Eel</td>
-                    <td className="px-4 py-3 text-slate-600">+1 Luck, +1 Speed</td>
-                    <td className="px-4 py-3 text-right font-bold text-slate-700">10-15</td>
-                  </tr>
-                  <tr className="border-t border-slate-200 bg-white">
-                    <td className="px-4 py-3 font-medium">Gold Cheese</td>
-                    <td className="px-4 py-3 text-slate-600">+201 Energy, +90 Health</td>
-                    <td className="px-4 py-3 text-right font-bold text-slate-700">Full Stack</td>
-                  </tr>
+                  {[
+                    { item: '💣 Mega Bomb', effect: 'Clears large area of rocks instantly', qty: '100+', critical: true },
+                    { item: '🪜 Staircase', effect: 'Skip any floor instantly', qty: '50-100', critical: true },
+                    { item: '☕ Coffee', effect: '+1 Speed (stacks with food buffs)', qty: '10-20' },
+                    { item: '🌶️ Spicy Eel', effect: '+1 Luck, +1 Speed', qty: '10-15' },
+                    { item: '🧀 Gold Cheese', effect: '+201 Energy, +90 Health', qty: 'Full Stack' },
+                  ].map((row, i) => (
+                    <tr key={i} className={`border-t border-slate-200 ${row.critical ? 'bg-emerald-50' : i % 2 === 0 ? 'bg-white' : 'bg-slate-50'}`}>
+                      <td className="px-4 py-3 font-medium">{row.item}</td>
+                      <td className="px-4 py-3 text-slate-600">{row.effect}</td>
+                      <td className={`px-4 py-3 text-right font-bold ${row.critical ? 'text-emerald-600' : 'text-slate-700'}`}>{row.qty}</td>
+                    </tr>
+                  ))}
                 </tbody>
               </table>
             </div>
@@ -277,7 +241,7 @@ export default function SkullCavernGuide() {
             {/* Staircase Tip */}
             <div className="bg-gradient-to-r from-indigo-100 to-purple-100 rounded-xl p-6 border border-indigo-200">
               <h3 className="font-bold text-indigo-800 mb-2 flex items-center gap-2">
-                <span className="text-2xl">Jade</span> Infinite Staircase Farm
+                <span className="text-2xl">💎</span> Infinite Staircase Farm
               </h3>
               <p className="text-indigo-700">
                 <strong>Jade + Crystallarium = Infinite Staircases.</strong> Trade Jade to the Desert Trader 
@@ -289,65 +253,53 @@ export default function SkullCavernGuide() {
           {/* Floor Strategy */}
           <section id="strategy" className="mb-12">
             <h2 className="text-2xl font-bold text-slate-800 mb-6 flex items-center gap-2">
-              <span className="text-purple-500">Bomb</span> Floor Strategy
+              <span className="text-purple-500">💣</span> Floor Strategy
             </h2>
 
             <div className="grid md:grid-cols-2 gap-6 mb-8">
               {/* Speed Strategy */}
               <div className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-xl p-6 border border-blue-200">
                 <h3 className="font-bold text-blue-800 mb-4 flex items-center gap-2">
-                  <span className="text-2xl">Run</span> Speed Run (Floor 100 Goal)
+                  <span className="text-2xl">🏃</span> Speed Run (Floor 100 Goal)
                 </h3>
                 <ol className="space-y-3">
-                  <li className="flex items-start gap-3">
-                    <span className="w-6 h-6 bg-blue-500 text-white rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0">1</span>
-                    <span className="text-blue-800 text-sm">Staircase monster floors and spiral layouts immediately</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <span className="w-6 h-6 bg-blue-500 text-white rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0">2</span>
-                    <span className="text-blue-800 text-sm">Bomb open areas to find holes (skip 3-15 floors)</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <span className="w-6 h-6 bg-blue-500 text-white rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0">3</span>
-                    <span className="text-blue-800 text-sm">Only mine Iridium if you see 5+ nodes clustered</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <span className="w-6 h-6 bg-blue-500 text-white rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0">4</span>
-                    <span className="text-blue-800 text-sm">Never stop to fight unless completely cornered</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <span className="w-6 h-6 bg-blue-500 text-white rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0">5</span>
-                    <span className="text-blue-800 text-sm">Jump in holes over using ladders when possible</span>
-                  </li>
+                  {[
+                    'Staircase monster floors and spiral layouts immediately',
+                    'Bomb open areas to find holes (skip 3-15 floors)',
+                    'Only mine Iridium if you see 5+ nodes clustered',
+                    'Never stop to fight unless completely cornered',
+                    'Jump in holes over using ladders when possible',
+                  ].map((tip, i) => (
+                    <li key={i} className="flex items-start gap-3">
+                      <span className="w-6 h-6 bg-blue-500 text-white rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0">
+                        {i + 1}
+                      </span>
+                      <span className="text-blue-800 text-sm">{tip}</span>
+                    </li>
+                  ))}
                 </ol>
               </div>
 
               {/* Farming Strategy */}
               <div className="bg-gradient-to-br from-violet-50 to-purple-50 rounded-xl p-6 border border-violet-200">
                 <h3 className="font-bold text-violet-800 mb-4 flex items-center gap-2">
-                  <span className="text-2xl">Mine</span> Iridium Farming Focus
+                  <span className="text-2xl">⛏️</span> Iridium Farming Focus
                 </h3>
                 <ol className="space-y-3">
-                  <li className="flex items-start gap-3">
-                    <span className="w-6 h-6 bg-violet-500 text-white rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0">1</span>
-                    <span className="text-violet-800 text-sm">Use staircases to reach floor 50+ quickly</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <span className="w-6 h-6 bg-violet-500 text-white rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0">2</span>
-                    <span className="text-violet-800 text-sm">Bomb every cluster of rocks you see</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <span className="w-6 h-6 bg-violet-500 text-white rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0">3</span>
-                    <span className="text-violet-800 text-sm">Kill Purple Slimes for Iridium Ore drops</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <span className="w-6 h-6 bg-violet-500 text-white rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0">4</span>
-                    <span className="text-violet-800 text-sm">Treasure floors (mostly rocks) are best - clear them fully</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <span className="w-6 h-6 bg-violet-500 text-white rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0">5</span>
-                    <span className="text-violet-800 text-sm">Stay until 1:50 AM (you pass out at 2 AM)</span>
-                  </li>
+                  {[
+                    'Use staircases to reach floor 50+ quickly',
+                    'Bomb every cluster of rocks you see',
+                    'Kill Purple Slimes for Iridium Ore drops',
+                    'Treasure floors (mostly rocks) are best - clear them fully',
+                    'Stay until 1:50 AM (you pass out at 2 AM)',
+                  ].map((tip, i) => (
+                    <li key={i} className="flex items-start gap-3">
+                      <span className="w-6 h-6 bg-violet-500 text-white rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0">
+                        {i + 1}
+                      </span>
+                      <span className="text-violet-800 text-sm">{tip}</span>
+                    </li>
+                  ))}
                 </ol>
               </div>
             </div>
@@ -355,62 +307,44 @@ export default function SkullCavernGuide() {
             {/* DO vs DON'T */}
             <div className="grid md:grid-cols-2 gap-6">
               <div className="bg-gradient-to-br from-green-100 to-emerald-100 rounded-xl p-6 border-2 border-green-300">
-                <h4 className="font-bold text-green-800 mb-4 text-lg flex items-center gap-2">DO</h4>
+                <h4 className="font-bold text-green-800 mb-4 text-lg flex items-center gap-2">
+                  ✅ DO
+                </h4>
                 <ul className="space-y-2">
-                  <li className="flex items-center gap-2 text-green-700">
-                    <span className="text-green-500">*</span>
-                    <span className="text-sm">Wait for spirits are very happy days</span>
-                  </li>
-                  <li className="flex items-center gap-2 text-green-700">
-                    <span className="text-green-500">*</span>
-                    <span className="text-sm">Warp to Desert at exactly 6:00 AM</span>
-                  </li>
-                  <li className="flex items-center gap-2 text-green-700">
-                    <span className="text-green-500">*</span>
-                    <span className="text-sm">Stack Coffee + Spicy Eel buffs</span>
-                  </li>
-                  <li className="flex items-center gap-2 text-green-700">
-                    <span className="text-green-500">*</span>
-                    <span className="text-sm">Bomb clusters, skip single rocks</span>
-                  </li>
-                  <li className="flex items-center gap-2 text-green-700">
-                    <span className="text-green-500">*</span>
-                    <span className="text-sm">Always jump in holes over ladders</span>
-                  </li>
-                  <li className="flex items-center gap-2 text-green-700">
-                    <span className="text-green-500">*</span>
-                    <span className="text-sm">Bring 100+ bombs minimum</span>
-                  </li>
+                  {[
+                    'Wait for "spirits are very happy" days',
+                    'Warp to Desert at exactly 6:00 AM',
+                    'Stack Coffee + Spicy Eel buffs',
+                    'Bomb clusters, skip single rocks',
+                    'Always jump in holes over ladders',
+                    'Bring 100+ bombs minimum',
+                  ].map((item, i) => (
+                    <li key={i} className="flex items-center gap-2 text-green-700">
+                      <span className="text-green-500">●</span>
+                      <span className="text-sm">{item}</span>
+                    </li>
+                  ))}
                 </ul>
               </div>
 
               <div className="bg-gradient-to-br from-red-100 to-rose-100 rounded-xl p-6 border-2 border-red-300">
-                <h4 className="font-bold text-red-800 mb-4 text-lg flex items-center gap-2">DO NOT</h4>
+                <h4 className="font-bold text-red-800 mb-4 text-lg flex items-center gap-2">
+                  ❌ DO NOT
+                </h4>
                 <ul className="space-y-2">
-                  <li className="flex items-center gap-2 text-red-700">
-                    <span className="text-red-500">*</span>
-                    <span className="text-sm">Take the Bus (wastes 1 hour of time)</span>
-                  </li>
-                  <li className="flex items-center gap-2 text-red-700">
-                    <span className="text-red-500">*</span>
-                    <span className="text-sm">Fight every monster you see</span>
-                  </li>
-                  <li className="flex items-center gap-2 text-red-700">
-                    <span className="text-red-500">*</span>
-                    <span className="text-sm">Mine every single rock</span>
-                  </li>
-                  <li className="flex items-center gap-2 text-red-700">
-                    <span className="text-red-500">*</span>
-                    <span className="text-sm">Forget to eat when HP drops low</span>
-                  </li>
-                  <li className="flex items-center gap-2 text-red-700">
-                    <span className="text-red-500">*</span>
-                    <span className="text-sm">Go on bad luck days</span>
-                  </li>
-                  <li className="flex items-center gap-2 text-red-700">
-                    <span className="text-red-500">*</span>
-                    <span className="text-sm">Use pickaxe when bombs work better</span>
-                  </li>
+                  {[
+                    'Take the Bus (arrives at 10 AM, wastes 4 hours)',
+                    'Fight every monster you see',
+                    'Mine every single rock',
+                    'Forget to eat when HP drops low',
+                    'Go on bad luck days',
+                    'Use pickaxe when bombs work better',
+                  ].map((item, i) => (
+                    <li key={i} className="flex items-center gap-2 text-red-700">
+                      <span className="text-red-500">●</span>
+                      <span className="text-sm">{item}</span>
+                    </li>
+                  ))}
                 </ul>
               </div>
             </div>
@@ -419,7 +353,7 @@ export default function SkullCavernGuide() {
           {/* Floor Types */}
           <section className="mb-12">
             <h2 className="text-2xl font-bold text-slate-800 mb-6 flex items-center gap-2">
-              <span className="text-purple-500">Map</span> Floor Types
+              <span className="text-purple-500">🗺️</span> Floor Types
             </h2>
 
             <div className="overflow-x-auto rounded-xl border border-slate-200 shadow-sm">
@@ -432,36 +366,20 @@ export default function SkullCavernGuide() {
                   </tr>
                 </thead>
                 <tbody>
-                  <tr className="border-t border-slate-200 bg-green-50">
-                    <td className="px-4 py-3 font-medium">Treasure Room</td>
-                    <td className="px-4 py-3 text-slate-600">Mostly rocks, few monsters</td>
-                    <td className="px-4 py-3 text-green-700 font-semibold">BOMB IT ALL - best floors for Iridium</td>
-                  </tr>
-                  <tr className="border-t border-slate-200 bg-white">
-                    <td className="px-4 py-3 font-medium">Monster Floor</td>
-                    <td className="px-4 py-3 text-slate-600">Many enemies, few rocks</td>
-                    <td className="px-4 py-3 text-slate-600">Staircase immediately if speedrunning</td>
-                  </tr>
-                  <tr className="border-t border-slate-200 bg-slate-50">
-                    <td className="px-4 py-3 font-medium">Spiral Layout</td>
-                    <td className="px-4 py-3 text-slate-600">Long winding narrow path</td>
-                    <td className="px-4 py-3 text-slate-600">Staircase instantly - huge time waste</td>
-                  </tr>
-                  <tr className="border-t border-slate-200 bg-white">
-                    <td className="px-4 py-3 font-medium">Mushroom Floor</td>
-                    <td className="px-4 py-3 text-slate-600">Purple Mushrooms everywhere</td>
-                    <td className="px-4 py-3 text-slate-600">Harvest quickly, then staircase</td>
-                  </tr>
-                  <tr className="border-t border-slate-200 bg-slate-50">
-                    <td className="px-4 py-3 font-medium">Prehistoric Floor</td>
-                    <td className="px-4 py-3 text-slate-600">Pepper Rex dinosaurs</td>
-                    <td className="px-4 py-3 text-slate-600">Farm for rare Dinosaur Eggs</td>
-                  </tr>
-                  <tr className="border-t border-slate-200 bg-white">
-                    <td className="px-4 py-3 font-medium">Slime Infestation</td>
-                    <td className="px-4 py-3 text-slate-600">Covered in slimes</td>
-                    <td className="px-4 py-3 text-slate-600">Napalm Ring clears fast, or staircase</td>
-                  </tr>
+                  {[
+                    { type: '💎 Treasure Room', look: 'Mostly rocks, few monsters', strat: 'BOMB IT ALL - best floors for Iridium', good: true },
+                    { type: '👹 Monster Floor', look: 'Many enemies, few rocks', strat: 'Staircase immediately if speedrunning' },
+                    { type: '🌀 Spiral Layout', look: 'Long winding narrow path', strat: 'Staircase instantly - huge time waste' },
+                    { type: '🍄 Mushroom Floor', look: 'Purple Mushrooms everywhere', strat: 'Harvest quickly, then staircase' },
+                    { type: '🦖 Prehistoric Floor', look: 'Pepper Rex dinosaurs', strat: 'Farm for rare Dinosaur Eggs' },
+                    { type: '🟣 Slime Infestation', look: 'Covered in slimes', strat: 'Napalm Ring clears fast, or staircase' },
+                  ].map((row, i) => (
+                    <tr key={i} className={`border-t border-slate-200 ${row.good ? 'bg-green-50' : i % 2 === 0 ? 'bg-white' : 'bg-slate-50'}`}>
+                      <td className="px-4 py-3 font-medium">{row.type}</td>
+                      <td className="px-4 py-3 text-slate-600">{row.look}</td>
+                      <td className={`px-4 py-3 ${row.good ? 'text-green-700 font-semibold' : 'text-slate-600'}`}>{row.strat}</td>
+                    </tr>
+                  ))}
                 </tbody>
               </table>
             </div>
@@ -470,7 +388,7 @@ export default function SkullCavernGuide() {
           {/* Iridium Spawn Rates */}
           <section className="mb-12">
             <h2 className="text-2xl font-bold text-slate-800 mb-6 flex items-center gap-2">
-              <span className="text-purple-500">Iridium</span> Iridium Spawn Rates by Depth
+              <span className="text-purple-500">💜</span> Iridium Spawn Rates by Depth
             </h2>
 
             <div className="overflow-x-auto rounded-xl border border-slate-200 shadow-sm mb-6">
@@ -483,31 +401,19 @@ export default function SkullCavernGuide() {
                   </tr>
                 </thead>
                 <tbody>
-                  <tr className="border-t border-slate-200 bg-white">
-                    <td className="px-4 py-3 font-medium">Floors 1-20</td>
-                    <td className="px-4 py-3 font-semibold text-slate-500">Very Low</td>
-                    <td className="px-4 py-3 text-slate-600">Skip these floors with staircases</td>
-                  </tr>
-                  <tr className="border-t border-slate-200 bg-slate-50">
-                    <td className="px-4 py-3 font-medium">Floors 21-50</td>
-                    <td className="px-4 py-3 font-semibold text-slate-600">Low</td>
-                    <td className="px-4 py-3 text-slate-600">Occasional nodes, not worth stopping</td>
-                  </tr>
-                  <tr className="border-t border-slate-200 bg-white">
-                    <td className="px-4 py-3 font-medium">Floors 51-100</td>
-                    <td className="px-4 py-3 font-semibold text-blue-600">Medium</td>
-                    <td className="px-4 py-3 text-slate-600">Decent spawns, bomb if 5+ nodes visible</td>
-                  </tr>
-                  <tr className="border-t border-slate-200 bg-purple-50">
-                    <td className="px-4 py-3 font-medium">Floors 100+</td>
-                    <td className="px-4 py-3 font-semibold text-purple-600">High</td>
-                    <td className="px-4 py-3 text-slate-600">Iridium everywhere - farm these floors</td>
-                  </tr>
-                  <tr className="border-t border-slate-200 bg-purple-50">
-                    <td className="px-4 py-3 font-medium">Floors 200+</td>
-                    <td className="px-4 py-3 font-semibold text-purple-700">Very High</td>
-                    <td className="px-4 py-3 text-slate-600">Maximum density, but very dangerous</td>
-                  </tr>
+                  {[
+                    { range: 'Floors 1-20', chance: 'Very Low', notes: 'Skip these floors with staircases', color: 'text-slate-500' },
+                    { range: 'Floors 21-50', chance: 'Low', notes: 'Occasional nodes, not worth stopping', color: 'text-slate-600' },
+                    { range: 'Floors 51-100', chance: 'Medium', notes: 'Decent spawns, bomb if 5+ nodes visible', color: 'text-blue-600' },
+                    { range: 'Floors 100+', chance: 'High', notes: 'Iridium everywhere - farm these floors', color: 'text-purple-600', highlight: true },
+                    { range: 'Floors 200+', chance: 'Very High', notes: 'Maximum density, but very dangerous', color: 'text-purple-700', highlight: true },
+                  ].map((row, i) => (
+                    <tr key={i} className={`border-t border-slate-200 ${row.highlight ? 'bg-purple-50' : i % 2 === 0 ? 'bg-white' : 'bg-slate-50'}`}>
+                      <td className="px-4 py-3 font-medium">{row.range}</td>
+                      <td className={`px-4 py-3 font-semibold ${row.color}`}>{row.chance}</td>
+                      <td className="px-4 py-3 text-slate-600">{row.notes}</td>
+                    </tr>
+                  ))}
                 </tbody>
               </table>
             </div>
@@ -516,7 +422,7 @@ export default function SkullCavernGuide() {
           {/* Luck Mechanics */}
           <section id="luck" className="mb-12">
             <h2 className="text-2xl font-bold text-slate-800 mb-6 flex items-center gap-2">
-              <span className="text-purple-500">Clover</span> Luck Mechanics
+              <span className="text-purple-500">🍀</span> Luck Mechanics
             </h2>
 
             <p className="text-slate-600 mb-6">
@@ -533,88 +439,101 @@ export default function SkullCavernGuide() {
                     <th className="px-4 py-3 text-left font-semibold">Recommendation</th>
                   </tr>
                 </thead>
-                <tbody>
-                  <tr className="border-t border-slate-200 bg-green-50">
-                    <td className="px-4 py-3 font-medium">Spirits are very happy</td>
-                    <td className="px-4 py-3 text-slate-600">+0.07 to +0.10</td>
-                    <td className="px-4 py-3 font-bold text-green-600">BEST DAY - go now!</td>
-                  </tr>
-                  <tr className="border-t border-slate-200 bg-blue-50">
-                    <td className="px-4 py-3 font-medium">Good humor today</td>
-                    <td className="px-4 py-3 text-slate-600">+0.02 to +0.07</td>
-                    <td className="px-4 py-3 font-bold text-blue-600">Good day for runs</td>
-                  </tr>
-                  <tr className="border-t border-slate-200 bg-slate-50">
-                    <td className="px-4 py-3 font-medium">Neutral</td>
-                    <td className="px-4 py-3 text-slate-600">-0.02 to +0.02</td>
-                    <td className="px-4 py-3 font-bold text-slate-600">OK with luck food buffs</td>
-                  </tr>
-                  <tr className="border-t border-slate-200 bg-orange-50">
-                    <td className="px-4 py-3 font-medium">Spirits are annoyed</td>
-                    <td className="px-4 py-3 text-slate-600">-0.02 to -0.07</td>
-                    <td className="px-4 py-3 font-bold text-orange-600">Skip - do farm chores</td>
-                  </tr>
-                  <tr className="border-t border-slate-200 bg-red-50">
-                    <td className="px-4 py-3 font-medium">Very displeased</td>
-                    <td className="px-4 py-3 text-slate-600">-0.07 to -0.10</td>
-                    <td className="px-4 py-3 font-bold text-red-600">DO NOT GO</td>
-                  </tr>
+                <tbody>                  {[
+                    { fortune: '✨ Spirits are very happy', luck: '+0.07 to +0.10', rec: 'BEST DAY - go now!', color: 'text-green-600', bg: 'bg-green-50' },
+                    { fortune: '😊 Good humor today', luck: '+0.02 to +0.07', rec: 'Good day for runs', color: 'text-blue-600', bg: 'bg-blue-50' },
+                    { fortune: '😐 Neutral', luck: '-0.02 to +0.02', rec: 'OK with luck food buffs', color: 'text-slate-600', bg: 'bg-slate-50' },
+                    { fortune: '😠 Spirits are annoyed', luck: '-0.07 to -0.02', rec: 'Skip - do farm chores', color: 'text-orange-600', bg: 'bg-orange-50' },
+                    { fortune: '💢 Very displeased', luck: '-0.10 to -0.07', rec: 'DO NOT GO', color: 'text-red-600', bg: 'bg-red-50' },
+                  ].map((row, i) => (
+                    <tr key={i} className={`border-t border-slate-200 ${row.bg}`}>
+                      <td className="px-4 py-3 font-medium">{row.fortune}</td>
+                      <td className="px-4 py-3 text-slate-600">{row.luck}</td>
+                      <td className={`px-4 py-3 font-bold ${row.color}`}>{row.rec}</td>
+                    </tr>
+                  ))}
                 </tbody>
               </table>
             </div>
-          </section>
-
-          {/* Mr. Qi Challenge */}
+          </section>          {/* Mr. Qi Challenges */}
           <section className="mb-12">
-            <div className="bg-gradient-to-r from-cyan-500 to-blue-600 rounded-xl p-6 text-white shadow-lg">
-              <div className="flex items-start gap-4">
-                <span className="text-4xl">Target</span>
-                <div>
-                  <h3 className="font-bold text-xl mb-2">Mr. Qi Challenge: Reach Floor 100</h3>
-                  <p className="text-cyan-100 mb-4">
-                    After completing the Community Center or JojaMart, Mr. Qi challenges you to reach 
-                    floor 100 without using more than 10 staircases. The reward is worth it!
-                  </p>
-                  <div className="bg-white/20 rounded-lg p-4">
-                    <p className="text-sm">
-                      <strong>Tip:</strong> This challenge requires perfect luck day timing, maximum bombs, 
-                      and aggressive hole-hunting. Save staircases only for spiral/monster floors.
+            <h2 className="text-2xl font-bold text-slate-800 mb-6 flex items-center gap-2">
+              <span className="text-purple-500">🎯</span> Mr. Qi&apos;s Challenges
+            </h2>
+            
+            <div className="grid gap-4">
+              {/* Qi's Challenge - Floor 25 */}
+              <div className="bg-gradient-to-r from-cyan-500 to-blue-600 rounded-xl p-6 text-white shadow-lg">
+                <div className="flex items-start gap-4">
+                  <span className="text-3xl">📜</span>
+                  <div>
+                    <h3 className="font-bold text-lg mb-2">Qi&apos;s Challenge: Reach Floor 25</h3>
+                    <p className="text-cyan-100 mb-2">
+                      After your first Skull Cavern visit, Mr. Qi sends a letter challenging you to reach 
+                      floor 25. Completing this awards <strong>10,000g</strong> by mail.
+                    </p>
+                    <p className="text-cyan-200 text-sm">
+                      Tip: This is easy with 25 staircases. Complete it early to get the gold reward.
                     </p>
                   </div>
                 </div>
               </div>
-            </div>
-          </section>
 
-          {/* Related Guides */}
+              {/* Qi's Hungry Challenge - Floor 100 */}
+              <div className="bg-gradient-to-r from-purple-600 to-indigo-700 rounded-xl p-6 text-white shadow-lg">
+                <div className="flex items-start gap-4">
+                  <span className="text-3xl">🍽️</span>
+                  <div>
+                    <h3 className="font-bold text-lg mb-2">Qi&apos;s Hungry Challenge: Floor 100 (No Food)</h3>
+                    <p className="text-purple-100 mb-2">
+                      A Special Order from Qi&apos;s Walnut Room on Ginger Island. Reach floor 100 
+                      <strong> without eating or drinking anything</strong>. Extremely difficult!
+                    </p>
+                    <div className="bg-white/20 rounded-lg p-3 mt-3">
+                      <p className="text-sm">
+                        <strong>Strategy:</strong> Use 100+ staircases to skip most floors. Bring Napalm Ring 
+                        to kill monsters without taking damage. Galaxy Sword + Iridium Band essential.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>          {/* Related Guides */}
           <section className="mb-8">
             <h2 className="text-2xl font-bold text-slate-800 mb-6 flex items-center gap-2">
-              <span className="text-purple-500">Books</span> Related Guides
+              <span className="text-purple-500">📚</span> Related Guides
             </h2>
 
             <div className="grid md:grid-cols-3 gap-4">
-              <Link href="/guide/mining-profit/" className="bg-white border-2 border-slate-200 rounded-xl p-5 hover:border-purple-400 hover:shadow-lg transition-all group">
-                <div className="text-3xl mb-2 group-hover:scale-110 transition-transform">Pick</div>
-                <div className="font-bold text-purple-600 group-hover:text-purple-700">Mining Profit Guide</div>
-                <div className="text-sm text-slate-500">Regular mines strategy</div>
-              </Link>
-              <Link href="/guide/keg-vs-jar/" className="bg-white border-2 border-slate-200 rounded-xl p-5 hover:border-purple-400 hover:shadow-lg transition-all group">
-                <div className="text-3xl mb-2 group-hover:scale-110 transition-transform">Keg</div>
-                <div className="font-bold text-purple-600 group-hover:text-purple-700">Keg vs Jar</div>
-                <div className="text-sm text-slate-500">Process your crops</div>
-              </Link>
-              <Link href="/guide/year-1-money/" className="bg-white border-2 border-slate-200 rounded-xl p-5 hover:border-purple-400 hover:shadow-lg transition-all group">
-                <div className="text-3xl mb-2 group-hover:scale-110 transition-transform">Gold</div>
-                <div className="font-bold text-purple-600 group-hover:text-purple-700">Year 1 Money</div>
-                <div className="text-sm text-slate-500">Fund your Skull Cavern runs</div>
-              </Link>
+              {[
+                { href: '/guide/mining-profit/', icon: '⛏️', title: 'Mining Profit Guide', desc: 'Gem values & Crystalarium strategy' },
+                { href: '/guide/year-1-money/', icon: '💰', title: 'Year 1 Money', desc: 'Fund your Skull Cavern runs' },
+                { href: '/guide/most-profitable-crops/', icon: '🌾', title: 'Profitable Crops', desc: 'Best crops to farm for gold' },
+                { href: '/guide/ancient-fruit/', icon: '🍇', title: 'Ancient Fruit Guide', desc: 'Best long-term investment' },
+                { href: '/guide/community-center/', icon: '📦', title: 'Community Center', desc: 'Unlock Desert faster' },
+                { href: '/guide/best-fish-pond/', icon: '🐟', title: 'Fish Pond Guide', desc: 'Passive income while mining' },
+              ].map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className="bg-white border-2 border-slate-200 rounded-xl p-5 hover:border-purple-400 hover:shadow-lg transition-all group"
+                >
+                  <div className="text-3xl mb-2 group-hover:scale-110 transition-transform">{link.icon}</div>
+                  <div className="font-bold text-purple-600 group-hover:text-purple-700">{link.title}</div>
+                  <div className="text-sm text-slate-500">{link.desc}</div>
+                </Link>
+              ))}
             </div>
           </section>
 
           {/* Back Link */}
           <div className="text-center pt-8 border-t border-slate-200">
-            <Link href="/guide/" className="inline-flex items-center gap-2 text-purple-600 hover:text-purple-800 font-medium transition-colors">
-              Back to All Guides
+            <Link
+              href="/guide/"
+              className="inline-flex items-center gap-2 text-purple-600 hover:text-purple-800 font-medium transition-colors"
+            >
+              ← Back to All Guides
             </Link>
           </div>
         </article>

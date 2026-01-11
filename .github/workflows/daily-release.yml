@@ -8,6 +8,9 @@ on:
   # 也可以手动触发
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
   release-pages:
     runs-on: ubuntu-latest
