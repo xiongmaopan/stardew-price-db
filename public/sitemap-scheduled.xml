@@ -30,4 +30,34 @@
     <changefreq>weekly</changefreq>
     <priority>1</priority>
   </url>
+  <url>
+    <loc>https://stardewpricedb.com/recipes/</loc>
+    <lastmod>2026-01-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+  </url>
+  <url>
+    <loc>https://stardewpricedb.com/calculator/spring/</loc>
+    <lastmod>2026-01-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+  </url>
+  <url>
+    <loc>https://stardewpricedb.com/calculator/summer/</loc>
+    <lastmod>2026-01-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+  </url>
+  <url>
+    <loc>https://stardewpricedb.com/calculator/fall/</loc>
+    <lastmod>2026-01-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+  </url>
+  <url>
+    <loc>https://stardewpricedb.com/calculator/winter/</loc>
+    <lastmod>2026-01-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+  </url>
 </urlset>

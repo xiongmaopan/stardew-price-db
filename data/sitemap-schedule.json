@@ -2,8 +2,8 @@
   "createdAt": "2025-12-18",
   "totalPages": 397,
   "pagesPerDay": 5,
-  "publishedCount": 5,
-  "lastPublishDate": "2025-12-17",
+  "publishedCount": 10,
+  "lastPublishDate": "2026-01-12",
   "pages": [
     {
       "url": "/",
@@ -44,36 +44,36 @@
       "url": "/recipes/",
       "priority": 1,
       "scheduledDay": 1,
-      "published": false,
-      "publishedAt": null
+      "published": true,
+      "publishedAt": "2026-01-12"
     },
     {
       "url": "/calculator/spring/",
       "priority": 1,
       "scheduledDay": 1,
-      "published": false,
-      "publishedAt": null
+      "published": true,
+      "publishedAt": "2026-01-12"
     },
     {
       "url": "/calculator/summer/",
       "priority": 1,
       "scheduledDay": 1,
-      "published": false,
-      "publishedAt": null
+      "published": true,
+      "publishedAt": "2026-01-12"
     },
     {
       "url": "/calculator/fall/",
       "priority": 1,
       "scheduledDay": 1,
-      "published": false,
-      "publishedAt": null
+      "published": true,
+      "publishedAt": "2026-01-12"
     },
     {
       "url": "/calculator/winter/",
       "priority": 1,
       "scheduledDay": 1,
-      "published": false,
-      "publishedAt": null
+      "published": true,
+      "publishedAt": "2026-01-12"
     },
     {
       "url": "/calculator/greenhouse/",
