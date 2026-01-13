@@ -2,8 +2,8 @@
   "createdAt": "2025-12-18",
   "totalPages": 397,
   "pagesPerDay": 5,
-  "publishedCount": 10,
-  "lastPublishDate": "2026-01-12",
+  "publishedCount": 15,
+  "lastPublishDate": "2026-01-13",
   "pages": [
     {
       "url": "/",
@@ -79,36 +79,36 @@
       "url": "/calculator/greenhouse/",
       "priority": 1,
       "scheduledDay": 2,
-      "published": false,
-      "publishedAt": null
+      "published": true,
+      "publishedAt": "2026-01-13"
     },
     {
       "url": "/guide/most-profitable-crops/",
       "priority": 1,
       "scheduledDay": 2,
-      "published": false,
-      "publishedAt": null
+      "published": true,
+      "publishedAt": "2026-01-13"
     },
     {
       "url": "/guide/keg-vs-jar/",
       "priority": 1,
       "scheduledDay": 2,
-      "published": false,
-      "publishedAt": null
+      "published": true,
+      "publishedAt": "2026-01-13"
     },
     {
       "url": "/guide/ancient-fruit/",
       "priority": 1,
       "scheduledDay": 2,
-      "published": false,
-      "publishedAt": null
+      "published": true,
+      "publishedAt": "2026-01-13"
     },
     {
       "url": "/guide/greenhouse-layout/",
       "priority": 1,
       "scheduledDay": 2,
-      "published": false,
-      "publishedAt": null
+      "published": true,
+      "publishedAt": "2026-01-13"
     },
     {
       "url": "/guide/animal-profit/",
