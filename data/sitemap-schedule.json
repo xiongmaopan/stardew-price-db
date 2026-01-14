@@ -2,8 +2,8 @@
   "createdAt": "2025-12-18",
   "totalPages": 397,
   "pagesPerDay": 5,
-  "publishedCount": 15,
-  "lastPublishDate": "2026-01-13",
+  "publishedCount": 20,
+  "lastPublishDate": "2026-01-14",
   "pages": [
     {
       "url": "/",
@@ -114,36 +114,36 @@
       "url": "/guide/animal-profit/",
       "priority": 1,
       "scheduledDay": 3,
-      "published": false,
-      "publishedAt": null
+      "published": true,
+      "publishedAt": "2026-01-14"
     },
     {
       "url": "/guide/mining-profit/",
       "priority": 1,
       "scheduledDay": 3,
-      "published": false,
-      "publishedAt": null
+      "published": true,
+      "publishedAt": "2026-01-14"
     },
     {
       "url": "/guide/best-fish-pond/",
       "priority": 1,
       "scheduledDay": 3,
-      "published": false,
-      "publishedAt": null
+      "published": true,
+      "publishedAt": "2026-01-14"
     },
     {
       "url": "/guide/year-1-money/",
       "priority": 1,
       "scheduledDay": 3,
-      "published": false,
-      "publishedAt": null
+      "published": true,
+      "publishedAt": "2026-01-14"
     },
     {
       "url": "/guide/community-center/",
       "priority": 1,
       "scheduledDay": 3,
-      "published": false,
-      "publishedAt": null
+      "published": true,
+      "publishedAt": "2026-01-14"
     },
     {
       "url": "/guide/best-gifts/",

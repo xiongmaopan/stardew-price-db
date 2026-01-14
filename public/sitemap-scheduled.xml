@@ -90,4 +90,34 @@
     <changefreq>weekly</changefreq>
     <priority>1</priority>
   </url>
+  <url>
+    <loc>https://stardewpricedb.com/guide/animal-profit/</loc>
+    <lastmod>2026-01-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+  </url>
+  <url>
+    <loc>https://stardewpricedb.com/guide/mining-profit/</loc>
+    <lastmod>2026-01-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+  </url>
+  <url>
+    <loc>https://stardewpricedb.com/guide/best-fish-pond/</loc>
+    <lastmod>2026-01-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+  </url>
+  <url>
+    <loc>https://stardewpricedb.com/guide/year-1-money/</loc>
+    <lastmod>2026-01-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+  </url>
+  <url>
+    <loc>https://stardewpricedb.com/guide/community-center/</loc>
+    <lastmod>2026-01-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+  </url>
 </urlset>
