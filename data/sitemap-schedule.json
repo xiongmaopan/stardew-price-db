@@ -2,8 +2,8 @@
   "createdAt": "2025-12-18",
   "totalPages": 397,
   "pagesPerDay": 5,
-  "publishedCount": 20,
-  "lastPublishDate": "2026-01-14",
+  "publishedCount": 25,
+  "lastPublishDate": "2026-01-15",
   "pages": [
     {
       "url": "/",
@@ -149,36 +149,36 @@
       "url": "/guide/best-gifts/",
       "priority": 0.8,
       "scheduledDay": 4,
-      "published": false,
-      "publishedAt": null
+      "published": true,
+      "publishedAt": "2026-01-15"
     },
     {
       "url": "/guide/foraging-profit/",
       "priority": 0.8,
       "scheduledDay": 4,
-      "published": false,
-      "publishedAt": null
+      "published": true,
+      "publishedAt": "2026-01-15"
     },
     {
       "url": "/guide/skull-cavern/",
       "priority": 0.8,
       "scheduledDay": 4,
-      "published": false,
-      "publishedAt": null
+      "published": true,
+      "publishedAt": "2026-01-15"
     },
     {
       "url": "/item/parsnip/",
       "priority": 0.8,
       "scheduledDay": 4,
-      "published": false,
-      "publishedAt": null
+      "published": true,
+      "publishedAt": "2026-01-15"
     },
     {
       "url": "/item/green-bean/",
       "priority": 0.8,
       "scheduledDay": 4,
-      "published": false,
-      "publishedAt": null
+      "published": true,
+      "publishedAt": "2026-01-15"
     },
     {
       "url": "/item/cauliflower/",
