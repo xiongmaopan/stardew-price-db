@@ -2,8 +2,8 @@
   "createdAt": "2025-12-18",
   "totalPages": 397,
   "pagesPerDay": 5,
-  "publishedCount": 25,
-  "lastPublishDate": "2026-01-15",
+  "publishedCount": 30,
+  "lastPublishDate": "2026-01-16",
   "pages": [
     {
       "url": "/",
@@ -184,36 +184,36 @@
       "url": "/item/cauliflower/",
       "priority": 0.8,
       "scheduledDay": 5,
-      "published": false,
-      "publishedAt": null
+      "published": true,
+      "publishedAt": "2026-01-16"
     },
     {
       "url": "/item/potato/",
       "priority": 0.8,
       "scheduledDay": 5,
-      "published": false,
-      "publishedAt": null
+      "published": true,
+      "publishedAt": "2026-01-16"
     },
     {
       "url": "/item/kale/",
       "priority": 0.8,
       "scheduledDay": 5,
-      "published": false,
-      "publishedAt": null
+      "published": true,
+      "publishedAt": "2026-01-16"
     },
     {
       "url": "/item/garlic/",
       "priority": 0.8,
       "scheduledDay": 5,
-      "published": false,
-      "publishedAt": null
+      "published": true,
+      "publishedAt": "2026-01-16"
     },
     {
       "url": "/item/rhubarb/",
       "priority": 0.8,
       "scheduledDay": 5,
-      "published": false,
-      "publishedAt": null
+      "published": true,
+      "publishedAt": "2026-01-16"
     },
     {
       "url": "/item/strawberry/",
