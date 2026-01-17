@@ -2,8 +2,8 @@
   "createdAt": "2025-12-18",
   "totalPages": 397,
   "pagesPerDay": 5,
-  "publishedCount": 30,
-  "lastPublishDate": "2026-01-16",
+  "publishedCount": 35,
+  "lastPublishDate": "2026-01-17",
   "pages": [
     {
       "url": "/",
@@ -219,36 +219,36 @@
       "url": "/item/strawberry/",
       "priority": 0.8,
       "scheduledDay": 6,
-      "published": false,
-      "publishedAt": null
+      "published": true,
+      "publishedAt": "2026-01-17"
     },
     {
       "url": "/item/coffee-bean/",
       "priority": 0.8,
       "scheduledDay": 6,
-      "published": false,
-      "publishedAt": null
+      "published": true,
+      "publishedAt": "2026-01-17"
     },
     {
       "url": "/item/blue-jazz/",
       "priority": 0.8,
       "scheduledDay": 6,
-      "published": false,
-      "publishedAt": null
+      "published": true,
+      "publishedAt": "2026-01-17"
     },
     {
       "url": "/item/tulip/",
       "priority": 0.8,
       "scheduledDay": 6,
-      "published": false,
-      "publishedAt": null
+      "published": true,
+      "publishedAt": "2026-01-17"
     },
     {
       "url": "/item/melon/",
       "priority": 0.8,
       "scheduledDay": 6,
-      "published": false,
-      "publishedAt": null
+      "published": true,
+      "publishedAt": "2026-01-17"
     },
     {
       "url": "/item/tomato/",
