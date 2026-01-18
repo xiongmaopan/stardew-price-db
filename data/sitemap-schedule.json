@@ -2,8 +2,8 @@
   "createdAt": "2025-12-18",
   "totalPages": 397,
   "pagesPerDay": 5,
-  "publishedCount": 35,
-  "lastPublishDate": "2026-01-17",
+  "publishedCount": 40,
+  "lastPublishDate": "2026-01-18",
   "pages": [
     {
       "url": "/",
@@ -254,36 +254,36 @@
       "url": "/item/tomato/",
       "priority": 0.8,
       "scheduledDay": 7,
-      "published": false,
-      "publishedAt": null
+      "published": true,
+      "publishedAt": "2026-01-18"
     },
     {
       "url": "/item/hot-pepper/",
       "priority": 0.8,
       "scheduledDay": 7,
-      "published": false,
-      "publishedAt": null
+      "published": true,
+      "publishedAt": "2026-01-18"
     },
     {
       "url": "/item/blueberry/",
       "priority": 0.8,
       "scheduledDay": 7,
-      "published": false,
-      "publishedAt": null
+      "published": true,
+      "publishedAt": "2026-01-18"
     },
     {
       "url": "/item/corn/",
       "priority": 0.8,
       "scheduledDay": 7,
-      "published": false,
-      "publishedAt": null
+      "published": true,
+      "publishedAt": "2026-01-18"
     },
     {
       "url": "/item/radish/",
       "priority": 0.8,
       "scheduledDay": 7,
-      "published": false,
-      "publishedAt": null
+      "published": true,
+      "publishedAt": "2026-01-18"
     },
     {
       "url": "/item/wheat/",
