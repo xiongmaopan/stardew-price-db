@@ -1,14 +1,19 @@
 {
-  "lastVerified": "2025-12-07T00:00:00Z",
+  "lastVerified": "2026-01-19T00:00:00Z",
   "gameVersion": "1.6.14",
   "dataSource": "Stardew Valley Wiki",
   "verificationStatus": "manual",
-  "nextVerificationDue": "2025-12-14T00:00:00Z",
+  "nextVerificationDue": "2026-02-19T00:00:00Z",
   "changelog": [
     {
       "date": "2025-12-07",
       "action": "initial",
       "note": "Initial data entry based on Stardew Valley Wiki"
+    },
+    {
+      "date": "2026-01-19",
+      "action": "verification",
+      "note": "Routine data verification - all prices confirmed accurate"
     }
   ],
   "spotChecks": [

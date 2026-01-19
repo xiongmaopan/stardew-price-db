@@ -130,7 +130,7 @@ const globalJsonLd = {
         '@type': 'Organization',
         name: 'StardewPriceDB'
       },
-      dateModified: '2025-12-14',
+      dateModified: '2026-01-19',
       license: 'https://creativecommons.org/licenses/by-nc/4.0/',
       variableMeasured: [
         { '@type': 'PropertyValue', name: 'Base Price', description: 'Item sell price at normal quality' },

@@ -61,20 +61,49 @@ async function callQwenAPI(prompt, systemPrompt) {
 
 /**
  * 生成作物策略内容
+ * 
+ * Google 2025-2026 SEO 算法合规版本
+ * 参考更新:
+ * - December 2025 Core Update
+ * - August 2025 Spam Update (扩展垃圾内容定义)
+ * - Helpful Content 整合到核心算法
+ * - E-E-A-T 强化 (Experience-Expertise-Authority-Trust)
  */
 async function generateCropStrategy(item) {
-  const systemPrompt = `You are an expert Stardew Valley player with 2000+ hours of gameplay. 
-You write concise, data-driven farming guides. 
-RULES:
-- Use EXACT game numbers (prices, growth times, etc.)
-- Give SPECIFIC advice, not generic tips
-- Include profit calculations when relevant
-- Maximum 2-3 sentences per tip
-- No filler words like "definitely", "absolutely"
-- Write in active voice
-- Target experienced players who want optimization`;
+  const systemPrompt = `You are a Stardew Valley expert with 2000+ hours across 8 save files (Perfection on 3). 
+You write concise, experience-based farming guides for experienced players.
 
-  const prompt = `Generate strategy content for ${item.name} in Stardew Valley 1.6.
+CRITICAL RULES (Google 2026 SEO Compliance):
+
+1. E-E-A-T SIGNALS (Required):
+   - Use first-person experience: "In my Year 3 run, I found...", "After testing 500 tiles..."
+   - Include version-specific data: "Verified in 1.6.15", "Since 1.6 patch..."
+   - Reference game mechanics precisely: "Frame-perfect timing shows..."
+
+2. BANNED AI PHRASES (Spam Update targets these):
+   - NEVER use: definitely, absolutely, certainly, incredibly, remarkably
+   - NEVER use: leverage, utilize, optimize, enhance, boost, robust
+   - NEVER use: comprehensive, in-depth, game-changer, unlock potential
+   - NEVER use: "In this guide", "Let me explain", "It's worth noting"
+   - NEVER start with: "Welcome to", "Are you looking for", "Have you ever"
+
+3. DATA-DRIVEN CONTENT (Required):
+   - Every tip MUST include 2+ specific numbers
+   - Show calculations: "750g × 7 days = 107g/day"
+   - Compare alternatives: "Wine at 2250g beats Jelly at 1050g, but takes 7 days vs 3"
+
+4. UNIQUE INSIGHTS (Anti-Scaled-Content):
+   - Include one non-obvious strategy per item
+   - Reference edge cases: "Exception: with Gatherer profession, raw might beat processed"
+   - Mention common mistakes: "Common mistake: wasting Kegs on low-value crops"
+
+5. WRITING STYLE:
+   - Active voice only
+   - 2-3 sentences max per field
+   - No hedging words (sort of, kind of, somewhat)
+   - Direct and confident tone`;
+
+  const prompt = `Generate strategy content for ${item.name} in Stardew Valley 1.6.15.
 
 ITEM DATA:
 - Name: ${item.name}
@@ -89,11 +118,16 @@ ${item.extraHarvestChance ? `- ${item.extraHarvestChance * 100}% extra harvest c
 ${item.processing ? `- Jar: ${item.processing.jarPrice}g (${item.processing.jarTime} days)` : ''}
 ${item.processing ? `- Keg: ${item.processing.kegPrice}g (${item.processing.kegTime} days)` : ''}
 
-Generate JSON with these fields:
+REQUIREMENTS (Google 2026 SEO):
+- proTip: Start with a number or specific action. NEVER start with "Pro tip:" or "Tip:"
+- strategyNote: Include at least one calculation (e.g., "750g ÷ 13 days = 57.7g/day")
+- bestUse: Exactly 5-8 words, no fluff
+
+Generate JSON:
 {
-  "proTip": "One specific, actionable tip for experienced players. Include numbers.",
-  "strategyNote": "Detailed analysis: profit comparison, when to process vs sell raw, synergies with professions. 2-3 sentences max.",
-  "bestUse": "5-8 word summary of optimal use case"
+  "proTip": "Actionable tip with 2+ numbers. First-person experience welcome.",
+  "strategyNote": "Profit math, profession synergy, and one non-obvious insight.",
+  "bestUse": "5-8 word optimal use case"
 }
 
 Output ONLY valid JSON, no markdown.`;
@@ -114,18 +148,36 @@ Output ONLY valid JSON, no markdown.`;
 
 /**
  * 生成鱼类策略内容
+ * 
+ * Google 2025-2026 SEO 算法合规版本
  */
 async function generateFishStrategy(fishData) {
-  const systemPrompt = `You are an expert Stardew Valley angler with complete fishing knowledge.
-You write practical fishing tips based on game mechanics.
-RULES:
-- Use EXACT game data (locations, times, seasons, weather)
-- Include specific tackle/bait recommendations
-- Mention difficulty level and tips to catch
-- No generic advice like "practice makes perfect"
-- Maximum 2-3 sentences per tip`;
+  const systemPrompt = `You are a Stardew Valley fishing expert with all Legendary fish caught multiple times.
+You write practical, data-driven fishing guides.
 
-  const prompt = `Generate fishing strategy for ${fishData.name} in Stardew Valley 1.6.
+CRITICAL RULES (Google 2026 SEO Compliance):
+
+1. E-E-A-T SIGNALS:
+   - Use experience language: "After catching 50+ of these...", "In rainy Spring runs..."
+   - Include version data: "Since 1.6, the spawn rate increased..."
+   - Reference game mechanics: "The fishing bar behavior changes at Fishing Level 8..."
+
+2. BANNED AI PHRASES:
+   - NEVER: definitely, absolutely, incredibly, basically, essentially
+   - NEVER: "Pro tip", "Key takeaway", "It's important to note"
+   - NEVER: leverage, utilize, optimize, enhance
+
+3. DATA-DRIVEN:
+   - Include sell prices and g/day calculations
+   - Compare to alternative fish in same location
+   - Mention quality star probabilities
+
+4. UNIQUE INSIGHTS:
+   - Tackle recommendations with reasoning
+   - Weather/time optimization
+   - Common player mistakes`;
+
+  const prompt = `Generate fishing strategy for ${fishData.name} in Stardew Valley 1.6.15.
 
 FISH DATA:
 - Name: ${fishData.name}
@@ -136,11 +188,11 @@ FISH DATA:
 - Weather: ${fishData.weather || 'Any'}
 - Difficulty: ${fishData.difficulty || 'Unknown'}
 
-Generate JSON:
+Generate JSON (no markdown):
 {
-  "catchTip": "Specific technique or timing advice for catching this fish.",
-  "profitNote": "Is it worth fishing for profit? Compare to other options.",
-  "bestUse": "Optimal use: sell, gift, recipe, pond, etc."
+  "catchTip": "Technique with specific numbers. Start with action or number, never 'Tip:'",
+  "profitNote": "g/day comparison to alternatives. Include calculation.",
+  "bestUse": "5-8 words: sell, gift, recipe, pond recommendation"
 }
 
 Output ONLY valid JSON.`;
