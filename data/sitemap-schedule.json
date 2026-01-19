@@ -2,8 +2,8 @@
   "createdAt": "2025-12-18",
   "totalPages": 397,
   "pagesPerDay": 5,
-  "publishedCount": 40,
-  "lastPublishDate": "2026-01-18",
+  "publishedCount": 45,
+  "lastPublishDate": "2026-01-19",
   "pages": [
     {
       "url": "/",
@@ -289,36 +289,36 @@
       "url": "/item/wheat/",
       "priority": 0.8,
       "scheduledDay": 8,
-      "published": false,
-      "publishedAt": null
+      "published": true,
+      "publishedAt": "2026-01-19"
     },
     {
       "url": "/item/red-cabbage/",
       "priority": 0.8,
       "scheduledDay": 8,
-      "published": false,
-      "publishedAt": null
+      "published": true,
+      "publishedAt": "2026-01-19"
     },
     {
       "url": "/item/starfruit/",
       "priority": 0.8,
       "scheduledDay": 8,
-      "published": false,
-      "publishedAt": null
+      "published": true,
+      "publishedAt": "2026-01-19"
     },
     {
       "url": "/item/hops/",
       "priority": 0.8,
       "scheduledDay": 8,
-      "published": false,
-      "publishedAt": null
+      "published": true,
+      "publishedAt": "2026-01-19"
     },
     {
       "url": "/item/summer-spangle/",
       "priority": 0.8,
       "scheduledDay": 8,
-      "published": false,
-      "publishedAt": null
+      "published": true,
+      "publishedAt": "2026-01-19"
     },
     {
       "url": "/item/poppy/",
