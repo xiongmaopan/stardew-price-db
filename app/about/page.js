@@ -2,7 +2,11 @@ import Link from 'next/link';
 
 export const metadata = {
   title: 'About - StardewPriceDB | How We Calculate Prices',
-  description: 'How StardewPriceDB calculates Stardew Valley prices, our data sources, and update methodology.',
+  description: 'Learn how StardewPriceDB calculates Stardew Valley item prices, profit margins for Keg and Preserves Jar processing, profession bonuses, and data verification methodology.',
+  keywords: ['Stardew Valley price calculation', 'how prices are calculated', 'data sources', 'methodology', 'price verification', 'Keg profit', 'Artisan bonus'],
+  alternates: {
+    canonical: '/about',
+  },
 };
 
 export default function AboutPage() {
@@ -42,9 +46,9 @@ export default function AboutPage() {
 
       <div className="bg-blue-50 rounded-xl p-8 mb-8">
         <h2 className="text-2xl font-bold text-slate-800 mb-4">Data Sources</h2>
-        <ul className="space-y-2 text-slate-700">
+          <ul className="space-y-2 text-slate-700">
           <li>• Game files (Content/Data folder)</li>
-          <li>• <a href="https://stardewvalleywiki.com" className="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">Stardew Valley Wiki</a></li>
+          <li>• <a href="https://stardewvalleywiki.com" className="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer sponsored">Stardew Valley Wiki</a></li>
           <li>• In-game testing for edge cases</li>
         </ul>
         <p className="mt-4 text-sm text-slate-600">

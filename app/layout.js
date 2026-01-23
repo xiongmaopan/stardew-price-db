@@ -137,6 +137,56 @@ const globalJsonLd = {
         { '@type': 'PropertyValue', name: 'Wine Value', description: 'Base price × 3 for fruits processed in Keg' },
         { '@type': 'PropertyValue', name: 'Jelly Value', description: 'Base price × 2 + 50 for fruits processed in Preserves Jar' }
       ]
+    },
+    // FAQPage Schema - 获取 FAQ Rich Snippets
+    {
+      '@type': 'FAQPage',
+      '@id': 'https://stardewpricedb.com/#faq',
+      mainEntity: [
+        {
+          '@type': 'Question',
+          name: 'How are item prices calculated in Stardew Valley?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Base prices are taken directly from Stardew Valley 1.6 game files. Quality multipliers apply: Silver = 1.25x, Gold = 1.5x, Iridium = 2x. Profession bonuses like Tiller (+10%) and Artisan (+40%) stack with quality multipliers.'
+          }
+        },
+        {
+          '@type': 'Question',
+          name: 'What is the profit difference between Keg and Preserves Jar?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Kegs generally yield higher profits for fruits (wine sells for 3x base price), while Preserves Jars are faster (3 days vs 7 days for wine) and better for vegetables. Use our calculator to compare profits for specific items.'
+          }
+        },
+        {
+          '@type': 'Question',
+          name: 'How often is StardewPriceDB updated?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'We verify all prices against Stardew Valley 1.6.14 game data after each game update. Check our About page for the last verification date.'
+          }
+        }
+      ]
+    },
+    // BreadcrumbList Schema - 帮助搜索引擎理解页面层级
+    {
+      '@type': 'BreadcrumbList',
+      '@id': 'https://stardewpricedb.com/#breadcrumb',
+      itemListElement: [
+        {
+          '@type': 'ListItem',
+          position: 1,
+          name: 'Home',
+          item: 'https://stardewpricedb.com/'
+        },
+        {
+          '@type': 'ListItem',
+          position: 2,
+          name: 'Item Database',
+          item: 'https://stardewpricedb.com/'
+        }
+      ]
     }
   ]
 };
