@@ -10,7 +10,8 @@ export async function generateStaticParams() {
 
 // Generate metadata for SEO
 export async function generateMetadata({ params }) {
-  const item = itemsData.items.find(i => i.slug === params.slug);
+  const { slug: slugId } = await params;
+  const item = itemsData.items.find(i => i.slug === slugId);
   
   if (!item) {
     return {
@@ -174,8 +175,9 @@ function generateJsonLd(item) {
   return schemas;
 }
 
-export default function ItemPage({ params }) {
-  const item = itemsData.items.find(i => i.slug === params.slug);
+export default async function ItemPage({ params }) {
+  const { slug: slugId } = await params;
+  const item = itemsData.items.find(i => i.slug === slugId);
   const relatedItems = itemsData.items
     .filter(i => i.id !== item?.id && i.category === item?.category)
     .slice(0, 5);

@@ -10,7 +10,8 @@ export async function generateStaticParams() {
 
 // Generate metadata for SEO
 export async function generateMetadata({ params }) {
-  const npc = npcsData.npcs.find(n => n.slug === params.npc);
+  const { npc: npcId } = await params;
+  const npc = npcsData.npcs.find(n => n.slug === npcId);
   
   if (!npc) {
     return { title: 'NPC Not Found' };
@@ -137,8 +138,9 @@ function generateJsonLd(npc) {
   ];
 }
 
-export default function GiftGuidePage({ params }) {
-  const npc = npcsData.npcs.find(n => n.slug === params.npc);
+export default async function GiftGuidePage({ params }) {
+  const { npc: npcId } = await params;
+  const npc = npcsData.npcs.find(n => n.slug === npcId);
   
   if (!npc) {
     return (

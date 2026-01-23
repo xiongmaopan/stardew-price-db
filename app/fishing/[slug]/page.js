@@ -10,7 +10,8 @@ export async function generateStaticParams() {
 
 // Generate metadata for SEO - High quality titles and descriptions
 export async function generateMetadata({ params }) {
-  const fish = fishData.fish.find(f => f.slug === params.slug);
+  const { slug: slugId } = await params;
+  const fish = fishData.fish.find(f => f.slug === slugId);
   
   if (!fish) {
     return { title: 'Fish Not Found' };
@@ -171,8 +172,9 @@ function generateJsonLd(fish) {
   return schemas;
 }
 
-export default function FishDetailPage({ params }) {
-  const fish = fishData.fish.find(f => f.slug === params.slug);
+export default async function FishDetailPage({ params }) {
+  const { slug: slugId } = await params;
+  const fish = fishData.fish.find(f => f.slug === slugId);
   
   if (!fish) {
     return (

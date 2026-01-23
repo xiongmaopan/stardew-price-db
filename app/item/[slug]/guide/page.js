@@ -9,16 +9,21 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }) {
-  const item = itemsData.items.find(i => i.slug === params.slug);
-  const strategy = itemStrategies.strategies[params.slug];
-  
+  const { slug } = await params;
+  const item = itemsData.items.find(i => i.slug === slug);
+  const strategy = itemStrategies.strategies[slug];
+
   if (!item) {
     return { title: 'Item Guide Not Found' };
   }
-  
+
+  const strategyDesc = strategy
+    ? `${strategy.goldPerDay}g/day. ${strategy.proTip ? strategy.proTip.substring(0, 100) + '...' : 'Learn optimal farming strategy.'}`
+    : `Base price: ${item.basePrice}g. Learn optimal farming strategy.`;
+
   return {
     title: `${item.name} Farming Guide - Gold per Day & Strategy (Stardew Valley 1.6)`,
-    description: `Complete ${item.name} guide for Stardew Valley 1.6. ${strategy ? `${strategy.goldPerDay}g/day. ${strategy.proTip.substring(0, 100)}...` : \`Base price: ${item.basePrice}g. Learn optimal farming strategy.\`}`,
+    description: `Complete ${item.name} guide for Stardew Valley 1.6. ${strategyDesc}`,
     alternates: {
       canonical: `/item/${item.slug}/guide`,
     },
@@ -58,14 +63,15 @@ function formatNumber(num) {
   return num.toLocaleString();
 }
 
-export default function ItemGuidePage({ params }) {
-  const item = itemsData.items.find(i => i.slug === params.slug);
-  const strategy = itemStrategies.strategies[params.slug];
-  
+export default async function ItemGuidePage({ params }) {
+  const { slug } = await params;
+  const item = itemsData.items.find(i => i.slug === slug);
+  const strategy = itemStrategies.strategies[slug];
+
   if (!item) {
     notFound();
   }
-  
+
   const goldPerDay = calculateGoldPerDay(item, strategy);
   const processingProfit = item.processing ? {
     keg: item.processing.kegPrice ? item.processing.kegPrice - item.basePrice : null,

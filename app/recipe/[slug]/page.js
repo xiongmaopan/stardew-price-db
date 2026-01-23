@@ -11,7 +11,8 @@ export async function generateStaticParams() {
 
 // Generate metadata for SEO
 export async function generateMetadata({ params }) {
-  const recipe = recipesData.recipes.find(r => r.slug === params.slug);
+  const { slug: slugId } = await params;
+  const recipe = recipesData.recipes.find(r => r.slug === slugId);
   
   if (!recipe) {
     return { title: 'Recipe Not Found' };
@@ -110,8 +111,9 @@ function generateJsonLd(recipe) {
   return schemas;
 }
 
-export default function RecipePage({ params }) {
-  const recipe = recipesData.recipes.find(r => r.slug === params.slug);
+export default async function RecipePage({ params }) {
+  const { slug: slugId } = await params;
+  const recipe = recipesData.recipes.find(r => r.slug === slugId);
   
   if (!recipe) {
     return (

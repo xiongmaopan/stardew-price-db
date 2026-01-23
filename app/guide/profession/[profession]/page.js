@@ -46,16 +46,17 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }) {
-  const profession = PROFESSIONS[params.profession];
+  const { profession: professionId } = await params;
+  const profession = PROFESSIONS[professionId];
   if (!profession) {
     return { title: 'Profession Not Found' };
   }
-  
+
   return {
     title: `${profession.name} Profession Guide - Profit Bonus & Best Items (Stardew Valley 1.6)`,
     description: `Complete ${profession.name} guide for Stardew Valley 1.6. ${profession.description}. Calculate exact sell prices with ${profession.bonus} bonus and find the most profitable items.`,
     alternates: {
-      canonical: `/guide/profession/${params.profession}`,
+      canonical: `/guide/profession/${professionId}`,
     },
   };
 }
@@ -89,13 +90,14 @@ function getProfitableItems(profession) {
   }).sort((a, b) => b.withBonus - a.withBonus);
 }
 
-export default function ProfessionGuidePage({ params }) {
-  const profession = PROFESSIONS[params.profession];
+export default async function ProfessionGuidePage({ params }) {
+  const { profession: professionId } = await params;
+  const profession = PROFESSIONS[professionId];
   if (!profession) {
     return <div>Profession not found</div>;
   }
-  
-  const profitableItems = getProfitableItems(profession);
+
+  const profitableItems = getProfitableItems(professionId);
   const topItems = profitableItems.slice(0, 10);
   const highValueItems = profitableItems.filter(item => item.isHighValue);
   
@@ -241,28 +243,28 @@ export default function ProfessionGuidePage({ params }) {
           <div className="border border-slate-200 rounded-lg p-4 bg-green-50">
             <h3 className="font-semibold text-green-900 mb-2">✅ Best For</h3>
             <ul className="text-green-800 space-y-1 text-sm">
-              {params.profession === 'tiller' && (
+              {professionId === 'tiller' && (
                 <>
                   <li>• High-volume crop farming (potatoes, kale)</li>
                   <li>• Giant crop farming (pumpkins, cauliflower)</li>
                   <li>• Year 1-2 gold generation</li>
                 </>
               )}
-              {params.profession === 'artisan' && (
+              {professionId === 'artisan' && (
                 <>
                   <li>• Wine production (ancient fruit, starfruit)</li>
                   <li>• Coffee processing (high volume)</li>
                   <li>• Any item with Keg processing</li>
                 </>
               )}
-              {params.profession === 'angler' && (
+              {professionId === 'angler' && (
                 <>
                   <li>• High-value fish (lobster, crab)</li>
                   <li>• Mass fishing for quick cash</li>
                   <li>• Legendary fish collection</li>
                 </>
               )}
-              {params.profession === 'rancher' && (
+              {professionId === 'rancher' && (
                 <>
                   <li>• Truffle oil production</li>
                   <li>• Cheese making (large milk)</li>
@@ -275,28 +277,28 @@ export default function ProfessionGuidePage({ params }) {
           <div className="border border-slate-200 rounded-lg p-4 bg-red-50">
             <h3 className="font-semibold text-red-900 mb-2">❌ Not Ideal For</h3>
             <ul className="text-red-800 space-y-1 text-sm">
-              {params.profession === 'tiller' && (
+              {professionId === 'tiller' && (
                 <>
                   <li>• Quick-harvest crops (parsnips) - low volume</li>
                   <li>• Flowers with no processing value</li>
                   <li>• Low-price vegetables</li>
                 </>
               )}
-              {params.profession === 'artisan' && (
+              {professionId === 'artisan' && (
                 <>
                   <li>• Raw selling (bonus doesn't apply)</li>
                   <li>• Items without processing options</li>
                   <li>• Low-margin artisan goods</li>
                 </>
               )}
-              {params.profession === 'angler' && (
+              {professionId === 'angler' && (
                 <>
                   <li>• Easy-to-catch low-value fish</li>
                   <li>• Fish used for crafting/gifts primarily</li>
                   <li>• Time-limited fishing windows</li>
                 </>
               )}
-              {params.profession === 'rancher' && (
+              {professionId === 'rancher' && (
                 <>
                   <li>• Regular milk (low margin)</li>
                   <li>• Items without animal products</li>
@@ -316,7 +318,7 @@ export default function ProfessionGuidePage({ params }) {
           {Object.entries(PROFESSIONS).map(([key, prof]) => (
             <div 
               key={key}
-              className={`p-4 rounded-lg text-center ${key === params.profession ? 'bg-blue-100 border-2 border-blue-400' : 'bg-white border border-slate-200'}`}
+              className={`p-4 rounded-lg text-center ${key === professionId ? 'bg-blue-100 border-2 border-blue-400' : 'bg-white border border-slate-200'}`}
             >
               <div className="text-2xl mb-2">{prof.icon}</div>
               <div className="font-bold text-slate-700">{prof.name}</div>

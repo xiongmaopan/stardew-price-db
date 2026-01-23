@@ -12,7 +12,8 @@ export async function generateStaticParams() {
 
 // Generate metadata for each bundle page
 export async function generateMetadata({ params }) {
-  const bundle = bundlesData.bundles.find(b => b.slug === params.slug);
+  const { slug: slugId } = await params;
+  const bundle = bundlesData.bundles.find(b => b.slug === slugId);
   
   if (!bundle) {
     return { title: 'Bundle Not Found' };
@@ -35,12 +36,12 @@ export async function generateMetadata({ params }) {
       'Community Center completion',
       ...bundle.items.slice(0, 5).map(i => `${i.name} bundle`),
     ],    alternates: {
-      canonical: `https://stardewpricedb.com/bundle/${params.slug}`,
+      canonical: `https://stardewpricedb.com/bundle/${slugId}`,
     },
     openGraph: {
       title: `${bundle.name} - ${bundle.room} Bundle Guide`,
       description: `Complete the ${bundle.name} to earn ${bundle.reward.quantity}x ${bundle.reward.item}. ${bundle.difficulty} difficulty.`,
-      url: `https://stardewpricedb.com/bundle/${params.slug}`,
+      url: `https://stardewpricedb.com/bundle/${slugId}`,
       type: 'article',
       siteName: 'StardewPriceDB',
     },
@@ -199,8 +200,9 @@ function generateJsonLd(bundle, room) {
   return schemas;
 }
 
-export default function BundleDetailPage({ params }) {
-  const bundle = bundlesData.bundles.find(b => b.slug === params.slug);
+export default async function BundleDetailPage({ params }) {
+  const { slug: slugId } = await params;
+  const bundle = bundlesData.bundles.find(b => b.slug === slugId);
   
   if (!bundle) {
     notFound();
