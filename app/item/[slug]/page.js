@@ -57,11 +57,68 @@ export async function generateMetadata({ params }) {
   };
 }
 
-// Generate JSON-LD structured data (FAQ only - Product Schema removed due to invalid currency)
+// Generate JSON-LD structured data (Product + FAQ Schema)
 function generateJsonLd(item) {
   const schemas = [];
   
-  // FAQ Schema- 为搜索结果添加富文本
+  // Product Schema - 为物品页面添加富文本卡片
+  schemas.push({
+    '@context': 'https://schema.org',
+    '@type': 'Product',
+    '@id': `https://stardewpricedb.com/item/${item.slug}#product`,
+    name: item.name,
+    description: item.description || `${item.name} - Stardew Valley item with base price of ${item.basePrice}g.`,
+    category: item.category,
+    image: `https://stardewpricedb.com/images/items/${item.slug}.webp`,
+    brand: {
+      '@type': 'Brand',
+      name: 'Stardew Valley',
+    },
+    manufacturer: {
+      '@type': 'Organization',
+      name: 'ConcernedApe',
+      url: 'https://www.stardewvalley.net/',
+    },
+    offers: {
+      '@type': 'Offer',
+      url: `https://stardewpricedb.com/item/${item.slug}`,
+      priceCurrency: 'g', // Star tokens (in-game currency)
+      price: item.basePrice,
+      availability: 'https://schema.org/InStock',
+      itemCondition: 'https://schema.org/NewCondition',
+      seller: {
+        '@type': 'Organization',
+        name: 'StardewPriceDB',
+      },
+    },
+    additionalProperty: [
+      {
+        '@type': 'PropertyValue',
+        name: 'Base Price',
+        value: `${item.basePrice}g`,
+      },
+      {
+        '@type': 'PropertyValue',
+        name: 'Silver Quality',
+        value: `${Math.floor(item.basePrice * 1.25)}g`,
+      },
+      {
+        '@type': 'PropertyValue',
+        name: 'Gold Quality',
+        value: `${Math.floor(item.basePrice * 1.5)}g`,
+      },
+      {
+        '@type': 'PropertyValue',
+        name: 'Iridium Quality',
+        value: `${item.basePrice * 2}g`,
+      },
+      ...(item.category ? [{ '@type': 'PropertyValue', name: 'Category', value: item.category }] : []),
+      ...(item.season ? [{ '@type': 'PropertyValue', name: 'Season', value: item.season.join('/') }] : []),
+      ...(item.growthTime ? [{ '@type': 'PropertyValue', name: 'Growth Time', value: `${item.growthTime} days` }] : []),
+    ],
+  });
+  
+  // FAQ Schema - 为搜索结果添加富文本
   const faqs = [];
   
   faqs.push({
@@ -69,7 +126,7 @@ function generateJsonLd(item) {
     name: `What is the sell price of ${item.name} in Stardew Valley?`,
     acceptedAnswer: {
       '@type': 'Answer',
-      text: `${item.name} sells for ${item.basePrice}g (base), ${Math.floor(item.basePrice * 1.25)}g (silver), ${Math.floor(item.basePrice * 1.5)}g (gold), and ${item.basePrice * 2}g (iridium quality).`
+      text: `${item.name} sells for ${item.basePrice}g (base), ${Math.floor(item.basePrice * 1.25)}g (silver), ${Math.floor(item.basePrice * 1.5)}g (gold), and ${item.basePrice * 2}g (iridium quality). Profession bonuses like Tiller (+10%) or Artisan (+40%) can increase these prices further.`
     }
   });
   
@@ -79,7 +136,7 @@ function generateJsonLd(item) {
       name: `Should I put ${item.name} in a Keg or Preserves Jar?`,
       acceptedAnswer: {
         '@type': 'Answer',
-        text: `${item.name} in a Keg produces ${item.processing.kegProduct} worth ${item.processing.kegPrice}g. In a Preserves Jar, it makes ${item.processing.jarProduct || 'preserved goods'} worth ${item.processing.jarPrice || 'N/A'}g. ${item.processing.kegPrice > (item.processing.jarPrice || 0) ? 'Keg is more profitable.' : 'Preserves Jar may be better for faster processing.'}`
+        text: `${item.name} in a Keg produces ${item.processing.kegProduct || 'artisan goods'} worth ${item.processing.kegPrice}g. In a Preserves Jar, it makes ${item.processing.jarProduct || 'preserved goods'} worth ${item.processing.jarPrice || 'N/A'}g. ${item.processing.kegPrice > (item.processing.jarPrice || 0) ? 'Keg is more profitable per unit but takes longer.' : 'Preserves Jar may be better for faster processing and similar profits.'} With the Artisan profession (+40%), profits increase significantly.`
       }
     });
   }
@@ -90,7 +147,18 @@ function generateJsonLd(item) {
       name: `How long does ${item.name} take to grow?`,
       acceptedAnswer: {
         '@type': 'Answer',
-        text: `${item.name} takes ${item.growthTime} days to grow. ${item.regrows ? `It regrows every ${item.regrowTime} days after the first harvest.` : 'It must be replanted after each harvest.'}`
+        text: `${item.name} takes ${item.growthTime} days to reach maturity. ${item.regrows ? `It regrows every ${item.regrowTime} days after the first harvest, making it excellent for continuous farming.` : 'It must be replanted after each harvest.'} Using fertilizer can speed up growth.`
+      }
+    });
+  }
+  
+  if (item.giftLove && item.giftLove.length > 0) {
+    faqs.push({
+      '@type': 'Question',
+      name: `Which villagers love receiving ${item.name} as a gift?`,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: `The following villagers love ${item.name}: ${item.giftLove.join(', ')}. Giving loved gifts increases friendship by 10 points (or 20 if the villager's birthday).`
       }
     });
   }

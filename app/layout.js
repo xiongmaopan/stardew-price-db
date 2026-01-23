@@ -21,11 +21,17 @@ export const metadata = {
   creator: 'StardewPriceDB',
   publisher: 'StardewPriceDB',
   
+  // 语言和地区设置（SEO重要）
+  language: 'en',
+  languages: {
+    'en': '/',
+  },
+  
   // Open Graph (Facebook, Discord 等)
   openGraph: {
     title: 'StardewPriceDB - Stardew Valley Price Database (v1.6)',
     description: 'Sell prices, Keg/Jar profits, profession bonuses. Tiller +10%, Artisan +40%, Angler +25%. Free calculator.',
-    url: 'https://stardewpricedb.com',
+    url: 'https://stardewpricedb.com/',
     siteName: 'StardewPriceDB',
     locale: 'en_US',
     type: 'website',
