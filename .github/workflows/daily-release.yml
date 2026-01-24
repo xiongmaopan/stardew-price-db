@@ -1,10 +1,14 @@
 name: 🚀 Daily Sitemap Release
 
 on:
+  # 每次 push 到 master 自动部署
+  push:
+    branches: [master]
+
   # 每天北京时间早上 8 点自动运行（UTC 0:00）
   schedule:
     - cron: '0 0 * * *'
-  
+
   # 也可以手动触发
   workflow_dispatch:
 
