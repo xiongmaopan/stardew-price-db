@@ -4,12 +4,15 @@ import FishingGuideContent from './FishingGuideContent';
 
 // SEO Metadata - High Quality for Google
 export const metadata = {
-  title: 'Stardew Valley Fish Locations & Prices 1.6.15 | Seasons, Times',
+  title: 'Stardew Valley Fish and Fishing Guide 1.6.15 | Locations',
   description: 'Find all 67 Stardew Valley fish by location, season, time, weather, difficulty, sell price, legendary fish, Night Market fish, and Crab Pot catches.',
   keywords: [
+    'Stardew Valley fish',
     'Stardew Valley fish locations',
     'Stardew Valley fishing guide',
     'Stardew Valley legendary fish',
+    'how to fish in Stardew Valley',
+    'Stardew Valley community center fish',
     'how to catch Legend fish',
     'Stardew fishing tackle',
     'Stardew Valley 1.6.15 fishing',
@@ -23,7 +26,7 @@ export const metadata = {
     canonical: '/fishing/',
   },
   openGraph: {
-    title: 'Stardew Valley Fish Locations & Prices 1.6.15',
+    title: 'Stardew Valley Fish and Fishing Guide 1.6.15',
     description: 'All 67 fish with locations, seasons, times, weather, difficulty, prices, and legendary fish.',
     url: 'https://stardewpricedb.com/fishing/',
     type: 'article',
@@ -38,7 +41,7 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Stardew Valley Fish Locations & Prices 1.6.15',
+    title: 'Stardew Valley Fish and Fishing Guide 1.6.15',
     description: '67 fish with locations, seasons, times, weather, difficulty, prices, and legendary fish.',
   },
 };
@@ -50,8 +53,8 @@ function generateJsonLd() {
     {
       '@context': 'https://schema.org',
       '@type': 'Article',
-      headline: 'Stardew Valley Fish Locations and Prices 1.6.15',
-      description: 'All 67 fish with exact locations, times, seasons, and difficulty ratings. Formula-checked against Stardew Valley Wiki data.',
+      headline: 'Stardew Valley Fish and Fishing Guide 1.6.15',
+      description: 'All 67 fish with exact locations, times, seasons, weather, difficulty ratings, and fishing guide links.',
       author: {
         '@type': 'Organization',
         name: 'StardewPriceDB'

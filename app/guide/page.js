@@ -97,6 +97,20 @@ const guides = [
     readTime: '6 min',
   },
   {
+    slug: 'how-to-fish',
+    title: 'How to Fish in Stardew Valley',
+    description: 'Beginner fishing mechanics, rods, bait, tackle, starter fish, leveling, and hard catch prep.',
+    category: 'Fishing',
+    readTime: '8 min',
+  },
+  {
+    slug: 'legendary-fish',
+    title: 'Legendary Fish Guide',
+    description: 'Exact locations, seasons, weather, fishing level requirements, difficulty, and sell prices.',
+    category: 'Fishing',
+    readTime: '8 min',
+  },
+  {
     slug: 'best-fish-by-season',
     title: 'Best Fish by Season',
     description: 'High-value fish for Spring, Summer, Fall, and Winter with locations, time windows, and difficulty.',
@@ -172,6 +186,13 @@ const guides = [
     readTime: '18 min',
   },
   {
+    slug: 'community-center-fish-bundles',
+    title: 'Community Center Fish Bundles',
+    description: 'Fish Tank checklist for River, Lake, Ocean, Night Fishing, Crab Pot, and Specialty Fish bundles.',
+    category: 'Bundles',
+    readTime: '9 min',
+  },
+  {
     slug: 'best-gifts',
     title: 'Best Gifts for Every Villager',
     description: 'Loved gifts for all 34 NPCs. Efficient gifting strategy, birthday bonuses, and friendship math.',
@@ -217,6 +238,7 @@ export default function GuidesPage() {
           { href: '/crops/', title: 'Crops Database', desc: 'Season, growth time, seed costs, and calculator entry points.' },
           { href: '/artisan-goods/', title: 'Artisan Goods Hub', desc: 'Keg, Jar, Wine, Juice, Coffee, and Artisan formulas.' },
           { href: '/fish-ponds/', title: 'Fish Pond Values', desc: 'Roe, Aged Roe, Caviar, and verified pond value formulas.' },
+          { href: '/fishing/', title: 'Fishing Hub', desc: 'Fish locations, seasons, legendary fish, bundle targets, and fishing guide links.' },
           { href: '/animal-products/', title: 'Animal Products', desc: 'Milk, Eggs, Wool, Truffles, Rancher bonus, and machine outputs.' },
           { href: '/minerals/', title: 'Minerals Price List', desc: 'Gem, geode, mine, Skull Cavern, and Crystalarium price references.' },
           { href: '/forage/', title: 'Forage Prices', desc: 'Seasonal forage, mushrooms, beach forage, and Botanist planning.' },

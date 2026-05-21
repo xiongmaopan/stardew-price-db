@@ -152,7 +152,7 @@ function LegendaryFishCard({ fish }) {
         </div>
         <div className="mt-2 text-xs text-slate-500">
           Difficulty: <span className="font-bold text-red-600">{fish.difficulty}</span>
-          {fish.fishingLevel && <span className="ml-2">• Lvl {fish.fishingLevel}+</span>}
+          {fish.fishingLevel && <span className="ml-2">| Lvl {fish.fishingLevel}+</span>}
         </div>
       </div>
     </Link>
@@ -182,7 +182,7 @@ function LegendaryShowcase({ legendaryFish }) {
 // Tackle guide section
 function TackleGuide({ tackle }) {
   return (
-    <section className="mb-12 bg-white rounded-xl border border-slate-200 overflow-hidden">
+    <section id="tackle-guide" className="mb-12 bg-white rounded-xl border border-slate-200 overflow-hidden scroll-mt-24">
       <div className="bg-slate-50 px-6 py-4 border-b border-slate-200">
         <h2 className="text-xl font-bold text-slate-800 flex items-center gap-2">
           <Anchor size={20} className="text-blue-500" />
@@ -254,6 +254,91 @@ function ScrollToTop() {
     >
       <ChevronUp size={24} />
     </button>
+  );
+}
+
+const fishingTopicLinks = [
+  {
+    href: '#fish-table',
+    title: 'All Fish Locations and Prices',
+    text: 'Search every fish by season, location, weather, time, difficulty, and sell price.',
+    metric: 'Database',
+    Icon: Fish,
+  },
+  {
+    href: '/guide/how-to-fish/',
+    title: 'How to Fish',
+    text: 'Rods, casting, bait, tackle, easy starter fish, and hard catch preparation.',
+    metric: 'Beginner',
+    Icon: Anchor,
+  },
+  {
+    href: '/guide/legendary-fish/',
+    title: 'Legendary Fish Guide',
+    text: 'Exact requirements for Legend, Crimsonfish, Angler, Glacierfish, and Extended Family fish.',
+    metric: 'Hard catches',
+    Icon: Crown,
+  },
+  {
+    href: '/guide/community-center-fish-bundles/',
+    title: 'Community Center Fish Bundles',
+    text: 'Fish Tank checklist for River, Lake, Ocean, Night Fishing, Crab Pot, and Specialty Fish.',
+    metric: 'Bundles',
+    Icon: Award,
+  },
+  {
+    href: '/fish-ponds/',
+    title: 'Fish Pond Values',
+    text: 'Roe, Aged Roe, Caviar, special drops, and pond value formulas.',
+    metric: 'Profit',
+    Icon: TrendingUp,
+  },
+  {
+    href: '#tackle-guide',
+    title: 'Bait and Tackle Guide',
+    text: 'Pick Cork Bobber, Trap Bobber, Lead Bobber, or profit tackle for the right target.',
+    metric: 'Gear',
+    Icon: Target,
+  },
+];
+
+function FishingTopicHub() {
+  return (
+    <section className="mb-10">
+      <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-3 mb-5">
+        <div>
+          <h2 className="text-2xl font-bold text-slate-800">Fishing topic hub</h2>
+          <p className="text-slate-600 mt-1">
+            Start from the task you care about: find a fish, learn the minigame, finish bundles, catch legendaries, or plan pond profit.
+          </p>
+        </div>
+        <Link href="/guide/best-fish-by-season/" className="text-sm font-semibold text-blue-700 hover:underline">
+          Best fish by season
+        </Link>
+      </div>
+      <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-4">
+        {fishingTopicLinks.map((link) => {
+          const Icon = link.Icon;
+          return (
+            <Link key={link.href} href={link.href} className="group bg-white border border-slate-200 rounded-xl p-5 hover:border-blue-300 hover:shadow-md transition">
+              <div className="flex items-start gap-4">
+                <div className="h-11 w-11 rounded-lg bg-blue-50 border border-blue-100 flex items-center justify-center flex-shrink-0">
+                  <Icon size={22} className="text-blue-600" />
+                </div>
+                <div className="min-w-0">
+                  <div className="flex items-start justify-between gap-3">
+                    <h3 className="font-bold text-slate-800 group-hover:text-blue-700">{link.title}</h3>
+                    <ChevronRight size={16} className="text-slate-400 group-hover:text-blue-600 group-hover:translate-x-1 transition-all flex-shrink-0 mt-1" />
+                  </div>
+                  <p className="text-sm text-slate-600 mt-2">{link.text}</p>
+                  <p className="text-xs font-semibold uppercase tracking-wide text-blue-600 mt-3">{link.metric}</p>
+                </div>
+              </div>
+            </Link>
+          );
+        })}
+      </div>
+    </section>
   );
 }
 
@@ -338,8 +423,8 @@ export default function FishingGuideContent({ fishData }) {
               <Fish size={32} />
             </div>
             <div>
-              <h1 className="text-3xl md:text-4xl font-black">Stardew Valley Fishing Guide</h1>
-              <p className="text-blue-100 text-lg">Complete Database • {fishData.fish.length} Fish • Updated for 1.6</p>
+              <h1 className="text-3xl md:text-4xl font-black">Stardew Valley Fish and Fishing Guide</h1>
+              <p className="text-blue-100 text-lg">Complete Database | {fishData.fish.length} Fish | Updated for 1.6.15</p>
             </div>
           </div>
             <p className="text-blue-100 max-w-3xl text-lg leading-relaxed mb-6">
@@ -365,11 +450,14 @@ export default function FishingGuideContent({ fishData }) {
         </div>
       </header>
 
+      {/* Fishing Topic Hub */}
+      <FishingTopicHub />
+
       {/* Legendary Fish Showcase */}
       <LegendaryShowcase legendaryFish={legendaryFish} />
 
       {/* Search & Filters */}
-      <section className="mb-8">
+      <section id="fish-table" className="mb-8 scroll-mt-24">
         <div className="bg-white rounded-xl border border-slate-200 p-4">
           {/* Search Bar */}
           <div className="flex flex-col md:flex-row gap-4 mb-4">
@@ -539,20 +627,26 @@ export default function FishingGuideContent({ fishData }) {
 
       {/* Bottom CTA */}
       <section className="bg-gradient-to-r from-slate-800 to-slate-700 rounded-xl p-8 text-white text-center">
-        <h2 className="text-2xl font-bold mb-2">Looking for Crop Profit Calculations?</h2>
-        <p className="text-slate-300 mb-6">Check out our profit calculator to maximize your farm income</p>
+        <h2 className="text-2xl font-bold mb-2">Plan Your Next Fishing Goal</h2>
+        <p className="text-slate-300 mb-6">Move from lookup to action: bundles, legendary catches, fish ponds, or seasonal profit targets.</p>
         <div className="flex flex-wrap gap-4 justify-center">
-          <Link 
-            href="/calculator/spring"
+          <Link
+            href="/guide/community-center-fish-bundles/"
             className="px-6 py-3 bg-white text-slate-800 rounded-lg font-semibold hover:bg-slate-100 transition"
           >
-            Profit Calculator
+            Fish Bundles
           </Link>
-          <Link 
-            href="/gifts"
+          <Link
+            href="/guide/legendary-fish/"
             className="px-6 py-3 bg-slate-600 text-white rounded-lg font-semibold hover:bg-slate-500 transition"
           >
-            Gift Guides
+            Legendary Fish
+          </Link>
+          <Link
+            href="/fish-ponds/"
+            className="px-6 py-3 bg-slate-600 text-white rounded-lg font-semibold hover:bg-slate-500 transition"
+          >
+            Fish Pond Values
           </Link>
         </div>
       </section>
