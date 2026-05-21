@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import ScrollToTop from '@/components/ScrollToTop';
 
 export const metadata = {
   title: 'Community Center Guide - Stardew Valley Bundles',
@@ -77,6 +78,7 @@ const jsonLd = {
 export default function CommunityCenterGuide() {
   return (
     <>
+      <ScrollToTop />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

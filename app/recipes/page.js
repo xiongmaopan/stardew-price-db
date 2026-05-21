@@ -7,8 +7,8 @@ const highEnergyRecipes = recipesData.recipes.filter(r => r.energy >= 200).lengt
 const queenOfSauceRecipes = recipesData.recipes.filter(r => r.source.includes('Queen of Sauce')).length;
 
 export const metadata = {
-  title: 'All 80 Cooking Recipes - Stardew Valley 1.6.15 | StardewPriceDB',
-  description: `${recipesData.recipes.length} cooking recipes with ingredients, energy, ${buffRecipes.length} buff foods, sell prices, sources, and Queen of Sauce schedule. Data verified for 1.6.`,
+  title: 'Stardew Valley Recipes List 1.6.15 | Ingredients, Buffs & Energy',
+  description: `${recipesData.recipes.length} Stardew Valley recipes with ingredients, energy, health, ${buffRecipes.length} buff foods, sell prices, sources, and Queen of Sauce schedule.`,
   keywords: [
     'Stardew Valley recipes',
     'Stardew Valley cooking guide',
@@ -28,15 +28,15 @@ export const metadata = {
   alternates: {
     canonical: 'https://stardewpricedb.com/recipes/',
   },  openGraph: {
-    title: 'All 80 Cooking Recipes - Stardew Valley 1.6.15',
-    description: `${recipesData.recipes.length} recipes, ${buffRecipes.length} buff foods, ingredients & Queen of Sauce schedule.`,
+    title: 'Stardew Valley Recipes List 1.6.15',
+    description: `${recipesData.recipes.length} recipes with ingredients, energy, buffs, sell prices, and Queen of Sauce schedule.`,
     url: 'https://stardewpricedb.com/recipes/',
     type: 'website',
     siteName: 'StardewPriceDB',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'All 80 Cooking Recipes - Stardew Valley 1.6.15',
+    title: 'Stardew Valley Recipes List 1.6.15',
     description: `${recipesData.recipes.length} recipes with ingredients, buffs, and sources.`,
   },
 };

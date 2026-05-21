@@ -29,6 +29,10 @@ function hasQualityPrices(item) {
 }
 
 function getItemTitle(item) {
+  if (item.slug === 'aged-roe') {
+    return 'Aged Roe Price Formula & Fish Roe Values - Stardew Valley';
+  }
+
   const variablePrice = getVariablePriceInfo(item);
   if (variablePrice) {
     return `${item.name} ${variablePrice.label} & Uses - Stardew Valley`;

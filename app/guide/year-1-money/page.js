@@ -1,14 +1,15 @@
 import Link from 'next/link';
+import ScrollToTop from '@/components/ScrollToTop';
 
 export const metadata = {
-  title: 'Year 1 Money Making Guide - Stardew Valley 1.6.15',
-  description: 'Realistic Year 1 money strategies for Stardew Valley. Season-by-season breakdown of crops, fishing, foraging, and mining to maximize your first year income.',
+  title: 'Stardew Valley Year 1 Money Guide 1.6.15 | Crops, Fish & Goals',
+  description: 'Plan Stardew Valley Year 1 money with season-by-season crops, fishing, mining, foraging, greenhouse goals, tool upgrades, and realistic gold targets.',
   alternates: {
     canonical: '/guide/year-1-money/',
   },
   openGraph: {
-    title: 'Year 1 Money Making Guide - Stardew Valley 1.6.15',
-    description: 'Realistic strategies to reach 100k+ in Year 1 without exploits.',
+    title: 'Stardew Valley Year 1 Money Guide 1.6.15',
+    description: 'Season-by-season crops, fishing, mining, greenhouse goals, and realistic gold targets.',
     url: 'https://stardewpricedb.com/guide/year-1-money/',
   },
 };
@@ -26,13 +27,13 @@ const jsonLd = {
       dateModified: '2026-05-19',
       author: { '@type': 'Organization', name: 'StardewPriceDB', url: 'https://stardewpricedb.com' },
       publisher: { '@type': 'Organization', name: 'StardewPriceDB', logo: { '@type': 'ImageObject', url: 'https://stardewpricedb.com/favicon.svg' } },
-      mainEntityOfPage: 'https://stardewpricedb.com/guide/year-1-money'
+      mainEntityOfPage: 'https://stardewpricedb.com/guide/year-1-money/'
     },
     {
       '@type': 'BreadcrumbList',
       itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://stardewpricedb.com' },
-        { '@type': 'ListItem', position: 2, name: 'Guides', item: 'https://stardewpricedb.com/guide' },
+        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://stardewpricedb.com/' },
+        { '@type': 'ListItem', position: 2, name: 'Guides', item: 'https://stardewpricedb.com/guide/' },
         { '@type': 'ListItem', position: 3, name: 'Year 1 Money' }
       ]
     },
@@ -107,13 +108,14 @@ const winterFish = [
 export default function Year1MoneyGuide() {
   return (
     <>
+      <ScrollToTop />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <main className="max-w-5xl mx-auto px-4 py-12">
         {/* Breadcrumb */}
         <nav className="mb-8 text-sm text-slate-500">
           <Link href="/" className="hover:text-slate-700">Home</Link>
           <span className="mx-2">/</span>
-          <Link href="/guide" className="hover:text-slate-700">Guides</Link>
+          <Link href="/guide/" className="hover:text-slate-700">Guides</Link>
           <span className="mx-2">/</span>
           <span className="text-slate-800 font-medium">Year 1 Money</span>
         </nav>

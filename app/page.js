@@ -8,7 +8,7 @@ const GAME_VERSION = verificationData.gameVersion;
 const PRICE_ENTRY_COUNT = itemsData.items.filter((item) => item.category !== 'Fish').length + fishData.fish.length;
 
 export const metadata = {
-  title: `Stardew Valley Price List & Profit Calculator ${GAME_VERSION} | StardewPriceDB`,
+  title: `Stardew Valley Price List & Profit Calculator ${GAME_VERSION}`,
   description: `Search the Stardew Valley ${GAME_VERSION} price list with crop, fish, mineral, artisan, Keg/Jar, quality, and profession profit values.`,
   keywords: ['Stardew Valley selling prices', 'Stardew Valley price guide', 'profit calculator', 'keg', 'preserves jar', 'farming guide', 'artisan goods', 'best crops stardew valley', 'stardew valley 1.6'],
   alternates: {

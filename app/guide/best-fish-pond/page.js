@@ -1,17 +1,18 @@
 import Link from 'next/link';
+import ScrollToTop from '@/components/ScrollToTop';
 
 const GAME_VERSION = '1.6.15';
-const LAST_VERIFIED = '2026-05-13';
+const LAST_VERIFIED = '2026-05-19';
 
 export const metadata = {
-  title: `Best Fish Pond Choices for Profit - Stardew Valley ${GAME_VERSION} Guide`,
-  description: `Which fish make the most money in Fish Ponds? Complete analysis of roe values, Caviar vs Aged Roe, and optimal pond strategies for Stardew Valley ${GAME_VERSION}.`,
+  title: `Best Fish Pond Fish Stardew Valley ${GAME_VERSION} | Roe Profit Chart`,
+  description: `Rank the best Stardew Valley fish ponds by roe value, Caviar, Aged Roe, rare drops, population quests, and passive profit for version ${GAME_VERSION}.`,
   alternates: {
     canonical: '/guide/best-fish-pond/',
   },
   openGraph: {
-    title: `Best Fish Pond Choices - Stardew Valley ${GAME_VERSION}`,
-    description: `Sturgeon Caviar, Lava Eel roe, and more. Complete Fish Pond profit analysis verified for Stardew Valley ${GAME_VERSION}.`,
+    title: `Best Fish Pond Fish Stardew Valley ${GAME_VERSION}`,
+    description: 'Lava Eel, Sturgeon, Blobfish, Caviar, Aged Roe, rare drops, and pond profit ranked.',
     url: 'https://stardewpricedb.com/guide/best-fish-pond/',
   },
 };
@@ -29,13 +30,13 @@ const jsonLd = {
       dateModified: LAST_VERIFIED,
       author: { '@type': 'Organization', name: 'StardewPriceDB', url: 'https://stardewpricedb.com' },
       publisher: { '@type': 'Organization', name: 'StardewPriceDB', logo: { '@type': 'ImageObject', url: 'https://stardewpricedb.com/favicon.svg' } },
-      mainEntityOfPage: 'https://stardewpricedb.com/guide/best-fish-pond'
+      mainEntityOfPage: 'https://stardewpricedb.com/guide/best-fish-pond/'
     },
     {
       '@type': 'BreadcrumbList',
       itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://stardewpricedb.com' },
-        { '@type': 'ListItem', position: 2, name: 'Guides', item: 'https://stardewpricedb.com/guide' },
+        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://stardewpricedb.com/' },
+        { '@type': 'ListItem', position: 2, name: 'Guides', item: 'https://stardewpricedb.com/guide/' },
         { '@type': 'ListItem', position: 3, name: 'Best Fish Pond' }
       ]
     },
@@ -96,13 +97,14 @@ const specialDrops = [
 export default function BestFishPondGuide() {
   return (
     <>
+      <ScrollToTop />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <main className="max-w-5xl mx-auto px-4 py-12">
         {/* Breadcrumb */}
         <nav className="mb-8 text-sm text-slate-500">
           <Link href="/" className="hover:text-slate-700">Home</Link>
           <span className="mx-2">/</span>
-          <Link href="/guide" className="hover:text-slate-700">Guides</Link>
+          <Link href="/guide/" className="hover:text-slate-700">Guides</Link>
           <span className="mx-2">/</span>
           <span className="text-slate-800 font-medium">Best Fish Pond</span>
         </nav>

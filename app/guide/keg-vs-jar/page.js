@@ -1,14 +1,15 @@
 import Link from 'next/link';
+import ScrollToTop from '@/components/ScrollToTop';
 
 export const metadata = {
-  title: 'Keg vs Preserves Jar Calculator & Profit Chart | Stardew Valley 1.6.15',
-  description: 'When to use Kegs vs Preserves Jars in Stardew Valley. Gold-per-day calculations, processing times, and optimal strategies for every crop type.',
+  title: 'Keg vs Jar Calculator Stardew Valley 1.6.15 | Profit Chart',
+  description: 'Compare Keg vs Preserves Jar profit in Stardew Valley with exact Wine, Juice, Jelly, Pickles, Artisan, processing time, and gold/day formulas.',
   alternates: {
     canonical: 'https://stardewpricedb.com/guide/keg-vs-jar/',
   },
   openGraph: {
-    title: 'Keg vs Preserves Jar Analysis - Stardew Valley 1.6.15',
-    description: 'Complete breakdown of when Kegs beat Jars and vice versa. Includes gold-per-day math.',
+    title: 'Keg vs Jar Calculator Stardew Valley 1.6.15',
+    description: 'Exact Keg and Preserves Jar formulas with gold/day profit chart and Artisan values.',
     url: 'https://stardewpricedb.com/guide/keg-vs-jar/',
     type: 'article',
   },
@@ -66,6 +67,7 @@ const breadcrumbSchema = {
 export default function KegVsJarGuide() {
   return (
     <>
+      <ScrollToTop />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}

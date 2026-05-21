@@ -1,14 +1,15 @@
 import Link from 'next/link';
+import ScrollToTop from '@/components/ScrollToTop';
 
 export const metadata = {
-  title: 'Animal Profit Guide - Stardew Valley 1.6.15',
-  description: 'Profit breakdown for every barn and coop animal. ROI calculations, processing comparisons, and which animals to prioritize for maximum gold per day.',
+  title: 'Best Animals for Profit Stardew Valley 1.6.15 | Barn & Coop ROI',
+  description: 'Compare Stardew Valley animal profit by barn, coop, product processing, Truffle Oil, Cheese, Mayonnaise, daily income, and ROI for version 1.6.15.',
   alternates: {
     canonical: '/guide/animal-profit/',
   },
   openGraph: {
-    title: 'Animal Profit Guide - Stardew Valley 1.6.15',
-    description: 'Complete profit analysis for Chickens, Cows, Pigs, and more. Includes processing ROI.',
+    title: 'Best Animals for Profit Stardew Valley 1.6.15',
+    description: 'Barn and coop ROI for Pigs, Cows, Goats, Chickens, Ducks, Cheese, Mayo, and Truffle Oil.',
     url: 'https://stardewpricedb.com/guide/animal-profit/',
   },
 };
@@ -37,13 +38,13 @@ const jsonLd = {
           url: 'https://stardewpricedb.com/favicon.svg'
         }
       },
-      mainEntityOfPage: 'https://stardewpricedb.com/guide/animal-profit'
+      mainEntityOfPage: 'https://stardewpricedb.com/guide/animal-profit/'
     },
     {
       '@type': 'BreadcrumbList',
       itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://stardewpricedb.com' },
-        { '@type': 'ListItem', position: 2, name: 'Guides', item: 'https://stardewpricedb.com/guide' },
+        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://stardewpricedb.com/' },
+        { '@type': 'ListItem', position: 2, name: 'Guides', item: 'https://stardewpricedb.com/guide/' },
         { '@type': 'ListItem', position: 3, name: 'Animal Profit' }
       ]
     },
@@ -158,6 +159,7 @@ function AnimalTable({ animals, title, bgGradient }) {
 export default function AnimalProfitGuide() {
   return (
     <>
+      <ScrollToTop />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
@@ -167,7 +169,7 @@ export default function AnimalProfitGuide() {
         <nav className="mb-8 text-sm text-slate-500">
           <Link href="/" className="hover:text-slate-700">Home</Link>
           <span className="mx-2">/</span>
-          <Link href="/guide" className="hover:text-slate-700">Guides</Link>
+          <Link href="/guide/" className="hover:text-slate-700">Guides</Link>
           <span className="mx-2">/</span>
           <span className="text-slate-800 font-medium">Animal Profit</span>
         </nav>

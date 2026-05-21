@@ -79,7 +79,7 @@ const processable = itemsData.items
   .slice(0, 12);
 
 export const metadata = {
-  title: `Stardew Valley All Item Prices List ${GAME_VERSION} | Crops, Fish, Artisan Goods`,
+  title: `Stardew Valley Item Prices List ${GAME_VERSION} | Crops & Fish`,
   description: `Search all Stardew Valley item prices for crops, fish, minerals, artisan goods, cooking, quality values, processing, and profession bonuses.`,
   keywords: [
     'Stardew Valley selling prices',

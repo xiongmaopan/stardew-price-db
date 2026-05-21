@@ -1,14 +1,15 @@
 import Link from 'next/link';
+import ScrollToTop from '@/components/ScrollToTop';
 
 export const metadata = {
-  title: 'Most Profitable Crops by Season - Stardew Valley 1.6.15 Guide',
-  description: 'Complete profit analysis of every Stardew Valley crop. Gold-per-day rankings for Spring, Summer, and Fall with Tiller/Artisan bonuses calculated.',
+  title: 'Most Profitable Crops Stardew Valley 1.6.15 | Gold/Day Chart',
+  description: 'Rank Stardew Valley crops by gold/day for Spring, Summer, and Fall with seed costs, Keg/Jar value, Tiller, Artisan, and 1.6.15 data.',
   alternates: {
     canonical: '/guide/most-profitable-crops/',
   },
   openGraph: {
-    title: 'Most Profitable Crops by Season - Stardew Valley 1.6.15',
-    description: 'Complete crop profit rankings with gold-per-day calculations. Data verified for v1.6.15.',
+    title: 'Most Profitable Crops Stardew Valley 1.6.15',
+    description: 'Gold/day crop rankings by season with seed costs, Keg/Jar value, Tiller, and Artisan.',
     url: 'https://stardewpricedb.com/guide/most-profitable-crops/',
   },
 };
@@ -21,7 +22,7 @@ const jsonLd = {
     {
       '@type': 'Article',
       '@id': 'https://stardewpricedb.com/guide/most-profitable-crops#article',
-      headline: 'Most Profitable Crops by Season - Stardew Valley 1.6.15 Guide',
+      headline: 'Most Profitable Crops Stardew Valley 1.6.15',
       description: 'Complete profit analysis of every Stardew Valley crop with gold-per-day rankings.',
       image: 'https://stardewpricedb.com/og-image.png',
       datePublished: '2026-05-19',
@@ -39,14 +40,14 @@ const jsonLd = {
           url: 'https://stardewpricedb.com/favicon.svg'
         }
       },
-      mainEntityOfPage: 'https://stardewpricedb.com/guide/most-profitable-crops'
+      mainEntityOfPage: 'https://stardewpricedb.com/guide/most-profitable-crops/'
     },
     // BreadcrumbList Schema
     {
       '@type': 'BreadcrumbList',
       itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://stardewpricedb.com' },
-        { '@type': 'ListItem', position: 2, name: 'Guides', item: 'https://stardewpricedb.com/guide' },
+        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://stardewpricedb.com/' },
+        { '@type': 'ListItem', position: 2, name: 'Guides', item: 'https://stardewpricedb.com/guide/' },
         { '@type': 'ListItem', position: 3, name: 'Most Profitable Crops' }
       ]
     },
@@ -101,29 +102,29 @@ const jsonLd = {
 
 // Crop data
 const springCrops = [
-  { name: 'Strawberry', sellPrice: '120g', seedCost: '100g', growth: '8d (regrows 4d)', goldPerDay: '~21g/day', notes: 'Egg Festival only. 5 harvests if planted Day 1', highlight: true, link: '/calculator/spring' },
-  { name: 'Rhubarb', sellPrice: '220g', seedCost: '100g', growth: '13d', goldPerDay: '9.2g/day', notes: 'Oasis only. Wine = 660g (94g/day after Keg time)', link: '/item/rhubarb' },
-  { name: 'Cauliflower', sellPrice: '175g', seedCost: '80g', growth: '12d', goldPerDay: '7.9g/day', notes: 'Can become Giant Crop (x2 yield)', link: '/item/cauliflower' },
-  { name: 'Coffee Bean', sellPrice: '15g (×4)', seedCost: '2,500g', growth: '10d (regrows 2d)', goldPerDay: '~24g/day', notes: 'Traveling Cart. Makes Coffee (Speed +1)', link: '/item/coffee-bean' },
-  { name: 'Potato', sellPrice: '80g', seedCost: '50g', growth: '6d', goldPerDay: '5g/day', notes: '25% extra harvest chance. Good early game.', link: '/item/potato' },
-  { name: 'Kale', sellPrice: '110g', seedCost: '70g', growth: '6d', goldPerDay: '6.7g/day', notes: 'Solid mid-tier choice', link: '/item/kale' },
+  { name: 'Strawberry', sellPrice: '120g', seedCost: '100g', growth: '8d (regrows 4d)', goldPerDay: '~21g/day', notes: 'Egg Festival only. 5 harvests if planted Day 1', highlight: true, link: '/calculator/spring/' },
+  { name: 'Rhubarb', sellPrice: '220g', seedCost: '100g', growth: '13d', goldPerDay: '9.2g/day', notes: 'Oasis only. Wine = 660g (94g/day after Keg time)', link: '/item/rhubarb/' },
+  { name: 'Cauliflower', sellPrice: '175g', seedCost: '80g', growth: '12d', goldPerDay: '7.9g/day', notes: 'Can become Giant Crop (x2 yield)', link: '/item/cauliflower/' },
+  { name: 'Coffee Bean', sellPrice: '15g (×4)', seedCost: '2,500g', growth: '10d (regrows 2d)', goldPerDay: '~24g/day', notes: 'Traveling Cart. Makes Coffee (Speed +1)', link: '/item/coffee-bean/' },
+  { name: 'Potato', sellPrice: '80g', seedCost: '50g', growth: '6d', goldPerDay: '5g/day', notes: '25% extra harvest chance. Good early game.', link: '/item/potato/' },
+  { name: 'Kale', sellPrice: '110g', seedCost: '70g', growth: '6d', goldPerDay: '6.7g/day', notes: 'Solid mid-tier choice', link: '/item/kale/' },
 ];
 
 const summerCrops = [
-  { name: 'Starfruit', sellPrice: '750g', seedCost: '400g', growth: '13d', goldPerDay: '26.9g/day', notes: 'Oasis. Wine = 2,250g (best in game)', highlight: true, link: '/item/starfruit' },
-  { name: 'Blueberry', sellPrice: '50g × 3', seedCost: '80g', growth: '13d (regrows 4d)', goldPerDay: '~22g/day', notes: '4 harvests. Easy to grow, no Oasis needed.', link: '/item/blueberry' },
-  { name: 'Red Cabbage', sellPrice: '260g', seedCost: '100g', growth: '9d', goldPerDay: '17.8g/day', notes: 'Year 2+ only. Great profit.', link: '/item/red-cabbage' },
-  { name: 'Melon', sellPrice: '250g', seedCost: '80g', growth: '12d', goldPerDay: '14.2g/day', notes: 'Giant Crop possible', link: '/item/melon' },
-  { name: 'Hops', sellPrice: '25g', seedCost: '60g', growth: '11d (regrows 1d)', goldPerDay: 'See notes', notes: 'Pale Ale = 300g in 1.5 days. Best Keg crop!', link: '/item/hops' },
+  { name: 'Starfruit', sellPrice: '750g', seedCost: '400g', growth: '13d', goldPerDay: '26.9g/day', notes: 'Oasis. Wine = 2,250g (best in game)', highlight: true, link: '/item/starfruit/' },
+  { name: 'Blueberry', sellPrice: '50g × 3', seedCost: '80g', growth: '13d (regrows 4d)', goldPerDay: '~22g/day', notes: '4 harvests. Easy to grow, no Oasis needed.', link: '/item/blueberry/' },
+  { name: 'Red Cabbage', sellPrice: '260g', seedCost: '100g', growth: '9d', goldPerDay: '17.8g/day', notes: 'Year 2+ only. Great profit.', link: '/item/red-cabbage/' },
+  { name: 'Melon', sellPrice: '250g', seedCost: '80g', growth: '12d', goldPerDay: '14.2g/day', notes: 'Giant Crop possible', link: '/item/melon/' },
+  { name: 'Hops', sellPrice: '25g', seedCost: '60g', growth: '11d (regrows 1d)', goldPerDay: 'See notes', notes: 'Pale Ale = 300g in 1.5 days. Best Keg crop!', link: '/item/hops/' },
 ];
 
 const fallCrops = [
-  { name: 'Pumpkin', sellPrice: '320g', seedCost: '100g', growth: '13d', goldPerDay: '16.9g/day', notes: 'Giant Crop possible. Top raw seller.', highlight: true, link: '/item/pumpkin' },
-  { name: 'Cranberry', sellPrice: '75g × 2', seedCost: '240g', growth: '7d (regrows 5d)', goldPerDay: '~16.5g/day', notes: '5 harvests. Great for raw selling.', link: '/item/cranberry' },
-  { name: 'Grape', sellPrice: '80g', seedCost: '60g', growth: '10d (regrows 3d)', goldPerDay: '~12g/day', notes: 'Wine = 240g. Trellis crop.', link: '/item/grape' },
-  { name: 'Artichoke', sellPrice: '160g', seedCost: '30g', growth: '8d', goldPerDay: '16.3g/day', notes: 'Year 2+ only. Underrated!', link: '/item/artichoke' },
-  { name: 'Amaranth', sellPrice: '150g', seedCost: '70g', growth: '7d', goldPerDay: '11.4g/day', notes: 'Good mid-tier option', link: '/item/amaranth' },
-  { name: 'Sweet Gem Berry', sellPrice: '3,000g', seedCost: '1,000g', growth: '24d', goldPerDay: '83.3g/day', notes: 'Rare Seed from Traveling Cart. Cannot process.', link: '/item/sweet-gem-berry' },
+  { name: 'Pumpkin', sellPrice: '320g', seedCost: '100g', growth: '13d', goldPerDay: '16.9g/day', notes: 'Giant Crop possible. Top raw seller.', highlight: true, link: '/item/pumpkin/' },
+  { name: 'Cranberry', sellPrice: '75g × 2', seedCost: '240g', growth: '7d (regrows 5d)', goldPerDay: '~16.5g/day', notes: '5 harvests. Great for raw selling.', link: '/item/cranberry/' },
+  { name: 'Grape', sellPrice: '80g', seedCost: '60g', growth: '10d (regrows 3d)', goldPerDay: '~12g/day', notes: 'Wine = 240g. Trellis crop.', link: '/item/grape/' },
+  { name: 'Artichoke', sellPrice: '160g', seedCost: '30g', growth: '8d', goldPerDay: '16.3g/day', notes: 'Year 2+ only. Underrated!', link: '/item/artichoke/' },
+  { name: 'Amaranth', sellPrice: '150g', seedCost: '70g', growth: '7d', goldPerDay: '11.4g/day', notes: 'Good mid-tier option', link: '/item/amaranth/' },
+  { name: 'Sweet Gem Berry', sellPrice: '3,000g', seedCost: '1,000g', growth: '24d', goldPerDay: '83.3g/day', notes: 'Rare Seed from Traveling Cart. Cannot process.', link: '/item/sweet-gem-berry/' },
 ];
 
 function CropTable({ crops, season, bgColor }) {
@@ -172,6 +173,7 @@ function CropTable({ crops, season, bgColor }) {
 export default function MostProfitableCropsGuide() {
   return (
     <>
+      <ScrollToTop />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
@@ -181,7 +183,7 @@ export default function MostProfitableCropsGuide() {
         <nav className="mb-8 text-sm text-slate-500">
           <Link href="/" className="hover:text-slate-700">Home</Link>
           <span className="mx-2">/</span>
-          <Link href="/guide" className="hover:text-slate-700">Guides</Link>
+          <Link href="/guide/" className="hover:text-slate-700">Guides</Link>
           <span className="mx-2">/</span>
           <span className="text-slate-800 font-medium">Most Profitable Crops</span>
         </nav>

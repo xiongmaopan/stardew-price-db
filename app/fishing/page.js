@@ -4,8 +4,8 @@ import FishingGuideContent from './FishingGuideContent';
 
 // SEO Metadata - High Quality for Google
 export const metadata = {
-  title: 'Stardew Valley Fish Locations, Seasons & Prices (1.6 Guide)',
-  description: '67 Stardew Valley fish with locations, times, seasons, difficulty, legendary fish, Night Market fish, Crab Pot catches, and tackle tips.',
+  title: 'Stardew Valley Fish Locations & Prices 1.6.15 | Seasons, Times',
+  description: 'Find all 67 Stardew Valley fish by location, season, time, weather, difficulty, sell price, legendary fish, Night Market fish, and Crab Pot catches.',
   keywords: [
     'Stardew Valley fish locations',
     'Stardew Valley fishing guide',
@@ -23,8 +23,8 @@ export const metadata = {
     canonical: '/fishing/',
   },
   openGraph: {
-    title: 'Stardew Valley Fish Locations & Seasons (v1.6.15)',
-    description: 'All 67 fish with locations, times, seasons, difficulty. Legendary fish included.',
+    title: 'Stardew Valley Fish Locations & Prices 1.6.15',
+    description: 'All 67 fish with locations, seasons, times, weather, difficulty, prices, and legendary fish.',
     url: 'https://stardewpricedb.com/fishing/',
     type: 'article',
     images: [
@@ -38,8 +38,8 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Stardew Valley Fish Locations & Seasons',
-    description: '67 fish with locations, times, seasons. All legendary fish included.',
+    title: 'Stardew Valley Fish Locations & Prices 1.6.15',
+    description: '67 fish with locations, seasons, times, weather, difficulty, prices, and legendary fish.',
   },
 };
 
@@ -50,7 +50,7 @@ function generateJsonLd() {
     {
       '@context': 'https://schema.org',
       '@type': 'Article',
-      headline: 'Stardew Valley Fish Locations, Seasons & Difficulty (v1.6.15)',
+      headline: 'Stardew Valley Fish Locations and Prices 1.6.15',
       description: 'All 67 fish with exact locations, times, seasons, and difficulty ratings. Formula-checked against Stardew Valley Wiki data.',
       author: {
         '@type': 'Organization',
@@ -65,7 +65,7 @@ function generateJsonLd() {
       dateModified: verificationData.lastVerified.split('T')[0],
       mainEntityOfPage: {
         '@type': 'WebPage',
-        '@id': 'https://stardewpricedb.com/fishing'
+        '@id': 'https://stardewpricedb.com/fishing/'
       }
     },
     // ItemList Schema for Fish
@@ -82,7 +82,7 @@ function generateJsonLd() {
           '@type': 'Thing',
           name: fish.name,
           description: fish.description,
-          url: `https://stardewpricedb.com/fishing/${fish.slug}`
+          url: `https://stardewpricedb.com/fishing/${fish.slug}/`
         }
       }))
     },
