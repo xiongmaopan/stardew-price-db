@@ -18,7 +18,7 @@ jobs:
           node-version: 22
           cache: npm
 
-      - run: npm ci
+      - run: npm install
 
       - name: Publish due SEO page
         run: npm run seo:release:due
