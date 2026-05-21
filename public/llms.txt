@@ -1,0 +1,45 @@
+# StardewPriceDB
+
+StardewPriceDB is a fan-made Stardew Valley price database and profit calculator for English-speaking players. It covers item sell prices, crop profitability, Keg and Preserves Jar processing values, fishing locations, villager gifts, recipes, bundles, and strategy guides.
+
+Canonical site: https://stardewpricedb.com/
+Sitemap: https://stardewpricedb.com/sitemap.xml
+Robots: https://stardewpricedb.com/robots.txt
+
+## Primary Sections
+
+- Item prices and profit pages: https://stardewpricedb.com/
+- Fishing guide: https://stardewpricedb.com/fishing/
+- Recipes: https://stardewpricedb.com/recipes/
+- Bundles: https://stardewpricedb.com/bundles/
+- Gift guide: https://stardewpricedb.com/gifts/
+- Strategy guides: https://stardewpricedb.com/guide/
+- Profit calculator: https://stardewpricedb.com/calculator/spring/
+
+## Representative Guides
+
+- Most profitable crops: https://stardewpricedb.com/guide/most-profitable-crops/
+- Best crops by season: https://stardewpricedb.com/guide/best-crops-by-season/
+- Best Spring crops: https://stardewpricedb.com/guide/best-spring-crops/
+- Best Summer crops: https://stardewpricedb.com/guide/best-summer-crops/
+- Best Fall crops: https://stardewpricedb.com/guide/best-fall-crops/
+- Best Greenhouse crops: https://stardewpricedb.com/guide/best-greenhouse-crops/
+- Ancient Fruit vs Starfruit: https://stardewpricedb.com/guide/ancient-fruit-vs-starfruit/
+- Ancient Fruit Wine guide: https://stardewpricedb.com/guide/ancient-fruit-wine/
+- Starfruit Wine guide: https://stardewpricedb.com/guide/starfruit-wine/
+- Truffle Oil guide: https://stardewpricedb.com/guide/truffle-oil/
+- Caviar guide: https://stardewpricedb.com/guide/caviar/
+- Best Fish by Season: https://stardewpricedb.com/guide/best-fish-by-season/
+- Best Keg items: https://stardewpricedb.com/guide/best-keg-items/
+- Best Preserves Jar items: https://stardewpricedb.com/guide/best-preserves-jar-items/
+- Keg vs Preserves Jar: https://stardewpricedb.com/guide/keg-vs-jar/
+- Ancient Fruit guide: https://stardewpricedb.com/guide/ancient-fruit/
+- Community Center guide: https://stardewpricedb.com/guide/community-center/
+- Best gifts guide: https://stardewpricedb.com/guide/best-gifts/
+
+## Data Notes
+
+- Game data version: Stardew Valley 1.6.15
+- Last verification: 2026-05-08
+- Data sources: Stardew Valley game data, Stardew Valley Wiki, and in-game formula checks.
+- Stardew Valley is created by ConcernedApe. StardewPriceDB is not affiliated with or endorsed by ConcernedApe.

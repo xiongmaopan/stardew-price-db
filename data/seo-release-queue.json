@@ -1,0 +1,74 @@
+{
+  "cadenceDays": 7,
+  "maxPagesPerRun": 1,
+  "nextRunDate": "2026-05-28",
+  "notes": "Only pages with status=ready are eligible for automatic release. Core pages such as /, /selling-prices/, and existing item pages are intentionally excluded.",
+  "pages": [
+    {
+      "slug": "crop-profit-calculator",
+      "url": "/crop-profit-calculator/",
+      "targetKeyword": "stardew valley crop profit calculator",
+      "type": "calculator-landing",
+      "priority": 1,
+      "status": "draft",
+      "plannedOrder": 1,
+      "releasedAt": null,
+      "notes": "Create a focused landing page that routes users to spring, summer, fall, winter, and greenhouse calculators."
+    },
+    {
+      "slug": "keg-vs-jar-calculator",
+      "url": "/keg-vs-jar-calculator/",
+      "targetKeyword": "stardew valley keg vs jar calculator",
+      "type": "calculator-landing",
+      "priority": 1,
+      "status": "draft",
+      "plannedOrder": 2,
+      "releasedAt": null,
+      "notes": "Build around exact Keg/Jar formulas, crop examples, and links to /guide/keg-vs-jar/."
+    },
+    {
+      "slug": "stardew-valley-price-list-pdf",
+      "url": "/stardew-valley-price-list-pdf/",
+      "targetKeyword": "stardew valley price list pdf",
+      "type": "download-resource",
+      "priority": 2,
+      "status": "draft",
+      "plannedOrder": 3,
+      "releasedAt": null,
+      "notes": "Release only after printable HTML/CSV/PDF assets exist."
+    },
+    {
+      "slug": "greenhouse-calculator",
+      "url": "/greenhouse-calculator/",
+      "targetKeyword": "stardew valley greenhouse profit calculator",
+      "type": "calculator-landing",
+      "priority": 2,
+      "status": "draft",
+      "plannedOrder": 4,
+      "releasedAt": null,
+      "notes": "Focus on greenhouse crop profit, Ancient Fruit, Starfruit, and fruit tree strategy."
+    },
+    {
+      "slug": "fish-pond-calculator",
+      "url": "/fish-pond-calculator/",
+      "targetKeyword": "stardew valley fish pond calculator",
+      "type": "calculator-landing",
+      "priority": 2,
+      "status": "draft",
+      "plannedOrder": 5,
+      "releasedAt": null,
+      "notes": "Release after fish pond roe value logic is exposed as a user-facing comparison."
+    },
+    {
+      "slug": "community-center-checklist",
+      "url": "/community-center-checklist/",
+      "targetKeyword": "stardew valley community center checklist",
+      "type": "checklist",
+      "priority": 2,
+      "status": "draft",
+      "plannedOrder": 6,
+      "releasedAt": null,
+      "notes": "Release after printable checklist and bundle links are ready."
+    }
+  ]
+}

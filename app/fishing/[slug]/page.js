@@ -1,4 +1,5 @@
 import fishData from '@/data/fish.json';
+import verificationData from '@/data/verification.json';
 import FishDetailContent from './FishDetailContent';
 
 // Generate static params for all fish
@@ -22,13 +23,13 @@ export async function generateMetadata({ params }) {
   const difficultyText = fish.difficulty >= 90 ? 'extremely hard' : fish.difficulty >= 70 ? 'challenging' : fish.difficulty >= 50 ? 'moderate' : 'easy';
   const legendaryTag = fish.legendary ? ' (Legendary)' : '';
 
-  // Craft unique, value-rich descriptions
-  const description = fish.legendary 
-    ? `Complete guide to catching ${fish.name}${legendaryTag} in Stardew Valley 1.6. Location: ${locationText}. Season: ${seasonText}. Difficulty: ${fish.difficulty}/110. Time: ${fish.time}. Expert tips, tackle recommendations, and strategies for this ${fish.basePrice}g legendary fish.`
-    : `How to catch ${fish.name} in Stardew Valley: Location (${locationText}), Season (${seasonText}), Time (${fish.time}), Difficulty (${difficultyText}). Sells for ${fish.basePrice}g. Complete fishing guide with tips and strategies.`;
+  const shortLocation = fish.location.slice(0, 2).join(', ');
+  const description = fish.legendary
+    ? `${fish.name}${legendaryTag} sells for ${fish.basePrice}g. Catch at ${shortLocation} in ${seasonText}, ${fish.time}. Difficulty ${fish.difficulty}/110.`
+    : `${fish.name} sells for ${fish.basePrice}g. Catch at ${shortLocation} in ${seasonText}, ${fish.time}. Includes quality and Angler prices.`;
 
   return {
-    title: `${fish.name} - Location, Season & How to Catch | Stardew Valley 1.6 Fishing Guide`,
+    title: `${fish.name} Price & Location - Stardew Valley`,
     description,
     keywords: [
       `${fish.name} Stardew Valley`,
@@ -38,19 +39,20 @@ export async function generateMetadata({ params }) {
       `${fish.name} time`,
       `where to find ${fish.name}`,
       `${fish.name} price`,
+      `${fish.name} sell price`,
       'Stardew Valley fishing',
-      'Stardew Valley 1.6',
+      'Stardew Valley 1.6.15',
       fish.legendary ? 'legendary fish' : 'Stardew fish guide',
       ...fish.season.map(s => `${s} fish Stardew`),
       ...fish.location.map(l => `${l} fish`)
     ],
     alternates: {
-      canonical: `/fishing/${fish.slug}`,
+      canonical: `/fishing/${fish.slug}/`,
     },
     openGraph: {
-      title: `${fish.name}${legendaryTag} Fishing Guide - Stardew Valley`,
-      description: `Catch ${fish.name} at ${locationText} during ${seasonText}. Difficulty: ${fish.difficulty}. Price: ${fish.basePrice}g. Complete guide with tips.`,
-      url: `https://stardewpricedb.com/fishing/${fish.slug}`,
+      title: `${fish.name}${legendaryTag} Sell Price & Fishing Guide - Stardew Valley`,
+      description: `${fish.name} sells for ${fish.basePrice}g. Catch it at ${locationText} during ${seasonText}. Difficulty: ${fish.difficulty}.`,
+      url: `https://stardewpricedb.com/fishing/${fish.slug}/`,
       type: 'article',
       images: [
         {
@@ -63,8 +65,8 @@ export async function generateMetadata({ params }) {
     },
     twitter: {
       card: 'summary',
-      title: `${fish.name} - Stardew Valley Fishing Guide`,
-      description: `Location: ${locationText}. Season: ${seasonText}. Price: ${fish.basePrice}g. Tips & strategies.`,
+      title: `${fish.name} Price - Stardew Valley Fishing Guide`,
+      description: `${fish.name} sells for ${fish.basePrice}g. Location: ${locationText}. Season: ${seasonText}.`,
     },
   };
 }
@@ -88,8 +90,8 @@ function generateJsonLd(fish) {
       name: 'StardewPriceDB',
       url: 'https://stardewpricedb.com'
     },
-    datePublished: '2025-12-09',
-    dateModified: new Date().toISOString().split('T')[0],
+    datePublished: '2026-05-19',
+    dateModified: verificationData.lastVerified.split('T')[0],
     mainEntityOfPage: {
       '@type': 'WebPage',
       '@id': `https://stardewpricedb.com/fishing/${fish.slug}`
@@ -125,46 +127,6 @@ function generateJsonLd(fish) {
         '@type': 'HowToStep',
         name: 'Cast and catch',
         text: `Cast your line as far as possible for better quality. ${fish.name} has ${fish.behavior} behavior - ${fish.behavior === 'dart' ? 'stay centered and react quickly' : fish.behavior === 'sinker' ? 'keep your bar low' : fish.behavior === 'floater' ? 'keep your bar high' : 'follow steadily'}.`
-      }
-    ]
-  });
-
-  // FAQ Schema
-  schemas.push({
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: [
-      {
-        '@type': 'Question',
-        name: `Where can I catch ${fish.name} in Stardew Valley?`,
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: `${fish.name} can be caught at ${fish.location.join(' or ')}. ${fish.locationDetail}`
-        }
-      },
-      {
-        '@type': 'Question',
-        name: `What season is ${fish.name} available?`,
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: `${fish.name} is available during ${fish.season.join(' and ')} from ${fish.time}.${fish.weather && fish.weather !== 'Any' ? ` It requires ${fish.weather.toLowerCase()} weather.` : ' It appears in any weather.'}`
-        }
-      },
-      {
-        '@type': 'Question',
-        name: `How much does ${fish.name} sell for?`,
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: `${fish.name} has a base sell price of ${fish.basePrice}g. With the Angler profession (+25%), it sells for ${Math.floor(fish.basePrice * 1.25)}g. Silver quality sells for ${Math.floor(fish.basePrice * 1.25)}g, Gold for ${Math.floor(fish.basePrice * 1.5)}g, and Iridium for ${Math.floor(fish.basePrice * 2)}g.`
-        }
-      },
-      {
-        '@type': 'Question',
-        name: `How hard is it to catch ${fish.name}?`,
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: `${fish.name} has a difficulty rating of ${fish.difficulty}${fish.difficulty >= 90 ? ', making it one of the hardest fish to catch' : fish.difficulty >= 70 ? ', a challenging catch' : fish.difficulty >= 50 ? ', a moderate challenge' : ', relatively easy to catch'}. It has ${fish.behavior} behavior. ${fish.tips}`
-        }
       }
     ]
   });

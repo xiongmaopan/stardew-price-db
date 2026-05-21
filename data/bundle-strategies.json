@@ -1,6 +1,6 @@
 {
-  "version": "1.6",
-  "lastUpdated": "2025-12-09",
+  "version": "1.6.15",
+  "lastUpdated": "2026-05-13",
   "strategies": {
     "spring-crops-bundle": {
       "proTip": "This is your FIRST bundle to complete. Plant all 4 crops on Day 1 of Spring Year 1. Use Basic Fertilizer on every tile - you need GOLD quality. Cauliflower is the bottleneck at 12 days growth.",

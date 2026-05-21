@@ -6,7 +6,11 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "verify": "node verify.js"
+    "verify": "node scripts/audit-data-integrity.js",
+    "seo:release:status": "node scripts/seo-release.js status",
+    "seo:release:ready": "node scripts/seo-release.js mark-ready",
+    "seo:release:due": "node scripts/seo-release.js publish-due",
+    "seo:release:next": "node scripts/seo-release.js publish-next"
   },
   "keywords": [
     "stardew valley",

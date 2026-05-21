@@ -1,14 +1,18 @@
 import Link from 'next/link';
 
+const GAME_VERSION = '1.6.15';
+const LAST_VERIFIED = '2026-05-13';
+
 export const metadata = {
-  title: 'Best Fish Pond Choices for Profit - Stardew Valley 1.6 Guide',
-  description: 'Which fish make the most money in Fish Ponds? Complete analysis of roe values, Caviar vs Aged Roe, and optimal pond strategies for Stardew Valley 1.6.',
+  title: `Best Fish Pond Choices for Profit - Stardew Valley ${GAME_VERSION} Guide`,
+  description: `Which fish make the most money in Fish Ponds? Complete analysis of roe values, Caviar vs Aged Roe, and optimal pond strategies for Stardew Valley ${GAME_VERSION}.`,
   alternates: {
-    canonical: '/guide/best-fish-pond',
+    canonical: '/guide/best-fish-pond/',
   },
   openGraph: {
-    title: 'Best Fish Pond Choices - Stardew Valley 1.6',
-    description: 'Sturgeon Caviar, Lava Eel roe, and more. Complete Fish Pond profit analysis.',
+    title: `Best Fish Pond Choices - Stardew Valley ${GAME_VERSION}`,
+    description: `Sturgeon Caviar, Lava Eel roe, and more. Complete Fish Pond profit analysis verified for Stardew Valley ${GAME_VERSION}.`,
+    url: 'https://stardewpricedb.com/guide/best-fish-pond/',
   },
 };
 
@@ -21,8 +25,8 @@ const jsonLd = {
       headline: 'Best Fish Pond Choices for Maximum Profit',
       description: 'Complete Fish Pond profit analysis including roe values and optimal fish choices.',
       image: 'https://stardewpricedb.com/og-image.png',
-      datePublished: '2025-12-14',
-      dateModified: '2025-06-21',
+      datePublished: '2026-05-19',
+      dateModified: LAST_VERIFIED,
       author: { '@type': 'Organization', name: 'StardewPriceDB', url: 'https://stardewpricedb.com' },
       publisher: { '@type': 'Organization', name: 'StardewPriceDB', logo: { '@type': 'ImageObject', url: 'https://stardewpricedb.com/favicon.svg' } },
       mainEntityOfPage: 'https://stardewpricedb.com/guide/best-fish-pond'
@@ -41,22 +45,22 @@ const jsonLd = {
         {
           '@type': 'Question',
           name: 'What is the best fish for Fish Ponds in Stardew Valley?',
-          acceptedAnswer: { '@type': 'Answer', text: 'Lava Eel has the highest roe value (380g raw, 532g Aged Roe, 745g with Artisan). Sturgeon is second best because its roe becomes Caviar (500g, 700g Artisan) without aging. Blob Fish is also excellent due to Pearl drops worth 2,500g each.' }
+          acceptedAnswer: { '@type': 'Answer', text: 'Lava Eel has the highest regular roe value (380g raw, 760g Aged Roe, 1,064g with Artisan). Sturgeon is still excellent because its roe becomes Caviar (500g, 700g Artisan). Blobfish is also useful due to Pearl drops worth 2,500g each.' }
         },
         {
           '@type': 'Question',
           name: 'Is Caviar or Aged Roe more valuable?',
-          acceptedAnswer: { '@type': 'Answer', text: 'It depends on the fish. Sturgeon Roe becomes Caviar (500g fixed, 700g Artisan). Lava Eel Aged Roe is 532g (745g Artisan). Overall, Lava Eel Aged Roe with Artisan profession produces the highest value.' }
+          acceptedAnswer: { '@type': 'Answer', text: 'It depends on the fish. Sturgeon Roe becomes Caviar (500g, 700g with Artisan). Lava Eel Aged Roe is 760g, or 1,064g with Artisan, making it the highest-value regular Aged Roe.' }
         },
         {
           '@type': 'Question',
           name: 'How many Fish Ponds should I build?',
-          acceptedAnswer: { '@type': 'Answer', text: 'Recommended: 6 ponds. 2 Lava Eel, 2 Sturgeon, 1 Blob Fish (Pearl drops), 1 Super Cucumber (Iridium Ore). This provides ~50,000-70,000g monthly passive income with minimal effort.' }
+          acceptedAnswer: { '@type': 'Answer', text: 'Recommended: 6 ponds. 2 Lava Eel, 2 Sturgeon, 1 Blob Fish (Pearl drops), 1 Super Cucumber (Iridium Ore). Monthly income varies by pond population and item rolls, so treat this as a scalable setup rather than a fixed monthly payout.' }
         },
         {
           '@type': 'Question',
           name: 'How do Fish Ponds work in Stardew Valley?',
-          acceptedAnswer: { '@type': 'Answer', text: 'Each Fish Pond holds one species. Population grows to max 10 by completing item requests. Fish produce roe daily based on population. Roe value = 30 + (Fish Base Price ÷ 2). Process roe in Preserves Jar for Aged Roe worth double plus 40g bonus.' }
+          acceptedAnswer: { '@type': 'Answer', text: 'Each Fish Pond holds one species. Population grows to max 10 by completing item requests. Fish produce roe daily based on population. Roe value = 30 + (Fish Base Price ÷ 2). Process non-Sturgeon Roe in a Preserves Jar for Aged Roe worth 2x Roe price. Sturgeon Roe becomes Caviar worth 500g.' }
         }
       ]
     }
@@ -65,20 +69,20 @@ const jsonLd = {
 
 // Fish Pond Data
 const fishPondRankings = [
-  { fish: 'Lava Eel', basePrice: '700g', roeValue: '380g', agedRoe: '532g', artisan: '745g', special: 'Magma Geode, Gold Ore, Spicy Eel', difficulty: 'Hard', highlight: 'gold' },
-  { fish: 'Sturgeon', basePrice: '200g', roeValue: '130g', agedRoe: 'Caviar: 500g', artisan: '700g', special: 'Universal loved gift', difficulty: 'Medium', highlight: 'blue' },
-  { fish: 'Blob Fish', basePrice: '500g', roeValue: '280g', agedRoe: '392g', artisan: '549g', special: 'Pearl (2,500g!), Warp Totem', difficulty: 'Hard', highlight: 'purple' },
-  { fish: 'Ice Pip', basePrice: '500g', roeValue: '280g', agedRoe: '392g', artisan: '549g', special: 'Iron Ore, Frozen Geode', difficulty: 'Medium', highlight: '' },
-  { fish: 'Super Cucumber', basePrice: '250g', roeValue: '155g', agedRoe: '217g', artisan: '304g', special: 'Iridium Ore, Amethyst', difficulty: 'Medium', highlight: '' },
-  { fish: 'Midnight Carp', basePrice: '150g', roeValue: '105g', agedRoe: '147g', artisan: '206g', special: '—', difficulty: 'Easy', highlight: '' },
-  { fish: 'Rainbow Trout', basePrice: '65g', roeValue: '62g', agedRoe: '86g', artisan: '120g', special: 'Prismatic Shard (0.09%!)', difficulty: 'Easy', highlight: '' },
+  { fish: 'Lava Eel', basePrice: '700g', roeValue: '380g', agedRoe: '760g', artisan: '1,064g', special: 'Magma Geode, Gold Ore, Spicy Eel', difficulty: 'Hard', highlight: 'gold' },
+  { fish: 'Sturgeon', basePrice: '200g', roeValue: '130g', agedRoe: 'Caviar: 500g', artisan: '700g', special: 'Missing Bundle item', difficulty: 'Medium', highlight: 'blue' },
+  { fish: 'Blob Fish', basePrice: '500g', roeValue: '280g', agedRoe: '560g', artisan: '784g', special: 'Pearl (2,500g!), Warp Totem', difficulty: 'Hard', highlight: 'purple' },
+  { fish: 'Ice Pip', basePrice: '500g', roeValue: '280g', agedRoe: '560g', artisan: '784g', special: 'Iron Ore, Frozen Geode', difficulty: 'Medium', highlight: '' },
+  { fish: 'Super Cucumber', basePrice: '250g', roeValue: '155g', agedRoe: '310g', artisan: '434g', special: 'Iridium Ore, Amethyst', difficulty: 'Medium', highlight: '' },
+  { fish: 'Midnight Carp', basePrice: '150g', roeValue: '105g', agedRoe: '210g', artisan: '294g', special: 'Seafoam Pudding ingredient', difficulty: 'Easy', highlight: '' },
+  { fish: 'Rainbow Trout', basePrice: '65g', roeValue: '62g', agedRoe: '124g', artisan: '173g', special: 'Prismatic Shard (0.09%!)', difficulty: 'Easy', highlight: '' },
 ];
 
 const populationQuests = [
-  { fish: 'Lava Eel', pop3: 'Fire Quartz ×3', pop5: 'Basalt ×2', pop7: 'Magma Geode ×10' },
-  { fish: 'Sturgeon', pop3: 'Diamond ×1', pop5: 'Jelly/Pickles/Maple Syrup ×1', pop7: 'Omni Geode ×3' },
-  { fish: 'Blob Fish', pop3: 'Coral ×5', pop5: 'Frozen Tear ×5', pop7: 'Cookie ×1' },
-  { fish: 'Super Cucumber', pop3: 'Amethyst ×3', pop5: 'Omni Geode ×1', pop7: 'Iridium Ore ×3' },
+  { fish: 'Lava Eel', pop1: 'Fire Quartz ×3', pop3: 'Basalt ×1, Diamond ×2, or Dwarf Scroll III ×1', pop5: 'Mega Bomb ×2', pop7: 'Iridium Bar ×1' },
+  { fish: 'Sturgeon', pop1: 'Diamond ×1', pop3: 'Jelly ×1, Pickles ×1, or Maple Syrup ×2', pop5: 'Omni Geode ×3', pop7: 'Nautilus Shell ×1' },
+  { fish: 'Blob Fish', pop1: 'Coral ×3, Frozen Tear ×2, or Sea Urchin ×2', pop3: 'Coffee Bean ×5, Mayonnaise ×1, or Pizza ×1', pop5: 'Cookie ×1, Green Tea ×1, or Wine ×1', pop7: 'Rainbow Shell ×1 or Rice Pudding ×1' },
+  { fish: 'Super Cucumber', pop1: 'None', pop3: 'Coral ×3, Honey ×1, Oyster ×1, Driftwood ×3, or Refined Quartz ×3', pop5: 'Dried Starfish ×1, Emerald ×2, Omni Geode ×2-3, or Purple Mushroom ×2-3', pop7: 'Diamond ×1, Gold Bar ×3, Iridium Ore ×1, Jelly ×1, Pickles ×1, or Sea Urchin ×2' },
 ];
 
 const specialDrops = [
@@ -110,7 +114,7 @@ export default function BestFishPondGuide() {
               🐟 Passive Income
             </span>
             <span className="bg-white/20 backdrop-blur px-3 py-1 rounded-full text-sm font-medium">
-              v1.6 Verified
+              v{GAME_VERSION} Verified
             </span>
           </div>
           <h1 className="text-3xl md:text-4xl font-extrabold mb-4">
@@ -121,7 +125,7 @@ export default function BestFishPondGuide() {
           </p>
           <div className="mt-6 flex flex-wrap gap-3">
             <span className="bg-white/20 backdrop-blur px-4 py-2 rounded-full text-sm font-medium">
-              💰 50-70k/month passive
+              High passive value
             </span>
             <span className="bg-white/20 backdrop-blur px-4 py-2 rounded-full text-sm font-medium">
               ⚙️ Minimal daily effort
@@ -130,6 +134,18 @@ export default function BestFishPondGuide() {
               💎 Rare item drops
             </span>
           </div>
+        </div>
+
+        {/* Version freshness note */}
+        <div className="bg-blue-50 border border-blue-200 rounded-xl p-5 mb-10 shadow-sm">
+          <h2 className="text-lg font-bold text-blue-900 mb-2">
+            Stardew Valley {GAME_VERSION} fish pond note
+          </h2>
+          <p className="text-slate-700">
+            This ranking is verified against Stardew Valley {GAME_VERSION}. Version 1.6 added legendary fish pond support,
+            but this profit list still prioritizes repeatable, farmable choices such as Lava Eel, Sturgeon, and Blob Fish.
+            Treat legendary fish ponds as collector or late-game specialty ponds rather than your main scalable gold engine.
+          </p>
         </div>
 
         {/* Key Stats Box */}
@@ -141,14 +157,14 @@ export default function BestFishPondGuide() {
             <div className="bg-white rounded-lg p-4 border border-amber-300 shadow-sm text-center">
               <div className="text-3xl mb-2">🔥</div>
               <p className="font-bold text-slate-800">#1 Lava Eel</p>
-              <p className="text-lg font-bold text-amber-600">745g/roe</p>
+              <p className="text-lg font-bold text-amber-600">1,064g/roe</p>
               <p className="text-xs text-slate-500 mt-1">Aged Roe + Artisan</p>
             </div>
             <div className="bg-white rounded-lg p-4 border border-blue-300 shadow-sm text-center">
               <div className="text-3xl mb-2">🥚</div>
               <p className="font-bold text-slate-800">#2 Sturgeon</p>
               <p className="text-lg font-bold text-blue-600">700g Caviar</p>
-              <p className="text-xs text-slate-500 mt-1">No aging needed!</p>
+              <p className="text-xs text-slate-500 mt-1">Preserves Jar product</p>
             </div>
             <div className="bg-white rounded-lg p-4 border border-purple-300 shadow-sm text-center">
               <div className="text-3xl mb-2">💎</div>
@@ -215,10 +231,10 @@ export default function BestFishPondGuide() {
             <div className="text-center">
               <div className="text-sm text-slate-400 mb-2">ROE VALUE FORMULA</div>
               <code className="text-xl md:text-2xl font-mono text-cyan-400">
-                Aged Roe = (Roe + 40) × 2 × 1.4 (Artisan)
+                Aged Roe = Roe x 2 x 1.4 (Artisan)
               </code>
               <div className="mt-4 text-sm text-slate-300">
-                Example: Lava Eel 380g roe → (380+40)×2 = 532g → ×1.4 = <span className="text-green-400 font-bold">745g</span>
+                Example: Lava Eel 380g roe {'->'} 380 x 2 = 760g {'->'} x1.4 = <span className="text-green-400 font-bold">1,064g</span>
               </div>
             </div>
           </div>
@@ -300,14 +316,14 @@ export default function BestFishPondGuide() {
                 <p className="text-sm text-slate-600">Caviar + Artisan</p>
               </div>
               <div className="bg-white/80 rounded-lg p-4 text-center">
-                <div className="text-2xl font-bold text-purple-600">~7,000g</div>
-                <p className="text-sm text-slate-600">Monthly/pond</p>
+                <div className="text-2xl font-bold text-purple-600">Varies</div>
+                <p className="text-sm text-slate-600">By output rolls</p>
               </div>
             </div>
             <div className="mt-6 bg-blue-200/50 rounded-lg p-4">
               <p className="text-blue-800">
                 <strong>Why Sturgeon?</strong> Easier to catch than Lava Eels. Mountain Lake, Summer/Winter. 
-                Caviar is also a <strong>universal loved gift</strong>—perfect for befriending villagers!
+                Caviar is also required for the Missing Bundle and is a useful artisan good.
               </p>
             </div>
           </div>
@@ -367,7 +383,7 @@ export default function BestFishPondGuide() {
             </div>
             <div className="mt-6 bg-amber-200/50 rounded-lg p-4">
               <p className="text-amber-800">
-                <strong>At population 10:</strong> Lava Eel Roe 380g → Aged 532g → <strong>Artisan 745g per roe!</strong><br/>
+                <strong>At population 10:</strong> Lava Eel Roe 380g {'->'} Aged 760g {'->'} <strong>Artisan 1,064g per roe!</strong><br/>
                 Plus bonus drops: Magma Geode, Gold Ore, Spicy Eel (great buff food).
               </p>
             </div>
@@ -380,7 +396,7 @@ export default function BestFishPondGuide() {
             </h3>
             <div className="grid md:grid-cols-2 gap-4">
               <div>
-                <p className="text-slate-700 mb-2"><strong>Roe value:</strong> 280g → 392g Aged → 549g Artisan</p>
+                <p className="text-slate-700 mb-2"><strong>Roe value:</strong> 280g raw, 560g Aged Roe, 784g with Artisan</p>
                 <p className="text-slate-700 mb-2"><strong>Pearl drops!</strong> Pearls sell for 2,500g each</p>
                 <p className="text-slate-700"><strong>Catch at:</strong> Night Market submarine (Winter 15-17)</p>
               </div>
@@ -406,6 +422,7 @@ export default function BestFishPondGuide() {
               <thead className="bg-gradient-to-r from-slate-600 to-slate-700 text-white">
                 <tr>
                   <th className="px-4 py-4 text-left font-semibold">Fish</th>
+                  <th className="px-4 py-4 text-left font-semibold">Pop 1 Quest</th>
                   <th className="px-4 py-4 text-left font-semibold">Pop 3 Quest</th>
                   <th className="px-4 py-4 text-left font-semibold">Pop 5 Quest</th>
                   <th className="px-4 py-4 text-left font-semibold">Pop 7 Quest</th>
@@ -415,6 +432,7 @@ export default function BestFishPondGuide() {
                 {populationQuests.map((quest, index) => (
                   <tr key={index} className={index % 2 === 0 ? 'bg-white' : 'bg-slate-50'}>
                     <td className="px-4 py-3 font-semibold text-slate-800">{quest.fish}</td>
+                    <td className="px-4 py-3">{quest.pop1}</td>
                     <td className="px-4 py-3">{quest.pop3}</td>
                     <td className="px-4 py-3">{quest.pop5}</td>
                     <td className="px-4 py-3">{quest.pop7}</td>
@@ -475,7 +493,7 @@ export default function BestFishPondGuide() {
             <div className="bg-gradient-to-br from-purple-50 to-indigo-50 border-2 border-purple-300 rounded-xl p-5 shadow-md">
               <span className="bg-purple-500 text-white px-3 py-1 rounded-full text-sm font-bold">End Game</span>
               <h3 className="font-bold text-purple-800 text-lg mt-3">6+ Ponds</h3>
-              <p className="text-slate-600 text-sm mt-2">Fill unused farm space. 6 Lava Eel ponds = ~60,000g/month passive!</p>
+              <p className="text-slate-600 text-sm mt-2">Fill unused farm space only if you can keep Preserves Jars available for the roe.</p>
             </div>
           </div>
 
@@ -493,7 +511,7 @@ export default function BestFishPondGuide() {
               </div>
               <div className="bg-white/10 rounded-lg p-4">
                 <p className="font-bold text-blue-400">🐟 2× Sturgeon</p>
-                <p className="text-slate-300 text-sm">Reliable Caviar, universal loved gift</p>
+                <p className="text-slate-300 text-sm">Reliable Caviar and Missing Bundle item</p>
               </div>
               <div className="bg-white/10 rounded-lg p-4">
                 <p className="font-bold text-purple-400">💎 1× Blob Fish</p>
@@ -506,7 +524,7 @@ export default function BestFishPondGuide() {
             </div>
             <div className="mt-6 text-center bg-green-500/20 rounded-lg p-4">
               <p className="text-green-300 font-bold text-xl">
-                💰 Estimated Monthly: 50,000-70,000g (passive!)
+                Scalable passive setup; output varies by pond population and daily rolls.
               </p>
             </div>
           </div>
@@ -528,7 +546,7 @@ export default function BestFishPondGuide() {
               <tbody className="divide-y divide-slate-200">
                 <tr className="bg-cyan-50">
                   <td className="px-4 py-3 font-semibold">Fish Pond (Lava Eel)</td>
-                  <td className="px-4 py-3">~8,000g per pond</td>
+                  <td className="px-4 py-3">Varies by roe and item rolls</td>
                   <td className="px-4 py-3 text-green-600 font-medium">Very Low ✓</td>
                 </tr>
                 <tr>
@@ -634,7 +652,7 @@ export default function BestFishPondGuide() {
           {/* Footer */}
           <div className="border-t pt-8 mt-8 not-prose">
             <p className="text-sm text-slate-500">
-              Last updated: June 2025 • Verified for Stardew Valley 1.6
+              Last updated: May 2026 - Verified for Stardew Valley 1.6.15
             </p>
           </div>
         </article>

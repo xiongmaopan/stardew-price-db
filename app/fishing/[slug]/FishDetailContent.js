@@ -10,7 +10,6 @@ import {
   Package, CheckCircle, Gift, ArrowRight
 } from 'lucide-react';
 import { useProfessions, calculatePrice } from '@/components/ProfessionContext';
-import fishStrategies from '@/data/fish-strategies.json';
 
 // Season styling
 const SEASONS = {
@@ -117,8 +116,8 @@ export default function FishDetailContent({ fish, relatedFish, behaviorInfo, tac
   const difficultyStyle = getDifficultyStyle(fish.difficulty);
   const behaviorStyle = BEHAVIORS[fish.behavior?.toLowerCase()] || BEHAVIORS.mixed;
 
-  // Get strategy data for this fish
-  const strategy = fishStrategies.strategies[fish.slug];
+  // Handwritten fish strategy copy is disabled until each entry is source-audited.
+  const strategy = null;
 
   // Calculate prices with Angler profession
   const basePrice = fish.basePrice;
@@ -128,6 +127,17 @@ export default function FishDetailContent({ fish, relatedFish, behaviorInfo, tac
     silver: Math.floor(basePrice * 1.25 * anglerBonus),
     gold: Math.floor(basePrice * 1.5 * anglerBonus),
     iridium: Math.floor(basePrice * 2 * anglerBonus)
+  };
+
+  const calculateSmokedFishPrice = (fishPrice) => {
+    const smokedBase = fishPrice * 2;
+    return professions.artisan ? Math.floor((smokedBase * 14) / 10) : smokedBase;
+  };
+  const smokedPrices = {
+    normal: calculateSmokedFishPrice(prices.normal),
+    silver: calculateSmokedFishPrice(prices.silver),
+    gold: calculateSmokedFishPrice(prices.gold),
+    iridium: calculateSmokedFishPrice(prices.iridium)
   };
 
   // Recommended tackle based on difficulty and behavior
@@ -426,6 +436,52 @@ export default function FishDetailContent({ fish, relatedFish, behaviorInfo, tac
             </div>
           </section>
 
+          <section className="bg-white rounded-xl border border-slate-200 overflow-hidden">
+            <div className="bg-slate-50 px-6 py-4 border-b border-slate-200 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+              <h2 className="font-bold text-lg text-slate-800 flex items-center gap-2">
+                <TrendingUp className="text-orange-500" size={20} />
+                Smoked Fish Value
+              </h2>
+              <div className={`text-xs px-2 py-1 rounded border self-start ${professions.artisan ? 'bg-purple-100 border-purple-300 text-purple-800' : 'bg-gray-100 text-gray-500'}`}>
+                Artisan: {professions.artisan ? 'Active (+40%)' : 'Inactive'}
+              </div>
+            </div>
+            <div className="p-6">
+              <p className="text-sm text-slate-600 mb-4">
+                The Fish Smoker uses 1 Coal and doubles the fish sell price while preserving quality. Fisher or Angler changes the fish value first; Artisan then increases the smoked product.
+              </p>
+              <div className="overflow-x-auto border border-slate-200 rounded-lg">
+                <table className="w-full text-left">
+                  <thead className="bg-slate-50 text-sm text-slate-500">
+                    <tr>
+                      <th className="px-4 py-3">Input Quality</th>
+                      <th className="px-4 py-3 text-right">Fish Value</th>
+                      <th className="px-4 py-3 text-right">Smoked Value</th>
+                    </tr>
+                  </thead>
+                  <tbody className="divide-y divide-slate-100">
+                    {[
+                      ['Normal', prices.normal, smokedPrices.normal],
+                      ['Silver', prices.silver, smokedPrices.silver],
+                      ['Gold', prices.gold, smokedPrices.gold],
+                      ['Iridium', prices.iridium, smokedPrices.iridium],
+                    ].map(([quality, fishValue, smokedValue]) => (
+                      <tr key={quality} className="hover:bg-slate-50">
+                        <td className="px-4 py-3 font-medium text-slate-800">{quality}</td>
+                        <td className="px-4 py-3 text-right font-mono">{fishValue.toLocaleString()}g</td>
+                        <td className="px-4 py-3 text-right font-bold text-orange-700">{smokedValue.toLocaleString()}g</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+              <p className="mt-4 text-sm text-slate-600">
+                Formula: <code className="rounded bg-slate-100 px-2 py-1">fish sell price x 2</code>
+                {professions.artisan ? ' x 1.4 Artisan' : ''}. See the <Link href="/about-data/" className="font-medium text-blue-700 hover:underline">formula audit</Link> for source notes.
+              </p>
+            </div>
+          </section>
+
           {/* Angler's Strategy Guide - High-value SEO content */}
           {strategy && (
             <section className="bg-gradient-to-r from-cyan-50 to-blue-50 rounded-xl border-2 border-cyan-200 p-6 shadow-sm">
@@ -438,7 +494,7 @@ export default function FishDetailContent({ fish, relatedFish, behaviorInfo, tac
                   <p className="text-cyan-800 leading-relaxed mb-4">{strategy.proTip}</p>
                   
                   <div className="bg-white/60 rounded-lg p-4 border border-cyan-200">
-                    <h4 className="font-semibold text-slate-700 text-sm mb-2 uppercase tracking-wide">Strategy Analysis (v1.6)</h4>
+                    <h4 className="font-semibold text-slate-700 text-sm mb-2 uppercase tracking-wide">Strategy Analysis (v1.6.15)</h4>
                     <p className="text-slate-600 text-sm leading-relaxed">{strategy.strategyNote}</p>
                   </div>
                   

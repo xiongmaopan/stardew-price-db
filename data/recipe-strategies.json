@@ -1,6 +1,6 @@
 {
-  "version": "1.6",
-  "lastUpdated": "2025-12-09",
+  "version": "1.6.15",
+  "lastUpdated": "2026-05-13",
   "strategies": {
     "fried-egg": {
       "proTip": "Your first recipe - cook eggs instead of selling raw. 35g sell vs 50g raw egg, but +50 energy makes it valuable early game when food is scarce.",

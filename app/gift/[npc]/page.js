@@ -1,4 +1,5 @@
 import npcsData from '@/data/npcs.json';
+import verificationData from '@/data/verification.json';
 import GiftGuideContent from './GiftGuideContent';
 
 // Generate static params for all NPCs
@@ -17,11 +18,11 @@ export async function generateMetadata({ params }) {
     return { title: 'NPC Not Found' };
   }
 
-  const marriageStatus = npc.marriageable ? '(Marriage Candidate)' : '';
+  const marriageStatus = npc.marriageable ? ' Marriage candidate.' : '';
   
   return {
-    title: `${npc.name} Gift Guide - Best Gifts & Schedule | Stardew Valley 1.6`,
-    description: `Complete ${npc.name} gift guide for Stardew Valley 1.6. Find loved gifts, liked items, birthday (${npc.birthday}), schedule, and heart events. ${marriageStatus}`,
+    title: `${npc.name} Gift Guide - Stardew Valley`,
+    description: `${npc.name} gift guide for Stardew Valley 1.6.15: loved gifts, liked items, birthday ${npc.birthday}, schedule, and heart events.${marriageStatus}`,
     keywords: [
       `${npc.name} gifts Stardew Valley`,
       `${npc.name} loved gifts`,
@@ -31,15 +32,15 @@ export async function generateMetadata({ params }) {
       `what does ${npc.name} like`,
       `best gifts for ${npc.name}`,
       'Stardew Valley gift guide',
-      'Stardew Valley 1.6'
+      'Stardew Valley 1.6.15'
     ],
     alternates: {
-      canonical: `/gift/${npc.slug}`,
+      canonical: `/gift/${npc.slug}/`,
     },
     openGraph: {
       title: `${npc.name} Gift Guide - Stardew Valley | StardewPriceDB`,
       description: `Find the best gifts for ${npc.name}. Loved gifts, schedule, birthday ${npc.birthday}, and heart events.`,
-      url: `https://stardewpricedb.com/gift/${npc.slug}`,
+      url: `https://stardewpricedb.com/gift/${npc.slug}/`,
       type: 'article',
       images: [
         {
@@ -76,39 +77,8 @@ function generateJsonLd(npc) {
         name: 'StardewPriceDB',
         url: 'https://stardewpricedb.com'
       },
-      datePublished: '2025-12-07',
-      dateModified: new Date().toISOString().split('T')[0]
-    },
-    // FAQ schema for common questions
-    {
-      '@context': 'https://schema.org',
-      '@type': 'FAQPage',
-      mainEntity: [
-        {
-          '@type': 'Question',
-          name: `What are ${npc.name}'s favorite gifts in Stardew Valley?`,
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: `${npc.name}'s loved gifts include: ${npc.gifts.love.slice(0, 5).join(', ')}. These gifts give +80 friendship points.`
-          }
-        },
-        {
-          '@type': 'Question',
-          name: `When is ${npc.name}'s birthday in Stardew Valley?`,
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: `${npc.name}'s birthday is on ${npc.birthday}. Giving a gift on their birthday multiplies friendship points by 8x!`
-          }
-        },
-        {
-          '@type': 'Question',
-          name: `Where can I find ${npc.name} in Stardew Valley?`,
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: `${npc.name} can usually be found at ${npc.location}. ${npc.schedule}`
-          }
-        }
-      ]
+      datePublished: '2026-05-19',
+      dateModified: verificationData.lastVerified.split('T')[0]
     },
     // BreadcrumbList schema
     {

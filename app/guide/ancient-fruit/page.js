@@ -1,14 +1,15 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Ancient Fruit Guide: From Seed to Millions - Stardew Valley 1.6',
+  title: 'Ancient Fruit Guide: From Seed to Millions - Stardew Valley 1.6.15',
   description: 'Complete Ancient Fruit strategy guide. How to get Ancient Seeds, greenhouse setup, Keg processing, and realistic income projections with actual numbers.',
   alternates: {
-    canonical: '/guide/ancient-fruit',
+    canonical: '/guide/ancient-fruit/',
   },
   openGraph: {
-    title: 'Ancient Fruit: The Ultimate Money Guide - Stardew Valley 1.6',
+    title: 'Ancient Fruit: The Ultimate Money Guide - Stardew Valley 1.6.15',
     description: 'From first seed to greenhouse empire. Complete Ancient Fruit strategy with verified numbers.',
+    url: 'https://stardewpricedb.com/guide/ancient-fruit/',
   },
 };
 
@@ -21,8 +22,8 @@ const jsonLd = {
       headline: 'Ancient Fruit: The Ultimate Money Making Guide',
       description: 'Complete Ancient Fruit strategy from first seed to 10+ million gold per year.',
       image: 'https://stardewpricedb.com/og-image.png',
-      datePublished: '2025-01-14',
-      dateModified: '2025-06-21',
+      datePublished: '2026-05-19',
+      dateModified: '2026-05-19',
       author: { '@type': 'Organization', name: 'StardewPriceDB', url: 'https://stardewpricedb.com' },
       publisher: { '@type': 'Organization', name: 'StardewPriceDB', logo: { '@type': 'ImageObject', url: 'https://stardewpricedb.com/favicon.svg' } },
       mainEntityOfPage: 'https://stardewpricedb.com/guide/ancient-fruit'
@@ -132,7 +133,7 @@ export default function AncientFruitGuide() {
               ✓ Keg Math Included
             </span>
             <span className="bg-white/20 backdrop-blur px-4 py-2 rounded-full text-sm font-medium">
-              ✓ v1.6 Verified
+              ✓ v1.6.15 Verified
             </span>
           </div>
         </div>
@@ -602,7 +603,7 @@ export default function AncientFruitGuide() {
           {/* Footer */}
           <div className="border-t pt-8 mt-8 not-prose">
             <p className="text-sm text-slate-500">
-              Last updated: June 2025 • Verified for Stardew Valley 1.6
+              Last updated: May 2026 - Verified for Stardew Valley 1.6.15
             </p>
           </div>
         </article>

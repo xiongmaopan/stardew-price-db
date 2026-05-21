@@ -1,14 +1,15 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Greenhouse Layout Guide - Optimal Planting Patterns | Stardew Valley 1.6',
+  title: 'Greenhouse Layout Guide - Stardew Valley 1.6.15',
   description: 'How to maximize your greenhouse with 120 crop tiles. Includes Ancient Fruit layout, Fruit Tree placement, sprinkler setups, and seasonal income projections.',
   alternates: {
-    canonical: '/guide/greenhouse-layout',
+    canonical: '/guide/greenhouse-layout/',
   },
   openGraph: {
-    title: 'Greenhouse Layout Guide - Stardew Valley 1.6',
+    title: 'Greenhouse Layout Guide - Stardew Valley 1.6.15',
     description: 'Maximize 120 tiles with optimal sprinkler and crop placement. Income projections included.',
+    url: 'https://stardewpricedb.com/guide/greenhouse-layout/',
   },
 };
 
@@ -21,8 +22,8 @@ const jsonLd = {
       headline: 'Greenhouse Layout Guide - Optimal Planting Patterns',
       description: 'Complete greenhouse optimization for Stardew Valley including sprinkler placement, crop selection, and income projections.',
       image: 'https://stardewpricedb.com/og-image.png',
-      datePublished: '2025-01-15',
-      dateModified: '2025-06-21',
+      datePublished: '2026-05-19',
+      dateModified: '2026-05-19',
       author: { '@type': 'Organization', name: 'StardewPriceDB', url: 'https://stardewpricedb.com' },
       publisher: { '@type': 'Organization', name: 'StardewPriceDB', logo: { '@type': 'ImageObject', url: 'https://stardewpricedb.com/favicon.svg' } },
       mainEntityOfPage: 'https://stardewpricedb.com/guide/greenhouse-layout'
@@ -471,7 +472,7 @@ export default function GreenhouseLayoutGuide() {
           {/* Footer */}
           <div className="border-t pt-8 mt-8 not-prose">
             <p className="text-sm text-slate-500">
-              Last updated: June 2025 • Verified for Stardew Valley 1.6
+              Last updated: May 2026 - Verified for Stardew Valley 1.6.15
             </p>
           </div>
         </article>

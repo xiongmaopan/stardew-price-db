@@ -11,7 +11,13 @@ export default function robots() {
         allow: '/',
         disallow: '/api/',
       },
+      {
+        userAgent: ['GPTBot', 'ClaudeBot', 'PerplexityBot', 'CCBot'],
+        allow: '/',
+        disallow: '/api/',
+      },
     ],
     sitemap: 'https://stardewpricedb.com/sitemap.xml',
+    host: 'https://stardewpricedb.com',
   };
 }

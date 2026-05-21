@@ -1,6 +1,11 @@
 import CalculatorClient from './CalculatorClient';
+import verificationData from '@/data/verification.json';
 
+const SITE_URL = 'https://stardewpricedb.com';
+const OG_IMAGE = '/og-image.png';
 const VALID_SEASONS = ['spring', 'summer', 'fall', 'winter', 'greenhouse'];
+const GAME_VERSION = verificationData.gameVersion;
+const LAST_VERIFIED = verificationData.lastVerified.split('T')[0];
 
 // Generate static params for all seasons
 export function generateStaticParams() {
@@ -19,18 +24,28 @@ export function generateMetadata({ params }) {
 
   const seasonCapitalized = season.charAt(0).toUpperCase() + season.slice(1);
 
+  const title = `${seasonCapitalized} Crop Profit Calculator - Stardew Valley`;
+  const description = `Calculate profitable ${seasonCapitalized} crops in Stardew Valley ${GAME_VERSION} with seed cost, Keg, Jar, Tiller, and Artisan values.`;
+
   return {
-    title: `${seasonCapitalized} Crop Profit Calculator - Stardew Valley 1.6`,
-    description: `Calculate the most profitable ${seasonCapitalized} crops in Stardew Valley 1.6. Compare raw sell prices, Keg wine/juice, and Preserves Jar profits with Tiller and Artisan bonuses.`,
+    title,
+    description,
     keywords: [
       `${season} crops Stardew Valley`,
       `${season} profit calculator`,
       'Stardew Valley crop calculator',
       'most profitable crops',
-      'Stardew Valley 1.6',
+      `Stardew Valley ${GAME_VERSION}`,
     ],
     alternates: {
-      canonical: `/calculator/${season}`,
+      canonical: `/calculator/${season}/`,
+    },
+    openGraph: {
+      title,
+      description,
+      url: `${SITE_URL}/calculator/${season}/`,
+      type: 'website',
+      images: [{ url: OG_IMAGE, width: 1200, height: 630, alt: `${seasonCapitalized} Stardew Valley crop calculator` }],
     },
   };
 }
@@ -50,13 +65,32 @@ export default function CalculatorPage({ params }) {
   }
 
   const seasonCapitalized = season.charAt(0).toUpperCase() + season.slice(1);
+  const appJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'WebApplication',
+    '@id': `${SITE_URL}/calculator/${season}/#app`,
+    name: `${seasonCapitalized} Crop Profit Calculator`,
+    url: `${SITE_URL}/calculator/${season}/`,
+    applicationCategory: 'GameApplication',
+    operatingSystem: 'Any',
+    version: GAME_VERSION,
+    dateModified: LAST_VERIFIED,
+    offers: {
+      '@type': 'Offer',
+      price: '0',
+      priceCurrency: 'USD',
+    },
+  };
 
   return (
-    <main className="max-w-6xl mx-auto px-4 py-6 min-h-[80vh]">
-      <CalculatorClient 
-        season={season} 
-        seasonCapitalized={seasonCapitalized}
-      />
-    </main>
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(appJsonLd) }} />
+      <main className="max-w-6xl mx-auto px-4 py-6 min-h-[80vh]">
+        <CalculatorClient 
+          season={season} 
+          seasonCapitalized={seasonCapitalized}
+        />
+      </main>
+    </>
   );
 }

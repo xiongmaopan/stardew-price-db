@@ -4,7 +4,7 @@ export const metadata = {
   title: 'Terms of Service - StardewPriceDB',
   description: 'Terms of Service for StardewPriceDB. Read our terms and conditions for using the Stardew Valley price database and calculators.',
   alternates: {
-    canonical: '/terms',
+    canonical: '/terms/',
   },
   openGraph: {
     title: 'Terms of Service - StardewPriceDB',
@@ -20,7 +20,7 @@ const jsonLd = {
   name: 'Terms of Service - StardewPriceDB',
   description: 'Terms of service for StardewPriceDB website',
   url: 'https://stardewpricedb.com/terms',
-  dateModified: '2024-12-09'
+  dateModified: '2026-05-19'
 };
 
 function Section({ title, children }) {
@@ -48,7 +48,7 @@ export default function TermsPage() {
 
         <article>
           <h1 className="text-4xl font-extrabold text-slate-800 mb-4">Terms of Service</h1>
-          <p className="text-lg text-slate-600 mb-8">Last updated: December 9, 2024</p>
+          <p className="text-lg text-slate-600 mb-8">Last updated: May 13, 2026</p>
 
           <div className="space-y-8 text-slate-700">
             <p>

@@ -16,26 +16,24 @@ const FERTILIZERS = [
   { id: 'hyper-speed-gro', name: 'Hyper Speed-Gro', growthBonus: 0.33, qualityBonus: 0, cost: 0 }, // crafted only
 ];
 
-// 品质分布计算 - 基于官方游戏公式
-// 来源: Stardew Valley game code, verified by Stardew-Profits project
-// @param fertilizerLevel: 0=none, 1=basic, 2=quality, 3=deluxe
-// @param farmingLevel: 玩家农业等级 (0-14)
 function calculateQualityRatios(fertilizerLevel, farmingLevel = 10) {
-  // Gold ratio formula from game code
   const goldBase = 0.2 * (farmingLevel / 10.0) + 0.2 * fertilizerLevel * ((farmingLevel + 2) / 12.0) + 0.01;
-  
-  // Iridium only available with Deluxe Fertilizer, at half gold rate
+
   const ratioI = fertilizerLevel >= 3 ? goldBase / 2 : 0;
-  
-  // Gold is the base minus iridium chance
-  const ratioG = goldBase * (1.0 - ratioI / goldBase);
-  
-  // Silver capped at 75%, times remaining probability
-  const ratioS = Math.max(0, Math.min(0.75, goldBase * 2.0) * (1.0 - ratioG - ratioI));
-  
-  // Normal is the remainder
+  const ratioG = goldBase * (1.0 - ratioI);
+
+  if (fertilizerLevel >= 3) {
+    return {
+      normal: 0,
+      silver: Math.max(0, 1.0 - ratioG - ratioI),
+      gold: ratioG,
+      iridium: ratioI,
+    };
+  }
+
+  const ratioS = Math.max(0, Math.min(0.75, goldBase * 2.0) * (1.0 - ratioG));
   const ratioN = Math.max(0, 1.0 - ratioS - ratioG - ratioI);
-  
+
   return { normal: ratioN, silver: ratioS, gold: ratioG, iridium: ratioI };
 }
 
@@ -47,6 +45,37 @@ const QUALITY_MULTIPLIERS = {
 };
 
 const SEASON_DAYS = 28;
+
+function applyArtisanBonus(value) {
+  return Math.floor((value * 14) / 10);
+}
+
+function applyTillerBonus(value, hasTiller) {
+  return hasTiller ? Math.floor((value * 11) / 10) : value;
+}
+
+function qualityPrice(basePrice, quality, hasTiller = false) {
+  return applyTillerBonus(Math.floor(basePrice * QUALITY_MULTIPLIERS[quality]), hasTiller);
+}
+
+function expectedQualityPrice(basePrice, qualityDist, hasTiller = false) {
+  return Object.entries(qualityDist).reduce(
+    (sum, [quality, ratio]) => sum + qualityPrice(basePrice, quality, hasTiller) * ratio,
+    0
+  );
+}
+
+function getGrowthTime(baseGrowthTime, fertilizer, hasAgriculturist) {
+  const growthBonus = (fertilizer.growthBonus || 0) + (hasAgriculturist ? 0.10 : 0);
+  return Math.max(1, Math.floor(baseGrowthTime * Math.max(0.1, 1 - growthBonus)));
+}
+
+function formatNumber(value, digits = 0) {
+  return Number(value).toLocaleString(undefined, {
+    maximumFractionDigits: digits,
+    minimumFractionDigits: 0,
+  });
+}
 
 const SEASON_LABELS = {
   spring: 'Spring',
@@ -92,6 +121,7 @@ export default function CalculatorClient({ season, seasonCapitalized }) {
   const [startDay, setStartDay] = useState(1);
   const [selectedFertilizerId, setSelectedFertilizerId] = useState('none');
   const [sellMethod, setSellMethod] = useState('raw'); // raw, keg, jar
+  const [farmingLevel, setFarmingLevel] = useState(10);
   const [includeSeedCost, setIncludeSeedCost] = useState(true);
   const [includeFertilizerCost, setIncludeFertilizerCost] = useState(true);
   
@@ -132,26 +162,9 @@ export default function CalculatorClient({ season, seasonCapitalized }) {
 
     const daysRemaining = season === 'greenhouse' ? 112 : SEASON_DAYS - startingDay + 1; // 4 seasons for greenhouse
     
-    // Apply growth speed bonuses - using Math.floor as per game mechanics
-    // Stardew Valley uses: Math.floor(baseGrowth * speedMultiplier)
-    // Agriculturist adds additional 0.1 reduction (stacks with fertilizer)
-    let speedMultiplier = 1;
-    
-    if (fertilizer.growthBonus > 0) {
-      speedMultiplier = 1 - fertilizer.growthBonus; // e.g., Speed-Gro = 0.9
-    }
-    
-    if (professionContext.agriculturist) {
-      // Agriculturist reduces by additional 10% (subtracts 0.1 from multiplier)
-      speedMultiplier = Math.max(0.1, speedMultiplier - 0.1);
-    }
-    
-    // Use Math.floor as per game code
-    const growthTime = Math.max(1, Math.floor(crop.growthTime * speedMultiplier));    // Calculate harvests using simulation approach (matches Stardew-Profits)
-    // For regrowing crops: plant once, harvest multiple times
-    // For non-regrowing crops: plant, harvest, replant, repeat
+    const growthTime = getGrowthTime(crop.growthTime, fertilizer, professionContext.agriculturist);
     let harvests = 0;
-    let currentDay = startingDay + growthTime - 1; // Day of first harvest
+    let currentDay = startingDay + growthTime;
     
     const maxDay = season === 'greenhouse' ? startingDay + 111 : SEASON_DAYS;
     
@@ -191,61 +204,67 @@ export default function CalculatorClient({ season, seasonCapitalized }) {
       };
     }
 
-    // Calculate yield per harvest
-    const yieldPerHarvest = crop.harvestYield || 1;
+    const baseYield = crop.harvestYield || 1;
+    const extraYield = (crop.extraHarvestChance || 0) * (crop.extraHarvestYield || 1);
+    const yieldPerHarvest = baseYield + extraYield;
     const totalYield = plots * harvests * yieldPerHarvest;
 
-    // Calculate quality distribution using official game formula
     const qualityLevel = fertilizer.qualityBonus;
-    const qualityDist = calculateQualityRatios(qualityLevel, 10); // Assume farming level 10
+    const qualityDist = calculateQualityRatios(qualityLevel, farmingLevel);
+    const qualityAdjustedUnitPrice = expectedQualityPrice(crop.basePrice, qualityDist, professionContext.tiller);
+    const normalUnitPrice = qualityPrice(crop.basePrice, 'normal', professionContext.tiller);
+    const rawRevenuePerPlotHarvest = qualityAdjustedUnitPrice + Math.max(0, yieldPerHarvest - 1) * normalUnitPrice;
+    const rawAveragePricePerItem = rawRevenuePerPlotHarvest / yieldPerHarvest;
 
-    // Calculate base price with quality
-    let avgPricePerItem = crop.basePrice * (
-      qualityDist.normal * QUALITY_MULTIPLIERS.normal +
-      qualityDist.silver * QUALITY_MULTIPLIERS.silver +
-      qualityDist.gold * QUALITY_MULTIPLIERS.gold +
-      qualityDist.iridium * QUALITY_MULTIPLIERS.iridium
-    );
-
-    // Apply Tiller bonus for raw sales
-    if (method === 'raw' && professionContext.tiller) {
-      avgPricePerItem *= 1.10;
-    }
-
-    // Calculate artisan prices
-    let pricePerItem = avgPricePerItem;
+    let pricePerItem = rawAveragePricePerItem;
     let processingTime = 0;
     let processorName = '';
     let processingNote = '';
+    let processingBatches = 0;
+    let grossRevenue = plots * harvests * rawRevenuePerPlotHarvest;
     
     if (method === 'keg' && crop.processing && crop.processing.kegPrice) {
       // Special case: Coffee Bean needs 5 beans per coffee
       if (crop.slug === 'coffee-bean') {
+        const coffeeBatches = Math.floor(totalYield / 5);
+        const leftoverBeans = totalYield - coffeeBatches * 5;
+        processingBatches = coffeeBatches;
+        grossRevenue = coffeeBatches * crop.processing.kegPrice + leftoverBeans * rawAveragePricePerItem;
         // 5 beans → 1 coffee (150g), so per-bean value is 150/5 = 30g
-        pricePerItem = crop.processing.kegPrice / 5;
+        pricePerItem = totalYield > 0 ? grossRevenue / totalYield : 0;
         processorName = 'Coffee';
-        processingNote = '5 beans → 1 Coffee';
+        processingNote = leftoverBeans > 0
+          ? `5 beans -> 1 Coffee; ${formatNumber(leftoverBeans, 2)} leftover beans sold raw. Coffee does not receive Artisan.`
+          : '5 beans -> 1 Coffee. Coffee does not receive Artisan.';
       } else {
         pricePerItem = crop.processing.kegPrice;
         processorName = crop.subcategory === 'Vegetable' ? 'Juice' : 'Wine';
+        processingBatches = totalYield;
       }
       processingTime = crop.processing.kegTime || 0;
-      if (professionContext.artisan) {
-        pricePerItem *= 1.40;
+      if (professionContext.artisan && crop.slug !== 'coffee-bean') {
+        pricePerItem = applyArtisanBonus(pricePerItem);
+      }
+      grossRevenue = totalYield * pricePerItem;
+      if (crop.slug === 'coffee-bean') {
+        processingNote = totalYield % 5 > 0
+          ? `5 beans -> 1 Coffee; ${formatNumber(totalYield % 5, 2)} leftover beans sold raw. Coffee does not receive Artisan.`
+          : '5 beans -> 1 Coffee. Coffee does not receive Artisan.';
       }
     } else if (method === 'jar' && crop.processing && crop.processing.jarPrice) {
       pricePerItem = crop.processing.jarPrice;
       processingTime = crop.processing.jarTime || 3;
       processorName = crop.subcategory === 'Vegetable' ? 'Pickles' : 'Jelly';
+      processingBatches = totalYield;
       if (professionContext.artisan) {
-        pricePerItem *= 1.40;
+        pricePerItem = applyArtisanBonus(pricePerItem);
       }
+      grossRevenue = totalYield * pricePerItem;
     } else if (method !== 'raw') {
       // Fallback to raw if no processing available
-      pricePerItem = avgPricePerItem;
+      pricePerItem = rawAveragePricePerItem;
       processingNote = 'No processing available, using raw price';
-    }    pricePerItem = Math.floor(pricePerItem);
-    const grossRevenue = totalYield * pricePerItem;
+    }
 
     // Calculate costs
     // For regrowing crops: buy seeds once
@@ -265,6 +284,7 @@ export default function CalculatorClient({ season, seasonCapitalized }) {
       plots,
       harvests,
       totalYield,
+      yieldPerHarvest,
       pricePerItem,
       grossRevenue,
       seedCost,
@@ -276,15 +296,17 @@ export default function CalculatorClient({ season, seasonCapitalized }) {
       daysUsed,
       processorName,
       processingTime,
+      processingBatches,
       processingNote,
       method,
+      plantings,
       growthTime // Include actual growth time for display
     };
   };
 
   const calculation = useMemo(() => 
     calculateCropProfit(selectedCrop, plotCount, startDay, selectedFertilizer, sellMethod),
-    [selectedCrop, plotCount, startDay, selectedFertilizer, sellMethod, professionContext, includeSeedCost, includeFertilizerCost]
+    [selectedCrop, plotCount, startDay, selectedFertilizer, sellMethod, farmingLevel, professionContext, includeSeedCost, includeFertilizerCost]
   );
 
   // Quick comparison of top crops
@@ -294,7 +316,7 @@ export default function CalculatorClient({ season, seasonCapitalized }) {
       .filter(c => c && c.harvests > 0)
       .sort((a, b) => b.profitPerDay - a.profitPerDay)
       .slice(0, 10);
-  }, [crops, plotCount, startDay, selectedFertilizer, sellMethod, professionContext, includeSeedCost, includeFertilizerCost]);
+  }, [crops, plotCount, startDay, selectedFertilizer, sellMethod, farmingLevel, professionContext, includeSeedCost, includeFertilizerCost]);
 
   // Add to comparison
   const addToComparison = (crop) => {
@@ -312,7 +334,7 @@ export default function CalculatorClient({ season, seasonCapitalized }) {
     return comparisonCrops.map(crop => 
       calculateCropProfit(crop, plotCount, startDay, selectedFertilizer, sellMethod)
     ).filter(Boolean);
-  }, [comparisonCrops, plotCount, startDay, selectedFertilizer, sellMethod, professionContext, includeSeedCost, includeFertilizerCost]);
+  }, [comparisonCrops, plotCount, startDay, selectedFertilizer, sellMethod, farmingLevel, professionContext, includeSeedCost, includeFertilizerCost]);
 
   if (!mounted) {
     return (
@@ -456,6 +478,21 @@ export default function CalculatorClient({ season, seasonCapitalized }) {
               </select>
             </div>
 
+            <div className="mb-4">
+              <label className="block text-sm font-medium text-slate-700 mb-1">
+                Farming Level for Crop Quality
+              </label>
+              <input
+                type="number"
+                min="0"
+                max="14"
+                value={farmingLevel}
+                onChange={(e) => setFarmingLevel(Math.max(0, Math.min(14, parseInt(e.target.value) || 0)))}
+                className="w-full px-3 py-2.5 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 text-sm"
+              />
+              <p className="text-xs text-slate-400 mt-1">Use 0-10 for normal play; buffs can raise effective Farming to 14.</p>
+            </div>
+
             {/* Sell Method */}
             <div className="mb-4">
               <label className="block text-sm font-medium text-slate-700 mb-1">
@@ -568,7 +605,7 @@ export default function CalculatorClient({ season, seasonCapitalized }) {
                   <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
                     <div className="bg-green-50 rounded-xl p-4 text-center">
                       <div className="text-2xl font-bold text-green-600">
-                        {calculation.netProfit.toLocaleString()}g
+                        {formatNumber(calculation.netProfit)}g
                       </div>
                       <div className="text-xs text-green-700 font-medium">NET PROFIT</div>
                     </div>
@@ -586,7 +623,7 @@ export default function CalculatorClient({ season, seasonCapitalized }) {
                     </div>
                     <div className="bg-amber-50 rounded-xl p-4 text-center">
                       <div className="text-2xl font-bold text-amber-600">
-                        {calculation.totalYield.toLocaleString()}
+                        {formatNumber(calculation.totalYield, 2)}
                       </div>
                       <div className="text-xs text-amber-700 font-medium">TOTAL YIELD</div>
                     </div>
@@ -598,33 +635,33 @@ export default function CalculatorClient({ season, seasonCapitalized }) {
                     <div className="space-y-2 text-sm">
                       <div className="flex justify-between">
                         <span className="text-slate-600">Plots × Harvests × Yield</span>
-                        <span className="font-mono">{plotCount} × {calculation.harvests} × {selectedCrop.harvestYield || 1} = {calculation.totalYield}</span>
+                        <span className="font-mono">{plotCount} x {calculation.harvests} x {formatNumber(calculation.yieldPerHarvest, 2)} = {formatNumber(calculation.totalYield, 2)}</span>
                       </div>
                       <div className="flex justify-between">
                         <span className="text-slate-600">Price per item ({sellMethod === 'raw' ? 'Raw' : calculation.processorName})</span>
-                        <span className="font-mono text-green-600">+{calculation.pricePerItem}g</span>
+                        <span className="font-mono text-green-600">+{formatNumber(calculation.pricePerItem, 2)}g</span>
                       </div>
                       <div className="flex justify-between font-medium">
                         <span className="text-slate-600">Gross Revenue</span>
-                        <span className="font-mono text-green-600">+{calculation.grossRevenue.toLocaleString()}g</span>
+                        <span className="font-mono text-green-600">+{formatNumber(calculation.grossRevenue)}g</span>
                       </div>
                       <div className="border-t border-slate-200 my-2"></div>
                       {includeSeedCost && (
                         <div className="flex justify-between">
-                          <span className="text-slate-600">Seed Cost ({selectedCrop.seedPrice || 0}g × {plotCount})</span>
-                          <span className="font-mono text-red-500">-{calculation.seedCost.toLocaleString()}g</span>
+                          <span className="text-slate-600">Seed Cost ({selectedCrop.seedPrice || 0}g x {plotCount} x {calculation.plantings})</span>
+                          <span className="font-mono text-red-500">-{formatNumber(calculation.seedCost)}g</span>
                         </div>
                       )}
                       {includeFertilizerCost && selectedFertilizer.cost > 0 && (
                         <div className="flex justify-between">
                           <span className="text-slate-600">Fertilizer Cost ({selectedFertilizer.cost}g × {plotCount})</span>
-                          <span className="font-mono text-red-500">-{calculation.fertilizerCost.toLocaleString()}g</span>
+                          <span className="font-mono text-red-500">-{formatNumber(calculation.fertilizerCost)}g</span>
                         </div>
                       )}
                       <div className="flex justify-between font-bold text-base pt-2 border-t border-slate-200">
                         <span className="text-slate-800">Net Profit</span>
                         <span className={`font-mono ${calculation.netProfit >= 0 ? 'text-green-600' : 'text-red-500'}`}>
-                          {calculation.netProfit >= 0 ? '+' : ''}{calculation.netProfit.toLocaleString()}g
+                          {calculation.netProfit >= 0 ? '+' : ''}{formatNumber(calculation.netProfit)}g
                         </span>
                       </div>
                     </div>
@@ -636,7 +673,7 @@ export default function CalculatorClient({ season, seasonCapitalized }) {
                       <span className="font-medium text-purple-700">⏱️ Processing Note:</span>
                       <span className="text-purple-600 ml-2">
                         {sellMethod === 'keg' ? 'Keg' : 'Preserves Jar'} takes {calculation.processingTime} days per batch.
-                        You&apos;ll need {Math.ceil(calculation.totalYield / (28 / calculation.processingTime))} machines to process all {calculation.totalYield} items in a season.
+                        You&apos;ll need roughly {Math.ceil(((calculation.processingBatches || calculation.totalYield) * calculation.processingTime) / calculation.daysUsed)} machines to process {formatNumber(calculation.processingBatches || calculation.totalYield, 2)} batches across this calculation window.
                       </span>
                     </div>
                   )}
@@ -679,9 +716,9 @@ export default function CalculatorClient({ season, seasonCapitalized }) {
                           </div>
                         </td>
                         <td className="px-4 py-3 text-right">{result.harvests}×</td>
-                        <td className="px-4 py-3 text-right">{result.totalYield.toLocaleString()}</td>
+                        <td className="px-4 py-3 text-right">{formatNumber(result.totalYield, 2)}</td>
                         <td className="px-4 py-3 text-right font-semibold text-green-600">
-                          {result.netProfit.toLocaleString()}g
+                          {formatNumber(result.netProfit)}g
                         </td>
                         <td className="px-4 py-3 text-right font-bold text-green-600">
                           {result.profitPerDay.toFixed(1)}g
@@ -750,7 +787,7 @@ export default function CalculatorClient({ season, seasonCapitalized }) {
                       </td>
                       <td className="px-4 py-2.5 text-center text-slate-600">{result.harvests}×</td>
                       <td className="px-4 py-2.5 text-right font-semibold text-green-600">
-                        {result.netProfit.toLocaleString()}g
+                        {formatNumber(result.netProfit)}g
                       </td>
                       <td className="px-4 py-2.5 text-right">
                         <span className="font-bold text-green-600">{result.profitPerDay.toFixed(1)}g</span>
@@ -781,10 +818,12 @@ export default function CalculatorClient({ season, seasonCapitalized }) {
           <div>
             <p><strong>Starting Day:</strong> Earlier = more harvests for regrow crops</p>
             <p><strong>Regrow crops:</strong> Better for late planting (less seed cost per harvest)</p>
+            <p><strong>Growth Time:</strong> A 4-day crop planted on day 1 is harvested on day 5</p>
           </div>
           <div>
             <p><strong>Keg vs Jar:</strong> Kegs take longer but usually pay more per item</p>
-            <p><strong>Quality Fertilizer:</strong> Increases average sell price by ~20%</p>
+            <p><strong>Quality:</strong> Uses your Farming Level; multi-yield crops improve one item per harvest</p>
+            <p><strong>Coffee:</strong> Keg Coffee is sold at 150g per 5 beans and does not get Artisan</p>
           </div>
         </div>
       </div>

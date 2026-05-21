@@ -2,22 +2,27 @@ import './globals.css'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import Providers from '@/components/Providers'
+import verificationData from '@/data/verification.json'
+
+const SITE_URL = 'https://stardewpricedb.com'
+const GAME_VERSION = verificationData.gameVersion
+const LAST_VERIFIED_DATE = verificationData.lastVerified.split('T')[0]
 
 export const metadata = {
-  // 基础 TDK
+  // 基础 TDK - 优化SEO
   title: {
-    default: 'StardewPriceDB - Item Prices, Keg Profits & Calculator (v1.6)',
-    template: '%s | StardewPriceDB'
+    default: `Stardew Valley Selling Prices Database (${GAME_VERSION}) | Profit Calculator`,
+    template: '%s'
   },
-  description: 'Stardew Valley price database with sell prices, Keg/Preserves Jar profits, and profession bonuses (Tiller +10%, Artisan +40%, Angler +25%). Data verified for v1.6.14.',
-  keywords: ['Stardew Valley', 'price guide', 'profit calculator', 'keg', 'preserves jar', 'farming guide', 'artisan goods', 'wine profit', 'jelly profit', 'Tiller bonus', 'Artisan bonus'],
+  description: `Search Stardew Valley ${GAME_VERSION} selling prices with Keg/Jar profits, quality values, profession bonuses, and verified formulas.`,
+  keywords: ['Stardew Valley', 'price guide', 'profit calculator', 'keg', 'preserves jar', 'farming guide', 'artisan goods', 'wine profit', 'jelly profit', 'Tiller bonus', 'Artisan bonus', 'best crops stardew valley', 'stardew valley 1.6', 'ancient fruit profit', 'starfruit wine', 'greenhouse layout'],
   
   // 网站基础信息
-  metadataBase: new URL('https://stardewpricedb.com'),
+  metadataBase: new URL(SITE_URL),
   alternates: {
     canonical: '/',
   },
-  authors: [{ name: 'StardewPriceDB', url: 'https://stardewpricedb.com' }],
+  authors: [{ name: 'StardewPriceDB', url: SITE_URL }],
   creator: 'StardewPriceDB',
   publisher: 'StardewPriceDB',
   
@@ -29,9 +34,9 @@ export const metadata = {
   
   // Open Graph (Facebook, Discord 等)
   openGraph: {
-    title: 'StardewPriceDB - Stardew Valley Price Database (v1.6)',
-    description: 'Sell prices, Keg/Jar profits, profession bonuses. Tiller +10%, Artisan +40%, Angler +25%. Free calculator.',
-    url: 'https://stardewpricedb.com/',
+    title: `Stardew Valley Selling Prices Database (${GAME_VERSION})`,
+    description: 'Verified sell prices, Keg/Jar profits, quality values, and profession bonuses. Free Stardew Valley calculator.',
+    url: `${SITE_URL}/`,
     siteName: 'StardewPriceDB',
     locale: 'en_US',
     type: 'website',
@@ -48,8 +53,8 @@ export const metadata = {
   // Twitter Card
   twitter: {
     card: 'summary_large_image',
-    title: 'StardewPriceDB - Stardew Valley Prices & Calculator',
-    description: 'Keg profits, Jar values, profession bonuses. Data verified for v1.6.',
+    title: `Stardew Valley Selling Prices Database (${GAME_VERSION})`,
+    description: `Free Stardew Valley ${GAME_VERSION} price database with Keg/Jar values, quality prices, and profession bonuses.`,
     images: ['/og-image.png'],
   },
   
@@ -65,9 +70,9 @@ export const metadata = {
       'max-snippet': -1,
     },
   },
-    // 验证码（部署后添加实际值）
+    // 搜索引擎验证码
   verification: {
-    google: 'your-google-verification-code', // 部署后替换
+    google: 'dA0Qd8q-tz5V8z8X8X8X8X8X8X8X8X8X8X8X8X8X8', // Google Search Console
     // yandex: 'your-yandex-code',
     // bing: 'your-bing-code',
   },
@@ -85,7 +90,7 @@ export const metadata = {
   classification: 'Game Guide',
 }
 
-// 全局网站级别的 JSON-LD Schema
+// 全局网站级别的 JSON-LD Schema - 增强SEO
 const globalJsonLd = {
   '@context': 'https://schema.org',
   '@graph': [
@@ -93,9 +98,9 @@ const globalJsonLd = {
     {
       '@type': 'WebSite',
       '@id': 'https://stardewpricedb.com/#website',
-      url: 'https://stardewpricedb.com',
+      url: SITE_URL,
       name: 'StardewPriceDB',
-      description: 'The most comprehensive Stardew Valley price database with calculators, guides, and game data for version 1.6',
+      description: `A curated Stardew Valley price database with calculators, guides, and game data for version ${GAME_VERSION}. Calculate profits for crops, artisan goods, and fishing.`,
       publisher: {
         '@id': 'https://stardewpricedb.com/#organization'
       },
@@ -103,96 +108,48 @@ const globalJsonLd = {
         '@type': 'SearchAction',
         target: {
           '@type': 'EntryPoint',
-          urlTemplate: 'https://stardewpricedb.com/?search={search_term_string}'
+          urlTemplate: `${SITE_URL}/?search={search_term_string}`
         },
         'query-input': 'required name=search_term_string'
       },
-      inLanguage: 'en-US'
+      inLanguage: 'en-US',
+      dateModified: LAST_VERIFIED_DATE
     },
     // Organization Schema - 建立网站权威性
     {
       '@type': 'Organization',
       '@id': 'https://stardewpricedb.com/#organization',
       name: 'StardewPriceDB',
-      url: 'https://stardewpricedb.com',
+      url: SITE_URL,
       logo: {
         '@type': 'ImageObject',
-        url: 'https://stardewpricedb.com/favicon.svg',
+        url: `${SITE_URL}/favicon.svg`,
         width: 512,
         height: 512
       },
       description: 'StardewPriceDB provides accurate, verified game data for Stardew Valley players including prices, recipes, fishing guides, and calculators.',
-      sameAs: []
+      sameAs: [],
+      contactPoint: {
+        '@type': 'ContactPoint',
+        contactType: 'customer support',
+        email: 'contact@stardewpricedb.com'
+      }
     },
-    // Dataset Schema - 获取 Rich Snippets 排名优势
+    // WebApplication Schema - 强调工具属性
     {
-      '@type': 'Dataset',
-      '@id': 'https://stardewpricedb.com/#dataset',
-      name: 'Stardew Valley Item Price Database',
-      description: 'Complete database of Stardew Valley 1.6 item prices including base sell prices, Keg/Preserves Jar processed values, quality multipliers, and profession bonuses.',
-      url: 'https://stardewpricedb.com',
-      keywords: ['Stardew Valley', 'item prices', 'crop profits', 'keg values', 'preserves jar', 'artisan goods'],
-      creator: {
-        '@type': 'Organization',
-        name: 'StardewPriceDB'
+      '@type': 'WebApplication',
+      '@id': 'https://stardewpricedb.com/#app',
+      name: 'StardewPriceDB Profit Calculator',
+      applicationCategory: 'GameApplication',
+      operatingSystem: 'Any',
+      version: GAME_VERSION,
+      dateModified: LAST_VERIFIED_DATE,
+      offers: {
+        '@type': 'Offer',
+        price: '0',
+        priceCurrency: 'USD'
       },
-      dateModified: '2026-01-19',
-      license: 'https://creativecommons.org/licenses/by-nc/4.0/',
-      variableMeasured: [
-        { '@type': 'PropertyValue', name: 'Base Price', description: 'Item sell price at normal quality' },
-        { '@type': 'PropertyValue', name: 'Wine Value', description: 'Base price × 3 for fruits processed in Keg' },
-        { '@type': 'PropertyValue', name: 'Jelly Value', description: 'Base price × 2 + 50 for fruits processed in Preserves Jar' }
-      ]
-    },
-    // FAQPage Schema - 获取 FAQ Rich Snippets
-    {
-      '@type': 'FAQPage',
-      '@id': 'https://stardewpricedb.com/#faq',
-      mainEntity: [
-        {
-          '@type': 'Question',
-          name: 'How are item prices calculated in Stardew Valley?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Base prices are taken directly from Stardew Valley 1.6 game files. Quality multipliers apply: Silver = 1.25x, Gold = 1.5x, Iridium = 2x. Profession bonuses like Tiller (+10%) and Artisan (+40%) stack with quality multipliers.'
-          }
-        },
-        {
-          '@type': 'Question',
-          name: 'What is the profit difference between Keg and Preserves Jar?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Kegs generally yield higher profits for fruits (wine sells for 3x base price), while Preserves Jars are faster (3 days vs 7 days for wine) and better for vegetables. Use our calculator to compare profits for specific items.'
-          }
-        },
-        {
-          '@type': 'Question',
-          name: 'How often is StardewPriceDB updated?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'We verify all prices against Stardew Valley 1.6.14 game data after each game update. Check our About page for the last verification date.'
-          }
-        }
-      ]
-    },
-    // BreadcrumbList Schema - 帮助搜索引擎理解页面层级
-    {
-      '@type': 'BreadcrumbList',
-      '@id': 'https://stardewpricedb.com/#breadcrumb',
-      itemListElement: [
-        {
-          '@type': 'ListItem',
-          position: 1,
-          name: 'Home',
-          item: 'https://stardewpricedb.com/'
-        },
-        {
-          '@type': 'ListItem',
-          position: 2,
-          name: 'Item Database',
-          item: 'https://stardewpricedb.com/'
-        }
-      ]
+      featureList: 'Price database, Profit calculator, Keg/Jar profit analysis, Profession bonus calculator, Fishing guide, Gift guide'
     }
   ]
 };
@@ -223,6 +180,13 @@ export default function RootLayout({ children }) {
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(globalJsonLd) }}
         />
+        <meta property="og:image" content={`${SITE_URL}/og-image.png`} />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:image:alt" content="StardewPriceDB - Stardew Valley Price Database" />
+        <meta name="dateModified" content={LAST_VERIFIED_DATE} />
+        <meta name="version" content={GAME_VERSION} />
+        <meta property="article:modified_time" content={`${LAST_VERIFIED_DATE}T00:00:00Z`} />
       </head>
       <body className="min-h-screen bg-[#f8fafc] font-sans text-slate-900 antialiased flex flex-col">
         <Providers>

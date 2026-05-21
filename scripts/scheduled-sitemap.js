@@ -20,7 +20,7 @@ const CONFIG = {
   scheduleFile: path.join(__dirname, '../data/sitemap-schedule.json'),
   
   // 输出的 sitemap
-  sitemapOutput: path.join(__dirname, '../public/sitemap-scheduled.xml'),
+  sitemapOutput: path.join(__dirname, '../tmp/sitemap-scheduled.xml'),
   
   // 基础 URL
   baseUrl: 'https://stardewpricedb.com'
@@ -213,6 +213,7 @@ function generateSitemap(schedule) {
 
   xml += `</urlset>`;
   
+  fs.mkdirSync(path.dirname(CONFIG.sitemapOutput), { recursive: true });
   fs.writeFileSync(CONFIG.sitemapOutput, xml);
   console.log(`📄 Sitemap 已更新: ${CONFIG.sitemapOutput}`);
 }

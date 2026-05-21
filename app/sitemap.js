@@ -4,12 +4,28 @@ import npcsData from '@/data/npcs.json';
 import fishData from '@/data/fish.json';
 import recipesData from '@/data/recipes.json';
 import bundlesData from '@/data/bundles.json';
+import verificationData from '@/data/verification.json';
 
 const seasons = ['spring', 'summer', 'fall', 'winter', 'greenhouse'];
+const professions = ['tiller', 'artisan', 'angler', 'rancher'];
+const lastModified = new Date(verificationData.lastVerified);
 
 // Guide pages
 const guides = [
   'most-profitable-crops',
+  'best-crops-by-season',
+  'best-spring-crops',
+  'best-summer-crops',
+  'best-fall-crops',
+  'best-greenhouse-crops',
+  'ancient-fruit-vs-starfruit',
+  'ancient-fruit-wine',
+  'starfruit-wine',
+  'truffle-oil',
+  'caviar',
+  'best-fish-by-season',
+  'best-keg-items',
+  'best-preserves-jar-items',
   'keg-vs-jar',
   'ancient-fruit',
   'greenhouse-layout',
@@ -28,55 +44,115 @@ export default function sitemap() {
   const staticPages = [
     {
       url: `${baseUrl}/`,
-      lastModified: new Date(),
+      lastModified,
       changeFrequency: 'weekly',
       priority: 1,
     },
     {
       url: `${baseUrl}/guide/`,
-      lastModified: new Date(),
+      lastModified,
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/selling-prices/`,
+      lastModified,
+      changeFrequency: 'weekly',
+      priority: 0.95,
+    },
+    {
+      url: `${baseUrl}/crops/`,
+      lastModified,
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/artisan-goods/`,
+      lastModified,
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/minerals/`,
+      lastModified,
+      changeFrequency: 'weekly',
+      priority: 0.85,
+    },
+    {
+      url: `${baseUrl}/animal-products/`,
+      lastModified,
+      changeFrequency: 'weekly',
+      priority: 0.85,
+    },
+    {
+      url: `${baseUrl}/forage/`,
+      lastModified,
+      changeFrequency: 'weekly',
+      priority: 0.85,
+    },
+    {
+      url: `${baseUrl}/cooking/`,
+      lastModified,
+      changeFrequency: 'weekly',
+      priority: 0.85,
+    },
+    {
+      url: `${baseUrl}/resources/`,
+      lastModified,
+      changeFrequency: 'weekly',
+      priority: 0.85,
+    },
+    {
+      url: `${baseUrl}/fish-ponds/`,
+      lastModified,
       changeFrequency: 'weekly',
       priority: 0.9,
     },
     {
       url: `${baseUrl}/fishing/`,
-      lastModified: new Date(),
+      lastModified,
       changeFrequency: 'weekly',
       priority: 0.9,
     },
     {
       url: `${baseUrl}/gifts/`,
-      lastModified: new Date(),
+      lastModified,
       changeFrequency: 'weekly',
       priority: 0.9,
     },
     {
       url: `${baseUrl}/about/`,
-      lastModified: new Date(),
+      lastModified,
       changeFrequency: 'monthly',
       priority: 0.7,
     },
     {
+      url: `${baseUrl}/about-data/`,
+      lastModified,
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
       url: `${baseUrl}/contact/`,
-      lastModified: new Date(),
+      lastModified,
       changeFrequency: 'monthly',
       priority: 0.6,
     },
     {
       url: `${baseUrl}/privacy/`,
-      lastModified: new Date(),
+      lastModified,
       changeFrequency: 'yearly',
       priority: 0.5,
     },
     {
       url: `${baseUrl}/terms/`,
-      lastModified: new Date(),
+      lastModified,
       changeFrequency: 'yearly',
       priority: 0.5,
     },
     {
       url: `${baseUrl}/bundles/`,
-      lastModified: new Date(),
+      lastModified,
       changeFrequency: 'weekly',
       priority: 0.9,
     },
@@ -85,22 +161,25 @@ export default function sitemap() {
   // Calculator pages
   const calculatorPages = seasons.map((season) => ({
     url: `${baseUrl}/calculator/${season}/`,
-    lastModified: new Date(),
+    lastModified,
     changeFrequency: 'weekly',
     priority: 0.9,
   }));
 
   // Item pages from data
-  const itemPages = itemsData.items.map((item) => ({
+  const indexableItems = itemsData.items.filter((item) => item.category !== 'Fish');
+
+  const itemPages = indexableItems.map((item) => ({
     url: `${baseUrl}/item/${item.slug}/`,
-    lastModified: new Date(),
+    lastModified,
     changeFrequency: 'monthly',
     priority: 0.8,
   }));
+
   // NPC gift guide pages
   const giftPages = npcsData.npcs.map((npc) => ({
     url: `${baseUrl}/gift/${npc.slug}/`,
-    lastModified: new Date(),
+    lastModified,
     changeFrequency: 'monthly',
     priority: 0.8,
   }));
@@ -108,7 +187,7 @@ export default function sitemap() {
   // Fish detail pages
   const fishPages = fishData.fish.map((fish) => ({
     url: `${baseUrl}/fishing/${fish.slug}/`,
-    lastModified: new Date(),
+    lastModified,
     changeFrequency: 'monthly',
     priority: 0.8,
   }));
@@ -117,13 +196,13 @@ export default function sitemap() {
   const recipePages = [
     {
       url: `${baseUrl}/recipes/`,
-      lastModified: new Date(),
+      lastModified,
       changeFrequency: 'weekly',
       priority: 0.9,
     },
     ...recipesData.recipes.map((recipe) => ({
       url: `${baseUrl}/recipe/${recipe.slug}/`,
-      lastModified: new Date(),
+      lastModified,
       changeFrequency: 'monthly',
       priority: 0.8,
     }))
@@ -132,7 +211,7 @@ export default function sitemap() {
   // Bundle pages
   const bundlePages = bundlesData.bundles.map((bundle) => ({
     url: `${baseUrl}/bundle/${bundle.slug}/`,
-    lastModified: new Date(),
+    lastModified,
     changeFrequency: 'monthly',
     priority: 0.8,
   }));
@@ -140,10 +219,17 @@ export default function sitemap() {
   // Guide pages
   const guidePages = guides.map((guide) => ({
     url: `${baseUrl}/guide/${guide}/`,
-    lastModified: new Date(),
+    lastModified,
     changeFrequency: 'monthly',
     priority: 0.8,
   }));
 
-  return [...staticPages, ...calculatorPages, ...itemPages, ...giftPages, ...fishPages, ...recipePages, ...bundlePages, ...guidePages];
+  const professionPages = professions.map((profession) => ({
+    url: `${baseUrl}/guide/profession/${profession}/`,
+    lastModified,
+    changeFrequency: 'monthly',
+    priority: 0.7,
+  }));
+
+  return [...staticPages, ...calculatorPages, ...itemPages, ...giftPages, ...fishPages, ...recipePages, ...bundlePages, ...guidePages, ...professionPages];
 }

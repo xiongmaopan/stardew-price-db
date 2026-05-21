@@ -3,22 +3,22 @@ import GiftsContent from './GiftsContent';
 
 export const metadata = {
   title: 'Stardew Valley NPC Gifts - Loved Items for All 34 Characters (1.6)',
-  description: 'Best gifts for every NPC in Stardew Valley 1.6. All 34 characters with loved items, birthdays, and heart event requirements. Marriage candidates included.',
+  description: 'Best gifts for every NPC in Stardew Valley 1.6.15. All 34 characters with loved items, birthdays, and heart event requirements. Marriage candidates included.',
   keywords: [
     'Stardew Valley gifts',
     'Stardew Valley NPC loved items',
     'best gifts Stardew Valley',
     'Stardew Valley friendship',
     'marriage candidates gifts',
-    'Stardew Valley 1.6 gifts',
+    'Stardew Valley 1.6.15 gifts',
     'NPC birthday gifts',
     'loved gifts all characters'
   ],
   alternates: {
-    canonical: '/gifts',
+    canonical: '/gifts/',
   },
   openGraph: {
-    title: 'Stardew Valley NPC Gifts - All 34 Characters (v1.6)',
+    title: 'Stardew Valley NPC Gifts - All 34 Characters (v1.6.15)',
     description: 'Loved items, birthdays, and heart requirements for all NPCs.',
     url: 'https://stardewpricedb.com/gifts',
     type: 'website',

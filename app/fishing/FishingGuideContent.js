@@ -345,7 +345,7 @@ export default function FishingGuideContent({ fishData }) {
             <p className="text-blue-100 max-w-3xl text-lg leading-relaxed mb-6">
             {fishData.fish.length} catchable fish across {fishData.locations.length} locations. Includes spawn times, 
             seasons, weather conditions, and difficulty ratings. {legendaryFish.length} legendary fish with exact 
-            catch requirements. All data verified for Stardew Valley 1.6.
+            catch requirements. All data verified for Stardew Valley 1.6.15.
           </p>
 
           <div className="flex flex-wrap gap-4 text-sm">

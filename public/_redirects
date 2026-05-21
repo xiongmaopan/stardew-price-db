@@ -1,4 +1,9 @@
 # Stardew Price DB Redirects
+# Consolidate thin item guide URLs into canonical item pages
+/item/:slug/guide/ /item/:slug/ 301
+/item/:slug/guide /item/:slug/ 301
+/guide/best-crops/ /guide/best-crops-by-season/ 301
+/guide/best-crops /guide/best-crops-by-season/ 301
 # 将鱼类从 /item/ 重定向到 /fishing/
 
 # 鱼类重定向 (Fish redirects)

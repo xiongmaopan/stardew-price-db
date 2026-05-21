@@ -1,17 +1,18 @@
 import fishData from '@/data/fish.json';
+import verificationData from '@/data/verification.json';
 import FishingGuideContent from './FishingGuideContent';
 
 // SEO Metadata - High Quality for Google
 export const metadata = {
   title: 'Stardew Valley Fish Locations, Seasons & Prices (1.6 Guide)',
-  description: '67 fish with exact locations, times, seasons, and difficulty ratings. Includes all 5 legendary fish, Legendary II fish, Night Market fish, and Crab Pot catches with tackle recommendations.',
+  description: '67 Stardew Valley fish with locations, times, seasons, difficulty, legendary fish, Night Market fish, Crab Pot catches, and tackle tips.',
   keywords: [
     'Stardew Valley fish locations',
     'Stardew Valley fishing guide',
     'Stardew Valley legendary fish',
     'how to catch Legend fish',
     'Stardew fishing tackle',
-    'Stardew Valley 1.6 fishing',
+    'Stardew Valley 1.6.15 fishing',
     'Stardew fish seasons',
     'Stardew Valley fish prices',
     'Pufferfish location',
@@ -19,12 +20,12 @@ export const metadata = {
     'fishing difficulty Stardew'
   ],
   alternates: {
-    canonical: '/fishing',
+    canonical: '/fishing/',
   },
   openGraph: {
-    title: 'Stardew Valley Fish Locations & Seasons (v1.6)',
+    title: 'Stardew Valley Fish Locations & Seasons (v1.6.15)',
     description: 'All 67 fish with locations, times, seasons, difficulty. Legendary fish included.',
-    url: 'https://stardewpricedb.com/fishing',
+    url: 'https://stardewpricedb.com/fishing/',
     type: 'article',
     images: [
       {
@@ -49,8 +50,8 @@ function generateJsonLd() {
     {
       '@context': 'https://schema.org',
       '@type': 'Article',
-      headline: 'Stardew Valley Fish Locations, Seasons & Difficulty (v1.6)',
-      description: 'All 67 fish with exact locations, times, seasons, and difficulty ratings. Data verified against game files.',
+      headline: 'Stardew Valley Fish Locations, Seasons & Difficulty (v1.6.15)',
+      description: 'All 67 fish with exact locations, times, seasons, and difficulty ratings. Formula-checked against Stardew Valley Wiki data.',
       author: {
         '@type': 'Organization',
         name: 'StardewPriceDB'
@@ -60,8 +61,8 @@ function generateJsonLd() {
         name: 'StardewPriceDB',
         url: 'https://stardewpricedb.com'
       },
-      datePublished: '2025-12-09',
-      dateModified: new Date().toISOString().split('T')[0],
+      datePublished: '2026-05-19',
+      dateModified: verificationData.lastVerified.split('T')[0],
       mainEntityOfPage: {
         '@type': 'WebPage',
         '@id': 'https://stardewpricedb.com/fishing'

@@ -1,14 +1,15 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Year 1 Money Making Guide - Stardew Valley 1.6',
+  title: 'Year 1 Money Making Guide - Stardew Valley 1.6.15',
   description: 'Realistic Year 1 money strategies for Stardew Valley. Season-by-season breakdown of crops, fishing, foraging, and mining to maximize your first year income.',
   alternates: {
-    canonical: '/guide/year-1-money',
+    canonical: '/guide/year-1-money/',
   },
   openGraph: {
-    title: 'Year 1 Money Making Guide - Stardew Valley 1.6',
+    title: 'Year 1 Money Making Guide - Stardew Valley 1.6.15',
     description: 'Realistic strategies to reach 100k+ in Year 1 without exploits.',
+    url: 'https://stardewpricedb.com/guide/year-1-money/',
   },
 };
 
@@ -21,8 +22,8 @@ const jsonLd = {
       headline: 'Year 1 Money Making Guide: Realistic Strategies',
       description: 'Season-by-season breakdown to maximize your first year income in Stardew Valley.',
       image: 'https://stardewpricedb.com/og-image.png',
-      datePublished: '2025-01-14',
-      dateModified: '2025-06-21',
+      datePublished: '2026-05-19',
+      dateModified: '2026-05-19',
       author: { '@type': 'Organization', name: 'StardewPriceDB', url: 'https://stardewpricedb.com' },
       publisher: { '@type': 'Organization', name: 'StardewPriceDB', logo: { '@type': 'ImageObject', url: 'https://stardewpricedb.com/favicon.svg' } },
       mainEntityOfPage: 'https://stardewpricedb.com/guide/year-1-money'
@@ -133,7 +134,7 @@ export default function Year1MoneyGuide() {
               ✓ Season-by-Season
             </span>
             <span className="bg-white/20 backdrop-blur px-4 py-2 rounded-full text-sm font-medium">
-              ✓ v1.6 Verified
+              ✓ v1.6.15 Verified
             </span>
           </div>
         </div>
@@ -679,7 +680,7 @@ export default function Year1MoneyGuide() {
           {/* Footer */}
           <div className="border-t pt-8 mt-8 not-prose">
             <p className="text-sm text-slate-500">
-              Last updated: June 2025 • Verified for Stardew Valley 1.6
+              Last updated: May 2026 - Verified for Stardew Valley 1.6.15
             </p>
           </div>
         </article>

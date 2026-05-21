@@ -96,14 +96,157 @@ function ItemImage({ item, size = 64 }) {
   );
 }
 
-export default function ItemDetailContent({ item, relatedItems, strategy }) {
+function formatGold(value) {
+  if (value === null || value === undefined || Number.isNaN(value)) return 'N/A';
+  return `${Math.round(value).toLocaleString()}g`;
+}
+
+function hasQualityPrices(item) {
+  return item.hasQuality !== false && ['Crops', 'Forage', 'Animal Products'].includes(item.category);
+}
+
+function getVariablePriceInfo(item) {
+  if (item.slug === 'aged-roe') {
+    return {
+      label: 'Variable',
+      caption: 'Depends on fish species',
+      description: 'Aged Roe is not one fixed item price. Its value depends on the fish that produced the Roe; most Aged Roe is worth 2x the Roe price, while Sturgeon Roe becomes Caviar.',
+      href: '/fish-ponds/',
+    };
+  }
+
+  if (item.slug === 'omni-geode') {
+    return {
+      label: 'No sell price',
+      caption: 'Utility item',
+      description: 'Omni Geode is best treated as a utility item. Crack it open, trade it, or use it for unlocks instead of counting it as shipping profit.',
+      href: '/resources/',
+    };
+  }
+
+  return null;
+}
+
+function formatGoldPerDay(value) {
+  if (value === null || value === undefined || Number.isNaN(value)) return 'N/A';
+  return `${Math.round(value * 10) / 10}g/day`;
+}
+
+function getProcessingDecisionRows(item, rawPrice, professions) {
+  if (!item.processing) return [];
+
+  const rows = [
+    {
+      method: 'Sell raw',
+      output: item.name,
+      value: rawPrice,
+      time: 0,
+      gain: 0,
+      gainPerDay: null,
+      note: 'Fast cash, no machine slot required.',
+    },
+  ];
+
+  if (item.processing.kegPrice) {
+    const value = calculateArtisanPrice(item.processing.kegPrice, professions);
+    const time = item.processing.kegTime || 7;
+    const gain = value - rawPrice;
+    rows.push({
+      method: 'Keg',
+      output: item.processing.kegProduct || (item.subcategory === 'Vegetable' ? 'Juice' : 'Wine'),
+      value,
+      time,
+      gain,
+      gainPerDay: gain / time,
+      note: 'Best when machine capacity is available and total value matters.',
+    });
+  }
+
+  if (item.processing.jarPrice) {
+    const value = calculateArtisanPrice(item.processing.jarPrice, professions);
+    const time = item.processing.jarTime || 3;
+    const gain = value - rawPrice;
+    rows.push({
+      method: 'Preserves Jar',
+      output: item.processing.jarProduct || (item.subcategory === 'Vegetable' ? 'Pickles' : 'Jelly'),
+      value,
+      time,
+      gain,
+      gainPerDay: gain / time,
+      note: 'Useful for faster turnover or crop overflow.',
+    });
+  }
+
+  if (item.processing.machine && item.processing.price) {
+    const value = calculateArtisanPrice(item.processing.price, professions);
+    const gain = value - rawPrice;
+    rows.push({
+      method: item.processing.machine,
+      output: item.processing.product || item.processing.machine,
+      value,
+      time: item.processing.time || null,
+      gain,
+      gainPerDay: null,
+      note: 'Special machine output.',
+    });
+  }
+
+  return rows;
+}
+
+function getBestProcessingRow(rows) {
+  return rows
+    .filter((row) => row.method !== 'Sell raw')
+    .sort((a, b) => b.value - a.value)[0];
+}
+
+function formatMachineTime(time) {
+  if (!time) return 'None';
+  if (typeof time === 'number') return `${time} days`;
+  return time;
+}
+
+const dehydratorFruitNames = new Set(['Coconut', 'Cactus Fruit', 'Salmonberry', 'Blackberry', 'Spice Berry', 'Grape']);
+
+function getDehydratorInfo(item, rawPrice, professions) {
+  const isGrape = item.name === 'Grape';
+  const isFruit = item.subcategory === 'Fruit' || dehydratorFruitNames.has(item.name);
+  const isMushroom = item.subcategory === 'Mushroom' && item.name !== 'Red Mushroom';
+
+  if (!isFruit && !isMushroom) return null;
+
+  const baseOutputPrice = isGrape ? 600 : Math.floor(item.basePrice * 7.5 + 25);
+  const value = calculateArtisanPrice(baseOutputPrice, professions);
+  const rawIngredientValue = rawPrice * 5;
+
+  return {
+    output: isGrape ? 'Raisins' : (isMushroom ? 'Dried Mushrooms' : `Dried ${item.name}`),
+    ingredients: `5 x ${item.name}`,
+    baseOutputPrice,
+    value,
+    rawIngredientValue,
+    gain: value - rawIngredientValue,
+    formula: isGrape ? 'fixed 600g for 5 Grapes' : 'floor(base price x 7.5 + 25)',
+    note: isGrape
+      ? 'Grapes become Raisins instead of Dried Fruit.'
+      : 'Dehydrator price uses the base item price and ignores input quality.',
+  };
+}
+
+export default function ItemDetailContent({ item, relatedItems, strategy, coreGuide }) {
   const professions = useProfessions();
+  const variablePrice = getVariablePriceInfo(item);
+  const supportsQuality = hasQualityPrices(item);
   
   // Helper function for price calculation
   const p = (quality) => calculatePrice(item.basePrice, quality, professions, item.category);
+  const normalPrice = p('normal');
+  const processingDecisionRows = getProcessingDecisionRows(item, normalPrice, professions);
+  const bestProcessingRow = getBestProcessingRow(processingDecisionRows);
+  const dehydratorInfo = getDehydratorInfo(item, normalPrice, professions);
   
   // SEO Title
-  const seoTitle = `${item.name} Sell Price & Profit Guide (2025)`;
+  const seoTitle = `${item.name} Sell Price & Profit Guide (2026)`;
 
   return (
     <div className="animate-fade-in">
@@ -153,7 +296,10 @@ export default function ItemDetailContent({ item, relatedItems, strategy }) {
 
           <div className="bg-slate-50 p-4 rounded-lg border border-slate-200 min-w-[200px]">
             <div className="text-xs text-slate-500 uppercase font-bold mb-1">Base Sell Price</div>
-            <div className="text-2xl font-black text-slate-800">{item.basePrice}g</div>
+            <div className="text-2xl font-black text-slate-800">{variablePrice?.label || `${item.basePrice}g`}</div>
+            {variablePrice && (
+              <div className="mt-1 text-xs text-slate-600">{variablePrice.caption}</div>
+            )}
             {item.growthTime && (
               <div className="mt-2 text-sm text-slate-600 flex items-center">
                 <TrendingUp size={16} className="mr-1 text-green-600" />
@@ -174,6 +320,22 @@ export default function ItemDetailContent({ item, relatedItems, strategy }) {
         <div className="lg:col-span-2 space-y-8">
           
           {/* 1. Sell Prices Table */}
+          {variablePrice ? (
+            <section className="bg-white rounded-xl shadow-sm border border-amber-200 overflow-hidden">
+              <div className="bg-amber-50 px-6 py-4 border-b border-amber-200">
+                <h2 className="font-bold text-lg text-amber-950 flex items-center">
+                  <Package className="mr-2 text-amber-700" size={20} />
+                  Variable Price Notice
+                </h2>
+              </div>
+              <div className="p-6">
+                <p className="text-slate-700 mb-4">{variablePrice.description}</p>
+                <Link href={variablePrice.href} className="inline-flex rounded-lg bg-amber-700 px-4 py-2 text-sm font-bold text-white hover:bg-amber-800">
+                  View exact related values
+                </Link>
+              </div>
+            </section>
+          ) : (
           <section className="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
             <div className="bg-slate-50 px-6 py-4 border-b border-slate-200 flex justify-between items-center">
               <h2 className="font-bold text-lg text-slate-800 flex items-center">
@@ -195,7 +357,7 @@ export default function ItemDetailContent({ item, relatedItems, strategy }) {
               <table className="w-full text-left border-collapse">
                 <thead>
                   <tr className="text-sm font-semibold text-slate-500 bg-slate-50 border-b border-slate-200">
-                    <th className="px-6 py-3">Quality</th>
+                    <th className="px-6 py-3">{supportsQuality ? 'Quality' : 'Price Type'}</th>
                     <th className="px-6 py-3">Sell Price</th>
                     <th className="px-6 py-3 hidden sm:table-cell">Multiplier</th>
                   </tr>
@@ -204,33 +366,47 @@ export default function ItemDetailContent({ item, relatedItems, strategy }) {
                   <tr className="hover:bg-slate-50">
                     <td className="px-6 py-4 font-medium text-slate-700">Normal</td>
                     <td className="px-6 py-4 font-mono font-bold text-slate-800">{p('normal')}g</td>
-                    <td className="px-6 py-4 hidden sm:table-cell text-slate-400 text-sm">1.0x</td>
+                    <td className="px-6 py-4 hidden sm:table-cell text-slate-400 text-sm">{supportsQuality ? '1.0x' : 'Fixed'}</td>
                   </tr>
-                  <tr className="hover:bg-slate-50">
-                    <td className="px-6 py-4 font-medium text-slate-700 flex items-center">
-                      <span className="w-3 h-3 rounded-full bg-gray-300 mr-2 border border-gray-400"></span> Silver
-                    </td>
-                    <td className="px-6 py-4 font-mono font-bold text-slate-800">{p('silver')}g</td>
-                    <td className="px-6 py-4 hidden sm:table-cell text-slate-400 text-sm">1.25x</td>
-                  </tr>
-                  <tr className="hover:bg-slate-50">
-                    <td className="px-6 py-4 font-medium text-yellow-600 flex items-center">
-                      <span className="w-3 h-3 rounded-full bg-yellow-400 mr-2 border border-yellow-500"></span> Gold
-                    </td>
-                    <td className="px-6 py-4 font-mono font-bold text-yellow-700">{p('gold')}g</td>
-                    <td className="px-6 py-4 hidden sm:table-cell text-slate-400 text-sm">1.5x</td>
-                  </tr>
-                  <tr className="bg-purple-50 hover:bg-purple-100">
-                    <td className="px-6 py-4 font-medium text-purple-700 flex items-center">
-                      <span className="w-3 h-3 rounded-full bg-purple-500 mr-2 border border-purple-600"></span> Iridium
-                    </td>
-                    <td className="px-6 py-4 font-mono font-bold text-purple-800">{p('iridium')}g</td>
-                    <td className="px-6 py-4 hidden sm:table-cell text-slate-400 text-sm">2.0x</td>
-                  </tr>
+                  {item.professionBonus && (
+                    <tr className="hover:bg-green-50">
+                      <td className="px-6 py-4 font-medium text-green-700">{item.professionBonus.name}</td>
+                      <td className="px-6 py-4 font-mono font-bold text-green-800">{formatGold(item.professionBonus.price)}</td>
+                      <td className="px-6 py-4 hidden sm:table-cell text-slate-400 text-sm">
+                        {item.professionBonus.multiplier}x
+                      </td>
+                    </tr>
+                  )}
+                  {supportsQuality && (
+                    <>
+                      <tr className="hover:bg-slate-50">
+                        <td className="px-6 py-4 font-medium text-slate-700 flex items-center">
+                          <span className="w-3 h-3 rounded-full bg-gray-300 mr-2 border border-gray-400"></span> Silver
+                        </td>
+                        <td className="px-6 py-4 font-mono font-bold text-slate-800">{p('silver')}g</td>
+                        <td className="px-6 py-4 hidden sm:table-cell text-slate-400 text-sm">1.25x</td>
+                      </tr>
+                      <tr className="hover:bg-slate-50">
+                        <td className="px-6 py-4 font-medium text-yellow-600 flex items-center">
+                          <span className="w-3 h-3 rounded-full bg-yellow-400 mr-2 border border-yellow-500"></span> Gold
+                        </td>
+                        <td className="px-6 py-4 font-mono font-bold text-yellow-700">{p('gold')}g</td>
+                        <td className="px-6 py-4 hidden sm:table-cell text-slate-400 text-sm">1.5x</td>
+                      </tr>
+                      <tr className="bg-purple-50 hover:bg-purple-100">
+                        <td className="px-6 py-4 font-medium text-purple-700 flex items-center">
+                          <span className="w-3 h-3 rounded-full bg-purple-500 mr-2 border border-purple-600"></span> Iridium
+                        </td>
+                        <td className="px-6 py-4 font-mono font-bold text-purple-800">{p('iridium')}g</td>
+                        <td className="px-6 py-4 hidden sm:table-cell text-slate-400 text-sm">2.0x</td>
+                      </tr>
+                    </>
+                  )}
                 </tbody>
               </table>
             </div>
           </section>
+          )}
 
           {/* Strategy Pro Tip - High-value SEO content */}
           {strategy && (
@@ -244,7 +420,7 @@ export default function ItemDetailContent({ item, relatedItems, strategy }) {
                   <p className="text-amber-800 leading-relaxed mb-4">{strategy.proTip}</p>
                   
                   <div className="bg-white/60 rounded-lg p-4 border border-amber-200">
-                    <h4 className="font-semibold text-slate-700 text-sm mb-2 uppercase tracking-wide">Strategy Analysis (v1.6)</h4>
+                    <h4 className="font-semibold text-slate-700 text-sm mb-2 uppercase tracking-wide">Strategy Analysis (v1.6.15)</h4>
                     <p className="text-slate-600 text-sm leading-relaxed">{strategy.strategyNote}</p>
                   </div>
                   
@@ -269,6 +445,140 @@ export default function ItemDetailContent({ item, relatedItems, strategy }) {
                   </div>
                 </div>
               </div>
+            </section>
+          )}
+
+          {coreGuide && (
+            <section className="bg-white rounded-xl shadow-sm border border-slate-200 p-6">
+              <h2 className="font-bold text-lg text-slate-800 mb-4 flex items-center">
+                <TrendingUp className="mr-2 text-green-600" size={20} />
+                Best Use Strategy for {item.name}
+              </h2>
+              <p className="text-slate-600 mb-4">{coreGuide.intent}</p>
+              <div className="grid md:grid-cols-2 gap-4 mb-5">
+                <div className="bg-green-50 border border-green-200 rounded-lg p-4">
+                  <h3 className="font-semibold text-green-900 mb-2">Best choice</h3>
+                  <p className="text-sm text-green-800">{coreGuide.bestChoice}</p>
+                </div>
+                <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
+                  <h3 className="font-semibold text-blue-900 mb-2">Do this</h3>
+                  <p className="text-sm text-blue-800">{coreGuide.doThis}</p>
+                </div>
+              </div>
+              <div className="bg-red-50 border border-red-100 rounded-lg p-4 mb-5">
+                <h3 className="font-semibold text-red-900 mb-2">Avoid this mistake</h3>
+                <p className="text-sm text-red-800">{coreGuide.avoidThis}</p>
+              </div>
+              <div>
+                <h3 className="font-semibold text-slate-700 mb-3">Related strategy guides</h3>
+                <div className="flex flex-wrap gap-2">
+                  {coreGuide.links.map((link) => (
+                    <Link
+                      key={link.href}
+                      href={link.href}
+                      className="px-3 py-2 rounded-lg bg-slate-50 border border-slate-200 text-sm font-medium text-blue-700 hover:border-blue-300 hover:bg-blue-50 transition"
+                    >
+                      {link.label}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            </section>
+          )}
+
+          {item.processing && processingDecisionRows.length > 1 && (
+            <section className="bg-white rounded-xl shadow-sm border border-slate-200 p-6">
+              <h2 className="font-bold text-lg text-slate-800 mb-4 flex items-center">
+                <Calculator className="mr-2 text-blue-600" size={20} />
+                Sell vs Process Decision for {item.name}
+              </h2>
+              <p className="text-slate-600 mb-4">
+                If you are deciding whether to sell {item.name} raw or process it first, compare total value and machine
+                time. {bestProcessingRow ? `The highest-value processed option is ${bestProcessingRow.output} from a ${bestProcessingRow.method}.` : ''}
+              </p>
+              <div className="overflow-x-auto border border-slate-200 rounded-lg">
+                <table className="w-full text-left">
+                  <thead className="bg-slate-50 text-sm text-slate-500">
+                    <tr>
+                      <th className="px-4 py-3">Method</th>
+                      <th className="px-4 py-3">Output</th>
+                      <th className="px-4 py-3 text-right">Sell Value</th>
+                      <th className="px-4 py-3 text-right">Gain vs Raw</th>
+                      <th className="px-4 py-3 text-right">Machine Time</th>
+                      <th className="px-4 py-3 text-right">Gain/Day</th>
+                    </tr>
+                  </thead>
+                  <tbody className="divide-y divide-slate-100">
+                    {processingDecisionRows.map((row) => (
+                      <tr key={row.method} className="hover:bg-slate-50">
+                        <td className="px-4 py-3 font-medium text-slate-800">{row.method}</td>
+                        <td className="px-4 py-3 text-slate-700">{row.output}</td>
+                        <td className="px-4 py-3 text-right font-bold">{formatGold(row.value)}</td>
+                        <td className="px-4 py-3 text-right text-green-700">{formatGold(row.gain)}</td>
+                        <td className="px-4 py-3 text-right">{formatMachineTime(row.time)}</td>
+                        <td className="px-4 py-3 text-right">{formatGoldPerDay(row.gainPerDay)}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+              <div className="mt-4 grid md:grid-cols-2 gap-4">
+                <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
+                  <h3 className="font-semibold text-blue-950 mb-2">Use total value when</h3>
+                  <p className="text-sm text-blue-900">
+                    You have enough machines and want maximum gold per item, especially for premium Wine, Juice, Oil, or Caviar.
+                  </p>
+                </div>
+                <div className="bg-green-50 border border-green-200 rounded-lg p-4">
+                  <h3 className="font-semibold text-green-950 mb-2">Use gain/day when</h3>
+                  <p className="text-sm text-green-900">
+                    Your Kegs or Jars are the bottleneck and faster processing keeps your farm cash flow moving.
+                  </p>
+                </div>
+              </div>
+            </section>
+          )}
+
+          {dehydratorInfo && (
+            <section className="bg-white rounded-xl shadow-sm border border-slate-200 p-6">
+              <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4 mb-5">
+                <div>
+                  <h2 className="font-bold text-lg text-slate-800 mb-2 flex items-center">
+                    <Calculator className="mr-2 text-orange-600" size={20} />
+                    Dehydrator Formula for {item.name}
+                  </h2>
+                  <p className="text-sm text-slate-600">
+                    Stardew Valley 1.6 Dehydrator products are variable-price goods, so this page calculates the value from the input item instead of storing one fixed price.
+                  </p>
+                </div>
+                <div className={`text-xs px-2 py-1 rounded border self-start ${professions.artisan ? 'bg-purple-100 border-purple-300 text-purple-800' : 'bg-gray-100 text-gray-500'}`}>
+                  Artisan: {professions.artisan ? 'Active (+40%)' : 'Inactive'}
+                </div>
+              </div>
+
+              <div className="grid md:grid-cols-3 gap-4">
+                <div className="rounded-lg border border-orange-200 bg-orange-50 p-4">
+                  <div className="text-xs uppercase font-bold text-orange-700 mb-1">Output</div>
+                  <div className="text-xl font-black text-orange-950">{dehydratorInfo.output}</div>
+                  <div className="text-xs text-orange-800 mt-1">{dehydratorInfo.ingredients}</div>
+                </div>
+                <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
+                  <div className="text-xs uppercase font-bold text-slate-500 mb-1">Formula</div>
+                  <code className="text-sm font-bold text-slate-900">{dehydratorInfo.formula}</code>
+                  <div className="text-xs text-slate-500 mt-1">Base output: {formatGold(dehydratorInfo.baseOutputPrice)}</div>
+                </div>
+                <div className="rounded-lg border border-green-200 bg-green-50 p-4">
+                  <div className="text-xs uppercase font-bold text-green-700 mb-1">Sell Value</div>
+                  <div className="text-2xl font-black text-green-900">{formatGold(dehydratorInfo.value)}</div>
+                  <div className={dehydratorInfo.gain >= 0 ? 'text-xs text-green-700 mt-1' : 'text-xs text-red-700 mt-1'}>
+                    {formatGold(dehydratorInfo.gain)} vs selling 5 raw
+                  </div>
+                </div>
+              </div>
+
+              <p className="mt-4 text-sm text-slate-600">
+                {dehydratorInfo.note} See the public <Link href="/about-data/" className="font-medium text-blue-700 hover:underline">formula audit</Link> for source links and known limits.
+              </p>
             </section>
           )}
 
@@ -421,9 +731,33 @@ export default function ItemDetailContent({ item, relatedItems, strategy }) {
         {/* RIGHT COLUMN: Sidebar / Related */}
         <div className="lg:col-span-1 space-y-6">
           
-          {/* Ad Placeholder */}
-          <div className="bg-slate-100 rounded-xl h-64 flex items-center justify-center border-2 border-dashed border-slate-300 text-slate-400 text-sm">
-            Ad Space (300x250)
+          <div className="bg-white rounded-xl shadow-sm border border-slate-200 p-5">
+            <div className="text-sm font-bold text-slate-500 uppercase tracking-wide mb-3">
+              Price tools
+            </div>
+            <div className="space-y-3">
+              <Link
+                href="/selling-prices/"
+                className="block rounded-lg border border-slate-200 p-3 hover:border-blue-300 hover:bg-blue-50 transition"
+              >
+                <div className="text-sm font-bold text-slate-800">All selling prices</div>
+                <div className="text-xs text-slate-500 mt-1">Compare crops, fish, minerals, artisan goods, and resources.</div>
+              </Link>
+              <Link
+                href="/calculator/spring/"
+                className="block rounded-lg border border-slate-200 p-3 hover:border-green-300 hover:bg-green-50 transition"
+              >
+                <div className="text-sm font-bold text-slate-800">Profit calculator</div>
+                <div className="text-xs text-slate-500 mt-1">Check season profits with profession bonuses and processing values.</div>
+              </Link>
+              <Link
+                href="/about-data/"
+                className="block rounded-lg border border-slate-200 p-3 hover:border-amber-300 hover:bg-amber-50 transition"
+              >
+                <div className="text-sm font-bold text-slate-800">Data verification</div>
+                <div className="text-xs text-slate-500 mt-1">Review sources, formulas, and the current game version.</div>
+              </Link>
+            </div>
           </div>
 
           {/* Related Items (Internal Linking) */}
@@ -467,7 +801,7 @@ export default function ItemDetailContent({ item, relatedItems, strategy }) {
               </div>
               <div className="flex justify-between">
                 <span className="text-slate-500">Base Price</span>
-                <span className="font-medium">{item.basePrice}g</span>
+                <span className="font-medium">{variablePrice?.label || `${item.basePrice}g`}</span>
               </div>
               {item.growthTime && (
                 <div className="flex justify-between">

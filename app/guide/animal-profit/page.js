@@ -1,14 +1,15 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Animal Profit Guide - Which Animals Make the Most Money | Stardew Valley 1.6',
+  title: 'Animal Profit Guide - Stardew Valley 1.6.15',
   description: 'Profit breakdown for every barn and coop animal. ROI calculations, processing comparisons, and which animals to prioritize for maximum gold per day.',
   alternates: {
-    canonical: '/guide/animal-profit',
+    canonical: '/guide/animal-profit/',
   },
   openGraph: {
-    title: 'Animal Profit Guide - Stardew Valley 1.6',
+    title: 'Animal Profit Guide - Stardew Valley 1.6.15',
     description: 'Complete profit analysis for Chickens, Cows, Pigs, and more. Includes processing ROI.',
+    url: 'https://stardewpricedb.com/guide/animal-profit/',
   },
 };
 
@@ -19,10 +20,10 @@ const jsonLd = {
       '@type': 'Article',
       '@id': 'https://stardewpricedb.com/guide/animal-profit#article',
       headline: 'Animal Profit Guide - Which Animals Make the Most Money',
-      description: 'Complete profit analysis for all barn and coop animals in Stardew Valley 1.6.',
+      description: 'Complete profit analysis for all barn and coop animals in Stardew Valley 1.6.15.',
       image: 'https://stardewpricedb.com/og-image.png',
-      datePublished: '2025-12-15',
-      dateModified: '2025-06-21',
+      datePublished: '2026-05-19',
+      dateModified: '2026-05-19',
       author: {
         '@type': 'Organization',
         name: 'StardewPriceDB',
@@ -178,7 +179,7 @@ export default function AnimalProfitGuide() {
               💰 Profit Guide
             </span>
             <span className="bg-white/20 backdrop-blur px-3 py-1 rounded-full text-sm font-medium">
-              v1.6 Verified
+              v1.6.15 Verified
             </span>
           </div>
           <h1 className="text-3xl md:text-4xl font-extrabold mb-4">
@@ -649,7 +650,7 @@ export default function AnimalProfitGuide() {
                 <div className="font-bold text-teal-800">🏠 Greenhouse Layout</div>
                 <p className="text-sm text-slate-600 mt-1">Maximize your greenhouse</p>
               </Link>
-              <Link href="/?category=Animal%20Products" className="block bg-gradient-to-br from-orange-50 to-orange-100 border border-orange-200 rounded-xl p-4 hover:shadow-md transition-shadow">
+              <Link href="/animal-products/" className="block bg-gradient-to-br from-orange-50 to-orange-100 border border-orange-200 rounded-xl p-4 hover:shadow-md transition-shadow">
                 <div className="font-bold text-orange-800">📊 Animal Products</div>
                 <p className="text-sm text-slate-600 mt-1">All eggs, milk, wool prices</p>
               </Link>
@@ -659,7 +660,7 @@ export default function AnimalProfitGuide() {
           {/* Footer */}
           <div className="border-t pt-8 mt-8 not-prose">
             <p className="text-sm text-slate-500">
-              Last updated: June 2025 • Verified for Stardew Valley 1.6
+              Last updated: May 2026 - Verified for Stardew Valley 1.6.15
             </p>
           </div>
         </article>

@@ -1,7 +1,16 @@
 import { notFound } from 'next/navigation';
 import bundlesData from '@/data/bundles.json';
+import verificationData from '@/data/verification.json';
 import bundleStrategies from '@/data/bundle-strategies.json';
 import BundleDetailContent from './BundleDetailContent';
+
+const SITE_URL = 'https://stardewpricedb.com';
+const OG_IMAGE = '/og-image.png';
+
+function shortDescription(text, max = 155) {
+  if (text.length <= max) return text;
+  return `${text.slice(0, max - 1).trimEnd()}…`;
+}
 
 // Generate static params for all bundles
 export async function generateStaticParams() {
@@ -22,9 +31,13 @@ export async function generateMetadata({ params }) {
   const room = bundlesData.rooms.find(r => r.slug === bundle.roomSlug);
   const itemNames = bundle.items.slice(0, 5).map(i => i.name).join(', ');
   
+  const description = shortDescription(
+    `${bundle.name} guide for Stardew Valley's ${bundle.room}. Items: ${itemNames}${bundle.items.length > 5 ? '...' : ''}. Reward: ${bundle.reward.quantity}x ${bundle.reward.item}.`
+  );
+
   return {
-    title: `${bundle.name} - ${bundle.room} | Stardew Valley Community Center Guide`,
-    description: `Complete guide to the ${bundle.name} in Stardew Valley's ${bundle.room}. Required items: ${itemNames}${bundle.items.length > 5 ? '...' : ''}. Reward: ${bundle.reward.quantity}x ${bundle.reward.item}. Difficulty: ${bundle.difficulty}. ${bundle.tips}`,
+    title: `${bundle.name} Bundle - ${bundle.room} Guide`,
+    description,
     keywords: [
       `${bundle.name} Stardew Valley`,
       `${bundle.room} bundles`,
@@ -36,14 +49,15 @@ export async function generateMetadata({ params }) {
       'Community Center completion',
       ...bundle.items.slice(0, 5).map(i => `${i.name} bundle`),
     ],    alternates: {
-      canonical: `https://stardewpricedb.com/bundle/${slugId}`,
+      canonical: `${SITE_URL}/bundle/${slugId}/`,
     },
     openGraph: {
       title: `${bundle.name} - ${bundle.room} Bundle Guide`,
-      description: `Complete the ${bundle.name} to earn ${bundle.reward.quantity}x ${bundle.reward.item}. ${bundle.difficulty} difficulty.`,
-      url: `https://stardewpricedb.com/bundle/${slugId}`,
+      description,
+      url: `${SITE_URL}/bundle/${slugId}/`,
       type: 'article',
       siteName: 'StardewPriceDB',
+      images: [{ url: OG_IMAGE, width: 1200, height: 630, alt: `${bundle.name} bundle guide` }],
     },
     twitter: {
       card: 'summary',
@@ -113,8 +127,8 @@ function generateJsonLd(bundle, room) {
       name: 'StardewPriceDB',
       url: 'https://stardewpricedb.com'
     },
-    datePublished: '2025-12-09',
-    dateModified: new Date().toISOString().split('T')[0],
+    datePublished: '2026-05-19',
+    dateModified: verificationData.lastVerified.split('T')[0],
     mainEntityOfPage: {
       '@type': 'WebPage',
       '@id': `https://stardewpricedb.com/bundle/${bundle.slug}`
@@ -123,46 +137,6 @@ function generateJsonLd(bundle, room) {
       '@type': 'VideoGame',
       name: 'Stardew Valley'
     }
-  });
-
-  // FAQPage Schema
-  schemas.push({
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: [
-      {
-        '@type': 'Question',
-        name: `What items do I need for the ${bundle.name}?`,
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: `You need ${bundle.itemsRequired} items from this list: ${bundle.items.map(i => `${i.quantity}x ${i.name} (${i.quality} quality)`).join(', ')}.`
-        }
-      },
-      {
-        '@type': 'Question',
-        name: `What reward do I get for completing the ${bundle.name}?`,
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: `You receive ${bundle.reward.quantity}x ${bundle.reward.item} as a reward for completing this bundle.`
-        }
-      },
-      {
-        '@type': 'Question',
-        name: `Where is the ${bundle.name} located?`,
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: `The ${bundle.name} is located in the ${bundle.room} room of the Community Center.${room ? ` Completing all bundles in the ${bundle.room} will reward you with: ${room.reward}` : ''}`
-        }
-      },
-      {
-        '@type': 'Question',
-        name: `How hard is the ${bundle.name} to complete?`,
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: `This bundle is rated as ${bundle.difficulty}. ${bundle.tips}`
-        }
-      }
-    ]
   });
 
   // BreadcrumbList Schema

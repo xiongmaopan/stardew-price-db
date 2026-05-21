@@ -39,6 +39,17 @@ function getCategoryBgColor(category) {
 
 export default function ItemCard({ item }) {
   const [imgFormat, setImgFormat] = useState('webp'); // 'webp' -> 'png' -> 'error'
+  const detailUrl = item.category === 'Fish' ? `/fishing/${item.slug}/` : `/item/${item.slug}/`;
+  const priceLabel = item.slug === 'aged-roe'
+    ? 'Variable'
+    : item.slug === 'omni-geode'
+      ? 'No sell price'
+      : `${item.basePrice}g`;
+  const priceCaption = item.slug === 'aged-roe'
+    ? 'Depends on fish'
+    : item.slug === 'omni-geode'
+      ? 'Utility item'
+      : 'Base Price';
   const maxProcessPrice = item.processing 
     ? Math.max(item.processing.kegPrice || 0, item.processing.jarPrice || 0, item.processing.price || 0)
     : 0;
@@ -56,7 +67,7 @@ export default function ItemCard({ item }) {
 
   return (
     <Link 
-      href={`/item/${item.slug}/`}
+      href={detailUrl}
       className="bg-white rounded-xl shadow-sm hover:shadow-lg transition cursor-pointer border border-slate-200 group overflow-hidden block"
     >
       <div className="p-5 flex items-start space-x-4">
@@ -85,8 +96,8 @@ export default function ItemCard({ item }) {
             </span>
           </div>
           <div className="mt-2 flex items-baseline space-x-2">
-            <span className="text-2xl font-black text-slate-700">{item.basePrice}g</span>
-            <span className="text-xs text-slate-400">Base Price</span>
+            <span className="text-2xl font-black text-slate-700">{priceLabel}</span>
+            <span className="text-xs text-slate-400">{priceCaption}</span>
           </div>
           {maxProcessPrice > 0 && (
             <div className="mt-2 text-xs text-green-600 flex items-center">
@@ -97,7 +108,7 @@ export default function ItemCard({ item }) {
         </div>
       </div>
       <div className="bg-slate-50 px-5 py-2 border-t border-slate-100 flex justify-between items-center text-xs text-slate-500 group-hover:bg-blue-50/50 transition">
-        <span>View Profit Breakdown</span>
+        <span>View Sell Price & Profit</span>
         <ChevronRight size={14} />
       </div>
     </Link>

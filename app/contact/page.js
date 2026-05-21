@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import verificationData from '@/data/verification.json';
 
 export const metadata = {
   title: 'Contact Us - StardewPriceDB | Get in Touch',
@@ -10,7 +11,7 @@ export const metadata = {
     'Stardew Valley community'
   ],
   alternates: {
-    canonical: '/contact',
+    canonical: '/contact/',
   },
   openGraph: {
     title: 'Contact StardewPriceDB',
@@ -134,7 +135,7 @@ export default function ContactPage() {
           <div className="space-y-4">
             <FAQItem 
               question="How often is the database updated?"
-              answer="We update our database with every major Stardew Valley patch. Our data is currently verified for version 1.6.14."
+              answer={`We update our database with every major Stardew Valley patch. Our data is currently verified for version ${verificationData.gameVersion}.`}
             />
             <FAQItem 
               question="Can I use your data for my own project?"

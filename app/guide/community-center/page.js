@@ -1,13 +1,13 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Community Center Guide - Complete All Bundles in Year 1 | Stardew Valley 1.6',
-  description: 'Complete Community Center guide for Stardew Valley 1.6. Room-by-room breakdown with exact item sources, seasonal deadlines, and Year 1 completion strategy. Official game data verified.',
+  title: 'Community Center Guide - Stardew Valley Bundles',
+  description: 'Complete Stardew Valley Community Center guide with room-by-room bundles, item sources, seasonal deadlines, and Year 1 strategy.',
   alternates: {
     canonical: 'https://stardewpricedb.com/guide/community-center/',
   },
   openGraph: {
-    title: 'Community Center Complete Guide - Stardew Valley 1.6',
+    title: 'Community Center Complete Guide - Stardew Valley 1.6.15',
     description: 'Room-by-room breakdown with seasonal planning. Complete all 31 bundles and unlock the Greenhouse, Bus, and more.',
     url: 'https://stardewpricedb.com/guide/community-center/',
   },
@@ -21,8 +21,8 @@ const jsonLd = {
       '@id': 'https://stardewpricedb.com/guide/community-center/#article',
       headline: 'Community Center Guide - Complete All Bundles in Year 1',
       description: 'Complete Community Center walkthrough with room breakdowns, seasonal deadlines, and Year 1 completion strategy.',
-      datePublished: '2025-12-16',
-      dateModified: '2025-12-16',
+      datePublished: '2026-05-19',
+      dateModified: '2026-05-19',
       author: {
         '@type': 'Organization',
         name: 'StardewPriceDB',
@@ -102,8 +102,8 @@ export default function CommunityCenterGuide() {
           <div className="not-prose bg-amber-50 border-l-4 border-amber-500 p-4 my-6">
             <p className="font-medium text-amber-800">Data Source</p>
             <p className="text-amber-700 text-sm">
-              All item requirements and bundle data verified against Stardew Valley 1.6 game files. 
-              Last updated December 2025.
+              All item requirements and bundle data verified against Stardew Valley 1.6.15 game files. 
+              Last updated May 2026.
             </p>
           </div>
 

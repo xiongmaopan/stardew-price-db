@@ -1,14 +1,15 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Most Profitable Crops by Season - Stardew Valley 1.6 Guide',
+  title: 'Most Profitable Crops by Season - Stardew Valley 1.6.15 Guide',
   description: 'Complete profit analysis of every Stardew Valley crop. Gold-per-day rankings for Spring, Summer, and Fall with Tiller/Artisan bonuses calculated.',
   alternates: {
-    canonical: '/guide/most-profitable-crops',
+    canonical: '/guide/most-profitable-crops/',
   },
   openGraph: {
-    title: 'Most Profitable Crops by Season - Stardew Valley 1.6',
-    description: 'Complete crop profit rankings with gold-per-day calculations. Data verified for v1.6.',
+    title: 'Most Profitable Crops by Season - Stardew Valley 1.6.15',
+    description: 'Complete crop profit rankings with gold-per-day calculations. Data verified for v1.6.15.',
+    url: 'https://stardewpricedb.com/guide/most-profitable-crops/',
   },
 };
 
@@ -20,11 +21,11 @@ const jsonLd = {
     {
       '@type': 'Article',
       '@id': 'https://stardewpricedb.com/guide/most-profitable-crops#article',
-      headline: 'Most Profitable Crops by Season - Stardew Valley 1.6 Guide',
+      headline: 'Most Profitable Crops by Season - Stardew Valley 1.6.15 Guide',
       description: 'Complete profit analysis of every Stardew Valley crop with gold-per-day rankings.',
       image: 'https://stardewpricedb.com/og-image.png',
-      datePublished: '2025-01-14',
-      dateModified: '2025-06-21',
+      datePublished: '2026-05-19',
+      dateModified: '2026-05-19',
       author: {
         '@type': 'Organization',
         name: 'StardewPriceDB',
@@ -191,7 +192,7 @@ export default function MostProfitableCropsGuide() {
             🌾 Most Profitable Crops by Season
           </h1>
           <p className="text-lg md:text-xl text-green-100 max-w-3xl">
-            Complete gold-per-day analysis for every crop in Stardew Valley 1.6. Know exactly what to plant for maximum profit in Spring, Summer, and Fall.
+            Complete gold-per-day analysis for every crop in Stardew Valley 1.6.15. Know exactly what to plant for maximum profit in Spring, Summer, and Fall.
           </p>
           <div className="mt-6 flex flex-wrap gap-3">
             <span className="bg-white/20 backdrop-blur px-4 py-2 rounded-full text-sm font-medium">
@@ -201,7 +202,7 @@ export default function MostProfitableCropsGuide() {
               ✓ Tiller/Artisan Bonuses
             </span>
             <span className="bg-white/20 backdrop-blur px-4 py-2 rounded-full text-sm font-medium">
-              ✓ v1.6 Verified
+              ✓ v1.6.15 Verified
             </span>
           </div>
         </div>
@@ -459,7 +460,7 @@ export default function MostProfitableCropsGuide() {
           {/* Footer */}
           <div className="border-t pt-8 mt-8 not-prose">
             <p className="text-sm text-slate-500">
-              Last updated: June 2025 • Verified for Stardew Valley 1.6
+              Last updated: May 2026 - Verified for Stardew Valley 1.6.15
             </p>
           </div>
         </article>

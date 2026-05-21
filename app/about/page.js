@@ -1,11 +1,22 @@
 import Link from 'next/link';
+import verificationData from '@/data/verification.json';
+
+const SITE_URL = 'https://stardewpricedb.com';
+const OG_IMAGE = '/og-image.png';
 
 export const metadata = {
-  title: 'About - StardewPriceDB | How We Calculate Prices',
-  description: 'Learn how StardewPriceDB calculates Stardew Valley item prices, profit margins for Keg and Preserves Jar processing, profession bonuses, and data verification methodology.',
+  title: 'About StardewPriceDB - Price Calculations',
+  description: 'How StardewPriceDB calculates Stardew Valley prices, Keg and Jar profit, profession bonuses, and verified game data.',
   keywords: ['Stardew Valley price calculation', 'how prices are calculated', 'data sources', 'methodology', 'price verification', 'Keg profit', 'Artisan bonus'],
   alternates: {
-    canonical: '/about',
+    canonical: '/about/',
+  },
+  openGraph: {
+    title: 'About StardewPriceDB',
+    description: 'Price calculations, formula rules, and data verification for Stardew Valley sell prices.',
+    url: `${SITE_URL}/about/`,
+    type: 'article',
+    images: [{ url: OG_IMAGE, width: 1200, height: 630, alt: 'About StardewPriceDB' }],
   },
 };
 
@@ -23,14 +34,14 @@ export default function AboutPage() {
       </h1>
       
       <p className="text-xl text-slate-600 mb-8">
-        Price calculations and profit optimization for Stardew Valley 1.6.
+        Price calculations and profit optimization for Stardew Valley {verificationData.gameVersion}.
       </p>
 
       <div className="bg-white rounded-xl border p-8 mb-8">
         <h2 className="text-2xl font-bold text-slate-800 mb-4">How Prices Are Calculated</h2>
         <div className="space-y-4 text-slate-700">
           <p>
-            All base prices come directly from Stardew Valley 1.6 game data, cross-referenced with the official Stardew Valley Wiki.
+            All base prices come directly from Stardew Valley {verificationData.gameVersion} game data, cross-referenced with the official Stardew Valley Wiki.
           </p>
           <p>
             Profession bonuses use the exact multipliers from the game: Tiller adds 10% to crop sell prices, Artisan adds 40% to artisan goods, and Angler adds 25% to fish.
@@ -52,7 +63,7 @@ export default function AboutPage() {
           <li>• In-game testing for edge cases</li>
         </ul>
         <p className="mt-4 text-sm text-slate-600">
-          Last data verification: December 2025 (Stardew Valley 1.6)
+          Last data verification: May 2026 (Stardew Valley {verificationData.gameVersion})
         </p>
       </div>
 

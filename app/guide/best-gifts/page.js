@@ -1,10 +1,20 @@
 import Link from 'next/link';
 
+const SITE_URL = 'https://stardewpricedb.com';
+const OG_IMAGE = '/og-image.png';
+
 export const metadata = {
-  title: 'Best Gifts for Every NPC - Stardew Valley 1.6 Gift Guide',
+  title: 'Best Gifts for Every NPC - Stardew Valley 1.6.15 Gift Guide',
   description: 'Complete gift guide for all 34 Stardew Valley NPCs. Loved gifts, universal likes, birthday bonuses, and efficient friendship strategies. Data from game files.',
   alternates: {
     canonical: 'https://stardewpricedb.com/guide/best-gifts/',
+  },
+  openGraph: {
+    title: 'Best Gifts for Every NPC - Stardew Valley',
+    description: 'Loved gifts, universal likes, birthday bonuses, and efficient friendship strategy for all villagers.',
+    url: `${SITE_URL}/guide/best-gifts/`,
+    type: 'article',
+    images: [{ url: OG_IMAGE, width: 1200, height: 630, alt: 'Stardew Valley gift guide' }],
   },
 };
 
@@ -12,8 +22,8 @@ const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'Article',
   headline: 'Best Gifts for Every NPC - Stardew Valley Gift Guide',
-  datePublished: '2025-12-17',
-  dateModified: '2025-12-17',
+  datePublished: '2026-05-19',
+  dateModified: '2026-05-19',
   author: { '@type': 'Organization', name: 'StardewPriceDB' },
 };
 
@@ -45,8 +55,8 @@ export default function BestGiftsGuide() {
           <div className="not-prose bg-amber-50 border-l-4 border-amber-500 p-4 my-6">
             <p className="font-medium text-amber-800">Data Source</p>
             <p className="text-amber-700 text-sm">
-              Gift preferences extracted from Stardew Valley 1.6 game data (Data/NPCGiftTastes). 
-              Updated December 2025.
+              Gift preferences extracted from Stardew Valley 1.6.15 game data (Data/NPCGiftTastes). 
+              Updated May 2026.
             </p>
           </div>
 

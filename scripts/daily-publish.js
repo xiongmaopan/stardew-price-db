@@ -7,7 +7,7 @@ const path = require('path');
 const CONFIG = {
   pagesPerDay: 5,
   scheduleFile: path.join(__dirname, '../data/sitemap-schedule.json'),
-  sitemapOutput: path.join(__dirname, '../public/sitemap-scheduled.xml'),
+  sitemapOutput: path.join(__dirname, '../tmp/sitemap-scheduled.xml'),
   baseUrl: 'https://stardewpricedb.com'
 };
 
@@ -37,6 +37,7 @@ function generateSitemap(schedule) {
 
   xml += `</urlset>`;
   
+  fs.mkdirSync(path.dirname(CONFIG.sitemapOutput), { recursive: true });
   fs.writeFileSync(CONFIG.sitemapOutput, xml);
   return publishedPages.length;
 }

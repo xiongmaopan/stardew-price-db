@@ -4,7 +4,7 @@ export const metadata = {
   title: 'Privacy Policy - StardewPriceDB',
   description: 'Privacy Policy for StardewPriceDB. Learn how we collect, use, and protect your information when using our Stardew Valley price database.',
   alternates: {
-    canonical: '/privacy',
+    canonical: '/privacy/',
   },
   openGraph: {
     title: 'Privacy Policy - StardewPriceDB',
@@ -20,7 +20,7 @@ const jsonLd = {
   name: 'Privacy Policy - StardewPriceDB',
   description: 'Privacy policy for StardewPriceDB website',
   url: 'https://stardewpricedb.com/privacy',
-  dateModified: '2024-12-09'
+  dateModified: '2026-05-19'
 };
 
 function Section({ title, children }) {
@@ -48,7 +48,7 @@ export default function PrivacyPage() {
 
         <article>
           <h1 className="text-4xl font-extrabold text-slate-800 mb-4">Privacy Policy</h1>
-          <p className="text-lg text-slate-600 mb-8">Last updated: December 9, 2024</p>
+          <p className="text-lg text-slate-600 mb-8">Last updated: May 15, 2026</p>
 
           <div className="space-y-8 text-slate-700">
             <p>
@@ -102,11 +102,12 @@ export default function PrivacyPage() {
               </p>
             </Section>
 
-            <Section title="Google Analytics">
+            <Section title="Analytics Services">
               <p>
-                We may use Google Analytics to track and analyze website traffic. Google Analytics 
-                uses cookies to collect information about how visitors use our website. This 
-                information is used to compile reports and help us improve the website.
+                We may use privacy-conscious analytics services, including Ahrefs Web Analytics, 
+                to track and analyze website traffic. These services may collect information about 
+                how visitors use our website. This information is used to compile reports and help 
+                us improve the website.
               </p>
             </Section>
 

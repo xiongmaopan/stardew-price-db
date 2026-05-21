@@ -1,31 +1,100 @@
 import itemsData from '@/data/items.json';
+import verificationData from '@/data/verification.json';
 import ItemDetailClient from './ItemDetailClient';
 
-// Generate static params for all items
+const GAME_VERSION = verificationData.gameVersion;
+
+function getVariablePriceInfo(item) {
+  if (item.slug === 'aged-roe') {
+    return {
+      label: 'Variable',
+      description: `Aged Roe has a variable Stardew Valley ${GAME_VERSION} sell price based on the fish species. Most Aged Roe is worth 2x Roe value.`,
+      schemaValue: 'Variable by fish species',
+    };
+  }
+
+  if (item.slug === 'omni-geode') {
+    return {
+      label: 'No sell price',
+      description: `Omni Geode is a utility item in Stardew Valley ${GAME_VERSION}. Crack it open, trade it, or use it for unlocks instead of treating it as sell-price profit.`,
+      schemaValue: 'No normal sell price',
+    };
+  }
+
+  return null;
+}
+
+function hasQualityPrices(item) {
+  return item.hasQuality !== false && ['Crops', 'Forage', 'Animal Products'].includes(item.category);
+}
+
+function getItemTitle(item) {
+  const variablePrice = getVariablePriceInfo(item);
+  if (variablePrice) {
+    return `${item.name} ${variablePrice.label} & Uses - Stardew Valley`;
+  }
+
+  if (item.category === 'Crops') {
+    return `${item.name} Price & Profit - Stardew Valley`;
+  }
+
+  if (item.category === 'Artisan Goods') {
+    return `${item.name} Sell Price & Source - Stardew Valley`;
+  }
+
+  if (item.category === 'Cooking') {
+    return `${item.name} Sell Price & Recipe - Stardew Valley`;
+  }
+
+  return `${item.name} Sell Price & Uses - Stardew Valley`;
+}
+
+function getItemDescription(item, seasonText) {
+  const variablePrice = getVariablePriceInfo(item);
+  if (variablePrice) return variablePrice.description;
+
+  const processingText = item.processing
+    ? ` Best processing: ${item.processing.kegPrice && item.processing.jarPrice
+      ? `${(item.processing.kegPrice >= item.processing.jarPrice ? item.processing.kegProduct : item.processing.jarProduct) || 'Machine'} ${Math.max(item.processing.kegPrice, item.processing.jarPrice)}g`
+      : item.processing.kegPrice
+        ? `${item.processing.kegProduct || 'Keg'} ${item.processing.kegPrice}g`
+        : `${item.processing.jarProduct || 'Jar'} ${item.processing.jarPrice}g`}.`
+    : '';
+  const professionText = item.professionBonus
+    ? ` ${item.professionBonus.name} profession value: ${item.professionBonus.price}g.`
+    : '';
+  const seasonOrCategory = item.season ? ` Season: ${seasonText}.` : ` Category: ${item.category}.`;
+  const growthText = item.growthTime ? ` Grows in ${item.growthTime} days.` : '';
+
+  return `${item.name} sells for ${item.basePrice}g in Stardew Valley ${GAME_VERSION}.${processingText}${professionText}${seasonOrCategory}${growthText}`.slice(0, 155);
+}
+
 export async function generateStaticParams() {
   return itemsData.items.map((item) => ({
     slug: item.slug,
   }));
 }
 
-// Generate metadata for SEO
 export async function generateMetadata({ params }) {
   const { slug: slugId } = await params;
   const item = itemsData.items.find(i => i.slug === slugId);
-  
+
   if (!item) {
     return {
       title: 'Item Not Found',
     };
   }
+
   const seasonText = item.season ? (item.season.length > 1 ? item.season.join('/') : item.season[0]) : 'All Year';
-  
+  const variablePrice = getVariablePriceInfo(item);
+
   return {
-    title: `${item.name} - Price, Keg/Jar Profit (Stardew Valley 1.6)`,
-    description: `${item.name}: ${item.basePrice}g base, ${Math.floor(item.basePrice * 1.5)}g gold quality. ${item.processing ? `Keg: ${item.processing.kegPrice || item.processing.price}g. Jar: ${item.processing.jarPrice}g.` : ''} ${item.season ? `Season: ${seasonText}.` : ''} Growth: ${item.growthTime || 'N/A'} days.`,
+    title: getItemTitle(item),
+    description: getItemDescription(item, seasonText),
     keywords: [
       item.name,
       `${item.name} price`,
+      `${item.name} sell price`,
       `${item.name} Stardew Valley`,
       `${item.name} profit`,
       item.processing?.kegPrice ? `${item.name} wine` : null,
@@ -34,12 +103,12 @@ export async function generateMetadata({ params }) {
       ...(item.season || []),
     ].filter(Boolean),
     alternates: {
-      canonical: `/item/${item.slug}`,
+      canonical: `/item/${item.slug}/`,
     },
     openGraph: {
-      title: `${item.name} - ${item.basePrice}g | Stardew Valley Price`,
-      description: `${item.name}: ${item.basePrice}g base. ${item.processing ? `Keg: ${item.processing.kegPrice || item.processing.price}g.` : ''} Profession bonuses calculated.`,
-      url: `https://stardewpricedb.com/item/${item.slug}`,
+      title: `${item.name} Sell Price - ${variablePrice?.label || `${item.basePrice}g`} | Stardew Valley ${GAME_VERSION}`,
+      description: getItemDescription(item, seasonText),
+      url: `https://stardewpricedb.com/item/${item.slug}/`,
       type: 'article',
       images: [
         {
@@ -52,127 +121,78 @@ export async function generateMetadata({ params }) {
     },
     twitter: {
       card: 'summary',
-      title: `${item.name} Price Guide - Stardew Valley`,
-      description: `${item.name}: ${item.basePrice}g base price. Keg/Jar profits & profession bonuses.`,
+      title: `${item.name} Sell Price - Stardew Valley`,
+      description: variablePrice?.description || getItemDescription(item, seasonText),
     },
   };
 }
 
-// Generate JSON-LD structured data (Product + FAQ Schema)
 function generateJsonLd(item) {
-  const schemas = [];
-  
-  // Product Schema - 为物品页面添加富文本卡片
-  schemas.push({
-    '@context': 'https://schema.org',
-    '@type': 'Product',
-    '@id': `https://stardewpricedb.com/item/${item.slug}#product`,
-    name: item.name,
-    description: item.description || `${item.name} - Stardew Valley item with base price of ${item.basePrice}g.`,
-    category: item.category,
-    image: `https://stardewpricedb.com/images/items/${item.slug}.webp`,
-    brand: {
-      '@type': 'Brand',
-      name: 'Stardew Valley',
-    },
-    manufacturer: {
-      '@type': 'Organization',
-      name: 'ConcernedApe',
-      url: 'https://www.stardewvalley.net/',
-    },
-    offers: {
-      '@type': 'Offer',
-      url: `https://stardewpricedb.com/item/${item.slug}`,
-      priceCurrency: 'g', // Star tokens (in-game currency)
-      price: item.basePrice,
-      availability: 'https://schema.org/InStock',
-      itemCondition: 'https://schema.org/NewCondition',
-      seller: {
+  const variablePrice = getVariablePriceInfo(item);
+
+  return [
+    {
+      '@context': 'https://schema.org',
+      '@type': 'Article',
+      '@id': `https://stardewpricedb.com/item/${item.slug}#article`,
+      headline: `${item.name} Price and Profit Guide`,
+      description: getItemDescription(item, item.season?.join('/') || 'All Year'),
+      image: `https://stardewpricedb.com/images/items/${item.slug}.webp`,
+      author: {
         '@type': 'Organization',
         name: 'StardewPriceDB',
+        url: 'https://stardewpricedb.com',
       },
+      publisher: {
+        '@type': 'Organization',
+        name: 'StardewPriceDB',
+        url: 'https://stardewpricedb.com',
+      },
+      datePublished: '2026-05-19',
+      dateModified: verificationData.lastVerified.split('T')[0],
+      mainEntityOfPage: {
+        '@type': 'WebPage',
+        '@id': `https://stardewpricedb.com/item/${item.slug}/`,
+      },
+      about: {
+        '@type': 'Thing',
+        name: item.name,
+        description: item.category ? `${item.category} item in Stardew Valley` : 'Stardew Valley item',
+      },
+      additionalProperty: [
+        {
+          '@type': 'PropertyValue',
+          name: 'Base Price',
+          value: variablePrice?.schemaValue || `${item.basePrice}g`,
+        },
+        ...(item.professionBonus ? [{
+          '@type': 'PropertyValue',
+          name: `${item.professionBonus.name} Profession Price`,
+          value: `${item.professionBonus.price}g`,
+        }] : []),
+        ...(!variablePrice && hasQualityPrices(item) ? [
+          {
+            '@type': 'PropertyValue',
+            name: 'Silver Quality',
+            value: `${Math.floor(item.basePrice * 1.25)}g`,
+          },
+          {
+            '@type': 'PropertyValue',
+            name: 'Gold Quality',
+            value: `${Math.floor(item.basePrice * 1.5)}g`,
+          },
+          {
+            '@type': 'PropertyValue',
+            name: 'Iridium Quality',
+            value: `${item.basePrice * 2}g`,
+          },
+        ] : []),
+        ...(item.category ? [{ '@type': 'PropertyValue', name: 'Category', value: item.category }] : []),
+        ...(item.season ? [{ '@type': 'PropertyValue', name: 'Season', value: item.season.join('/') }] : []),
+        ...(item.growthTime ? [{ '@type': 'PropertyValue', name: 'Growth Time', value: `${item.growthTime} days` }] : []),
+      ],
     },
-    additionalProperty: [
-      {
-        '@type': 'PropertyValue',
-        name: 'Base Price',
-        value: `${item.basePrice}g`,
-      },
-      {
-        '@type': 'PropertyValue',
-        name: 'Silver Quality',
-        value: `${Math.floor(item.basePrice * 1.25)}g`,
-      },
-      {
-        '@type': 'PropertyValue',
-        name: 'Gold Quality',
-        value: `${Math.floor(item.basePrice * 1.5)}g`,
-      },
-      {
-        '@type': 'PropertyValue',
-        name: 'Iridium Quality',
-        value: `${item.basePrice * 2}g`,
-      },
-      ...(item.category ? [{ '@type': 'PropertyValue', name: 'Category', value: item.category }] : []),
-      ...(item.season ? [{ '@type': 'PropertyValue', name: 'Season', value: item.season.join('/') }] : []),
-      ...(item.growthTime ? [{ '@type': 'PropertyValue', name: 'Growth Time', value: `${item.growthTime} days` }] : []),
-    ],
-  });
-  
-  // FAQ Schema - 为搜索结果添加富文本
-  const faqs = [];
-  
-  faqs.push({
-    '@type': 'Question',
-    name: `What is the sell price of ${item.name} in Stardew Valley?`,
-    acceptedAnswer: {
-      '@type': 'Answer',
-      text: `${item.name} sells for ${item.basePrice}g (base), ${Math.floor(item.basePrice * 1.25)}g (silver), ${Math.floor(item.basePrice * 1.5)}g (gold), and ${item.basePrice * 2}g (iridium quality). Profession bonuses like Tiller (+10%) or Artisan (+40%) can increase these prices further.`
-    }
-  });
-  
-  if (item.processing?.kegPrice) {
-    faqs.push({
-      '@type': 'Question',
-      name: `Should I put ${item.name} in a Keg or Preserves Jar?`,
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: `${item.name} in a Keg produces ${item.processing.kegProduct || 'artisan goods'} worth ${item.processing.kegPrice}g. In a Preserves Jar, it makes ${item.processing.jarProduct || 'preserved goods'} worth ${item.processing.jarPrice || 'N/A'}g. ${item.processing.kegPrice > (item.processing.jarPrice || 0) ? 'Keg is more profitable per unit but takes longer.' : 'Preserves Jar may be better for faster processing and similar profits.'} With the Artisan profession (+40%), profits increase significantly.`
-      }
-    });
-  }
-  
-  if (item.growthTime) {
-    faqs.push({
-      '@type': 'Question',
-      name: `How long does ${item.name} take to grow?`,
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: `${item.name} takes ${item.growthTime} days to reach maturity. ${item.regrows ? `It regrows every ${item.regrowTime} days after the first harvest, making it excellent for continuous farming.` : 'It must be replanted after each harvest.'} Using fertilizer can speed up growth.`
-      }
-    });
-  }
-  
-  if (item.giftLove && item.giftLove.length > 0) {
-    faqs.push({
-      '@type': 'Question',
-      name: `Which villagers love receiving ${item.name} as a gift?`,
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: `The following villagers love ${item.name}: ${item.giftLove.join(', ')}. Giving loved gifts increases friendship by 10 points (or 20 if the villager's birthday).`
-      }
-    });
-  }
-  
-  if (faqs.length > 0) {
-    schemas.push({
-      '@context': 'https://schema.org',
-      '@type': 'FAQPage',
-      mainEntity: faqs
-    });
-  }
-  
-  return schemas;
+  ];
 }
 
 export default async function ItemPage({ params }) {

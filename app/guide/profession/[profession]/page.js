@@ -1,5 +1,8 @@
 import itemsData from '@/data/items.json';
 
+const SITE_URL = 'https://stardewpricedb.com';
+const OG_IMAGE = '/og-image.png';
+
 const PROFESSIONS = {
   'tiller': {
     name: 'Tiller',
@@ -52,11 +55,22 @@ export async function generateMetadata({ params }) {
     return { title: 'Profession Not Found' };
   }
 
+  const title = `${profession.name} Profession Guide - Stardew Valley`;
+  const professionDescription = professionId === 'artisan' ? '+40% sell price for artisan goods' : profession.description;
+  const description = `${profession.name} guide for Stardew Valley 1.6.15. ${professionDescription}. Compare ${profession.bonus} bonus prices and profitable items.`;
+
   return {
-    title: `${profession.name} Profession Guide - Profit Bonus & Best Items (Stardew Valley 1.6)`,
-    description: `Complete ${profession.name} guide for Stardew Valley 1.6. ${profession.description}. Calculate exact sell prices with ${profession.bonus} bonus and find the most profitable items.`,
+    title,
+    description,
     alternates: {
-      canonical: `/guide/profession/${professionId}`,
+      canonical: `/guide/profession/${professionId}/`,
+    },
+    openGraph: {
+      title,
+      description,
+      url: `${SITE_URL}/guide/profession/${professionId}/`,
+      type: 'article',
+      images: [{ url: OG_IMAGE, width: 1200, height: 630, alt: `${profession.name} profession guide` }],
     },
   };
 }
@@ -121,7 +135,7 @@ export default async function ProfessionGuidePage({ params }) {
           <span className="text-6xl">{profession.icon}</span>
           <div>
             <h1 className="text-4xl font-bold text-slate-800">{profession.name} Profession Guide</h1>
-            <p className="text-xl text-slate-600">Stardew Valley 1.6</p>
+            <p className="text-xl text-slate-600">Stardew Valley 1.6.15</p>
           </div>
         </div>
         
@@ -333,15 +347,15 @@ export default async function ProfessionGuidePage({ params }) {
       <section className="bg-white rounded-xl shadow-sm border border-slate-200 p-6">
         <h2 className="text-xl font-bold text-slate-800 mb-4">📚 Related Guides</h2>
         <div className="grid md:grid-cols-3 gap-4">
-          <a href="/guide/best-crops" className="block p-4 bg-slate-50 rounded-lg hover:bg-slate-100 transition">
+          <a href="/guide/best-crops-by-season/" className="block p-4 bg-slate-50 rounded-lg hover:bg-slate-100 transition">
             <div className="font-medium text-slate-700">Best Crops by Season</div>
             <div className="text-sm text-slate-500">Compare profits across seasons</div>
           </a>
-          <a href="/guide/keg-vs-jar" className="block p-4 bg-slate-50 rounded-lg hover:bg-slate-100 transition">
+          <a href="/guide/keg-vs-jar/" className="block p-4 bg-slate-50 rounded-lg hover:bg-slate-100 transition">
             <div className="font-medium text-slate-700">Keg vs Preserves Jar</div>
             <div className="text-sm text-slate-500">Processing method comparison</div>
           </a>
-          <a href="/calculator/spring" className="block p-4 bg-slate-50 rounded-lg hover:bg-slate-100 transition">
+          <a href="/calculator/spring/" className="block p-4 bg-slate-50 rounded-lg hover:bg-slate-100 transition">
             <div className="font-medium text-slate-700">Profit Calculator</div>
             <div className="text-sm text-slate-500">Calculate farm profits</div>
           </a>

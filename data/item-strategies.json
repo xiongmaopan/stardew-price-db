@@ -1,6 +1,6 @@
 {
   "version": "1.6.15",
-  "lastUpdated": "2026-01-11",
+  "lastUpdated": "2026-05-13",
   "verified": "Tested across 3 save files on PC 1.6.15",
   "seoCompliance": "Google 2025-2026 E-E-A-T optimized",
   "strategies": {
@@ -31,7 +31,7 @@
     "potato": {
       "proTip": "25% chance for extra potato per harvest. With Tiller profession, expected value per harvest is ~110g. Best early-game gold-to-effort ratio.",
       "strategyNote": "6-day growth, multiple harvests per season, bonus drops. Potatoes are the workhorse crop of Spring Year 1. Skip processing—your Kegs should be on Starfruit.",
-      "goldPerDay": 10.0,
+      "goldPerDay": 10,
       "recommendation": "sell-raw",
       "tier": "high",
       "bestUse": "Reliable Spring income with bonus harvest chance"
@@ -47,7 +47,7 @@
     "garlic": {
       "proTip": "Unlocks Year 2 at Pierre's. Fast 4-day growth like Parsnip but 60g vs 35g. The Year 2 Spring meta pick.",
       "strategyNote": "If you're in Year 2+, Garlic outpaces Parsnip in every way. Same growth time, 71% more profit. Process into Pickles (170g) only if you have spare Jars.",
-      "goldPerDay": 10.0,
+      "goldPerDay": 10,
       "recommendation": "sell-raw",
       "tier": "high",
       "bestUse": "Year 2+ fast-turnover crop"
@@ -79,7 +79,7 @@
     "blueberry": {
       "proTip": "Yields 3 berries per harvest average. At 80g × 3 = 240g per harvest, then 4-day regrowth. Plant Day 1 for 5 harvests.",
       "strategyNote": "Blueberry is Summer's gold standard for raw shipping. 240g every 4 days with minimal effort. Wine (210g per berry × 3 = 630g) takes 21 days of Keg time—only worthwhile if you have excess Kegs.",
-      "goldPerDay": 18.0,
+      "goldPerDay": 18,
       "recommendation": "sell-raw",
       "tier": "high",
       "bestUse": "Mass planting for raw shipping profit"
@@ -127,7 +127,7 @@
     "sweet-gem-berry": {
       "proTip": "Rare Seeds from Traveling Cart (600-1000g). 24-day growth = exactly 1 harvest per Fall. 3000g base price, cannot be processed.",
       "strategyNote": "3000g raw, no Wine option. That's 125g/day—lower than Starfruit Wine but zero Keg dependency. Buy seeds whenever you see them at Traveling Cart. Give one to Old Master Cannoli for Stardrop.",
-      "goldPerDay": 125.0,
+      "goldPerDay": 125,
       "recommendation": "sell-raw",
       "tier": "legendary",
       "bestUse": "High-value raw shipping, Stardrop quest"
@@ -143,7 +143,7 @@
     "hops": {
       "proTip": "Fastest regrowth in game: daily harvest after 11-day initial growth. One Hops plant = 17 harvests per Summer.",
       "strategyNote": "25g raw is weak. But Pale Ale (300g, 420g Artisan) in 1-2 Keg days? That hits 150-210g/day per Hops. The catch: you need 1 Keg per Hops plant to keep up. Keg-heavy but the profit ceiling is the highest in game.",
-      "goldPerDay": 25.0,
+      "goldPerDay": 25,
       "recommendation": "keg",
       "tier": "premium",
       "bestUse": "Pale Ale mass production (requires many Kegs)"
@@ -157,17 +157,17 @@
       "bestUse": "Multi-season set-and-forget farming"
     },
     "caviar": {
-      "proTip": "Sturgeon Roe → Preserves Jar = Caviar (500g, 700g Artisan). Takes 4000 in-game minutes.",
-      "strategyNote": "Sturgeon Fish Pond is the key. At max population, daily Roe production. One of the best passive income streams. Prioritize Sturgeon over other Fish Pond fish.",
-      "goldPerDay": 83.33,
+      "proTip": "Sturgeon Roe -> Preserves Jar = Caviar (500g, 700g with Artisan). Caviar takes 6000 in-game minutes in the Preserves Jar.",
+      "strategyNote": "Only Sturgeon Roe makes Caviar. Other fish Roe becomes Aged Roe instead, so Caviar production depends on Sturgeon Fish Ponds.",
+      "goldPerDay": null,
       "recommendation": "fish-pond-priority",
       "tier": "premium",
       "bestUse": "Passive income via Sturgeon Fish Pond"
     },
     "aged-roe": {
-      "proTip": "Any Fish Roe except Sturgeon → Preserves Jar = Aged Roe. Value = 2× Roe price + 60g.",
-      "strategyNote": "Lava Eel Roe is best non-Sturgeon option (700g Roe → 1460g Aged Roe with Artisan). Consider Lava Eel Pond for Magma Geodes + Aged Roe.",
-      "goldPerDay": 0,
+      "proTip": "Any Fish Roe except Sturgeon -> Preserves Jar = Aged Roe. Value = 2x Roe price, then +40% if Artisan is active.",
+      "strategyNote": "Lava Eel Roe is the highest-value regular Roe: 380g Roe -> 760g Aged Roe -> 1,064g with Artisan. Sturgeon Roe is the exception and becomes Caviar.",
+      "goldPerDay": null,
       "recommendation": "preserves-jar",
       "tier": "mid",
       "bestUse": "Fish Pond profit maximization"
@@ -175,7 +175,7 @@
     "pale-ale": {
       "proTip": "Hops + Keg = Pale Ale (300g, 420g Artisan). Only 1-2 days Keg time. Fastest turnaround in the Keg.",
       "strategyNote": "Hops produce daily after 11-day growth. From my setup: 17 Kegs per Hops plant keeps pace. With 100 Hops + 1700 Kegs, you hit 420g × 17 harvests = 7,140g per plant per Summer.",
-      "goldPerDay": 150.0,
+      "goldPerDay": 150,
       "recommendation": "keg",
       "tier": "premium",
       "bestUse": "Mass Keg operations"
@@ -183,7 +183,7 @@
     "beer": {
       "proTip": "Wheat + Keg = Beer (200g, 280g Artisan). Quick 1-2 day process.",
       "strategyNote": "Wheat (25g) → Beer (200g) is 8× multiplier. Not as good as Pale Ale but Wheat is easier to mass-produce. Good secondary Keg filler.",
-      "goldPerDay": 100.0,
+      "goldPerDay": 100,
       "recommendation": "keg",
       "tier": "mid",
       "bestUse": "Secondary Keg product"
@@ -191,7 +191,7 @@
     "mead": {
       "proTip": "Honey + Keg = Mead (200g, 280g Artisan). 10 hour Keg time.",
       "strategyNote": "Wild Honey (100g) → Mead (200g) doubles value. But Flower Honey loses value in Keg—Fairy Honey (680g) → Mead (200g). Keep flower honey raw, Keg only wild honey.",
-      "goldPerDay": 48.0,
+      "goldPerDay": 48,
       "recommendation": "conditional",
       "tier": "low",
       "bestUse": "Wild Honey only—never Keg flower honey"
@@ -223,7 +223,7 @@
     "honey": {
       "proTip": "Bee House produces honey every 4 days (3 with flowers). Flower type within 5 tiles determines honey type.",
       "strategyNote": "Wild Honey: 100g. Fairy Rose Honey: 680g. Plant Fairy Roses in Fall, surround with Bee Houses. Each house needs only 1 flower in range. Passive 680g every 3-4 days.",
-      "goldPerDay": 170.0,
+      "goldPerDay": 170,
       "recommendation": "fairy-rose",
       "tier": "high",
       "bestUse": "Fairy Rose Honey farming"
@@ -263,7 +263,7 @@
     "coffee": {
       "proTip": "5 Coffee Beans + Keg = Coffee (150g). Only 2 hour Keg time. Gives +1 Speed buff for 1:23.",
       "strategyNote": "In my Skull Cavern runs, +1 Speed = 10% faster movement makes a huge difference. Stack with Spicy Eel (+1 more) for +2 total. Keep 50+ Coffee in stock. The buff, not the gold, is the real value.",
-      "goldPerDay": 75.0,
+      "goldPerDay": 75,
       "recommendation": "keep-for-buff",
       "tier": "premium",
       "bestUse": "Speed buff for mining/farming efficiency"
@@ -278,11 +278,11 @@
     },
     "diamond": {
       "proTip": "Crystalarium produces Diamond every 5 days. Tested: 750g × 73/year = 54,750g passive income per Crystalarium.",
-      "strategyNote": "Diamond Crystalarium is the standard for passive income. No Artisan bonus, but zero processing needed. In my farmhouse, 20 Crystalariums generate 1,095,000g/year hands-free. Universal loved gift too.",
-      "goldPerDay": 150.0,
+      "strategyNote": "Diamond Crystalarium is the standard for passive income. No Artisan bonus, but zero processing needed. In my farmhouse, 20 Crystalariums generate 1,095,000g/year hands-free. Diamond is also loved by many villagers.",
+      "goldPerDay": 150,
       "recommendation": "crystalarium",
       "tier": "premium",
-      "bestUse": "Crystalarium passive income, universal loved gift"
+      "bestUse": "Crystalarium passive income, widely loved gift"
     },
     "prismatic-shard": {
       "proTip": "First one → Galaxy Sword (desert pillars). After that: Junimo Hut, tailoring, or donation.",
@@ -375,7 +375,7 @@
     "tomato": {
       "proTip": "Tomatoes have a 5% chance to drop extra fruit per harvest. With 4-day regrowth and multi-harvest, they are Summer workhorses.",
       "strategyNote": "At 60g base with multi-harvest potential, Tomatoes are excellent passive income. Juice (180g) takes 4 days - only worthwhile with excess Kegs. Raw shipping is the meta.",
-      "goldPerDay": 6.0,
+      "goldPerDay": 6,
       "recommendation": "sell-raw",
       "tier": "mid",
       "bestUse": "Reliable Summer regrowth income"
@@ -383,7 +383,7 @@
     "hot-pepper": {
       "proTip": "Hot Peppers regrow every 3 days - the fastest regrowth in the game. Plant Day 1 Summer for 9 harvests.",
       "strategyNote": "40g base seems low, but 3-day regrowth means 120g/harvest cycle after initial growth. Jelly (130g) is decent. Great for Pepper Poppers (speed buff recipe).",
-      "goldPerDay": 5.0,
+      "goldPerDay": 5,
       "recommendation": "sell-raw",
       "tier": "mid",
       "bestUse": "Fast regrowth passive income, Pepper Poppers"
@@ -439,7 +439,7 @@
     "grape": {
       "proTip": "Grapes grow on trellises with 3-day regrowth. 10-day initial growth, but excellent late-season production.",
       "strategyNote": "80g base with consistent regrowth. Wine (225g) takes 7 days - worthwhile for Grapes. Plant by Fall 1 for 7 harvests. Trellis placement matters!",
-      "goldPerDay": 8.0,
+      "goldPerDay": 8,
       "recommendation": "keg",
       "tier": "mid",
       "bestUse": "Wine production, Fall regrowth income"
@@ -447,7 +447,7 @@
     "yam": {
       "proTip": "Yams have 10-day growth but 20% chance for extra drops. High variance, high potential.",
       "strategyNote": "160g base with bonus drops averages ~192g per harvest. Only 2 harvests per Fall without Speed-Gro. Solid for Pickles (390g).",
-      "goldPerDay": 13.0,
+      "goldPerDay": 13,
       "recommendation": "sell-raw",
       "tier": "mid",
       "bestUse": "High-value single harvest with bonus chance"
@@ -463,7 +463,7 @@
     "bok-choy": {
       "proTip": "Bok Choy has the fastest Fall growth at 4 days. Quick turnover for early Fall gold.",
       "strategyNote": "80g base in 4 days = solid early Fall income. 6 harvests possible per season. Pickles (210g) are decent if processing.",
-      "goldPerDay": 15.0,
+      "goldPerDay": 15,
       "recommendation": "sell-raw",
       "tier": "mid",
       "bestUse": "Fast turnover Fall crop"
@@ -479,7 +479,7 @@
     "sunflower": {
       "proTip": "Sunflowers drop 0-2 Sunflower Seeds on harvest. With luck, they can be self-sustaining.",
       "strategyNote": "80g base plus seed drops. Grows in Summer AND Fall - one of few dual-season crops. Sunflower Honey (260g) is mid-tier. Good for decoration and Oil production.",
-      "goldPerDay": 5.0,
+      "goldPerDay": 5,
       "recommendation": "oil-or-sell",
       "tier": "low",
       "bestUse": "Oil production, decoration, seed recovery"
@@ -502,7 +502,7 @@
     },
     "sturgeon": {
       "proTip": "Found in Mountain Lake, Summer/Winter, 6AM-7PM. Difficulty 78 - bring Trap Bobber. The fish for Caviar production.",
-      "strategyNote": "200g base, but Fish Pond is the real play. Sturgeon Roe (320g) → Caviar (500g, 700g Artisan). In my farm, 3 Sturgeon ponds at max population net 2,100g/day with Artisan.",
+      "strategyNote": "200g base fish. Fish Pond production is the main value: Sturgeon Roe sells for 130g and becomes Caviar worth 500g, or 700g with Artisan.",
       "goldPerDay": null,
       "recommendation": "fish-pond",
       "tier": "premium",
@@ -510,7 +510,7 @@
     },
     "lava-eel": {
       "proTip": "Volcano Dungeon floors 5+, any time/season. Difficulty 90 - second hardest fish. Magic Bait works in lava.",
-      "strategyNote": "700g base is excellent. Lava Eel Fish Pond produces Roe AND Magma Geodes. The Roe (700g) ages to 1,064g Caviar. High-tier passive income source.",
+      "strategyNote": "700g base fish. Fish Ponds can produce Lava Eel Roe worth 380g; Preserves Jar turns it into Aged Roe worth 760g, or 1,064g with Artisan.",
       "goldPerDay": null,
       "recommendation": "fish-pond",
       "tier": "legendary",

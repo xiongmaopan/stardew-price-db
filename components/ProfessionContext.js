@@ -86,8 +86,7 @@ export function calculatePrice(base, quality, professions, category) {
   if (professions.angler && category === 'Fish') {
     price = Math.floor(price * 1.25);
   }
-  if (professions.rancher && category === 'Forage' && 
-      ['Animal Product', 'Artisan'].includes(professions.subcategory)) {
+  if (professions.rancher && category === 'Animal Products') {
     price = Math.floor(price * 1.2);
   }
   
@@ -97,7 +96,7 @@ export function calculatePrice(base, quality, professions, category) {
 export function calculateArtisanPrice(base, professions) {
   if (!base) return 0;
   if (professions.artisan) {
-    return Math.floor(base * 1.4);
+    return Math.floor((base * 14) / 10);
   }
   return base;
 }

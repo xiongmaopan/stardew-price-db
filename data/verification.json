@@ -1,9 +1,9 @@
 {
-  "lastVerified": "2026-01-19T00:00:00Z",
-  "gameVersion": "1.6.14",
+  "lastVerified": "2026-05-19T00:00:00Z",
+  "gameVersion": "1.6.15",
   "dataSource": "Stardew Valley Wiki",
   "verificationStatus": "manual",
-  "nextVerificationDue": "2026-02-19T00:00:00Z",
+  "nextVerificationDue": "2026-06-19T00:00:00Z",
   "changelog": [
     {
       "date": "2025-12-07",
@@ -13,18 +13,136 @@
     {
       "date": "2026-01-19",
       "action": "verification",
-      "note": "Routine data verification - all prices confirmed accurate"
+      "note": "Routine data verification - core price formulas and spot checks passed"
+    },
+    {
+      "date": "2026-05-08",
+      "action": "version-check",
+      "note": "Checked official release notes and Stardew Valley Wiki version history. PC latest is 1.6.15; console 1.6.15.1 syncs content with PC 1.6.15. Price formulas remain valid."
+    },
+    {
+      "date": "2026-05-13",
+      "action": "freshness-cleanup",
+      "note": "Updated public freshness signals, data file version labels, and legacy guide modified dates after a 1.6.15 content review."
+    },
+    {
+      "date": "2026-05-13",
+      "action": "data-integrity-audit",
+      "note": "Added formula audit script; corrected fish pond roe values, Sturgeon Roe, Lava Eel Aged Roe, Fish Pond population quests, and added missing 1.6 crops. Disabled unaudited handwritten strategy snippets from item and fish detail pages."
+    },
+    {
+      "date": "2026-05-13",
+      "action": "formula-transparency",
+      "note": "Added public data source page, Dehydrator and Smoked Fish formula displays, integer-safe Artisan calculations, and audit checks for Dried Fruit, Dried Mushrooms, Smoked Fish, and Rancher raw animal product pricing."
+    },
+    {
+      "date": "2026-05-19",
+      "action": "freshness-check",
+      "note": "Checked official Stardew Valley blog and Stardew Valley Wiki data after the latest public content review. No newer price-affecting content version was found beyond the 1.6.15 data set. Added missing fixed-price 1.6/support items: Moss, Raisins, Mystic Syrup, Tea Sapling, Fairy Dust, Life Elixir, Deluxe Bait, and Challenge Bait."
     }
   ],
   "spotChecks": [
-    { "item": "Parsnip", "field": "basePrice", "expected": 35, "verified": true },
-    { "item": "Cauliflower", "field": "basePrice", "expected": 175, "verified": true },
-    { "item": "Strawberry", "field": "basePrice", "expected": 120, "verified": true },
-    { "item": "Starfruit", "field": "basePrice", "expected": 750, "verified": true },
-    { "item": "Ancient Fruit", "field": "basePrice", "expected": 550, "verified": true },
-    { "item": "Wine formula", "field": "multiplier", "expected": 3, "verified": true },
-    { "item": "Jelly formula", "field": "formula", "expected": "base*2+50", "verified": true },
-    { "item": "Artisan bonus", "field": "multiplier", "expected": 1.4, "verified": true },
-    { "item": "Tiller bonus", "field": "percentage", "expected": 10, "verified": true }
+    {
+      "item": "Parsnip",
+      "field": "basePrice",
+      "expected": 35,
+      "verified": true
+    },
+    {
+      "item": "Cauliflower",
+      "field": "basePrice",
+      "expected": 175,
+      "verified": true
+    },
+    {
+      "item": "Strawberry",
+      "field": "basePrice",
+      "expected": 120,
+      "verified": true
+    },
+    {
+      "item": "Starfruit",
+      "field": "basePrice",
+      "expected": 750,
+      "verified": true
+    },
+    {
+      "item": "Ancient Fruit",
+      "field": "basePrice",
+      "expected": 550,
+      "verified": true
+    },
+    {
+      "item": "Wine formula",
+      "field": "multiplier",
+      "expected": 3,
+      "verified": true
+    },
+    {
+      "item": "Jelly formula",
+      "field": "formula",
+      "expected": "base*2+50",
+      "verified": true
+    },
+    {
+      "item": "Artisan bonus",
+      "field": "multiplier",
+      "expected": 1.4,
+      "verified": true
+    },
+    {
+      "item": "Tiller bonus",
+      "field": "percentage",
+      "expected": 10,
+      "verified": true
+    },
+    {
+      "item": "Moss",
+      "field": "basePrice",
+      "expected": 5,
+      "verified": true
+    },
+    {
+      "item": "Raisins",
+      "field": "basePrice",
+      "expected": 600,
+      "verified": true
+    },
+    {
+      "item": "Mystic Syrup",
+      "field": "basePrice",
+      "expected": 1000,
+      "verified": true
+    },
+    {
+      "item": "Tea Sapling",
+      "field": "basePrice",
+      "expected": 250,
+      "verified": true
+    },
+    {
+      "item": "Fairy Dust",
+      "field": "basePrice",
+      "expected": 300,
+      "verified": true
+    },
+    {
+      "item": "Life Elixir",
+      "field": "basePrice",
+      "expected": 250,
+      "verified": true
+    },
+    {
+      "item": "Deluxe Bait",
+      "field": "basePrice",
+      "expected": 1,
+      "verified": true
+    },
+    {
+      "item": "Challenge Bait",
+      "field": "basePrice",
+      "expected": 1,
+      "verified": true
+    }
   ]
 }

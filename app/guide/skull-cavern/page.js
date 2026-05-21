@@ -1,8 +1,8 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Skull Cavern Guide - Floor 100+ Strategy | Stardew Valley 1.6',
-  description: 'Reach floor 100+ in Skull Cavern with optimal loadout, bomb strategies, lucky day mechanics, and Iridium farming routes. Complete Stardew Valley 1.6 guide.',
+  title: 'Skull Cavern Guide - Floor 100+ Strategy | Stardew Valley 1.6.15',
+  description: 'Reach floor 100+ in Skull Cavern with optimal loadout, bomb strategies, lucky day mechanics, and Iridium farming routes. Complete Stardew Valley 1.6.15 guide.',
   alternates: {
     canonical: 'https://stardewpricedb.com/guide/skull-cavern/',
   },
@@ -82,7 +82,7 @@ export default function SkullCavernGuide() {
             <h1 className="text-4xl font-bold mb-4">💀 Skull Cavern Strategy Guide</h1>
             <p className="text-xl text-purple-100 leading-relaxed">
               Reach floor 100+ consistently with the right preparation. This guide covers optimal 
-              loadouts, bomb strategies, luck mechanics, and Iridium farming techniques for Stardew Valley 1.6.
+              loadouts, bomb strategies, luck mechanics, and Iridium farming techniques for Stardew Valley 1.6.15.
             </p>
           </div>
 

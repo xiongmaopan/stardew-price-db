@@ -1,10 +1,20 @@
 import Link from 'next/link';
 
+const SITE_URL = 'https://stardewpricedb.com';
+const OG_IMAGE = '/og-image.png';
+
 export const metadata = {
   title: 'Stardew Valley Guides - Profit Strategies & Money Making Tips',
-  description: 'In-depth Stardew Valley guides covering crop profits, Keg vs Jar analysis, Ancient Fruit strategies, Fish Pond optimization, and Year 1 money making. Data verified for v1.6.',
+  description: 'Stardew Valley guides for crop profit, Keg vs Jar math, Ancient Fruit, Fish Ponds, gifts, bundles, and Year 1 money.',
   alternates: {
-    canonical: '/guide',
+    canonical: '/guide/',
+  },
+  openGraph: {
+    title: 'Stardew Valley Guides',
+    description: 'Profit strategy guides for Stardew Valley crops, artisan goods, fish ponds, gifts, and bundles.',
+    url: `${SITE_URL}/guide/`,
+    type: 'website',
+    images: [{ url: OG_IMAGE, width: 1200, height: 630, alt: 'Stardew Valley guides' }],
   },
 };
 
@@ -14,6 +24,97 @@ const guides = [
     title: 'Most Profitable Crops by Season',
     description: 'Complete profit analysis for every season including growth time, processing value, and gold-per-day calculations.',
     category: 'Farming',
+    readTime: '8 min',
+  },
+  {
+    slug: 'best-crops-by-season',
+    title: 'Best Crops by Season',
+    description: 'Practical crop picks for Spring, Summer, Fall, Greenhouse, and machine-based farming plans.',
+    category: 'Farming',
+    readTime: '9 min',
+  },
+  {
+    slug: 'best-spring-crops',
+    title: 'Best Spring Crops',
+    description: 'Spring crop rankings for early cash flow, Strawberry planning, Rhubarb, and Ancient Fruit setup.',
+    category: 'Farming',
+    readTime: '7 min',
+  },
+  {
+    slug: 'best-summer-crops',
+    title: 'Best Summer Crops',
+    description: 'Compare Blueberry, Starfruit, Hops, Melon, Coffee, and summer processing options.',
+    category: 'Farming',
+    readTime: '7 min',
+  },
+  {
+    slug: 'best-fall-crops',
+    title: 'Best Fall Crops',
+    description: 'Fall crop rankings for Pumpkin, Cranberries, Fairy Rose Honey support, and bundle needs.',
+    category: 'Farming',
+    readTime: '7 min',
+  },
+  {
+    slug: 'best-greenhouse-crops',
+    title: 'Best Greenhouse Crops',
+    description: 'Long-term Greenhouse rankings for Ancient Fruit, Starfruit, Pineapple, Hops, and Coffee.',
+    category: 'Farming',
+    readTime: '8 min',
+  },
+  {
+    slug: 'ancient-fruit-vs-starfruit',
+    title: 'Ancient Fruit vs Starfruit',
+    description: 'Side-by-side comparison for Wine value, seed cost, Casks, Greenhouse use, and maintenance.',
+    category: 'Farming',
+    readTime: '8 min',
+  },
+  {
+    slug: 'ancient-fruit-wine',
+    title: 'Ancient Fruit Wine Guide',
+    description: 'Ancient Fruit Wine values, Artisan price, Iridium Cask value, and weekly Greenhouse strategy.',
+    category: 'Processing',
+    readTime: '7 min',
+  },
+  {
+    slug: 'starfruit-wine',
+    title: 'Starfruit Wine Guide',
+    description: 'Starfruit Wine value, Artisan and Cask math, seed cost, and premium Wine strategy.',
+    category: 'Processing',
+    readTime: '7 min',
+  },
+  {
+    slug: 'truffle-oil',
+    title: 'Truffle Oil Guide',
+    description: 'Compare raw Truffles, Iridium Truffles, Truffle Oil, Artisan value, and pig farm scaling.',
+    category: 'Animals',
+    readTime: '7 min',
+  },
+  {
+    slug: 'caviar',
+    title: 'Caviar Guide',
+    description: 'How to make Caviar from Sturgeon Roe, Fish Pond setup, Artisan value, and bundle use.',
+    category: 'Fishing',
+    readTime: '6 min',
+  },
+  {
+    slug: 'best-fish-by-season',
+    title: 'Best Fish by Season',
+    description: 'High-value fish for Spring, Summer, Fall, and Winter with locations, time windows, and difficulty.',
+    category: 'Fishing',
+    readTime: '8 min',
+  },
+  {
+    slug: 'best-keg-items',
+    title: 'Best Keg Items',
+    description: 'Ranked Keg items with Wine, Juice, Pale Ale, Coffee, Artisan values, and gold per Keg day.',
+    category: 'Processing',
+    readTime: '8 min',
+  },
+  {
+    slug: 'best-preserves-jar-items',
+    title: 'Best Preserves Jar Items',
+    description: 'Jelly, Pickles, Roe, Caviar, and Jar profit rankings for fast processing setups.',
+    category: 'Processing',
     readTime: '8 min',
   },
   {
@@ -107,8 +208,25 @@ export default function GuidesPage() {
       </h1>
       
       <p className="text-xl text-slate-600 mb-12 max-w-3xl">
-        In-depth analysis and strategies for maximizing your farm income. All calculations verified for Stardew Valley 1.6.
+        In-depth analysis and strategies for maximizing your farm income. All calculations verified for Stardew Valley 1.6.15.
       </p>
+
+      <section className="grid md:grid-cols-3 gap-4 mb-10">
+        {[
+          { href: '/selling-prices/', title: 'Selling Prices Database', desc: 'Verified sell prices for crops, fish, artisan goods, quality values, and profession bonuses.' },
+          { href: '/crops/', title: 'Crops Database', desc: 'Season, growth time, seed costs, and calculator entry points.' },
+          { href: '/artisan-goods/', title: 'Artisan Goods Hub', desc: 'Keg, Jar, Wine, Juice, Coffee, and Artisan formulas.' },
+          { href: '/fish-ponds/', title: 'Fish Pond Values', desc: 'Roe, Aged Roe, Caviar, and verified pond value formulas.' },
+          { href: '/animal-products/', title: 'Animal Products', desc: 'Milk, Eggs, Wool, Truffles, Rancher bonus, and machine outputs.' },
+          { href: '/minerals/', title: 'Minerals Price List', desc: 'Gem, geode, mine, Skull Cavern, and Crystalarium price references.' },
+          { href: '/forage/', title: 'Forage Prices', desc: 'Seasonal forage, mushrooms, beach forage, and Botanist planning.' },
+        ].map((hub) => (
+          <Link key={hub.href} href={hub.href} className="bg-white rounded-xl border border-slate-200 p-5 hover:shadow-md hover:border-green-300 transition">
+            <h2 className="text-lg font-bold text-slate-800 mb-2">{hub.title}</h2>
+            <p className="text-sm text-slate-600">{hub.desc}</p>
+          </Link>
+        ))}
+      </section>
 
       <div className="grid md:grid-cols-2 gap-6">
         {guides.map((guide) => (

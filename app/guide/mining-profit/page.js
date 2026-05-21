@@ -1,14 +1,15 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Mining Profit Guide - Best Gems and Minerals to Sell | Stardew Valley 1.6',
+  title: 'Mining Profit Guide - Stardew Valley 1.6.15',
   description: 'Which gems and minerals are worth keeping vs selling. Crystalarium optimization, Geode contents, and gold-per-day from mining runs.',
   alternates: {
-    canonical: '/guide/mining-profit',
+    canonical: '/guide/mining-profit/',
   },
   openGraph: {
-    title: 'Mining Profit Guide - Stardew Valley 1.6',
+    title: 'Mining Profit Guide - Stardew Valley 1.6.15',
     description: 'Gem values, Crystalarium ROI, and which Geodes are worth opening.',
+    url: 'https://stardewpricedb.com/guide/mining-profit/',
   },
 };
 
@@ -19,10 +20,10 @@ const jsonLd = {
       '@type': 'Article',
       '@id': 'https://stardewpricedb.com/guide/mining-profit#article',
       headline: 'Mining Profit Guide - Best Gems and Minerals to Sell',
-      description: 'Complete guide to maximizing gold from mining in Stardew Valley 1.6.',
+      description: 'Complete guide to maximizing gold from mining in Stardew Valley 1.6.15.',
       image: 'https://stardewpricedb.com/og-image.png',
-      datePublished: '2025-12-15',
-      dateModified: '2025-06-21',
+      datePublished: '2026-05-19',
+      dateModified: '2026-05-19',
       author: { '@type': 'Organization', name: 'StardewPriceDB', url: 'https://stardewpricedb.com' },
       publisher: { '@type': 'Organization', name: 'StardewPriceDB', logo: { '@type': 'ImageObject', url: 'https://stardewpricedb.com/favicon.svg' } },
       mainEntityOfPage: 'https://stardewpricedb.com/guide/mining-profit'
@@ -110,7 +111,7 @@ export default function MiningProfitGuide() {
               ⛏️ Mining Guide
             </span>
             <span className="bg-white/20 backdrop-blur px-3 py-1 rounded-full text-sm font-medium">
-              v1.6 Verified
+              v1.6.15 Verified
             </span>
           </div>
           <h1 className="text-3xl md:text-4xl font-extrabold mb-4">
@@ -530,7 +531,7 @@ export default function MiningProfitGuide() {
                 <div className="font-bold text-purple-800">💀 Skull Cavern Guide</div>
                 <p className="text-sm text-slate-600 mt-1">Floor 100+ strategies</p>
               </Link>
-              <Link href="/?category=Minerals" className="block bg-gradient-to-br from-indigo-50 to-indigo-100 border border-indigo-200 rounded-xl p-4 hover:shadow-md transition-shadow">
+              <Link href="/minerals/" className="block bg-gradient-to-br from-indigo-50 to-indigo-100 border border-indigo-200 rounded-xl p-4 hover:shadow-md transition-shadow">
                 <div className="font-bold text-indigo-800">💎 Mineral Prices</div>
                 <p className="text-sm text-slate-600 mt-1">Complete gem & mineral values</p>
               </Link>
@@ -556,7 +557,7 @@ export default function MiningProfitGuide() {
           {/* Footer */}
           <div className="border-t pt-8 mt-8 not-prose">
             <p className="text-sm text-slate-500">
-              Last updated: June 2025 • Verified for Stardew Valley 1.6
+              Last updated: May 2026 - Verified for Stardew Valley 1.6.15
             </p>
           </div>
         </article>

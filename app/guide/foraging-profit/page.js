@@ -1,14 +1,15 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Foraging Profit Guide - Best Items by Season | Stardew Valley 1.6',
+  title: 'Foraging Profit Guide - Best Items by Season | Stardew Valley 1.6.15',
   description: 'Complete foraging profit analysis. Seasonal items ranked by gold value, Botanist profession math, and efficient foraging routes. Game data verified.',
   alternates: {
     canonical: 'https://stardewpricedb.com/guide/foraging-profit/',
   },
   openGraph: {
-    title: 'Foraging Profit Guide - Stardew Valley 1.6',
+    title: 'Foraging Profit Guide - Stardew Valley 1.6.15',
     description: 'Best foraging items by season. Botanist profession, efficient routes, and gold-per-item rankings.',
+    url: 'https://stardewpricedb.com/guide/foraging-profit/',
   },
 };
 
@@ -21,8 +22,8 @@ const jsonLd = {
       headline: 'Foraging Profit Guide - Best Items by Season',
       description: 'Complete foraging profit analysis with seasonal rankings and efficient routes.',
       image: 'https://stardewpricedb.com/og-image.png',
-      datePublished: '2025-12-17',
-      dateModified: '2025-06-21',
+      datePublished: '2026-05-19',
+      dateModified: '2026-05-19',
       author: { '@type': 'Organization', name: 'StardewPriceDB', url: 'https://stardewpricedb.com' },
       publisher: { '@type': 'Organization', name: 'StardewPriceDB', logo: { '@type': 'ImageObject', url: 'https://stardewpricedb.com/favicon.svg' } },
       mainEntityOfPage: 'https://stardewpricedb.com/guide/foraging-profit'
@@ -157,7 +158,7 @@ export default function ForagingProfitGuide() {
               🌿 Free Money
             </span>
             <span className="bg-white/20 backdrop-blur px-3 py-1 rounded-full text-sm font-medium">
-              v1.6 Verified
+              v1.6.15 Verified
             </span>
           </div>
           <h1 className="text-3xl md:text-4xl font-extrabold mb-4">
@@ -546,7 +547,7 @@ export default function ForagingProfitGuide() {
           {/* Footer */}
           <div className="border-t pt-8 mt-8 not-prose">
             <p className="text-sm text-slate-500">
-              Last updated: June 2025 • Verified for Stardew Valley 1.6
+              Last updated: May 2026 - Verified for Stardew Valley 1.6.15
             </p>
           </div>
         </article>

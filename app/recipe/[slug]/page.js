@@ -2,6 +2,14 @@ import recipesData from '@/data/recipes.json';
 import recipeStrategies from '@/data/recipe-strategies.json';
 import RecipeDetailContent from './RecipeDetailContent';
 
+const SITE_URL = 'https://stardewpricedb.com';
+const OG_IMAGE = '/og-image.png';
+
+function shortDescription(text, max = 155) {
+  if (text.length <= max) return text;
+  return `${text.slice(0, max - 1).trimEnd()}…`;
+}
+
 // Generate static params for all recipes
 export async function generateStaticParams() {
   return recipesData.recipes.map((recipe) => ({
@@ -24,9 +32,13 @@ export async function generateMetadata({ params }) {
     .map(([k, v]) => `+${v} ${k}`)
     .join(', ') : 'No buffs';
 
+  const description = shortDescription(
+    `${recipe.name} recipe in Stardew Valley: ingredients ${ingredientList}. Sells for ${recipe.sellPrice}g, restores +${recipe.energy} energy. ${buffText}.`
+  );
+
   return {
-    title: `${recipe.name} Recipe - Ingredients & Stats | Stardew Valley 1.6`,
-    description: `How to cook ${recipe.name} in Stardew Valley: Ingredients (${ingredientList}). Sells for ${recipe.sellPrice}g. Energy: +${recipe.energy}. Source: ${recipe.source}. ${buffText}.`,
+    title: `${recipe.name} Recipe - Ingredients & Stats`,
+    description,
     keywords: [
       `${recipe.name} Stardew Valley`,
       `${recipe.name} recipe`,
@@ -34,16 +46,17 @@ export async function generateMetadata({ params }) {
       `${recipe.name} ingredients`,
       'Stardew Valley cooking',
       'Stardew Valley recipes',
-      'Stardew Valley 1.6',
+      'Stardew Valley 1.6.15',
     ],
     alternates: {
-      canonical: `/recipe/${recipe.slug}`,
+      canonical: `/recipe/${recipe.slug}/`,
     },
     openGraph: {
       title: `${recipe.name} - Stardew Valley Cooking Recipe`,
-      description: `Cook ${recipe.name}: ${ingredientList}. Energy: +${recipe.energy}. Sell: ${recipe.sellPrice}g.`,
-      url: `https://stardewpricedb.com/recipe/${recipe.slug}`,
+      description,
+      url: `${SITE_URL}/recipe/${recipe.slug}/`,
       type: 'article',
+      images: [{ url: OG_IMAGE, width: 1200, height: 630, alt: `${recipe.name} recipe guide` }],
     },
   };
 }
@@ -65,7 +78,7 @@ function generateJsonLd(recipe) {
       '@type': 'Organization',
       name: 'StardewPriceDB'
     },
-    datePublished: '2025-12-09',
+    datePublished: '2026-05-19',
     prepTime: 'PT1M',
     cookTime: 'PT1M',
     totalTime: 'PT2M',
@@ -74,38 +87,6 @@ function generateJsonLd(recipe) {
       '@type': 'NutritionInformation',
       calories: `${recipe.energy} energy`
     }
-  });
-
-  // FAQ Schema
-  schemas.push({
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: [
-      {
-        '@type': 'Question',
-        name: `How do I get the ${recipe.name} recipe in Stardew Valley?`,
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: `You can learn the ${recipe.name} recipe from: ${recipe.source}.`
-        }
-      },
-      {
-        '@type': 'Question',
-        name: `What ingredients do I need to cook ${recipe.name}?`,
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: `To cook ${recipe.name}, you need: ${recipe.ingredients.map(i => `${i.quantity}x ${i.item}`).join(', ')}.`
-        }
-      },
-      {
-        '@type': 'Question',
-        name: `How much does ${recipe.name} sell for?`,
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: `${recipe.name} sells for ${recipe.sellPrice}g. It restores ${recipe.energy} energy and ${recipe.health} health when consumed.${recipe.buffs ? ` It also provides buffs: ${Object.entries(recipe.buffs).filter(([k]) => k !== 'duration').map(([k, v]) => `+${v} ${k}`).join(', ')}.` : ''}`
-        }
-      }
-    ]
   });
 
   return schemas;

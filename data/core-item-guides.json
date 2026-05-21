@@ -1,0 +1,125 @@
+{
+  "lastUpdated": "2026-05-08",
+  "gameVersion": "1.6.15",
+  "guides": {
+    "ancient-fruit": {
+      "intent": "Best long-term greenhouse crop and endgame wine engine.",
+      "bestChoice": "Keg into Wine with Artisan, then age only when you have spare Cask space.",
+      "doThis": "Fill the Greenhouse or Ginger Island with Ancient Fruit first, then scale Kegs until every weekly harvest can be processed.",
+      "avoidThis": "Do not sell raw Ancient Fruit once you have Keg capacity. Raw selling is mostly a temporary cash-flow move.",
+      "links": [
+        { "label": "Ancient Fruit Wine guide", "href": "/guide/ancient-fruit-wine/" },
+        { "label": "Ancient Fruit vs Starfruit", "href": "/guide/ancient-fruit-vs-starfruit/" },
+        { "label": "Best Greenhouse crops", "href": "/guide/best-greenhouse-crops/" },
+        { "label": "Ancient Fruit guide", "href": "/guide/ancient-fruit/" },
+        { "label": "Keg vs Jar math", "href": "/guide/keg-vs-jar/" }
+      ]
+    },
+    "starfruit": {
+      "intent": "Highest-value repeat crop for Oasis, greenhouse, and wine production.",
+      "bestChoice": "Keg into Wine with Artisan. Use Casks on Starfruit Wine when you want maximum per-bottle value.",
+      "doThis": "Buy seeds from the Oasis, grow in Summer or protected spaces, and reserve Keg capacity before harvest day.",
+      "avoidThis": "Do not compare Starfruit only by raw sell price. The real value is the 2,250g Wine base value and 3,150g Artisan value.",
+      "links": [
+        { "label": "Starfruit Wine guide", "href": "/guide/starfruit-wine/" },
+        { "label": "Ancient Fruit vs Starfruit", "href": "/guide/ancient-fruit-vs-starfruit/" },
+        { "label": "Best Summer crops", "href": "/guide/best-summer-crops/" },
+        { "label": "Most profitable crops", "href": "/guide/most-profitable-crops/" },
+        { "label": "Keg vs Jar math", "href": "/guide/keg-vs-jar/" }
+      ]
+    },
+    "pumpkin": {
+      "intent": "Best Fall single-harvest crop, useful for bundles, gifts, and high-value Juice.",
+      "bestChoice": "Keg into Juice when Kegs are available; use 3x3 planting if you want Giant Crop chances.",
+      "doThis": "Plant on Fall 1 for two normal harvests, or use Speed-Gro to create more flexible timing.",
+      "avoidThis": "Do not ignore bundle and gift uses. Keep enough Pumpkins before processing the whole harvest.",
+      "links": [
+        { "label": "Best Fall crops", "href": "/guide/best-fall-crops/" },
+        { "label": "Best crops by season", "href": "/guide/best-crops-by-season/" },
+        { "label": "Community Center guide", "href": "/guide/community-center/" },
+        { "label": "Keg vs Jar math", "href": "/guide/keg-vs-jar/" }
+      ]
+    },
+    "strawberry": {
+      "intent": "Best Spring regrowth crop after the Egg Festival and a strong Year 2 setup crop.",
+      "bestChoice": "Grow for repeated harvests; Keg excess berries when Keg capacity is not needed by higher-value fruit.",
+      "doThis": "Buy heavily at the Egg Festival, plant immediately, and save some fruit for Seed Makers before Year 2.",
+      "avoidThis": "Do not spend all money without leaving enough for Summer seeds. Strawberry is good, but cash flow matters.",
+      "links": [
+        { "label": "Best Spring crops", "href": "/guide/best-spring-crops/" },
+        { "label": "Best crops by season", "href": "/guide/best-crops-by-season/" },
+        { "label": "Year 1 money route", "href": "/guide/year-1-money/" },
+        { "label": "Most profitable crops", "href": "/guide/most-profitable-crops/" }
+      ]
+    },
+    "hops": {
+      "intent": "Daily Summer harvest crop for Pale Ale and high Keg throughput.",
+      "bestChoice": "Keg into Pale Ale if you have enough Kegs to keep up with daily harvests.",
+      "doThis": "Plan trellis pathing and Keg count before planting large Hops fields.",
+      "avoidThis": "Do not mass plant Hops without Kegs. Raw Hops are low value and daily harvesting becomes tedious.",
+      "links": [
+        { "label": "Best Summer crops", "href": "/guide/best-summer-crops/" },
+        { "label": "Best Keg items", "href": "/guide/best-keg-items/" },
+        { "label": "Keg vs Jar math", "href": "/guide/keg-vs-jar/" },
+        { "label": "Best crops by season", "href": "/guide/best-crops-by-season/" }
+      ]
+    },
+    "truffle": {
+      "intent": "Pig product for daily outdoor animal profit and Truffle Oil production.",
+      "bestChoice": "Process into Truffle Oil with Artisan unless your profession setup strongly favors raw iridium Truffles.",
+      "doThis": "Prioritize Deluxe Barns, happy pigs, and enough Oil Makers before scaling pig count.",
+      "avoidThis": "Do not judge pigs by winter output. Pigs do not find Truffles in winter or rain.",
+      "links": [
+        { "label": "Truffle Oil guide", "href": "/guide/truffle-oil/" },
+        { "label": "Animal profit guide", "href": "/guide/animal-profit/" },
+        { "label": "Artisan profession", "href": "/guide/profession/artisan/" },
+        { "label": "Rancher profession", "href": "/guide/profession/rancher/" }
+      ]
+    },
+    "caviar": {
+      "intent": "Premium Fish Pond product made from Sturgeon Roe.",
+      "bestChoice": "Use Sturgeon Fish Ponds and Preserves Jars to turn Roe into Caviar.",
+      "doThis": "Build at least one Sturgeon pond early if you want steady passive income and Missing Bundle coverage.",
+      "avoidThis": "Do not use random low-value Roe as a substitute when the goal is Caviar. Only Sturgeon Roe makes Caviar.",
+      "links": [
+        { "label": "Caviar guide", "href": "/guide/caviar/" },
+        { "label": "Best Fish Pond choices", "href": "/guide/best-fish-pond/" },
+        { "label": "Sturgeon fishing guide", "href": "/fishing/sturgeon/" },
+        { "label": "Bundles guide", "href": "/bundles/" }
+      ]
+    },
+    "fairy-honey": {
+      "intent": "High-value Fall Bee House product from Fairy Rose flowers.",
+      "bestChoice": "Sell raw Fairy Rose Honey. Do not turn it into Mead.",
+      "doThis": "Place Bee Houses around Fairy Roses and keep the flowers alive through Fall production cycles.",
+      "avoidThis": "Do not put Fairy Honey in a Keg. Mead destroys most of the premium flower value.",
+      "links": [
+        { "label": "Foraging profit guide", "href": "/guide/foraging-profit/" },
+        { "label": "Best crops by season", "href": "/guide/best-crops-by-season/" },
+        { "label": "Keg vs Jar math", "href": "/guide/keg-vs-jar/" }
+      ]
+    },
+    "diamond": {
+      "intent": "Best general Crystalarium item and strong universal gift.",
+      "bestChoice": "Put Diamonds in Crystalariums for stable passive gold unless you need Jade for Staircases.",
+      "doThis": "Use your first Diamonds for Museum and gifting, then standardize Crystalariums around Diamond or Jade depending on your goal.",
+      "avoidThis": "Do not sell early Diamonds before considering Crystalarium, gifts, and quests.",
+      "links": [
+        { "label": "Mining profit guide", "href": "/guide/mining-profit/" },
+        { "label": "Skull Cavern guide", "href": "/guide/skull-cavern/" },
+        { "label": "Best gifts guide", "href": "/guide/best-gifts/" }
+      ]
+    },
+    "oak-resin": {
+      "intent": "Core machine crafting material for Keg scaling.",
+      "bestChoice": "Save for Kegs until your wine and Pale Ale operation is fully built.",
+      "doThis": "Tap Oak Trees early and keep a dedicated Oak Resin supply line running.",
+      "avoidThis": "Do not sell Oak Resin in early or mid game. The lost Keg capacity costs far more than the sell price.",
+      "links": [
+        { "label": "Best Keg items", "href": "/guide/best-keg-items/" },
+        { "label": "Keg vs Jar math", "href": "/guide/keg-vs-jar/" },
+        { "label": "Ancient Fruit guide", "href": "/guide/ancient-fruit/" }
+      ]
+    }
+  }
+}
