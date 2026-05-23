@@ -48,7 +48,7 @@ export default function PrivacyPage() {
 
         <article>
           <h1 className="text-4xl font-extrabold text-slate-800 mb-4">Privacy Policy</h1>
-          <p className="text-lg text-slate-600 mb-8">Last updated: May 15, 2026</p>
+          <p className="text-lg text-slate-600 mb-8">Last updated: May 24, 2026</p>
 
           <div className="space-y-8 text-slate-700">
             <p>
@@ -92,13 +92,22 @@ export default function PrivacyPage() {
               <p className="mb-4">
                 We use Google AdSense to display advertisements on our website. Google AdSense uses 
                 cookies to serve ads based on your prior visits to our website or other websites. 
-                You may opt out of personalized advertising by visiting Google Ads Settings.
+                You may opt out of personalized advertising by visiting{' '}
+                <a href="https://adssettings.google.com/" className="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">
+                  Google Ads Settings
+                </a>.
               </p>
-              <p>
+              <p className="mb-4">
                 Third-party vendors, including Google, use cookies to serve ads based on your 
-                prior visits to this website or other websites. Google use of advertising 
+                prior visits to this website or other websites. Google's use of advertising
                 cookies enables it and its partners to serve ads based on your visit to this 
                 site and other sites on the Internet.
+              </p>
+              <p>
+                You can learn more about how Google uses data from sites that use Google services at{' '}
+                <a href="https://policies.google.com/technologies/partner-sites" className="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">
+                  How Google uses information from sites or apps that use our services
+                </a>.
               </p>
             </Section>
 
@@ -167,9 +176,15 @@ export default function PrivacyPage() {
               </ul>
 
               <h3 className="text-xl font-semibold text-slate-800 mb-3">Managing Cookies</h3>
-              <p>
+              <p className="mb-4">
                 Most web browsers allow you to control cookies through their settings. However, 
                 limiting cookies may impact your experience on our website.
+              </p>
+              <p>
+                For industry-level advertising opt-out choices, you may also visit{' '}
+                <a href="https://youradchoices.com/" className="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">
+                  YourAdChoices
+                </a>.
               </p>
             </Section>
           </div>

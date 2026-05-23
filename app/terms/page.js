@@ -48,7 +48,7 @@ export default function TermsPage() {
 
         <article>
           <h1 className="text-4xl font-extrabold text-slate-800 mb-4">Terms of Service</h1>
-          <p className="text-lg text-slate-600 mb-8">Last updated: May 13, 2026</p>
+          <p className="text-lg text-slate-600 mb-8">Last updated: May 24, 2026</p>
 
           <div className="space-y-8 text-slate-700">
             <p>
@@ -116,7 +116,16 @@ export default function TermsPage() {
               </p>
             </Section>
 
-            <Section title="6. Limitations">
+            <Section title="6. Copyright and Takedown Requests">
+              <p>
+                StardewPriceDB uses game references, item names, and small illustrative game assets to help players
+                understand prices, formulas, and in-game decisions. If you are a rights holder and believe material on
+                this website should be removed or corrected, contact us at contact@stardewpricedb.com with the URL and
+                a description of the material. We review reasonable takedown or correction requests promptly.
+              </p>
+            </Section>
+
+            <Section title="7. Limitations">
               <p>
                 In no event shall StardewPriceDB or its suppliers be liable for any damages (including, 
                 without limitation, damages for loss of data or profit, or due to business interruption) 
@@ -124,16 +133,16 @@ export default function TermsPage() {
               </p>
             </Section>
 
-            <Section title="7. External Links">
+            <Section title="8. External Links">
               <p>
                 StardewPriceDB has not reviewed all of the sites linked to its website and is not 
                 responsible for the contents of any such linked site. The inclusion of any link does 
                 not imply endorsement by StardewPriceDB. Use of any such linked website is at the 
-                user own risk.
+                user's own risk.
               </p>
             </Section>
 
-            <Section title="8. Modifications">
+            <Section title="9. Modifications">
               <p>
                 StardewPriceDB may revise these Terms of Service at any time without notice. By using 
                 this website, you are agreeing to be bound by the then current version of these Terms 
@@ -141,7 +150,7 @@ export default function TermsPage() {
               </p>
             </Section>
 
-            <Section title="9. User Conduct">
+            <Section title="10. User Conduct">
               <p className="mb-3">You agree not to:</p>
               <ul className="list-disc pl-6 space-y-2">
                 <li>Use the website for any unlawful purpose</li>
@@ -152,7 +161,7 @@ export default function TermsPage() {
               </ul>
             </Section>
 
-            <Section title="10. Governing Law">
+            <Section title="11. Governing Law">
               <p>
                 These terms and conditions are governed by and construed in accordance with applicable 
                 laws, and you irrevocably submit to the exclusive jurisdiction of the courts in that 
@@ -160,7 +169,7 @@ export default function TermsPage() {
               </p>
             </Section>
 
-            <Section title="11. Contact Information">
+            <Section title="12. Contact Information">
               <p className="mb-3">If you have any questions about these Terms of Service, please contact us at:</p>
               <ul className="list-disc pl-6 space-y-2">
                 <li>Email: contact@stardewpricedb.com</li>
