@@ -181,6 +181,13 @@ const guides = [
     readTime: '16 min',
   },
   {
+    slug: 'first-8-days-checklist',
+    title: 'First 8 Days Checklist',
+    description: 'Day-by-day beginner route for Spring days 1-8: starter crops, fishing, Mines, Scarecrow, Furnace, and Community Center setup.',
+    category: 'Beginner',
+    readTime: '10 min',
+  },
+  {
     slug: 'year-1-money',
     title: 'Year 1 Money Making Guide',
     description: 'Realistic strategies to maximize income in your first year without exploits.',

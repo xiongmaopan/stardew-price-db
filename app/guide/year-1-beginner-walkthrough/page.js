@@ -485,8 +485,9 @@ export default function Year1BeginnerWalkthroughPage() {
 
         <section className="rounded-xl border border-green-200 bg-green-50 p-6">
           <h2 className="mb-4 text-2xl font-black text-green-950">Next decisions after this guide</h2>
-          <div className="grid gap-4 md:grid-cols-3">
+          <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
             {[
+              { href: '/guide/first-8-days-checklist/', title: 'First 8 Days Checklist', text: 'A tighter day-by-day route for Spring days 1-8 before the full Year 1 plan branches out.' },
               { href: '/crop-profit-calculator/', title: 'Crop Profit Calculator', text: 'Compare crop profit with seed cost, harvest count, Keg, Jar, and profession toggles.' },
               { href: '/guide/best-crops-by-season/', title: 'Best Crops by Season', text: 'Choose practical crops once you know the season and your farm setup.' },
               { href: '/guide/keg-vs-jar/', title: 'Keg vs Jar Guide', text: 'Decide which crops deserve machines and which should be sold raw.' },

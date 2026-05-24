@@ -35,6 +35,7 @@ const guides = [
   'mining-profit',
   'best-fish-pond',
   'year-1-beginner-walkthrough',
+  'first-8-days-checklist',
   'year-1-money',
   'community-center',
   'community-center-fish-bundles',
@@ -229,7 +230,7 @@ export default function sitemap() {
   // Guide pages
   const guidePages = guides.map((guide) => ({
     url: `${baseUrl}/guide/${guide}/`,
-    lastModified: guide === 'year-1-beginner-walkthrough' ? new Date('2026-05-24') : lastModified,
+    lastModified: ['year-1-beginner-walkthrough', 'first-8-days-checklist'].includes(guide) ? new Date('2026-05-24') : lastModified,
     changeFrequency: 'monthly',
     priority: 0.8,
   }));

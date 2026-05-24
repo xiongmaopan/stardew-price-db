@@ -1,9 +1,9 @@
 {
   "createdAt": "2025-12-18",
-  "totalPages": 398,
+  "totalPages": 399,
   "pagesPerDay": 5,
-  "publishedCount": 51,
-  "lastPublishDate": "2026-01-20",
+  "publishedCount": 52,
+  "lastPublishDate": "2026-05-24",
   "pages": [
     {
       "url": "/",
@@ -140,6 +140,13 @@
     },
     {
       "url": "/guide/year-1-beginner-walkthrough/",
+      "priority": 1,
+      "scheduledDay": 3,
+      "published": true,
+      "publishedAt": "2026-05-24"
+    },
+    {
+      "url": "/guide/first-8-days-checklist/",
       "priority": 1,
       "scheduledDay": 3,
       "published": true,
