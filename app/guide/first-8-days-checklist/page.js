@@ -183,6 +183,11 @@ const relatedLinks = [
     text: 'A more profit-focused route once you understand the first week basics.',
   },
   {
+    href: '/guide/beginner-mistakes/',
+    title: 'Beginner Mistakes to Avoid',
+    text: 'A safety checklist for rare items, trash cans, gifts, bombs, Legendary Fish, and end-of-season crop timing.',
+  },
+  {
     href: '/guide/community-center/',
     title: 'Community Center Guide',
     text: 'Bundle deadlines, room priorities, and the items you should stop selling.',

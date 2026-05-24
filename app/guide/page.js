@@ -195,6 +195,13 @@ const guides = [
     readTime: '10 min',
   },
   {
+    slug: 'beginner-mistakes',
+    title: 'Beginner Mistakes to Avoid',
+    description: 'Ten painful beginner mistakes that cost friendship, rare items, crops, machines, or farm progress, plus safer habits.',
+    category: 'Beginner',
+    readTime: '9 min',
+  },
+  {
     slug: 'robin-shop-best-items',
     title: 'Best Robin Shop Items',
     description: 'Five overlooked Carpenter Shop purchases that improve storage, crafting, schedule planning, and farm workflow.',

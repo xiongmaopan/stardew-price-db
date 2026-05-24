@@ -1,8 +1,8 @@
 {
   "createdAt": "2025-12-18",
-  "totalPages": 401,
+  "totalPages": 402,
   "pagesPerDay": 5,
-  "publishedCount": 54,
+  "publishedCount": 55,
   "lastPublishDate": "2026-05-24",
   "pages": [
     {
@@ -154,6 +154,13 @@
     },
     {
       "url": "/guide/first-8-days-checklist/",
+      "priority": 1,
+      "scheduledDay": 3,
+      "published": true,
+      "publishedAt": "2026-05-24"
+    },
+    {
+      "url": "/guide/beginner-mistakes/",
       "priority": 1,
       "scheduledDay": 3,
       "published": true,
