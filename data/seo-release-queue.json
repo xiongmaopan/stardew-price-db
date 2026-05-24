@@ -10,10 +10,10 @@
       "targetKeyword": "stardew valley crop profit calculator",
       "type": "calculator-landing",
       "priority": 1,
-      "status": "draft",
+      "status": "released",
       "plannedOrder": 1,
-      "releasedAt": null,
-      "notes": "Create a focused landing page that routes users to spring, summer, fall, winter, and greenhouse calculators."
+      "releasedAt": "2026-05-24",
+      "notes": "Released as a focused calculator hub that routes users to spring, summer, fall, winter, and greenhouse calculators."
     },
     {
       "slug": "keg-vs-jar-calculator",

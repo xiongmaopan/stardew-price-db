@@ -50,7 +50,7 @@ const workflowLinks = [
     accent: 'text-blue-700 bg-blue-50 border-blue-100',
   },
   {
-    href: '/calculator/spring/',
+    href: '/crop-profit-calculator/',
     title: 'Crop Profit Calculator',
     text: 'Compare seed cost, harvest count, quality, Tiller, Keg, and Jar value.',
     icon: Calculator,
@@ -298,6 +298,11 @@ export default function HomeContent() {
             Every price here reflects Stardew Valley {verificationData.gameVersion} game data. The database covers raw
             sell prices, quality multipliers, profession bonuses, Keg values, Preserves Jar values, Dehydrator formulas,
             Fish Smoker values, and Fish Pond roe calculations.
+          </p>
+          <p>
+            The goal is to answer player decisions that a static wiki table cannot answer quickly: whether a crop is
+            better raw or processed, whether a late planting can still pay back, which profession changes a result, and
+            when a high-price item is actually worse after seed cost or machine time.
           </p>
           <p>
             Base sell price is only the starting point. Crop quality changes raw sale value, Tiller adds 10% to crops,

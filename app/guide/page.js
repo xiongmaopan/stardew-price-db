@@ -288,6 +288,9 @@ export default function GuidesPage() {
           <Link href="/calculator/fall" className="px-4 py-2 bg-orange-500 text-white rounded-lg hover:bg-orange-600 transition">
             Fall Calculator
           </Link>
+          <Link href="/crop-profit-calculator/" className="px-4 py-2 bg-slate-800 text-white rounded-lg hover:bg-slate-900 transition">
+            Calculator Hub
+          </Link>
         </div>
       </div>
     </main>

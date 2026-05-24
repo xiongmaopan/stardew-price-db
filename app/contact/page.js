@@ -101,8 +101,8 @@ export default function ContactPage() {
           <ContactCard 
             title="GitHub"
             description="Found a bug or want to contribute? Open an issue or pull request."
-            link="https://github.com/stardewpricedb"
-            linkText="github.com/stardewpricedb"
+            link="https://github.com/xiongmaopan/stardew-price-db"
+            linkText="github.com/xiongmaopan/stardew-price-db"
           />
         </div>
 

@@ -58,6 +58,12 @@ export default function sitemap() {
       priority: 0.9,
     },
     {
+      url: `${baseUrl}/crop-profit-calculator/`,
+      lastModified,
+      changeFrequency: 'weekly',
+      priority: 0.95,
+    },
+    {
       url: `${baseUrl}/selling-prices/`,
       lastModified,
       changeFrequency: 'weekly',

@@ -7,16 +7,15 @@ export default function Footer() {
     month: 'long',
     day: 'numeric'
   });
-  const freshnessText = `Updated ${lastVerified} · Verified for Stardew Valley ${verificationData.gameVersion}`;
+  const freshnessText = `Updated ${lastVerified} | Verified for Stardew Valley ${verificationData.gameVersion}`;
   
   return (
     <footer className="bg-white border-t border-slate-200 py-12 mt-12">
       <div className="max-w-6xl mx-auto px-4">
-        {/* Data Verification Status - 关键 SEO 信号 */}
         <div className="text-center mb-8 p-4 bg-green-50 rounded-lg border border-green-200">
           <div className="flex items-center justify-center gap-2 mb-2">
             <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
-            <p className="text-sm text-green-700 font-medium">✓ Data Verified</p>
+            <p className="text-sm text-green-700 font-medium">Data Verified</p>
           </div>
           <p className="text-xs text-green-600">
             <strong>{freshnessText}</strong>
@@ -31,9 +30,8 @@ export default function Footer() {
         </div>
         
         <div className="text-center">
-          {/* 版权声明 - 重要！*/}
           <p className="text-slate-500 mb-4 text-sm">
-            Stardew Valley © <a href="https://www.stardewvalley.net/" target="_blank" rel="noopener noreferrer" className="hover:underline">ConcernedApe</a>. 
+            Stardew Valley (c) <a href="https://www.stardewvalley.net/" target="_blank" rel="noopener noreferrer" className="hover:underline">ConcernedApe</a>.
             This is a fan-made tool, not affiliated with or endorsed by ConcernedApe.
           </p>
           
@@ -49,8 +47,8 @@ export default function Footer() {
             <Link href="/fish-ponds/" className="hover:underline">Fish Ponds</Link>
             <Link href="/fishing/" className="hover:underline">Fishing Guide</Link>
             <Link href="/gifts/" className="hover:underline">Gift Guide</Link>
-            <Link href="/calculator/spring/" className="hover:underline">Calculator</Link>
-          </div>          {/* Legal & Info Links */}
+            <Link href="/crop-profit-calculator/" className="hover:underline">Calculator</Link>
+          </div>
           <div className="flex justify-center flex-wrap gap-4 text-sm text-slate-500 mb-4">
             <Link href="/about/" className="hover:text-blue-600 hover:underline">About</Link>
             <Link href="/about-data/" className="hover:text-blue-600 hover:underline">Data Sources</Link>
@@ -61,7 +59,7 @@ export default function Footer() {
           </div>
           
           <p className="mt-8 text-xs text-slate-400">
-            © {new Date().getFullYear()} StardewPriceDB.com | Game sprites © ConcernedApe
+            (c) {new Date().getFullYear()} StardewPriceDB.com | Game sprites (c) ConcernedApe
           </p>
         </div>
       </div>

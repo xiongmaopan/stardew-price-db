@@ -12,7 +12,7 @@ const navLinks = [
   { href: '/recipes/', label: 'Recipes' },
   { href: '/bundles/', label: 'Bundles' },
   { href: '/guide/', label: 'Guides' },
-  { href: '/calculator/spring/', label: 'Calculator' },
+  { href: '/crop-profit-calculator/', label: 'Calculator' },
 ];
 
 export default function Navbar() {
