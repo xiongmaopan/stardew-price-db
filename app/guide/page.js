@@ -188,6 +188,13 @@ const guides = [
     readTime: '16 min',
   },
   {
+    slug: 'year-1-spring-guide',
+    title: 'Year 1 Spring Guide',
+    description: 'First Spring route for beginners: Day 1 setup, fishing cash, Mines, bundles, Strawberries, Speed-Gro, Tappers, and Summer prep.',
+    category: 'Beginner',
+    readTime: '12 min',
+  },
+  {
     slug: 'first-8-days-checklist',
     title: 'First 8 Days Checklist',
     description: 'Day-by-day beginner route for Spring days 1-8: starter crops, fishing, Mines, Scarecrow, Furnace, and Community Center setup.',

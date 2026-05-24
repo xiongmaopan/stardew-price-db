@@ -221,6 +221,11 @@ const relatedLinks = [
     text: 'A day-by-day Spring start that avoids common early routing mistakes.',
   },
   {
+    href: '/guide/year-1-spring-guide/',
+    title: 'Year 1 Spring Guide',
+    text: 'A full first-Spring route for crops, fishing, Mines, bundles, Strawberries, and Summer prep.',
+  },
+  {
     href: '/guide/year-1-beginner-walkthrough/',
     title: 'Year 1 Beginner Walkthrough',
     text: 'A full first-year route for crops, bundles, mining, animals, and winter prep.',

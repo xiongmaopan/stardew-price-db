@@ -1,8 +1,8 @@
 {
   "createdAt": "2025-12-18",
-  "totalPages": 402,
+  "totalPages": 403,
   "pagesPerDay": 5,
-  "publishedCount": 55,
+  "publishedCount": 56,
   "lastPublishDate": "2026-05-24",
   "pages": [
     {
@@ -147,6 +147,13 @@
     },
     {
       "url": "/guide/year-1-beginner-walkthrough/",
+      "priority": 1,
+      "scheduledDay": 3,
+      "published": true,
+      "publishedAt": "2026-05-24"
+    },
+    {
+      "url": "/guide/year-1-spring-guide/",
       "priority": 1,
       "scheduledDay": 3,
       "published": true,

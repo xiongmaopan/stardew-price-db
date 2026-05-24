@@ -488,8 +488,9 @@ export default function Year1BeginnerWalkthroughPage() {
 
         <section className="rounded-xl border border-green-200 bg-green-50 p-6">
           <h2 className="mb-4 text-2xl font-black text-green-950">Next decisions after this guide</h2>
-          <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-5">
+          <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
             {[
+              { href: '/guide/year-1-spring-guide/', title: 'Year 1 Spring Guide', text: 'A focused first-Spring route for starter crops, fishing cash, Mines, bundles, Strawberries, and Summer prep.' },
               { href: '/guide/first-8-days-checklist/', title: 'First 8 Days Checklist', text: 'A tighter day-by-day route for Spring days 1-8 before the full Year 1 plan branches out.' },
               { href: '/guide/robin-shop-best-items/', title: 'Best Robin Shop Items', text: 'Buy the right Carpenter Shop items for storage, crafting, schedule planning, and fewer wasted trips.' },
               { href: '/crop-profit-calculator/', title: 'Crop Profit Calculator', text: 'Compare crop profit with seed cost, harvest count, Keg, Jar, and profession toggles.' },

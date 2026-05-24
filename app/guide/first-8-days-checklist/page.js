@@ -173,6 +173,11 @@ const correctedNotes = [
 
 const relatedLinks = [
   {
+    href: '/guide/year-1-spring-guide/',
+    title: 'Year 1 Spring Guide',
+    text: 'A full first-Spring route after the first week: Strawberries, Speed-Gro, Tappers, mining, and Summer prep.',
+  },
+  {
     href: '/guide/year-1-beginner-walkthrough/',
     title: 'Full Year 1 Beginner Walkthrough',
     text: 'Use this after Day 8 when you are ready to plan Spring, Summer, Fall, and Winter together.',
