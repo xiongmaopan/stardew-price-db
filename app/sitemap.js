@@ -33,6 +33,7 @@ const guides = [
   'greenhouse-layout',
   'animal-profit',
   'mining-profit',
+  'best-weapons',
   'best-fish-pond',
   'year-1-beginner-walkthrough',
   'first-8-days-checklist',
@@ -231,7 +232,7 @@ export default function sitemap() {
   // Guide pages
   const guidePages = guides.map((guide) => ({
     url: `${baseUrl}/guide/${guide}/`,
-    lastModified: ['year-1-beginner-walkthrough', 'first-8-days-checklist', 'robin-shop-best-items'].includes(guide) ? new Date('2026-05-24') : lastModified,
+    lastModified: ['year-1-beginner-walkthrough', 'first-8-days-checklist', 'robin-shop-best-items', 'best-weapons'].includes(guide) ? new Date('2026-05-24') : lastModified,
     changeFrequency: 'monthly',
     priority: 0.8,
   }));

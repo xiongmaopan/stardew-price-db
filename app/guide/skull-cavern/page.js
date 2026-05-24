@@ -77,6 +77,16 @@ export default function SkullCavernGuide() {
         </nav>
 
         <article>
+          <section className="mb-8 rounded-xl border border-purple-200 bg-purple-50 p-5">
+            <h2 className="mb-2 text-xl font-bold text-purple-950">Need a weapon before pushing deeper?</h2>
+            <p className="mb-3 text-sm leading-6 text-purple-900">
+              Compare Infinity Blade, Dragontooth Club, and Iridium Needle with Forge upgrade paths before committing gems and Cinder Shards.
+            </p>
+            <Link href="/guide/best-weapons/" className="inline-flex rounded-lg bg-purple-700 px-4 py-2 text-sm font-bold text-white hover:bg-purple-800">
+              See the best weapons ranking
+            </Link>
+          </section>
+
           {/* Hero Section */}
           <div className="bg-gradient-to-r from-purple-600 to-indigo-700 rounded-2xl p-8 mb-10 text-white shadow-xl">
             <h1 className="text-4xl font-bold mb-4">💀 Skull Cavern Strategy Guide</h1>

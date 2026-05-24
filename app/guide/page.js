@@ -167,6 +167,13 @@ const guides = [
     readTime: '10 min',
   },
   {
+    slug: 'best-weapons',
+    title: 'Best Weapons Ranked',
+    description: 'Top endgame weapons for Stardew Valley 1.6.15: Dragontooth Club, Infinity Blade, and Iridium Needle with Forge builds.',
+    category: 'Combat',
+    readTime: '11 min',
+  },
+  {
     slug: 'best-fish-pond',
     title: 'Best Fish Pond Choices for Profit',
     description: 'Which fish to put in ponds, expected roe income, and Caviar vs Aged Roe comparison.',
