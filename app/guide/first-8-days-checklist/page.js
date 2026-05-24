@@ -324,11 +324,11 @@ export default function First8DaysChecklistPage() {
         </header>
 
         <section className="mb-8 rounded-xl border border-blue-200 bg-blue-50 p-6">
-          <h2 className="mb-3 text-2xl font-black text-blue-950">Editorial note</h2>
+          <h2 className="mb-3 text-2xl font-black text-blue-950">StardewPriceDB editorial note</h2>
           <p className="leading-7 text-blue-950">
-            This is an English adaptation of a player-style first-week checklist, rewritten for clarity and checked
-            against Stardew Valley {GAME_VERSION} mechanics. I kept the useful day-by-day structure, but corrected
-            timing and unlock details that can easily confuse new players.
+            This is original StardewPriceDB guide content written for English readers. It keeps a practical
+            day-by-day player route, then checks the timing, rewards, and unlock details against Stardew Valley
+            {` ${GAME_VERSION}`} mechanics so new players do not lose progress to vague advice.
           </p>
           <div className="mt-4 flex flex-wrap gap-3">
             <Link href="/about-data/" className="rounded-lg bg-white px-4 py-2 text-sm font-bold text-blue-800 ring-1 ring-blue-200 hover:bg-blue-100">

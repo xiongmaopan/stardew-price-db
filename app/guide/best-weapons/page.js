@@ -204,7 +204,7 @@ const quickComparison = [
   ['Most fragile playstyle', 'Iridium Needle'],
 ];
 
-const translatedTakeaways = [
+const editorialTakeaways = [
   {
     title: 'Iridium Needle is the crit-lover pick',
     image: 'iridium-needle',
@@ -459,17 +459,17 @@ export default function BestWeaponsPage() {
         <section className="mb-8 rounded-xl border border-blue-200 bg-blue-50 p-6">
           <h2 className="mb-3 text-2xl font-black text-blue-950">StardewPriceDB editorial note</h2>
           <p className="leading-7 text-blue-950">
-            This is original StardewPriceDB guide content, translated and adapted from our Chinese combat notes for
-            English readers. The normal progression route is the main recommendation. Item-ID naming tricks or spawn
-            shortcuts are included only as optional testing notes because they bypass the combat progression this guide
-            is meant to help players understand.
+            This is original StardewPriceDB guide content written for English readers. The ranking is based on
+            practical combat feel, Forge scaling, obtainability, and verified Stardew Valley mechanics. Item-ID naming
+            tricks or spawn shortcuts are included only as optional testing notes because they bypass the combat
+            progression this guide is meant to help players understand.
           </p>
         </section>
 
         <section className="mb-8 rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
-          <h2 className="mb-4 text-2xl font-black text-slate-950">Plain-English translation of the ranking</h2>
+          <h2 className="mb-4 text-2xl font-black text-slate-950">Plain-English ranking summary</h2>
           <div className="grid gap-4 md:grid-cols-3">
-            {translatedTakeaways.map((item) => (
+            {editorialTakeaways.map((item) => (
               <div key={item.title} className="rounded-lg border border-slate-100 bg-slate-50 p-4">
                 <div className="mb-3 flex items-center gap-3">
                   <GameImage slug={item.image} alt={item.title} width={38} height={38} />

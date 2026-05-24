@@ -407,7 +407,7 @@ export default function BeginnerMistakesPage() {
         <section className="mb-8 rounded-xl border border-blue-200 bg-blue-50 p-6">
           <h2 className="mb-3 text-2xl font-black text-blue-950">StardewPriceDB editorial note</h2>
           <p className="leading-7 text-blue-950">
-            This is original StardewPriceDB guide content, rewritten for English readers with a practical player-first
+            This is original StardewPriceDB guide content, written and edited for English readers with a practical player-first
             tone. The advice is not a generic beginner list: it focuses on mistakes that permanently waste rare items,
             delay progression, or quietly reduce farm efficiency.
           </p>
