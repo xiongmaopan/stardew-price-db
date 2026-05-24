@@ -345,8 +345,8 @@ export default function Year1BeginnerWalkthroughPage() {
         <section className="mb-8 rounded-xl border border-blue-200 bg-blue-50 p-6">
           <h2 className="mb-3 text-2xl font-black text-blue-950">StardewPriceDB editorial note</h2>
           <p className="leading-7 text-blue-950">
-            This is original StardewPriceDB guide content written for English readers. The route, crop advice,
-            bundle priorities, and tool-upgrade notes are edited as a practical first-year walkthrough, then checked
+            This is original StardewPriceDB guide content. The route, crop advice, bundle priorities, and
+            tool-upgrade notes are edited as a practical first-year walkthrough, then checked
             against Stardew Valley {` ${GAME_VERSION}`} mechanics and the local StardewPriceDB formula audit.
           </p>
           <div className="mt-4 flex flex-wrap gap-3">

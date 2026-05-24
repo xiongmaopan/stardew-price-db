@@ -5,9 +5,9 @@ const fs = require('fs');
 const path = require('path');
 
 const CONFIG = {
-  pagesPerDay: 5,
+  pagesPerDay: 2,
   scheduleFile: path.join(__dirname, '../data/sitemap-schedule.json'),
-  sitemapOutput: path.join(__dirname, '../tmp/sitemap-scheduled.xml'),
+  sitemapOutput: path.join(__dirname, '../public/sitemap-scheduled.xml'),
   baseUrl: 'https://stardewpricedb.com'
 };
 
@@ -53,7 +53,9 @@ try {
   
   // 检查今天是否已发布
   if (schedule.lastPublishDate === today) {
+    const total = generateSitemap(schedule);
     console.log(`Already published today (${today})`);
+    console.log(`Total in sitemap: ${total}/${schedule.totalPages}`);
     process.exit(0);
   }
   
@@ -62,7 +64,9 @@ try {
   const toPublish = unpublished.slice(0, CONFIG.pagesPerDay);
   
   if (toPublish.length === 0) {
+    const total = generateSitemap(schedule);
     console.log('All pages published!');
+    console.log(`Total in sitemap: ${total}/${schedule.totalPages}`);
     process.exit(0);
   }
   

@@ -5,9 +5,9 @@ const path = require('path');
 try {
 
 const CONFIG = {
-  pagesPerDay: 5,
+  pagesPerDay: 2,
   scheduleFile: path.join(__dirname, '../data/sitemap-schedule.json'),
-  sitemapOutput: path.join(__dirname, '../tmp/sitemap-scheduled.xml'),
+  sitemapOutput: path.join(__dirname, '../public/sitemap-scheduled.xml'),
   baseUrl: 'https://stardewpricedb.com'
 };
 

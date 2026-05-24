@@ -14,13 +14,13 @@ const path = require('path');
 // 配置
 const CONFIG = {
   // 每天发布的新页面数量
-  pagesPerDay: 5,
+  pagesPerDay: 2,
   
   // 发布计划文件
   scheduleFile: path.join(__dirname, '../data/sitemap-schedule.json'),
   
   // 输出的 sitemap
-  sitemapOutput: path.join(__dirname, '../tmp/sitemap-scheduled.xml'),
+  sitemapOutput: path.join(__dirname, '../public/sitemap-scheduled.xml'),
   
   // 基础 URL
   baseUrl: 'https://stardewpricedb.com'

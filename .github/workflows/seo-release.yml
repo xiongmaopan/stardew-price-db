@@ -3,7 +3,7 @@ name: SEO release queue
 on:
   workflow_dispatch:
   schedule:
-    - cron: "20 2 * * 3"
+    - cron: "20 2 * * *"
 
 jobs:
   release:
@@ -20,7 +20,7 @@ jobs:
 
       - run: npm install
 
-      - name: Publish due SEO page
+      - name: Publish due original or SEO pages
         run: npm run seo:release:due
 
       - name: Detect queue changes
@@ -52,5 +52,5 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add data/seo-release-queue.json data/seo-release-log.json
-          git commit -m "chore: publish queued SEO page"
+          git commit -m "chore: publish queued SEO pages"
           git push

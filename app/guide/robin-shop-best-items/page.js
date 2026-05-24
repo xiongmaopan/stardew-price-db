@@ -328,8 +328,8 @@ export default function RobinShopBestItemsPage() {
         <section className="mb-8 rounded-xl border border-blue-200 bg-blue-50 p-6">
           <h2 className="mb-3 text-2xl font-black text-blue-950">StardewPriceDB editorial note</h2>
           <p className="leading-7 text-blue-950">
-            This is original StardewPriceDB guide content, written and edited for English readers rather than
-            copied from a generic item list. The recommendations are based on practical farm workflow value:
+            This is original StardewPriceDB guide content, not a copied generic item list. The recommendations are
+            based on practical farm workflow value:
             less inventory friction, fewer wasted trips, cleaner storage, and faster crafting.
           </p>
         </section>

@@ -12,7 +12,7 @@ export const metadata = {
   },
   openGraph: {
     title: 'Stardew Valley Guides by StardewPriceDB',
-    description: 'Original English Stardew Valley guides from StardewPriceDB, plus verified calculators and price data.',
+    description: 'Original StardewPriceDB guides, plus verified Stardew Valley calculators and price data.',
     url: `${SITE_URL}/guide/`,
     type: 'website',
     images: [{ url: OG_IMAGE, width: 1200, height: 630, alt: 'Stardew Valley guides' }],
@@ -20,6 +20,13 @@ export const metadata = {
 };
 
 const guides = [
+  {
+    slug: 'money-making-methods-ranked',
+    title: 'Money Making Methods Ranked',
+    description: 'Original StardewPriceDB ranking of Kegs, Sheep, Pigs, Mushroom Logs, Fish Ponds, Bee Houses, Crab Pots, and Fish Smokers.',
+    category: 'Original',
+    readTime: '13 min',
+  },
   {
     slug: 'most-profitable-crops',
     title: 'Most Profitable Crops by Season',
@@ -261,6 +268,7 @@ const guides = [
 ];
 
 const originalGuideSlugs = [
+  'money-making-methods-ranked',
   'year-1-spring-guide',
   'first-8-days-checklist',
   'year-1-beginner-walkthrough',
@@ -270,6 +278,7 @@ const originalGuideSlugs = [
 ];
 
 const originalGuideArt = {
+  'money-making-methods-ranked': ['keg', 'sheep', 'pig'],
   'year-1-spring-guide': ['strawberry', 'speed-gro', 'quality-sprinkler'],
   'first-8-days-checklist': ['parsnip', 'chest', 'catfish'],
   'year-1-beginner-walkthrough': ['blueberry', 'pumpkin', 'quality-sprinkler'],
@@ -352,7 +361,7 @@ export default function GuidesPage() {
             <p className="mb-2 text-sm font-black uppercase tracking-wide text-green-700">stardewpricedb.com original guides</p>
             <h2 className="text-3xl font-black text-slate-950">Original StardewPriceDB Guides</h2>
             <p className="mt-2 text-sm leading-6 text-slate-700">
-              These are original English guides created by StardewPriceDB, not scraped wiki summaries or copied item lists.
+              These are original StardewPriceDB guides, not scraped wiki summaries or copied item lists.
               Each page adds player decisions, practical routes, images, internal calculators, and mechanics checked for Stardew Valley 1.6.15.
             </p>
           </div>

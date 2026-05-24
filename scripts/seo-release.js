@@ -132,7 +132,7 @@ function usage() {
 
 Rules:
   - draft pages never auto-release
-  - ready pages release at most one per run by default
+  - ready pages release up to maxPagesPerRun per run
   - released pages are logged in data/seo-release-log.json`);
 }
 

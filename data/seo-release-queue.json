@@ -1,8 +1,8 @@
 {
-  "cadenceDays": 7,
-  "maxPagesPerRun": 1,
-  "nextRunDate": "2026-05-28",
-  "notes": "Only pages with status=ready are eligible for automatic release. Core pages such as /, /selling-prices/, and existing item pages are intentionally excluded.",
+  "cadenceDays": 1,
+  "maxPagesPerRun": 2,
+  "nextRunDate": "2026-05-25",
+  "notes": "Only pages with status=ready are eligible for automatic release. Ready original guide and SEO pages release daily, up to 2 per run. Core pages such as /, /selling-prices/, and existing item pages are intentionally excluded.",
   "pages": [
     {
       "slug": "crop-profit-calculator",
@@ -69,6 +69,17 @@
       "plannedOrder": 6,
       "releasedAt": null,
       "notes": "Release after printable checklist and bundle links are ready."
+    },
+    {
+      "slug": "money-making-methods-ranked",
+      "url": "/guide/money-making-methods-ranked/",
+      "targetKeyword": "stardew valley money making methods ranked",
+      "type": "original-guide",
+      "priority": 1,
+      "status": "released",
+      "plannedOrder": 7,
+      "releasedAt": "2026-05-24",
+      "notes": "Original StardewPriceDB ranking guide published with matched item images, source checks, structured data, and internal links."
     }
   ]
 }

@@ -459,8 +459,8 @@ export default function BestWeaponsPage() {
         <section className="mb-8 rounded-xl border border-blue-200 bg-blue-50 p-6">
           <h2 className="mb-3 text-2xl font-black text-blue-950">StardewPriceDB editorial note</h2>
           <p className="leading-7 text-blue-950">
-            This is original StardewPriceDB guide content written for English readers. The ranking is based on
-            practical combat feel, Forge scaling, obtainability, and verified Stardew Valley mechanics. Item-ID naming
+            This is original StardewPriceDB guide content. The ranking is based on practical combat feel, Forge
+            scaling, obtainability, and verified Stardew Valley mechanics. Item-ID naming
             tricks or spawn shortcuts are included only as optional testing notes because they bypass the combat
             progression this guide is meant to help players understand.
           </p>

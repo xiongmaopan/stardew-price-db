@@ -12,6 +12,7 @@ const lastModified = new Date(verificationData.lastVerified);
 
 // Guide pages
 const guides = [
+  'money-making-methods-ranked',
   'most-profitable-crops',
   'best-crops-by-season',
   'best-spring-crops',
@@ -234,7 +235,7 @@ export default function sitemap() {
   // Guide pages
   const guidePages = guides.map((guide) => ({
     url: `${baseUrl}/guide/${guide}/`,
-    lastModified: ['year-1-beginner-walkthrough', 'year-1-spring-guide', 'first-8-days-checklist', 'beginner-mistakes', 'robin-shop-best-items', 'best-weapons'].includes(guide) ? new Date('2026-05-24') : lastModified,
+    lastModified: ['money-making-methods-ranked', 'year-1-beginner-walkthrough', 'year-1-spring-guide', 'first-8-days-checklist', 'beginner-mistakes', 'robin-shop-best-items', 'best-weapons'].includes(guide) ? new Date('2026-05-24') : lastModified,
     changeFrequency: 'monthly',
     priority: 0.8,
   }));

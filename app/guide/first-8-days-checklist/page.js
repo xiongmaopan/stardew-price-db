@@ -326,8 +326,8 @@ export default function First8DaysChecklistPage() {
         <section className="mb-8 rounded-xl border border-blue-200 bg-blue-50 p-6">
           <h2 className="mb-3 text-2xl font-black text-blue-950">StardewPriceDB editorial note</h2>
           <p className="leading-7 text-blue-950">
-            This is original StardewPriceDB guide content written for English readers. It keeps a practical
-            day-by-day player route, then checks the timing, rewards, and unlock details against Stardew Valley
+            This is original StardewPriceDB guide content. It keeps a practical day-by-day player route, then checks
+            the timing, rewards, and unlock details against Stardew Valley
             {` ${GAME_VERSION}`} mechanics so new players do not lose progress to vague advice.
           </p>
           <div className="mt-4 flex flex-wrap gap-3">
