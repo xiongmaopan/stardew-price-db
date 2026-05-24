@@ -259,6 +259,20 @@ export default function BeginnerFarmMapChoicePage() {
         </div>
       </header>
 
+      <figure className="my-8 rounded-2xl border border-slate-200 bg-white p-3 shadow-sm">
+        <img
+          src="/images/guides/beginner-farm-map-choice.svg"
+          alt="Best farm maps for Stardew Valley beginners infographic"
+          width="1200"
+          height="630"
+          loading="eager"
+          className="w-full rounded-xl"
+        />
+        <figcaption className="px-3 py-3 text-sm text-slate-500">
+          Original StardewPriceDB infographic ranking the safest farm maps for a first Stardew Valley save.
+        </figcaption>
+      </figure>
+
       <section className="my-8 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
         {quickAnswers.map(([label, answer]) => (
           <div key={label} className="rounded-xl border border-slate-200 bg-white p-4 shadow-sm">

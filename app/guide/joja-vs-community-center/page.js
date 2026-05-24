@@ -215,6 +215,20 @@ export default function JojaVsCommunityCenterPage() {
         </div>
       </header>
 
+      <figure className="my-8 rounded-2xl border border-slate-200 bg-white p-3 shadow-sm">
+        <img
+          src="/images/guides/joja-vs-community-center.svg"
+          alt="Joja vs Community Center route comparison infographic"
+          width="1200"
+          height="630"
+          loading="eager"
+          className="w-full rounded-xl"
+        />
+        <figcaption className="px-3 py-3 text-sm text-slate-500">
+          Original StardewPriceDB infographic summarizing the route choice: Community Center for a first save, Joja for controlled repeat saves.
+        </figcaption>
+      </figure>
+
       <section className="my-8 grid gap-4 md:grid-cols-2">
         {routeCards.map((route) => (
           <article key={route.route} className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
