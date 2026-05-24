@@ -80,6 +80,290 @@
       "plannedOrder": 7,
       "releasedAt": "2026-05-24",
       "notes": "Original StardewPriceDB ranking guide published with matched item images, source checks, structured data, and internal links."
+    },
+    {
+      "slug": "joja-vs-community-center",
+      "url": "/guide/joja-vs-community-center/",
+      "targetKeyword": "stardew valley joja vs community center",
+      "type": "original-guide",
+      "priority": 1,
+      "status": "draft",
+      "plannedOrder": 8,
+      "plannedPublishDate": "2026-05-25",
+      "releasedAt": null,
+      "displayTitle": "Joja vs Community Center: Which Route Should You Choose?",
+      "description": "Original decision guide comparing Joja and Community Center routes by cost, unlock speed, story value, bundles, and first-year planning.",
+      "imagePlan": [
+        "gold",
+        "calendar",
+        "spring-seeds",
+        "quality-sprinkler"
+      ],
+      "sourceLeads": [
+        "https://www.xiaoheihe.cn/app/bbs/link/181155226"
+      ],
+      "notes": "Original StardewPriceDB guide planned from Xiaoheihe topic research. Write original copy, verify mechanics, use owned/recreated images, then mark ready."
+    },
+    {
+      "slug": "beginner-farm-map-choice",
+      "url": "/guide/beginner-farm-map-choice/",
+      "targetKeyword": "best farm map stardew valley beginners",
+      "type": "original-guide",
+      "priority": 1,
+      "status": "draft",
+      "plannedOrder": 9,
+      "plannedPublishDate": "2026-05-25",
+      "releasedAt": null,
+      "displayTitle": "Best Farm Map for Beginners in Stardew Valley",
+      "description": "Original beginner guide to choosing a farm map by crop space, fishing, mining access, layout difficulty, and long-term farm goals.",
+      "imagePlan": [
+        "parsnip",
+        "quality-sprinkler",
+        "wood",
+        "stone"
+      ],
+      "sourceLeads": [
+        "https://www.xiaoheihe.cn/app/bbs/link/181921945"
+      ],
+      "notes": "Original StardewPriceDB guide planned from Xiaoheihe topic research. Write original copy, verify mechanics, use owned/recreated images, then mark ready."
+    },
+    {
+      "slug": "community-center-bundles-checklist",
+      "url": "/guide/community-center-bundles-checklist/",
+      "targetKeyword": "stardew valley community center checklist",
+      "type": "original-guide",
+      "priority": 1,
+      "status": "draft",
+      "plannedOrder": 10,
+      "plannedPublishDate": "2026-05-26",
+      "releasedAt": null,
+      "displayTitle": "Community Center Checklist and Bundle Priority Guide",
+      "description": "Original checklist for Community Center bundles with seasonal deadlines, high-risk items, and beginner routing.",
+      "imagePlan": [
+        "spring-seeds",
+        "sturgeon",
+        "truffle",
+        "gold"
+      ],
+      "sourceLeads": [
+        "https://www.xiaoheihe.cn/app/bbs/link/180727888",
+        "https://www.xiaoheihe.cn/app/bbs/link/179653692",
+        "https://www.xiaoheihe.cn/app/bbs/link/179818552"
+      ],
+      "notes": "Original StardewPriceDB guide planned from Xiaoheihe topic research. Write original copy, verify mechanics, use owned/recreated images, then mark ready."
+    },
+    {
+      "slug": "early-game-money-guide",
+      "url": "/guide/early-game-money-guide/",
+      "targetKeyword": "stardew valley early game money",
+      "type": "original-guide",
+      "priority": 1,
+      "status": "draft",
+      "plannedOrder": 11,
+      "plannedPublishDate": "2026-05-26",
+      "releasedAt": null,
+      "displayTitle": "Early Game Money Guide: What to Do Before Kegs",
+      "description": "Original early-game money route for new farms covering fishing, crops, mines, tool timing, and the first stable profit loops.",
+      "imagePlan": [
+        "parsnip",
+        "catfish",
+        "copper-ore",
+        "gold"
+      ],
+      "sourceLeads": [
+        "https://www.xiaoheihe.cn/app/bbs/link/180196159",
+        "https://www.xiaoheihe.cn/app/bbs/link/181094356",
+        "https://www.xiaoheihe.cn/app/bbs/link/182031526"
+      ],
+      "notes": "Original StardewPriceDB guide planned from Xiaoheihe topic research. Write original copy, verify mechanics, use owned/recreated images, then mark ready."
+    },
+    {
+      "slug": "keg-brewing-layout-guide",
+      "url": "/guide/keg-brewing-layout-guide/",
+      "targetKeyword": "stardew valley keg layout brewing guide",
+      "type": "original-guide",
+      "priority": 1,
+      "status": "draft",
+      "plannedOrder": 12,
+      "plannedPublishDate": "2026-05-27",
+      "releasedAt": null,
+      "displayTitle": "Keg Brewing and Placement Guide",
+      "description": "Original Keg guide covering crop inputs, Oak Resin bottlenecks, shed capacity, harvest rhythm, and layout decisions.",
+      "imagePlan": [
+        "keg",
+        "oak-resin",
+        "ancient-fruit",
+        "wine"
+      ],
+      "sourceLeads": [
+        "https://www.xiaoheihe.cn/app/bbs/link/181988801",
+        "https://www.xiaoheihe.cn/app/bbs/link/179716589",
+        "https://www.xiaoheihe.cn/app/bbs/link/182009529"
+      ],
+      "notes": "Original StardewPriceDB guide planned from Xiaoheihe topic research. Write original copy, verify mechanics, use owned/recreated images, then mark ready."
+    },
+    {
+      "slug": "animal-profit-ranking",
+      "url": "/guide/animal-profit-ranking/",
+      "targetKeyword": "stardew valley animal profit ranking",
+      "type": "original-guide",
+      "priority": 1,
+      "status": "draft",
+      "plannedOrder": 13,
+      "plannedPublishDate": "2026-05-27",
+      "releasedAt": null,
+      "displayTitle": "Animal Profit Ranking: Pigs, Sheep, Cows, Goats, and Coops",
+      "description": "Original animal income ranking with startup cost, daily labor, season limits, processing value, and automation potential.",
+      "imagePlan": [
+        "pig",
+        "truffle",
+        "sheep",
+        "wool"
+      ],
+      "sourceLeads": [
+        "https://www.xiaoheihe.cn/app/bbs/link/180608757"
+      ],
+      "notes": "Original StardewPriceDB guide planned from Xiaoheihe topic research. Write original copy, verify mechanics, use owned/recreated images, then mark ready."
+    },
+    {
+      "slug": "best-fish-for-fish-ponds",
+      "url": "/guide/best-fish-for-fish-ponds/",
+      "targetKeyword": "stardew valley fish pond best fish",
+      "type": "original-guide",
+      "priority": 1,
+      "status": "draft",
+      "plannedOrder": 14,
+      "plannedPublishDate": "2026-05-28",
+      "releasedAt": null,
+      "displayTitle": "Best Fish for Fish Ponds",
+      "description": "Original Fish Pond guide comparing Sturgeon, Lava Eel, Blobfish, Super Cucumber, Stingray, and utility pond choices.",
+      "imagePlan": [
+        "fish-pond",
+        "sturgeon",
+        "roe",
+        "caviar"
+      ],
+      "sourceLeads": [
+        "https://www.xiaoheihe.cn/app/bbs/link/180983655"
+      ],
+      "notes": "Original StardewPriceDB guide planned from Xiaoheihe topic research. Write original copy, verify mechanics, use owned/recreated images, then mark ready."
+    },
+    {
+      "slug": "simple-fishing-guide",
+      "url": "/guide/simple-fishing-guide/",
+      "targetKeyword": "stardew valley fishing guide beginners",
+      "type": "original-guide",
+      "priority": 1,
+      "status": "draft",
+      "plannedOrder": 15,
+      "plannedPublishDate": "2026-05-28",
+      "releasedAt": null,
+      "displayTitle": "Simple Fishing Guide for New Players",
+      "description": "Original fishing guide focused on rod upgrades, bait, tackle, good early spots, easier fish, and when to sell.",
+      "imagePlan": [
+        "bait",
+        "deluxe-bait",
+        "catfish",
+        "sturgeon"
+      ],
+      "sourceLeads": [
+        "https://www.xiaoheihe.cn/app/bbs/link/181423050"
+      ],
+      "notes": "Original StardewPriceDB guide planned from Xiaoheihe topic research. Write original copy, verify mechanics, use owned/recreated images, then mark ready."
+    },
+    {
+      "slug": "farm-layout-planning-guide",
+      "url": "/guide/farm-layout-planning-guide/",
+      "targetKeyword": "stardew valley farm layout planning",
+      "type": "original-guide",
+      "priority": 1,
+      "status": "draft",
+      "plannedOrder": 16,
+      "plannedPublishDate": "2026-05-29",
+      "releasedAt": null,
+      "displayTitle": "Farm Layout Planning Guide",
+      "description": "Original planning guide for crop zones, barns, sheds, paths, machines, and late-game layout cleanup.",
+      "imagePlan": [
+        "wood",
+        "stone",
+        "quality-sprinkler",
+        "big-chest"
+      ],
+      "sourceLeads": [
+        "https://www.xiaoheihe.cn/app/bbs/link/181520287",
+        "https://www.xiaoheihe.cn/app/bbs/link/179365347",
+        "https://www.xiaoheihe.cn/app/bbs/link/179162505"
+      ],
+      "notes": "Original StardewPriceDB guide planned from Xiaoheihe topic research. Write original copy, verify mechanics, use owned/recreated images, then mark ready."
+    },
+    {
+      "slug": "building-materials-checklist",
+      "url": "/guide/building-materials-checklist/",
+      "targetKeyword": "stardew valley building materials checklist",
+      "type": "original-guide",
+      "priority": 1,
+      "status": "draft",
+      "plannedOrder": 17,
+      "plannedPublishDate": "2026-05-29",
+      "releasedAt": null,
+      "displayTitle": "Building Materials Checklist",
+      "description": "Original checklist for Wood, Stone, Hardwood, Copper, Iron, Gold, and early building priorities.",
+      "imagePlan": [
+        "wood",
+        "stone",
+        "hardwood",
+        "gold-bar"
+      ],
+      "sourceLeads": [
+        "https://www.xiaoheihe.cn/app/bbs/link/181988440"
+      ],
+      "notes": "Original StardewPriceDB guide planned from Xiaoheihe topic research. Write original copy, verify mechanics, use owned/recreated images, then mark ready."
+    },
+    {
+      "slug": "best-crops-to-plant-for-profit",
+      "url": "/guide/best-crops-to-plant-for-profit/",
+      "targetKeyword": "stardew valley what crops to plant for profit",
+      "type": "original-guide",
+      "priority": 1,
+      "status": "draft",
+      "plannedOrder": 18,
+      "plannedPublishDate": "2026-05-30",
+      "releasedAt": null,
+      "displayTitle": "What Crops Should You Plant for Profit?",
+      "description": "Original crop decision guide that separates raw sell price, gold per day, seed cost, processing value, and beginner safety.",
+      "imagePlan": [
+        "strawberry",
+        "blueberry",
+        "pumpkin",
+        "starfruit"
+      ],
+      "sourceLeads": [
+        "https://www.xiaoheihe.cn/app/bbs/link/181863392"
+      ],
+      "notes": "Original StardewPriceDB guide planned from Xiaoheihe topic research. Write original copy, verify mechanics, use owned/recreated images, then mark ready."
+    },
+    {
+      "slug": "cask-aging-layout-guide",
+      "url": "/guide/cask-aging-layout-guide/",
+      "targetKeyword": "stardew valley cask layout aging guide",
+      "type": "original-guide",
+      "priority": 1,
+      "status": "draft",
+      "plannedOrder": 19,
+      "plannedPublishDate": "2026-05-30",
+      "releasedAt": null,
+      "displayTitle": "Cask Aging and Cellar Layout Guide",
+      "description": "Original guide to Casks, cellar timing, Wine aging, layout tradeoffs, and when aging is worth the wait.",
+      "imagePlan": [
+        "wine",
+        "wine-silver",
+        "starfruit",
+        "ancient-fruit"
+      ],
+      "sourceLeads": [
+        "https://www.xiaoheihe.cn/app/bbs/link/181923732"
+      ],
+      "notes": "Original StardewPriceDB guide planned from Xiaoheihe topic research. Write original copy, verify mechanics, use owned/recreated images, then mark ready."
     }
   ]
 }

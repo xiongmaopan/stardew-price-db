@@ -1,0 +1,168 @@
+{
+  "generatedAt": "2026-05-24",
+  "source": "Xiaoheihe authenticated Chrome topic research",
+  "researchWindow": {
+    "from": "2026-04-24",
+    "to": "2026-05-24",
+    "capturedLinks": 244,
+    "recentLinks": 32,
+    "valuableRecentLinks": 27
+  },
+  "policy": "Use source pages as topic research only. Do not copy source wording, screenshots, or third-party images into StardewPriceDB pages. Build original StardewPriceDB guides, verify game mechanics, and use owned or recreated visual assets.",
+  "cadence": {
+    "recommendedPagesPerDay": 2,
+    "minimumPagesPerDay": 1,
+    "maximumPagesPerDay": 3,
+    "releaseQueue": "data/seo-release-queue.json"
+  },
+  "plannedGuides": [
+    {
+      "slug": "joja-vs-community-center",
+      "url": "/guide/joja-vs-community-center/",
+      "plannedPublishDate": "2026-05-25",
+      "targetKeyword": "stardew valley joja vs community center",
+      "title": "Joja vs Community Center: Which Route Should You Choose?",
+      "description": "Original decision guide comparing Joja and Community Center routes by cost, unlock speed, story value, bundles, and first-year planning.",
+      "sourceLeads": ["https://www.xiaoheihe.cn/app/bbs/link/181155226"],
+      "imagePlan": ["gold", "calendar", "spring-seeds", "quality-sprinkler"],
+      "status": "draft"
+    },
+    {
+      "slug": "beginner-farm-map-choice",
+      "url": "/guide/beginner-farm-map-choice/",
+      "plannedPublishDate": "2026-05-25",
+      "targetKeyword": "best farm map stardew valley beginners",
+      "title": "Best Farm Map for Beginners in Stardew Valley",
+      "description": "Original beginner guide to choosing a farm map by crop space, fishing, mining access, layout difficulty, and long-term farm goals.",
+      "sourceLeads": ["https://www.xiaoheihe.cn/app/bbs/link/181921945"],
+      "imagePlan": ["parsnip", "quality-sprinkler", "wood", "stone"],
+      "status": "draft"
+    },
+    {
+      "slug": "community-center-bundles-checklist",
+      "url": "/guide/community-center-bundles-checklist/",
+      "plannedPublishDate": "2026-05-26",
+      "targetKeyword": "stardew valley community center checklist",
+      "title": "Community Center Checklist and Bundle Priority Guide",
+      "description": "Original checklist for Community Center bundles with seasonal deadlines, high-risk items, and beginner routing.",
+      "sourceLeads": [
+        "https://www.xiaoheihe.cn/app/bbs/link/180727888",
+        "https://www.xiaoheihe.cn/app/bbs/link/179653692",
+        "https://www.xiaoheihe.cn/app/bbs/link/179818552"
+      ],
+      "imagePlan": ["spring-seeds", "sturgeon", "truffle", "gold"],
+      "status": "draft"
+    },
+    {
+      "slug": "early-game-money-guide",
+      "url": "/guide/early-game-money-guide/",
+      "plannedPublishDate": "2026-05-26",
+      "targetKeyword": "stardew valley early game money",
+      "title": "Early Game Money Guide: What to Do Before Kegs",
+      "description": "Original early-game money route for new farms covering fishing, crops, mines, tool timing, and the first stable profit loops.",
+      "sourceLeads": [
+        "https://www.xiaoheihe.cn/app/bbs/link/180196159",
+        "https://www.xiaoheihe.cn/app/bbs/link/181094356",
+        "https://www.xiaoheihe.cn/app/bbs/link/182031526"
+      ],
+      "imagePlan": ["parsnip", "catfish", "copper-ore", "gold"],
+      "status": "draft"
+    },
+    {
+      "slug": "keg-brewing-layout-guide",
+      "url": "/guide/keg-brewing-layout-guide/",
+      "plannedPublishDate": "2026-05-27",
+      "targetKeyword": "stardew valley keg layout brewing guide",
+      "title": "Keg Brewing and Placement Guide",
+      "description": "Original Keg guide covering crop inputs, Oak Resin bottlenecks, shed capacity, harvest rhythm, and layout decisions.",
+      "sourceLeads": [
+        "https://www.xiaoheihe.cn/app/bbs/link/181988801",
+        "https://www.xiaoheihe.cn/app/bbs/link/179716589",
+        "https://www.xiaoheihe.cn/app/bbs/link/182009529"
+      ],
+      "imagePlan": ["keg", "oak-resin", "ancient-fruit", "wine"],
+      "status": "draft"
+    },
+    {
+      "slug": "animal-profit-ranking",
+      "url": "/guide/animal-profit-ranking/",
+      "plannedPublishDate": "2026-05-27",
+      "targetKeyword": "stardew valley animal profit ranking",
+      "title": "Animal Profit Ranking: Pigs, Sheep, Cows, Goats, and Coops",
+      "description": "Original animal income ranking with startup cost, daily labor, season limits, processing value, and automation potential.",
+      "sourceLeads": ["https://www.xiaoheihe.cn/app/bbs/link/180608757"],
+      "imagePlan": ["pig", "truffle", "sheep", "wool"],
+      "status": "draft"
+    },
+    {
+      "slug": "best-fish-for-fish-ponds",
+      "url": "/guide/best-fish-for-fish-ponds/",
+      "plannedPublishDate": "2026-05-28",
+      "targetKeyword": "stardew valley fish pond best fish",
+      "title": "Best Fish for Fish Ponds",
+      "description": "Original Fish Pond guide comparing Sturgeon, Lava Eel, Blobfish, Super Cucumber, Stingray, and utility pond choices.",
+      "sourceLeads": ["https://www.xiaoheihe.cn/app/bbs/link/180983655"],
+      "imagePlan": ["fish-pond", "sturgeon", "roe", "caviar"],
+      "status": "draft"
+    },
+    {
+      "slug": "simple-fishing-guide",
+      "url": "/guide/simple-fishing-guide/",
+      "plannedPublishDate": "2026-05-28",
+      "targetKeyword": "stardew valley fishing guide beginners",
+      "title": "Simple Fishing Guide for New Players",
+      "description": "Original fishing guide focused on rod upgrades, bait, tackle, good early spots, easier fish, and when to sell.",
+      "sourceLeads": ["https://www.xiaoheihe.cn/app/bbs/link/181423050"],
+      "imagePlan": ["bait", "deluxe-bait", "catfish", "sturgeon"],
+      "status": "draft"
+    },
+    {
+      "slug": "farm-layout-planning-guide",
+      "url": "/guide/farm-layout-planning-guide/",
+      "plannedPublishDate": "2026-05-29",
+      "targetKeyword": "stardew valley farm layout planning",
+      "title": "Farm Layout Planning Guide",
+      "description": "Original planning guide for crop zones, barns, sheds, paths, machines, and late-game layout cleanup.",
+      "sourceLeads": [
+        "https://www.xiaoheihe.cn/app/bbs/link/181520287",
+        "https://www.xiaoheihe.cn/app/bbs/link/179365347",
+        "https://www.xiaoheihe.cn/app/bbs/link/179162505"
+      ],
+      "imagePlan": ["wood", "stone", "quality-sprinkler", "big-chest"],
+      "status": "draft"
+    },
+    {
+      "slug": "building-materials-checklist",
+      "url": "/guide/building-materials-checklist/",
+      "plannedPublishDate": "2026-05-29",
+      "targetKeyword": "stardew valley building materials checklist",
+      "title": "Building Materials Checklist",
+      "description": "Original checklist for Wood, Stone, Hardwood, Copper, Iron, Gold, and early building priorities.",
+      "sourceLeads": ["https://www.xiaoheihe.cn/app/bbs/link/181988440"],
+      "imagePlan": ["wood", "stone", "hardwood", "gold-bar"],
+      "status": "draft"
+    },
+    {
+      "slug": "best-crops-to-plant-for-profit",
+      "url": "/guide/best-crops-to-plant-for-profit/",
+      "plannedPublishDate": "2026-05-30",
+      "targetKeyword": "stardew valley what crops to plant for profit",
+      "title": "What Crops Should You Plant for Profit?",
+      "description": "Original crop decision guide that separates raw sell price, gold per day, seed cost, processing value, and beginner safety.",
+      "sourceLeads": ["https://www.xiaoheihe.cn/app/bbs/link/181863392"],
+      "imagePlan": ["strawberry", "blueberry", "pumpkin", "starfruit"],
+      "status": "draft"
+    },
+    {
+      "slug": "cask-aging-layout-guide",
+      "url": "/guide/cask-aging-layout-guide/",
+      "plannedPublishDate": "2026-05-30",
+      "targetKeyword": "stardew valley cask layout aging guide",
+      "title": "Cask Aging and Cellar Layout Guide",
+      "description": "Original guide to Casks, cellar timing, Wine aging, layout tradeoffs, and when aging is worth the wait.",
+      "sourceLeads": ["https://www.xiaoheihe.cn/app/bbs/link/181923732"],
+      "imagePlan": ["wine", "wine-silver", "starfruit", "ancient-fruit"],
+      "status": "draft"
+    }
+  ]
+}
