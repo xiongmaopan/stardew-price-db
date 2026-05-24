@@ -58,6 +58,11 @@ const weapons = [
     verdict:
       'The strongest pick when you are willing to farm rare Volcano chests and tune the weapon at the Forge.',
     image: 'dragontooth-club',
+    progressionIcons: ['dragontooth-club', 'dragon-tooth', 'ruby', 'prismatic-shard'],
+    playerFeel:
+      'This is the heavy weapon pick. Before tuning, it can feel slow and clumsy. After Speed comfort, a good innate roll, and Ruby forging, the special attack turns it into the highest burst weapon in the list.',
+    shortcutNote:
+      'Testing shortcut: some players use weapon ID (W)58 in item-ID naming setups. For a clean save, farm Volcano Dungeon chests instead.',
     quickTake: [
       'Hits as hard as an Infinity Blade before upgrades.',
       'Adds built-in critical power and heavy knockback.',
@@ -73,7 +78,7 @@ const weapons = [
       'Use Ruby if you want the cleanest damage increase.',
       'Use Emerald if the slow club swing is what gets you hit.',
       'Use a Prismatic Shard for Crusader if you spend a lot of time fighting mummies, ghosts, skeletons, or void spirits.',
-      'Use Dragon Tooth innate rolls to chase useful comfort stats such as reduced Weight, Speed, Attack, or Crit Power.',
+      'Use Dragon Tooth innate rolls to chase reduced Weight plus Speed if possible. Lower Weight reduces enemy knockback distance, and Speed makes the club feel much less sluggish.',
     ],
     downside:
       'The weapon is not reliable to obtain. If you want a strong weapon on a predictable schedule, Infinity Blade is easier to plan around.',
@@ -92,6 +97,9 @@ const weapons = [
     verdict:
       'The best practical recommendation for most players because it is strong, fast, defensive, and has a clear upgrade path.',
     image: 'infinity-blade',
+    progressionIcons: ['prismatic-shard', 'galaxy-sword', 'galaxy-soul', 'cinder-shard', 'infinity-blade'],
+    playerFeel:
+      'This is the boring answer in the best possible way. It swings fast, reaches safely, adds Defense, and does not ask you to gamble on rare weapon drops before it becomes useful.',
     quickTake: [
       'Excellent range and speed with no awkward weapon handling.',
       'Matches Dragontooth Club base damage while adding Defense.',
@@ -127,6 +135,11 @@ const weapons = [
     verdict:
       'The highest crit fantasy in Stardew Valley, but it asks you to play close, precise, and slightly risky.',
     image: 'iridium-needle',
+    progressionIcons: ['iridium-needle', 'dragon-tooth', 'aquamarine', 'jade', 'prismatic-shard'],
+    playerFeel:
+      'This is the crit ceiling weapon. When the dagger special lands multiple critical hits, enemies disappear in a very satisfying burst. The tradeoff is range: you are close enough to get punished if the fight gets crowded.',
+    shortcutNote:
+      'Testing shortcut: some players use weapon ID (W)61 for Iridium Needle, and object ID (O)852 for Dragon Tooth resources. Treat this as a sandbox/testing note, not the recommended progression route.',
     quickTake: [
       'Highest base critical strike chance and critical power of any weapon.',
       'Dagger special attacks feel excellent when the crit chain lands.',
@@ -191,6 +204,27 @@ const quickComparison = [
   ['Most fragile playstyle', 'Iridium Needle'],
 ];
 
+const translatedTakeaways = [
+  {
+    title: 'Iridium Needle is the crit-lover pick',
+    image: 'iridium-needle',
+    text:
+      'It can feel absurd when dagger special attacks chain into critical hits, but the short reach makes it risky against groups. Use it when you enjoy close-range burst, not when you want a relaxed cave run.',
+  },
+  {
+    title: 'Infinity Blade is the no-code recommendation',
+    image: 'infinity-blade',
+    text:
+      'If you are playing normally, this is the easiest weapon to recommend. The route is long but clear: Prismatic Shard, Galaxy Sword, Galaxy Souls, Cinder Shards, then the Forge.',
+  },
+  {
+    title: 'Dragontooth Club has the highest ceiling',
+    image: 'dragontooth-club',
+    text:
+      'The club starts heavy, then becomes terrifying after Forge tuning. Its weakness is not power. Its weakness is how random the drop and the best innate rolls can be.',
+  },
+];
+
 const sourceChecks = [
   { label: 'Iridium Needle stats and drop source', href: 'https://stardewvalleywiki.com/Iridium_Needle' },
   { label: 'Infinity Blade recipe and stats', href: 'https://stardewvalleywiki.com/Infinity_Blade' },
@@ -200,6 +234,7 @@ const sourceChecks = [
   { label: 'Galaxy Soul sources', href: 'https://stardewvalleywiki.com/Galaxy_Soul' },
   { label: 'Dragon Tooth sources and forging use', href: 'https://stardewvalleywiki.com/Dragon_Tooth' },
   { label: 'Far Away Stone and Meowmere appearance route', href: 'https://stardewvalleywiki.com/Far_Away_Stone' },
+  { label: 'Meowmere weapon appearance', href: 'https://stardewvalleywiki.com/Meowmere' },
 ];
 
 const relatedLinks = [
@@ -281,6 +316,18 @@ function PixelIcon({ slug, alt, size = 48 }) {
   );
 }
 
+function IconStrip({ slugs }) {
+  return (
+    <div className="flex flex-wrap gap-2" aria-label="Weapon route items">
+      {slugs.map((slug) => (
+        <div key={slug} className="flex h-12 w-12 items-center justify-center rounded-lg border border-slate-200 bg-white shadow-sm">
+          <GameImage slug={slug} alt={slug.replace(/-/g, ' ')} width={32} height={32} />
+        </div>
+      ))}
+    </div>
+  );
+}
+
 function WeaponCard({ weapon }) {
   return (
     <article id={weapon.slug} className="scroll-mt-24 rounded-xl border border-slate-200 bg-white p-5 shadow-sm">
@@ -322,6 +369,16 @@ function WeaponCard({ weapon }) {
         <p className="mt-1 text-sm font-semibold text-purple-950">{weapon.stats}</p>
       </div>
 
+      <div className="mb-5 rounded-lg border border-blue-200 bg-blue-50 p-4">
+        <div className="mb-3 flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
+          <div>
+            <div className="text-xs font-bold uppercase tracking-wide text-blue-700">How it feels in real runs</div>
+            <p className="mt-1 text-sm leading-6 text-blue-950">{weapon.playerFeel}</p>
+          </div>
+          <IconStrip slugs={weapon.progressionIcons} />
+        </div>
+      </div>
+
       <div className="grid gap-5 lg:grid-cols-3">
         <div>
           <h3 className="mb-3 text-lg font-black text-slate-950">Quick take</h3>
@@ -348,6 +405,13 @@ function WeaponCard({ weapon }) {
           </ul>
         </div>
       </div>
+
+      {weapon.shortcutNote ? (
+        <div className="mt-5 rounded-lg border border-slate-200 bg-slate-50 p-4">
+          <h3 className="mb-1 text-sm font-black uppercase tracking-wide text-slate-700">Optional testing shortcut</h3>
+          <p className="text-sm leading-6 text-slate-700">{weapon.shortcutNote}</p>
+        </div>
+      ) : null}
 
       <div className="mt-5 rounded-lg border border-red-200 bg-red-50 p-4">
         <h3 className="mb-1 text-sm font-black uppercase tracking-wide text-red-900">Main drawback</h3>
@@ -395,11 +459,26 @@ export default function BestWeaponsPage() {
         <section className="mb-8 rounded-xl border border-blue-200 bg-blue-50 p-6">
           <h2 className="mb-3 text-2xl font-black text-blue-950">StardewPriceDB editorial note</h2>
           <p className="leading-7 text-blue-950">
-            This is original StardewPriceDB guide content, rewritten for English readers and checked against current
-            Stardew Valley weapon and Forge mechanics. The normal progression route is the main recommendation. Item-ID
-            naming tricks or spawn shortcuts are not used for the ranking because they bypass the combat progression
-            this guide is meant to help players understand.
+            This is original StardewPriceDB guide content, translated and adapted from our Chinese combat notes for
+            English readers. The normal progression route is the main recommendation. Item-ID naming tricks or spawn
+            shortcuts are included only as optional testing notes because they bypass the combat progression this guide
+            is meant to help players understand.
           </p>
+        </section>
+
+        <section className="mb-8 rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
+          <h2 className="mb-4 text-2xl font-black text-slate-950">Plain-English translation of the ranking</h2>
+          <div className="grid gap-4 md:grid-cols-3">
+            {translatedTakeaways.map((item) => (
+              <div key={item.title} className="rounded-lg border border-slate-100 bg-slate-50 p-4">
+                <div className="mb-3 flex items-center gap-3">
+                  <GameImage slug={item.image} alt={item.title} width={38} height={38} />
+                  <h3 className="font-black text-slate-950">{item.title}</h3>
+                </div>
+                <p className="text-sm leading-6 text-slate-700">{item.text}</p>
+              </div>
+            ))}
+          </div>
         </section>
 
         <section className="mb-8 grid gap-4 md:grid-cols-3">
