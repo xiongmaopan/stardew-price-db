@@ -1,17 +1,18 @@
 import Link from 'next/link';
+import GameImage from '@/components/GameImage';
 
 const SITE_URL = 'https://stardewpricedb.com';
 const OG_IMAGE = '/og-image.png';
 
 export const metadata = {
-  title: 'Stardew Valley Guides - Profit Strategies & Money Making Tips',
-  description: 'Stardew Valley guides for crop profit, Keg vs Jar math, Ancient Fruit, Fish Ponds, gifts, bundles, and Year 1 money.',
+  title: 'Stardew Valley Guides by StardewPriceDB',
+  description: 'Original StardewPriceDB guides for Stardew Valley 1.6.15, including beginner routes, weapon rankings, Robin shop picks, crop profit, bundles, and money strategy.',
   alternates: {
     canonical: '/guide/',
   },
   openGraph: {
-    title: 'Stardew Valley Guides',
-    description: 'Profit strategy guides for Stardew Valley crops, artisan goods, fish ponds, gifts, and bundles.',
+    title: 'Stardew Valley Guides by StardewPriceDB',
+    description: 'Original English Stardew Valley guides from StardewPriceDB, plus verified calculators and price data.',
     url: `${SITE_URL}/guide/`,
     type: 'website',
     images: [{ url: OG_IMAGE, width: 1200, height: 630, alt: 'Stardew Valley guides' }],
@@ -259,9 +260,78 @@ const guides = [
   },
 ];
 
+const originalGuideSlugs = [
+  'year-1-spring-guide',
+  'first-8-days-checklist',
+  'year-1-beginner-walkthrough',
+  'beginner-mistakes',
+  'best-weapons',
+  'robin-shop-best-items',
+];
+
+const originalGuideArt = {
+  'year-1-spring-guide': ['strawberry', 'speed-gro', 'quality-sprinkler'],
+  'first-8-days-checklist': ['parsnip', 'chest', 'catfish'],
+  'year-1-beginner-walkthrough': ['blueberry', 'pumpkin', 'quality-sprinkler'],
+  'beginner-mistakes': ['prismatic-shard', 'dinosaur-egg', 'bomb'],
+  'best-weapons': ['infinity-blade', 'dragontooth-club', 'iridium-needle'],
+  'robin-shop-best-items': ['big-chest', 'calendar', 'workbench'],
+};
+
+const originalGuides = originalGuideSlugs
+  .map((slug) => guides.find((guide) => guide.slug === slug))
+  .filter(Boolean)
+  .map((guide) => ({ ...guide, art: originalGuideArt[guide.slug] || [] }));
+
+const regularGuides = guides.filter((guide) => !originalGuideSlugs.includes(guide.slug));
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'CollectionPage',
+      '@id': `${SITE_URL}/guide/#collection`,
+      name: 'Original StardewPriceDB Guides',
+      description:
+        'A guide library of original StardewPriceDB editorial content for Stardew Valley 1.6.15, including beginner routes, weapon rankings, farm workflow advice, calculators, and verified game mechanics.',
+      url: `${SITE_URL}/guide/`,
+      inLanguage: 'en-US',
+      publisher: {
+        '@type': 'Organization',
+        name: 'StardewPriceDB',
+        url: SITE_URL,
+      },
+    },
+    {
+      '@type': 'ItemList',
+      '@id': `${SITE_URL}/guide/#original-guides`,
+      name: 'Original StardewPriceDB Guides',
+      itemListElement: originalGuides.map((guide, index) => ({
+        '@type': 'ListItem',
+        position: index + 1,
+        name: guide.title,
+        url: `${SITE_URL}/guide/${guide.slug}/`,
+      })),
+    },
+  ],
+};
+
+function GuideIconRow({ slugs }) {
+  return (
+    <div className="flex gap-2" aria-label="Guide topic items">
+      {slugs.map((slug) => (
+        <div key={slug} className="flex h-11 w-11 items-center justify-center rounded-lg border border-green-100 bg-white shadow-sm">
+          <GameImage slug={slug} alt={slug.replace(/-/g, ' ')} width={30} height={30} />
+        </div>
+      ))}
+    </div>
+  );
+}
+
 export default function GuidesPage() {
   return (
     <main className="max-w-6xl mx-auto px-4 py-12">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <nav className="mb-8 text-sm text-slate-500">
         <Link href="/">Home</Link>
         <span className="mx-2">/</span>
@@ -269,12 +339,50 @@ export default function GuidesPage() {
       </nav>
 
       <h1 className="text-4xl font-extrabold text-slate-800 mb-4">
-        Stardew Valley Profit Guides
+        Stardew Valley Guides by StardewPriceDB
       </h1>
       
-      <p className="text-xl text-slate-600 mb-12 max-w-3xl">
-        In-depth analysis and strategies for maximizing your farm income. All calculations verified for Stardew Valley 1.6.15.
+      <p className="text-xl text-slate-600 mb-8 max-w-3xl">
+        Original StardewPriceDB guides, player-first strategy notes, and verified calculators for Stardew Valley 1.6.15.
       </p>
+
+      <section className="mb-10">
+        <div className="mb-5 flex flex-col gap-3 border-l-4 border-green-500 bg-green-50 px-5 py-4 md:flex-row md:items-end md:justify-between">
+          <div className="max-w-3xl">
+            <p className="mb-2 text-sm font-black uppercase tracking-wide text-green-700">stardewpricedb.com original guides</p>
+            <h2 className="text-3xl font-black text-slate-950">Original StardewPriceDB Guides</h2>
+            <p className="mt-2 text-sm leading-6 text-slate-700">
+              These are original English guides created by StardewPriceDB, not scraped wiki summaries or copied item lists.
+              Each page adds player decisions, practical routes, images, internal calculators, and mechanics checked for Stardew Valley 1.6.15.
+            </p>
+          </div>
+          <Link href="/about-data/" className="inline-flex rounded-lg bg-slate-900 px-4 py-2 text-sm font-bold text-white hover:bg-slate-800">
+            Data sources
+          </Link>
+        </div>
+
+        <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+          {originalGuides.map((guide) => (
+            <Link
+              key={guide.slug}
+              href={`/guide/${guide.slug}/`}
+              className="rounded-xl border border-green-100 bg-white p-5 shadow-sm transition hover:border-green-300 hover:shadow-md"
+            >
+              <div className="mb-4 flex items-start justify-between gap-3">
+                <div>
+                  <span className="rounded-full bg-green-100 px-3 py-1 text-xs font-black uppercase tracking-wide text-green-800">
+                    Original Guide
+                  </span>
+                  <span className="ml-2 text-xs font-semibold text-slate-400">{guide.readTime} read</span>
+                </div>
+                <GuideIconRow slugs={guide.art} />
+              </div>
+              <h3 className="text-xl font-black text-slate-950">{guide.title}</h3>
+              <p className="mt-2 text-sm leading-6 text-slate-600">{guide.description}</p>
+            </Link>
+          ))}
+        </div>
+      </section>
 
       <section className="grid md:grid-cols-3 gap-4 mb-10">
         {[
@@ -294,11 +402,12 @@ export default function GuidesPage() {
         ))}
       </section>
 
+      <h2 className="mb-4 text-2xl font-black text-slate-900">All Strategy Guides</h2>
       <div className="grid md:grid-cols-2 gap-6">
-        {guides.map((guide) => (
+        {regularGuides.map((guide) => (
           <Link 
             key={guide.slug}
-            href={`/guide/${guide.slug}`}
+            href={`/guide/${guide.slug}/`}
             className="bg-white rounded-xl border border-slate-200 p-6 hover:shadow-lg hover:border-blue-300 transition group"
           >
             <div className="flex items-center gap-2 mb-3">
