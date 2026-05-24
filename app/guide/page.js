@@ -188,6 +188,13 @@ const guides = [
     readTime: '10 min',
   },
   {
+    slug: 'robin-shop-best-items',
+    title: 'Best Robin Shop Items',
+    description: 'Five overlooked Carpenter Shop purchases that improve storage, crafting, schedule planning, and farm workflow.',
+    category: 'Beginner',
+    readTime: '9 min',
+  },
+  {
     slug: 'year-1-money',
     title: 'Year 1 Money Making Guide',
     description: 'Realistic strategies to maximize income in your first year without exploits.',

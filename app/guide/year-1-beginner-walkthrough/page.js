@@ -385,8 +385,11 @@ export default function Year1BeginnerWalkthroughPage() {
               <h3 className="mb-2 font-bold text-slate-900">Daily habits that quietly compound</h3>
               <p className="text-sm leading-6 text-slate-700">
                 Check TV before leaving the house. Weather decides watering-can upgrade windows; luck changes mining and
-                fishing days. Visit the Traveling Cart on Fridays and Sundays when you are bundle hunting. Buy the Calendar
-                from Robin when you can spare the gold, because birthdays are the easiest friendship multiplier.
+                fishing days. Visit the Traveling Cart on Fridays and Sundays when you are bundle hunting. Buy the{' '}
+                <Link href="/guide/robin-shop-best-items/" className="font-semibold text-green-700 hover:text-green-800">
+                  Calendar from Robin
+                </Link>{' '}
+                when you can spare the gold, because birthdays are the easiest friendship multiplier.
               </p>
             </div>
           </div>
@@ -485,9 +488,10 @@ export default function Year1BeginnerWalkthroughPage() {
 
         <section className="rounded-xl border border-green-200 bg-green-50 p-6">
           <h2 className="mb-4 text-2xl font-black text-green-950">Next decisions after this guide</h2>
-          <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+          <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-5">
             {[
               { href: '/guide/first-8-days-checklist/', title: 'First 8 Days Checklist', text: 'A tighter day-by-day route for Spring days 1-8 before the full Year 1 plan branches out.' },
+              { href: '/guide/robin-shop-best-items/', title: 'Best Robin Shop Items', text: 'Buy the right Carpenter Shop items for storage, crafting, schedule planning, and fewer wasted trips.' },
               { href: '/crop-profit-calculator/', title: 'Crop Profit Calculator', text: 'Compare crop profit with seed cost, harvest count, Keg, Jar, and profession toggles.' },
               { href: '/guide/best-crops-by-season/', title: 'Best Crops by Season', text: 'Choose practical crops once you know the season and your farm setup.' },
               { href: '/guide/keg-vs-jar/', title: 'Keg vs Jar Guide', text: 'Decide which crops deserve machines and which should be sold raw.' },
