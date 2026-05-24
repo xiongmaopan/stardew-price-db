@@ -1,8 +1,8 @@
 {
   "createdAt": "2025-12-18",
-  "totalPages": 404,
+  "totalPages": 406,
   "pagesPerDay": 2,
-  "publishedCount": 57,
+  "publishedCount": 59,
   "lastPublishDate": "2026-05-24",
   "pages": [
     {
@@ -42,6 +42,20 @@
     },
     {
       "url": "/guide/money-making-methods-ranked/",
+      "priority": 1,
+      "scheduledDay": 0,
+      "published": true,
+      "publishedAt": "2026-05-24"
+    },
+    {
+      "url": "/guide/joja-vs-community-center/",
+      "priority": 1,
+      "scheduledDay": 0,
+      "published": true,
+      "publishedAt": "2026-05-24"
+    },
+    {
+      "url": "/guide/beginner-farm-map-choice/",
       "priority": 1,
       "scheduledDay": 0,
       "published": true,

@@ -37,6 +37,18 @@
     <priority>1</priority>
   </url>
   <url>
+    <loc>https://stardewpricedb.com/guide/joja-vs-community-center/</loc>
+    <lastmod>2026-05-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+  </url>
+  <url>
+    <loc>https://stardewpricedb.com/guide/beginner-farm-map-choice/</loc>
+    <lastmod>2026-05-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+  </url>
+  <url>
     <loc>https://stardewpricedb.com/recipes/</loc>
     <lastmod>2026-01-12</lastmod>
     <changefreq>weekly</changefreq>

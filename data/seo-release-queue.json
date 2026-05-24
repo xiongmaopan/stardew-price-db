@@ -87,10 +87,10 @@
       "targetKeyword": "stardew valley joja vs community center",
       "type": "original-guide",
       "priority": 1,
-      "status": "draft",
+      "status": "released",
       "plannedOrder": 8,
       "plannedPublishDate": "2026-05-25",
-      "releasedAt": null,
+      "releasedAt": "2026-05-24",
       "displayTitle": "Joja vs Community Center: Which Route Should You Choose?",
       "description": "Original decision guide comparing Joja and Community Center routes by cost, unlock speed, story value, bundles, and first-year planning.",
       "imagePlan": [
@@ -102,7 +102,8 @@
       "sourceLeads": [
         "https://www.xiaoheihe.cn/app/bbs/link/181155226"
       ],
-      "notes": "Original StardewPriceDB guide planned from Xiaoheihe topic research. Write original copy, verify mechanics, use owned/recreated images, then mark ready."
+      "notes": "Original StardewPriceDB guide published with verified mechanics, matched site images, structured data, and internal links.",
+      "lastModified": "2026-05-24"
     },
     {
       "slug": "beginner-farm-map-choice",
@@ -110,10 +111,10 @@
       "targetKeyword": "best farm map stardew valley beginners",
       "type": "original-guide",
       "priority": 1,
-      "status": "draft",
+      "status": "released",
       "plannedOrder": 9,
       "plannedPublishDate": "2026-05-25",
-      "releasedAt": null,
+      "releasedAt": "2026-05-24",
       "displayTitle": "Best Farm Map for Beginners in Stardew Valley",
       "description": "Original beginner guide to choosing a farm map by crop space, fishing, mining access, layout difficulty, and long-term farm goals.",
       "imagePlan": [
@@ -125,7 +126,8 @@
       "sourceLeads": [
         "https://www.xiaoheihe.cn/app/bbs/link/181921945"
       ],
-      "notes": "Original StardewPriceDB guide planned from Xiaoheihe topic research. Write original copy, verify mechanics, use owned/recreated images, then mark ready."
+      "notes": "Original StardewPriceDB guide published with verified mechanics, matched site images, structured data, and internal links.",
+      "lastModified": "2026-05-24"
     },
     {
       "slug": "community-center-bundles-checklist",

@@ -28,6 +28,20 @@ const guides = [
     readTime: '13 min',
   },
   {
+    slug: 'joja-vs-community-center',
+    title: 'Joja vs Community Center',
+    description: 'Original StardewPriceDB route guide comparing Joja and Community Center by cost, unlock speed, story value, and Greenhouse timing.',
+    category: 'Original',
+    readTime: '10 min',
+  },
+  {
+    slug: 'beginner-farm-map-choice',
+    title: 'Best Farm Map for Beginners',
+    description: 'Original StardewPriceDB guide to choosing Standard, Meadowlands, Forest, Four Corners, Riverland, Hill-top, Wilderness, or Beach Farm.',
+    category: 'Original',
+    readTime: '11 min',
+  },
+  {
     slug: 'most-profitable-crops',
     title: 'Most Profitable Crops by Season',
     description: 'Complete profit analysis for every season including growth time, processing value, and gold-per-day calculations.',
@@ -269,6 +283,8 @@ const guides = [
 
 const originalGuideSlugs = [
   'money-making-methods-ranked',
+  'joja-vs-community-center',
+  'beginner-farm-map-choice',
   'year-1-spring-guide',
   'first-8-days-checklist',
   'year-1-beginner-walkthrough',
@@ -279,6 +295,8 @@ const originalGuideSlugs = [
 
 const originalGuideArt = {
   'money-making-methods-ranked': ['keg', 'sheep', 'pig'],
+  'joja-vs-community-center': ['spring-seeds', 'gold', 'quality-sprinkler'],
+  'beginner-farm-map-choice': ['parsnip', 'hay', 'hardwood'],
   'year-1-spring-guide': ['strawberry', 'speed-gro', 'quality-sprinkler'],
   'first-8-days-checklist': ['parsnip', 'chest', 'catfish'],
   'year-1-beginner-walkthrough': ['blueberry', 'pumpkin', 'quality-sprinkler'],

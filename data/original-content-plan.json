@@ -23,9 +23,17 @@
       "targetKeyword": "stardew valley joja vs community center",
       "title": "Joja vs Community Center: Which Route Should You Choose?",
       "description": "Original decision guide comparing Joja and Community Center routes by cost, unlock speed, story value, bundles, and first-year planning.",
-      "sourceLeads": ["https://www.xiaoheihe.cn/app/bbs/link/181155226"],
-      "imagePlan": ["gold", "calendar", "spring-seeds", "quality-sprinkler"],
-      "status": "draft"
+      "sourceLeads": [
+        "https://www.xiaoheihe.cn/app/bbs/link/181155226"
+      ],
+      "imagePlan": [
+        "gold",
+        "calendar",
+        "spring-seeds",
+        "quality-sprinkler"
+      ],
+      "status": "released",
+      "releasedAt": "2026-05-24"
     },
     {
       "slug": "beginner-farm-map-choice",
@@ -34,9 +42,17 @@
       "targetKeyword": "best farm map stardew valley beginners",
       "title": "Best Farm Map for Beginners in Stardew Valley",
       "description": "Original beginner guide to choosing a farm map by crop space, fishing, mining access, layout difficulty, and long-term farm goals.",
-      "sourceLeads": ["https://www.xiaoheihe.cn/app/bbs/link/181921945"],
-      "imagePlan": ["parsnip", "quality-sprinkler", "wood", "stone"],
-      "status": "draft"
+      "sourceLeads": [
+        "https://www.xiaoheihe.cn/app/bbs/link/181921945"
+      ],
+      "imagePlan": [
+        "parsnip",
+        "quality-sprinkler",
+        "wood",
+        "stone"
+      ],
+      "status": "released",
+      "releasedAt": "2026-05-24"
     },
     {
       "slug": "community-center-bundles-checklist",
@@ -50,7 +66,12 @@
         "https://www.xiaoheihe.cn/app/bbs/link/179653692",
         "https://www.xiaoheihe.cn/app/bbs/link/179818552"
       ],
-      "imagePlan": ["spring-seeds", "sturgeon", "truffle", "gold"],
+      "imagePlan": [
+        "spring-seeds",
+        "sturgeon",
+        "truffle",
+        "gold"
+      ],
       "status": "draft"
     },
     {
@@ -65,7 +86,12 @@
         "https://www.xiaoheihe.cn/app/bbs/link/181094356",
         "https://www.xiaoheihe.cn/app/bbs/link/182031526"
       ],
-      "imagePlan": ["parsnip", "catfish", "copper-ore", "gold"],
+      "imagePlan": [
+        "parsnip",
+        "catfish",
+        "copper-ore",
+        "gold"
+      ],
       "status": "draft"
     },
     {
@@ -80,7 +106,12 @@
         "https://www.xiaoheihe.cn/app/bbs/link/179716589",
         "https://www.xiaoheihe.cn/app/bbs/link/182009529"
       ],
-      "imagePlan": ["keg", "oak-resin", "ancient-fruit", "wine"],
+      "imagePlan": [
+        "keg",
+        "oak-resin",
+        "ancient-fruit",
+        "wine"
+      ],
       "status": "draft"
     },
     {
@@ -90,8 +121,15 @@
       "targetKeyword": "stardew valley animal profit ranking",
       "title": "Animal Profit Ranking: Pigs, Sheep, Cows, Goats, and Coops",
       "description": "Original animal income ranking with startup cost, daily labor, season limits, processing value, and automation potential.",
-      "sourceLeads": ["https://www.xiaoheihe.cn/app/bbs/link/180608757"],
-      "imagePlan": ["pig", "truffle", "sheep", "wool"],
+      "sourceLeads": [
+        "https://www.xiaoheihe.cn/app/bbs/link/180608757"
+      ],
+      "imagePlan": [
+        "pig",
+        "truffle",
+        "sheep",
+        "wool"
+      ],
       "status": "draft"
     },
     {
@@ -101,8 +139,15 @@
       "targetKeyword": "stardew valley fish pond best fish",
       "title": "Best Fish for Fish Ponds",
       "description": "Original Fish Pond guide comparing Sturgeon, Lava Eel, Blobfish, Super Cucumber, Stingray, and utility pond choices.",
-      "sourceLeads": ["https://www.xiaoheihe.cn/app/bbs/link/180983655"],
-      "imagePlan": ["fish-pond", "sturgeon", "roe", "caviar"],
+      "sourceLeads": [
+        "https://www.xiaoheihe.cn/app/bbs/link/180983655"
+      ],
+      "imagePlan": [
+        "fish-pond",
+        "sturgeon",
+        "roe",
+        "caviar"
+      ],
       "status": "draft"
     },
     {
@@ -112,8 +157,15 @@
       "targetKeyword": "stardew valley fishing guide beginners",
       "title": "Simple Fishing Guide for New Players",
       "description": "Original fishing guide focused on rod upgrades, bait, tackle, good early spots, easier fish, and when to sell.",
-      "sourceLeads": ["https://www.xiaoheihe.cn/app/bbs/link/181423050"],
-      "imagePlan": ["bait", "deluxe-bait", "catfish", "sturgeon"],
+      "sourceLeads": [
+        "https://www.xiaoheihe.cn/app/bbs/link/181423050"
+      ],
+      "imagePlan": [
+        "bait",
+        "deluxe-bait",
+        "catfish",
+        "sturgeon"
+      ],
       "status": "draft"
     },
     {
@@ -128,7 +180,12 @@
         "https://www.xiaoheihe.cn/app/bbs/link/179365347",
         "https://www.xiaoheihe.cn/app/bbs/link/179162505"
       ],
-      "imagePlan": ["wood", "stone", "quality-sprinkler", "big-chest"],
+      "imagePlan": [
+        "wood",
+        "stone",
+        "quality-sprinkler",
+        "big-chest"
+      ],
       "status": "draft"
     },
     {
@@ -138,8 +195,15 @@
       "targetKeyword": "stardew valley building materials checklist",
       "title": "Building Materials Checklist",
       "description": "Original checklist for Wood, Stone, Hardwood, Copper, Iron, Gold, and early building priorities.",
-      "sourceLeads": ["https://www.xiaoheihe.cn/app/bbs/link/181988440"],
-      "imagePlan": ["wood", "stone", "hardwood", "gold-bar"],
+      "sourceLeads": [
+        "https://www.xiaoheihe.cn/app/bbs/link/181988440"
+      ],
+      "imagePlan": [
+        "wood",
+        "stone",
+        "hardwood",
+        "gold-bar"
+      ],
       "status": "draft"
     },
     {
@@ -149,8 +213,15 @@
       "targetKeyword": "stardew valley what crops to plant for profit",
       "title": "What Crops Should You Plant for Profit?",
       "description": "Original crop decision guide that separates raw sell price, gold per day, seed cost, processing value, and beginner safety.",
-      "sourceLeads": ["https://www.xiaoheihe.cn/app/bbs/link/181863392"],
-      "imagePlan": ["strawberry", "blueberry", "pumpkin", "starfruit"],
+      "sourceLeads": [
+        "https://www.xiaoheihe.cn/app/bbs/link/181863392"
+      ],
+      "imagePlan": [
+        "strawberry",
+        "blueberry",
+        "pumpkin",
+        "starfruit"
+      ],
       "status": "draft"
     },
     {
@@ -160,8 +231,15 @@
       "targetKeyword": "stardew valley cask layout aging guide",
       "title": "Cask Aging and Cellar Layout Guide",
       "description": "Original guide to Casks, cellar timing, Wine aging, layout tradeoffs, and when aging is worth the wait.",
-      "sourceLeads": ["https://www.xiaoheihe.cn/app/bbs/link/181923732"],
-      "imagePlan": ["wine", "wine-silver", "starfruit", "ancient-fruit"],
+      "sourceLeads": [
+        "https://www.xiaoheihe.cn/app/bbs/link/181923732"
+      ],
+      "imagePlan": [
+        "wine",
+        "wine-silver",
+        "starfruit",
+        "ancient-fruit"
+      ],
       "status": "draft"
     }
   ]
