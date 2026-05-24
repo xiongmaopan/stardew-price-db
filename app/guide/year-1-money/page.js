@@ -652,6 +652,10 @@ export default function Year1MoneyGuide() {
           <div className="border-t-2 border-slate-200 pt-8 mt-12 not-prose">
             <h3 className="text-xl font-bold text-slate-800 mb-6">📚 Related Guides & Tools</h3>
             <div className="grid md:grid-cols-3 gap-4">
+              <Link href="/guide/year-1-beginner-walkthrough/" className="block bg-gradient-to-br from-slate-50 to-slate-100 border border-slate-200 rounded-xl p-4 hover:shadow-md transition-shadow">
+                <div className="font-bold text-slate-800">Year 1 Beginner Walkthrough</div>
+                <p className="text-sm text-slate-600 mt-1">Season-by-season checklist</p>
+              </Link>
               <Link href="/guide/most-profitable-crops" className="block bg-gradient-to-br from-green-50 to-green-100 border border-green-200 rounded-xl p-4 hover:shadow-md transition-shadow">
                 <div className="font-bold text-green-800">🌾 Profitable Crops</div>
                 <p className="text-sm text-slate-600 mt-1">All seasons compared</p>

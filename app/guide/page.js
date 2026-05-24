@@ -172,13 +172,22 @@ const guides = [
     description: 'Which fish to put in ponds, expected roe income, and Caviar vs Aged Roe comparison.',
     category: 'Fishing',
     readTime: '7 min',
-  },  {
+  },
+  {
+    slug: 'year-1-beginner-walkthrough',
+    title: 'Year 1 Beginner Walkthrough',
+    description: 'Season-by-season first year route with corrected crop values, tool upgrades, bundles, animals, mining, and winter prep.',
+    category: 'Beginner',
+    readTime: '16 min',
+  },
+  {
     slug: 'year-1-money',
     title: 'Year 1 Money Making Guide',
     description: 'Realistic strategies to maximize income in your first year without exploits.',
     category: 'Beginner',
     readTime: '15 min',
-  },  {
+  },
+  {
     slug: 'community-center',
     title: 'Community Center Completion Guide',
     description: 'Complete all 30 bundles in Year 1. Room-by-room breakdown with seasonal deadlines and item sources.',
