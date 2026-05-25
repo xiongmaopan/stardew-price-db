@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import GameImage from '@/components/GameImage';
+import ScrollToTop from '@/components/ScrollToTop';
 
 const SITE_URL = 'https://stardewpricedb.com';
 const OG_IMAGE = '/og-image.png';
@@ -359,6 +360,7 @@ export default function GuidesPage() {
   return (
     <main className="max-w-6xl mx-auto px-4 py-12">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <ScrollToTop />
       <nav className="mb-8 text-sm text-slate-500">
         <Link href="/">Home</Link>
         <span className="mx-2">/</span>
