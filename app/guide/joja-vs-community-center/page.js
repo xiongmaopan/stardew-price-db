@@ -161,7 +161,7 @@ const jsonLd = {
 
 function IconBox({ slug, label }) {
   return (
-    <div className="flex h-14 w-14 items-center justify-center rounded-xl border border-slate-200 bg-white shadow-sm">
+    <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl border border-slate-200 bg-white shadow-sm md:h-14 md:w-14">
       <GameImage slug={slug} alt={label} width={38} height={38} />
     </div>
   );
@@ -183,46 +183,46 @@ export default function JojaVsCommunityCenterPage() {
 
       <header className="rounded-3xl border border-blue-100 bg-gradient-to-br from-blue-50 via-white to-green-50 p-6 md:p-9">
         <div className="mb-5 flex flex-wrap gap-2">
-          <span className="rounded-full bg-blue-700 px-3 py-1 text-xs font-black uppercase tracking-wide text-white">
+          <span className="inline-flex max-w-full items-center rounded-full bg-blue-700 px-3 py-1 text-[11px] font-black uppercase leading-5 tracking-wide text-white sm:text-xs">
             StardewPriceDB Original Guide
           </span>
-          <span className="rounded-full bg-white px-3 py-1 text-xs font-bold text-slate-700 shadow-sm">
+          <span className="inline-flex max-w-full items-center rounded-full bg-white px-3 py-1 text-[11px] font-bold leading-5 text-slate-700 shadow-sm sm:text-xs">
             Updated {PAGE_UPDATED}
           </span>
-          <span className="rounded-full bg-white px-3 py-1 text-xs font-bold text-slate-700 shadow-sm">
+          <span className="inline-flex max-w-full items-center rounded-full bg-white px-3 py-1 text-[11px] font-bold leading-5 text-slate-700 shadow-sm sm:text-xs">
             Verified for Stardew Valley {GAME_VERSION}
           </span>
         </div>
         <div className="grid gap-8 lg:grid-cols-[1.2fr_0.8fr] lg:items-center">
           <div>
-            <h1 className="text-4xl font-black tracking-tight text-slate-950 md:text-5xl">
+            <h1 className="break-words text-3xl font-black leading-tight tracking-tight text-slate-950 sm:text-4xl md:text-5xl">
               Joja vs Community Center: Which Route Should You Choose?
             </h1>
             <p className="mt-5 max-w-3xl text-lg leading-8 text-slate-700">
               Short answer: pick Community Center for your first real save, pick Joja when you already understand the game and want faster control over unlocks. The choice is not just moral flavor. It changes how your farm spends time, money, and attention.
             </p>
           </div>
-          <div className="rounded-2xl border border-white bg-white/80 p-5 shadow-sm">
-            <div className="flex flex-wrap gap-3">
+          <div className="min-w-0 rounded-2xl border border-white bg-white/80 p-4 shadow-sm md:p-5">
+            <div className="flex flex-wrap gap-2 sm:gap-3">
               {['spring-seeds', 'gold', 'calendar', 'quality-sprinkler', 'chest'].map((slug) => (
                 <IconBox key={slug} slug={slug} label={slug.replace(/-/g, ' ')} />
               ))}
             </div>
-            <p className="mt-4 text-sm leading-6 text-slate-600">
+            <p className="mt-4 break-words text-sm leading-6 text-slate-600">
               This guide is written as a player decision page, not a plot summary. Data signals were checked against the Stardew Valley {GAME_VERSION} source set on {LAST_VERIFIED}.
             </p>
           </div>
         </div>
       </header>
 
-      <figure className="my-8 rounded-2xl border border-slate-200 bg-white p-3 shadow-sm">
+      <figure className="my-8 overflow-hidden rounded-2xl border border-slate-200 bg-white p-2 shadow-sm md:p-3">
         <img
           src="/images/guides/joja-vs-community-center.svg"
           alt="Joja vs Community Center route comparison infographic"
           width="1200"
-          height="630"
+          height="675"
           loading="eager"
-          className="w-full rounded-xl"
+          className="block w-full rounded-xl"
         />
         <figcaption className="px-3 py-3 text-sm text-slate-500">
           Original StardewPriceDB infographic summarizing the route choice: Community Center for a first save, Joja for controlled repeat saves.
@@ -286,14 +286,14 @@ export default function JojaVsCommunityCenterPage() {
         </div>
       </section>
 
-      <section className="my-8 grid gap-4 md:grid-cols-2">
+      <section className="my-10 grid gap-5 lg:grid-cols-2">
         {decisionRules.map((rule) => (
-          <article key={rule.title} className="rounded-2xl border border-green-100 bg-green-50 p-5">
-            <div className="flex items-start gap-4">
+          <article key={rule.title} className="rounded-2xl border border-green-100 bg-green-50 p-6">
+            <div className="flex items-start gap-5">
               <IconBox slug={rule.image} label={rule.title} />
-              <div>
-                <h2 className="text-lg font-black text-slate-950">{rule.title}</h2>
-                <p className="mt-2 leading-7 text-slate-700">{rule.text}</p>
+              <div className="min-w-0">
+                <h2 className="text-lg font-black leading-7 text-slate-950">{rule.title}</h2>
+                <p className="mt-3 text-base leading-7 text-slate-700">{rule.text}</p>
               </div>
             </div>
           </article>

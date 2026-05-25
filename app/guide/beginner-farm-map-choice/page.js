@@ -205,7 +205,7 @@ const jsonLd = {
 
 function IconBox({ slug, label }) {
   return (
-    <div className="flex h-14 w-14 items-center justify-center rounded-xl border border-slate-200 bg-white shadow-sm">
+    <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl border border-slate-200 bg-white shadow-sm md:h-14 md:w-14">
       <GameImage slug={slug} alt={label} width={38} height={38} />
     </div>
   );
@@ -227,46 +227,46 @@ export default function BeginnerFarmMapChoicePage() {
 
       <header className="rounded-3xl border border-green-100 bg-gradient-to-br from-green-50 via-white to-yellow-50 p-6 md:p-9">
         <div className="mb-5 flex flex-wrap gap-2">
-          <span className="rounded-full bg-green-700 px-3 py-1 text-xs font-black uppercase tracking-wide text-white">
+          <span className="inline-flex max-w-full items-center rounded-full bg-green-700 px-3 py-1 text-[11px] font-black uppercase leading-5 tracking-wide text-white sm:text-xs">
             StardewPriceDB Original Guide
           </span>
-          <span className="rounded-full bg-white px-3 py-1 text-xs font-bold text-slate-700 shadow-sm">
+          <span className="inline-flex max-w-full items-center rounded-full bg-white px-3 py-1 text-[11px] font-bold leading-5 text-slate-700 shadow-sm sm:text-xs">
             Updated {PAGE_UPDATED}
           </span>
-          <span className="rounded-full bg-white px-3 py-1 text-xs font-bold text-slate-700 shadow-sm">
+          <span className="inline-flex max-w-full items-center rounded-full bg-white px-3 py-1 text-[11px] font-bold leading-5 text-slate-700 shadow-sm sm:text-xs">
             Verified for Stardew Valley {GAME_VERSION}
           </span>
         </div>
         <div className="grid gap-8 lg:grid-cols-[1.2fr_0.8fr] lg:items-center">
           <div>
-            <h1 className="text-4xl font-black tracking-tight text-slate-950 md:text-5xl">
+            <h1 className="break-words text-3xl font-black leading-tight tracking-tight text-slate-950 sm:text-4xl md:text-5xl">
               Best Farm Map for Beginners in Stardew Valley
             </h1>
             <p className="mt-5 max-w-3xl text-lg leading-8 text-slate-700">
               Pick Standard Farm if you want the safest first save. Pick Meadowlands if animals are the fantasy. Pick Forest if you want a cozy resource map. Most other maps are fun, but they ask a new player to solve layout problems before they even know what the farm needs.
             </p>
           </div>
-          <div className="rounded-2xl border border-white bg-white/80 p-5 shadow-sm">
-            <div className="flex flex-wrap gap-3">
+          <div className="min-w-0 rounded-2xl border border-white bg-white/80 p-4 shadow-sm md:p-5">
+            <div className="flex flex-wrap gap-2 sm:gap-3">
               {['parsnip', 'hay', 'hardwood', 'quality-sprinkler', 'fish-smoker', 'coral'].map((slug) => (
                 <IconBox key={slug} slug={slug} label={slug.replace(/-/g, ' ')} />
               ))}
             </div>
-            <p className="mt-4 text-sm leading-6 text-slate-600">
+            <p className="mt-4 break-words text-sm leading-6 text-slate-600">
               Farm map choice is permanent for a save. This guide focuses on beginner comfort, long-term layout space, and how much the map helps or fights your first year.
             </p>
           </div>
         </div>
       </header>
 
-      <figure className="my-8 rounded-2xl border border-slate-200 bg-white p-3 shadow-sm">
+      <figure className="my-8 overflow-hidden rounded-2xl border border-slate-200 bg-white p-2 shadow-sm md:p-3">
         <img
           src="/images/guides/beginner-farm-map-choice.svg"
           alt="Best farm maps for Stardew Valley beginners infographic"
           width="1200"
-          height="630"
+          height="675"
           loading="eager"
-          className="w-full rounded-xl"
+          className="block w-full rounded-xl"
         />
         <figcaption className="px-3 py-3 text-sm text-slate-500">
           Original StardewPriceDB infographic ranking the safest farm maps for a first Stardew Valley save.

@@ -307,7 +307,7 @@ function IconStrip({ slugs }) {
   return (
     <div className="flex flex-wrap gap-2" aria-label="Related Stardew Valley items">
       {slugs.map((slug) => (
-        <div key={slug} className="flex h-12 w-12 items-center justify-center rounded-lg border border-slate-200 bg-white shadow-sm">
+        <div key={slug} className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg border border-slate-200 bg-white shadow-sm">
           <GameImage slug={slug} alt={slug.replace(/-/g, ' ')} width={34} height={34} />
         </div>
       ))}
@@ -389,28 +389,28 @@ export default function MoneyMakingMethodsRankedPage() {
 
       <header className="rounded-3xl border border-green-100 bg-gradient-to-br from-green-50 via-white to-amber-50 p-6 md:p-9">
         <div className="mb-5 flex flex-wrap items-center gap-2">
-          <span className="rounded-full bg-green-600 px-3 py-1 text-xs font-black uppercase tracking-wide text-white">
+          <span className="inline-flex max-w-full items-center rounded-full bg-green-600 px-3 py-1 text-[11px] font-black uppercase leading-5 tracking-wide text-white sm:text-xs">
             StardewPriceDB Original Guide
           </span>
-          <span className="rounded-full bg-white px-3 py-1 text-xs font-bold text-slate-700 shadow-sm">
+          <span className="inline-flex max-w-full items-center rounded-full bg-white px-3 py-1 text-[11px] font-bold leading-5 text-slate-700 shadow-sm sm:text-xs">
             Updated {PAGE_UPDATED}
           </span>
-          <span className="rounded-full bg-white px-3 py-1 text-xs font-bold text-slate-700 shadow-sm">
+          <span className="inline-flex max-w-full items-center rounded-full bg-white px-3 py-1 text-[11px] font-bold leading-5 text-slate-700 shadow-sm sm:text-xs">
             Verified for Stardew Valley {GAME_VERSION}
           </span>
         </div>
         <div className="grid gap-8 lg:grid-cols-[1.25fr_0.75fr] lg:items-center">
           <div>
-            <h1 className="text-4xl font-black tracking-tight text-slate-950 md:text-5xl">
+            <h1 className="break-words text-3xl font-black leading-tight tracking-tight text-slate-950 sm:text-4xl md:text-5xl">
               Stardew Valley Money Making Methods Ranked
             </h1>
             <p className="mt-5 max-w-3xl text-lg leading-8 text-slate-700">
               A practical ranking of eight farm economies by profit, setup cost, daily labor, season limits, and automation potential. The short version: Kegs win the whole farm, Sheep are the passive animal winner, and Pigs still print money when the season allows it.
             </p>
           </div>
-          <div className="rounded-2xl border border-white bg-white/80 p-5 shadow-sm">
+          <div className="min-w-0 rounded-2xl border border-white bg-white/80 p-4 shadow-sm md:p-5">
             <IconStrip slugs={['keg', 'sheep', 'pig', 'mushroom-log', 'fish-pond', 'bee-house', 'crab-pot', 'fish-smoker']} />
-            <p className="mt-4 text-sm leading-6 text-slate-600">
+            <p className="mt-4 break-words text-sm leading-6 text-slate-600">
               Original StardewPriceDB ranking. Mechanics were checked against Stardew Valley {GAME_VERSION} data and the public verification date on this site: {LAST_VERIFIED}.
             </p>
           </div>

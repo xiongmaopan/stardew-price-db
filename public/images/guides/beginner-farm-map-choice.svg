@@ -1,41 +1,48 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
   <title id="title">Best Stardew Valley farm maps for beginners</title>
   <desc id="desc">Original StardewPriceDB infographic ranking Stardew Valley farm maps for beginner players.</desc>
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#eefce8"/>
+      <stop offset="0" stop-color="#effce8"/>
       <stop offset="0.55" stop-color="#ffffff"/>
       <stop offset="1" stop-color="#fff7df"/>
     </linearGradient>
-    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
-      <feDropShadow dx="0" dy="9" stdDeviation="12" flood-color="#0f172a" flood-opacity="0.11"/>
+    <filter id="shadow" x="-8%" y="-8%" width="116%" height="116%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#0f172a" flood-opacity="0.11"/>
     </filter>
   </defs>
-  <rect width="1200" height="630" rx="32" fill="url(#bg)"/>
-  <text x="60" y="82" fill="#0f172a" font-family="Arial, Helvetica, sans-serif" font-size="44" font-weight="900">Best Farm Map for Beginners</text>
-  <text x="60" y="123" fill="#475569" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700">Pick the map that helps your first year, not the one that fights your layout.</text>
-  <rect x="60" y="160" width="1080" height="330" rx="24" fill="#ffffff" filter="url(#shadow)"/>
+
+  <rect width="1200" height="675" rx="32" fill="url(#bg)"/>
+
   <g font-family="Arial, Helvetica, sans-serif">
-    <rect x="95" y="198" width="310" height="248" rx="20" fill="#dcfce7"/>
-    <text x="122" y="242" fill="#166534" font-size="24" font-weight="900">#1 Standard Farm</text>
-    <text x="122" y="288" fill="#14532d" font-size="54" font-weight="900">Safest</text>
-    <text x="122" y="333" fill="#334155" font-size="21" font-weight="700">Most space, easiest</text>
-    <text x="122" y="364" fill="#334155" font-size="21" font-weight="700">sprinklers, barns, sheds</text>
-    <text x="122" y="410" fill="#475569" font-size="18">Best when you are unsure.</text>
-    <rect x="445" y="198" width="310" height="248" rx="20" fill="#fef9c3"/>
-    <text x="472" y="242" fill="#854d0e" font-size="24" font-weight="900">#2 Meadowlands</text>
-    <text x="472" y="288" fill="#713f12" font-size="54" font-weight="900">Friendly</text>
-    <text x="472" y="333" fill="#334155" font-size="21" font-weight="700">Starting Coop, chickens,</text>
-    <text x="472" y="364" fill="#334155" font-size="21" font-weight="700">blue grass animal identity</text>
-    <text x="472" y="410" fill="#475569" font-size="18">Best if animals are the fantasy.</text>
-    <rect x="795" y="198" width="310" height="248" rx="20" fill="#e0f2fe"/>
-    <text x="822" y="242" fill="#075985" font-size="24" font-weight="900">#3 Forest Farm</text>
-    <text x="822" y="288" fill="#0c4a6e" font-size="54" font-weight="900">Cozy</text>
-    <text x="822" y="333" fill="#334155" font-size="21" font-weight="700">Hardwood, forage,</text>
-    <text x="822" y="364" fill="#334155" font-size="21" font-weight="700">natural map shape</text>
-    <text x="822" y="410" fill="#475569" font-size="18">Great, but less open space.</text>
+    <text x="64" y="76" fill="#0f172a" font-size="42" font-weight="900">Best Farm Map for Beginners</text>
+    <text x="64" y="114" fill="#475569" font-size="21" font-weight="700">Choose the map that helps year one instead of fighting your layout.</text>
+
+    <rect x="64" y="152" width="1072" height="396" rx="26" fill="#ffffff" filter="url(#shadow)"/>
+
+    <rect x="102" y="200" width="304" height="288" rx="22" fill="#dcfce7"/>
+    <rect x="448" y="200" width="304" height="288" rx="22" fill="#fef9c3"/>
+    <rect x="794" y="200" width="304" height="288" rx="22" fill="#e0f2fe"/>
+
+    <text x="132" y="244" fill="#166534" font-size="23" font-weight="900">#1 Standard Farm</text>
+    <text x="132" y="302" fill="#14532d" font-size="48" font-weight="900">Safest</text>
+    <text x="132" y="348" fill="#334155" font-size="20" font-weight="800">Most open space</text>
+    <text x="132" y="382" fill="#334155" font-size="20" font-weight="800">Easy sprinklers and barns</text>
+    <text x="132" y="430" fill="#166534" font-size="18" font-weight="700">Best if you are unsure.</text>
+
+    <text x="478" y="244" fill="#854d0e" font-size="23" font-weight="900">#2 Meadowlands</text>
+    <text x="478" y="302" fill="#713f12" font-size="48" font-weight="900">Friendly</text>
+    <text x="478" y="348" fill="#334155" font-size="20" font-weight="800">Starts with a Coop</text>
+    <text x="478" y="382" fill="#334155" font-size="20" font-weight="800">Clear animal routine</text>
+    <text x="478" y="430" fill="#854d0e" font-size="18" font-weight="700">Best if animals hook you.</text>
+
+    <text x="824" y="244" fill="#075985" font-size="23" font-weight="900">#3 Forest Farm</text>
+    <text x="824" y="302" fill="#0c4a6e" font-size="48" font-weight="900">Cozy</text>
+    <text x="824" y="348" fill="#334155" font-size="20" font-weight="800">Hardwood and forage</text>
+    <text x="824" y="382" fill="#334155" font-size="20" font-weight="800">Less crop space</text>
+    <text x="824" y="430" fill="#075985" font-size="18" font-weight="700">Best after Standard.</text>
+
+    <rect x="144" y="584" width="912" height="52" rx="26" fill="#0f172a"/>
+    <text x="228" y="617" fill="#ffffff" font-size="18" font-weight="900">Beach Farm is better later: sandy soil blocks sprinklers.</text>
   </g>
-  <rect x="108" y="520" width="984" height="54" rx="27" fill="#0f172a"/>
-  <text x="158" y="555" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="900">Avoid Beach Farm as a first crop-heavy save: most sandy soil blocks sprinklers.</text>
-  <text x="60" y="604" fill="#64748b" font-family="Arial, Helvetica, sans-serif" font-size="16">Original StardewPriceDB infographic - guide checked for Stardew Valley 1.6.15</text>
 </svg>
