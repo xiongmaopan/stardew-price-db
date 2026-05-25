@@ -261,7 +261,7 @@ export default function BeginnerFarmMapChoicePage() {
 
       <figure className="my-8 overflow-hidden rounded-2xl border border-slate-200 bg-white p-2 shadow-sm md:p-3">
         <img
-          src="/images/guides/beginner-farm-map-choice.svg"
+          src="/images/guides/beginner-farm-map-choice.svg?v=20260525-layout"
           alt="Best farm maps for Stardew Valley beginners infographic"
           width="1200"
           height="675"
