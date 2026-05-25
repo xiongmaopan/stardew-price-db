@@ -6,6 +6,26 @@ import fishData from '@/data/fish.json';
 
 const GAME_VERSION = verificationData.gameVersion;
 const PRICE_ENTRY_COUNT = itemsData.items.filter((item) => item.category !== 'Fish').length + fishData.fish.length;
+const SITE_URL = 'https://stardewpricedb.com';
+
+const originalGuideSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  '@id': `${SITE_URL}/#original-guides`,
+  name: 'Original StardewPriceDB Guides',
+  description: `Original StardewPriceDB guide content for Stardew Valley ${GAME_VERSION}, including player routes, rankings, strategy decisions, and checked formulas.`,
+  itemListElement: [
+    ['Money Making Methods Ranked', '/guide/money-making-methods-ranked/'],
+    ['Year 1 Spring Guide', '/guide/year-1-spring-guide/'],
+    ['Joja vs Community Center', '/guide/joja-vs-community-center/'],
+    ['Beginner Mistakes to Avoid', '/guide/beginner-mistakes/'],
+  ].map(([name, path], index) => ({
+    '@type': 'ListItem',
+    position: index + 1,
+    name,
+    url: `${SITE_URL}${path}`,
+  })),
+};
 
 export const metadata = {
   title: `Stardew Valley Price List & Profit Calculator ${GAME_VERSION}`,
@@ -49,6 +69,7 @@ function StaticHero() {
 export default function Home() {
   return (
     <main className="max-w-6xl mx-auto px-4 py-6 min-h-[80vh]">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(originalGuideSchema) }} />
       <StaticHero />
 
       <Suspense fallback={

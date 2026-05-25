@@ -14,6 +14,7 @@ import {
   Search,
   Sprout,
 } from 'lucide-react';
+import GameImage from '@/components/GameImage';
 import ItemCard from '@/components/ItemCard';
 import itemsData from '@/data/items.json';
 import verificationData from '@/data/verification.json';
@@ -89,6 +90,51 @@ const guideLinks = [
   ['Best Jar Items', '/guide/best-preserves-jar-items/'],
   ['Community Center Guide', '/guide/community-center/'],
 ];
+
+const originalGuideCards = [
+  {
+    href: '/guide/money-making-methods-ranked/',
+    title: 'Money Making Methods Ranked',
+    text: 'Eight farm economies ranked by setup cost, daily labor, season limits, automation, and real player value.',
+    art: ['keg', 'sheep', 'pig'],
+  },
+  {
+    href: '/guide/year-1-spring-guide/',
+    title: 'Year 1 Spring Guide',
+    text: 'A first-Spring route covering crops, fishing cash, Mines, bundles, Strawberries, Speed-Gro, and Summer prep.',
+    art: ['strawberry', 'speed-gro', 'quality-sprinkler'],
+  },
+  {
+    href: '/guide/joja-vs-community-center/',
+    title: 'Joja vs Community Center',
+    text: 'A route-choice guide comparing story value, unlock speed, Greenhouse timing, and total gold cost.',
+    art: ['spring-seeds', 'gold', 'calendar'],
+  },
+  {
+    href: '/guide/beginner-mistakes/',
+    title: 'Beginner Mistakes to Avoid',
+    text: 'Ten avoidable mistakes that cost rare items, friendship, crops, machines, or farm progress.',
+    art: ['prismatic-shard', 'dinosaur-egg', 'bomb'],
+  },
+];
+
+const editorialSignals = [
+  ['Original analysis', 'Guide pages add route choices, tradeoffs, rankings, and practical decisions instead of only repeating item facts.'],
+  ['Mechanics checked', `Prices, formulas, and route notes are checked against the Stardew Valley ${verificationData.gameVersion} data audit.`],
+  ['Tools connected', 'Guides link into calculators and item pages so players can verify the math behind each recommendation.'],
+];
+
+function GuideArt({ slugs }) {
+  return (
+    <div className="flex gap-2" aria-hidden="true">
+      {slugs.map((slug) => (
+        <div key={slug} className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg border border-green-100 bg-white shadow-sm">
+          <GameImage slug={slug} alt="" width={28} height={28} />
+        </div>
+      ))}
+    </div>
+  );
+}
 
 function normalize(text) {
   return text.toLowerCase().trim();
@@ -198,6 +244,70 @@ export default function HomeContent() {
               </Link>
             );
           })}
+        </section>
+      )}
+
+      {!isBrowsing && (
+        <section className="mb-12">
+          <div className="mb-5 flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
+            <div className="max-w-3xl">
+              <p className="text-sm font-semibold uppercase tracking-wide text-green-700">
+                StardewPriceDB original content
+              </p>
+              <h2 className="mt-1 text-2xl font-black text-slate-950">Original guides built around player decisions</h2>
+              <p className="mt-2 text-sm leading-6 text-slate-600">
+                The guide library is written around routes, tradeoffs, rankings, and checked formulas: what to plant,
+                when to process, which path to choose, and how a decision changes the farm economy.
+              </p>
+            </div>
+            <div className="flex flex-wrap gap-2">
+              <Link
+                href="/guide/"
+                className="inline-flex min-h-10 items-center rounded-lg bg-slate-900 px-4 text-sm font-bold text-white hover:bg-slate-800"
+              >
+                View original guides
+              </Link>
+              <Link
+                href="/about-data/"
+                className="inline-flex min-h-10 items-center rounded-lg border border-slate-200 bg-white px-4 text-sm font-bold text-slate-700 hover:border-green-300 hover:text-green-700"
+              >
+                Data audit
+              </Link>
+            </div>
+          </div>
+
+          <div className="grid gap-4 lg:grid-cols-[1.45fr_0.75fr]">
+            <div className="grid gap-4 md:grid-cols-2">
+              {originalGuideCards.map((guide) => (
+                <Link
+                  key={guide.href}
+                  href={guide.href}
+                  className="rounded-lg border border-green-100 bg-white p-5 shadow-sm transition hover:border-green-300 hover:shadow-md"
+                >
+                  <div className="mb-4 flex items-start justify-between gap-3">
+                    <span className="rounded-full bg-green-100 px-3 py-1 text-xs font-black uppercase tracking-wide text-green-800">
+                      Original Guide
+                    </span>
+                    <GuideArt slugs={guide.art} />
+                  </div>
+                  <h3 className="text-lg font-black text-slate-950">{guide.title}</h3>
+                  <p className="mt-2 text-sm leading-6 text-slate-600">{guide.text}</p>
+                </Link>
+              ))}
+            </div>
+
+            <aside className="rounded-lg border border-slate-200 bg-slate-50 p-5">
+              <h3 className="text-lg font-black text-slate-950">Editorial standards</h3>
+              <div className="mt-4 grid gap-3">
+                {editorialSignals.map(([title, text]) => (
+                  <div key={title} className="rounded-lg bg-white p-4">
+                    <p className="text-sm font-black text-slate-950">{title}</p>
+                    <p className="mt-1 text-sm leading-6 text-slate-600">{text}</p>
+                  </div>
+                ))}
+              </div>
+            </aside>
+          </div>
         </section>
       )}
 
