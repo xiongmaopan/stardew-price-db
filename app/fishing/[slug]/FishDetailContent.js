@@ -6,7 +6,7 @@ import GameImage from '@/components/GameImage';
 import { 
   Fish, MapPin, Calendar, Clock, Cloud, Target, ChevronRight,
   Crown, Droplets, Sun, Snowflake, Leaf, Flower2, ChevronUp,
-  Info, TrendingUp, Award, Anchor, AlertTriangle, Star, Zap,
+  Info, TrendingUp, Award, Anchor, Star, Zap,
   Package, CheckCircle, Gift, ArrowRight
 } from 'lucide-react';
 import { useProfessions, calculatePrice } from '@/components/ProfessionContext';
@@ -83,7 +83,7 @@ function RelatedFishCard({ fish }) {
   const [imgError, setImgError] = useState(false);
   
   return (
-    <Link href={`/fishing/${fish.slug}`}>
+    <Link href={`/fishing/${fish.slug}/`}>
       <div className="group bg-white rounded-lg border border-slate-200 p-3 hover:border-blue-300 hover:shadow-md transition flex items-center gap-3">
         <div className="w-10 h-10 bg-slate-100 rounded-lg flex items-center justify-center flex-shrink-0">
           {imgError ? (
@@ -108,6 +108,65 @@ function RelatedFishCard({ fish }) {
         <ChevronRight size={16} className="text-slate-400 group-hover:text-blue-500" />
       </div>
     </Link>
+  );
+}
+
+function QuickAnswer({ fish, prices, smokedPrices, recommendedTackle }) {
+  const bestUse = fish.processing
+    ? `${fish.processing.product}${fish.processing.agedRoePrice ? ` into Aged Roe (${fish.processing.agedRoePrice}g)` : fish.processing.caviarPrice ? ` into Caviar (${fish.processing.caviarPrice}g)` : ''}`
+    : fish.uses?.[0] || 'Sell, gift, cook, or keep if needed for a route';
+  const weatherText = !fish.weather || fish.weather === 'Any' ? 'any weather' : `${fish.weather.toLowerCase()} weather`;
+
+  const facts = [
+    { icon: MapPin, label: 'Where to catch', value: fish.location.join(' or ') },
+    { icon: Calendar, label: 'Season', value: fish.season.join(', ') },
+    { icon: Clock, label: 'Time', value: `${fish.time}, ${weatherText}` },
+    { icon: Package, label: 'Sell price', value: `${prices.normal}g base, ${prices.iridium}g iridium${fish.basePrice !== prices.normal ? ' with profession bonus active' : ''}` },
+    { icon: Anchor, label: 'Best tackle', value: recommendedTackle.join(' or ') },
+    { icon: Gift, label: 'Best use', value: bestUse },
+  ];
+
+  return (
+    <section className="mb-8 rounded-xl border border-blue-200 bg-blue-50 p-5">
+      <div className="flex flex-col gap-4 lg:flex-row lg:items-start lg:justify-between">
+        <div>
+          <p className="text-sm font-bold uppercase tracking-wide text-blue-700">Quick answer</p>
+          <h2 className="mt-1 text-2xl font-black text-slate-900">Where to catch {fish.name} in Stardew Valley</h2>
+          <p className="mt-2 max-w-3xl text-sm leading-6 text-slate-700">
+            Catch {fish.name} at {fish.location.join(' or ')} during {fish.season.join(', ')} from {fish.time}
+            {' '}in {weatherText}. It sells for {prices.normal}g at normal quality and {smokedPrices.normal}g when smoked
+            {fish.difficulty >= 70 ? `; difficulty ${fish.difficulty} makes tackle preparation important.` : '.'}
+          </p>
+        </div>
+        <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-xl border border-blue-100 bg-white shadow-sm">
+          <FishImage fish={fish} size={46} />
+        </div>
+      </div>
+
+      <div className="mt-5 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+        {facts.map(({ icon: Icon, label, value }) => (
+          <div key={label} className="rounded-lg border border-blue-100 bg-white p-4">
+            <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wide text-blue-700">
+              <Icon size={14} />
+              {label}
+            </div>
+            <p className="mt-2 text-sm font-semibold leading-6 text-slate-800">{value}</p>
+          </div>
+        ))}
+      </div>
+
+      <div className="mt-5 flex flex-wrap gap-2">
+        <Link href="/fishing/" className="rounded-lg bg-blue-600 px-4 py-2 text-sm font-bold text-white hover:bg-blue-700">
+          All fish locations
+        </Link>
+        <Link href="/guide/best-fish-by-season/" className="rounded-lg border border-blue-200 bg-white px-4 py-2 text-sm font-bold text-blue-700 hover:border-blue-300">
+          Best fish by season
+        </Link>
+        <Link href="/fish-ponds/" className="rounded-lg border border-blue-200 bg-white px-4 py-2 text-sm font-bold text-blue-700 hover:border-blue-300">
+          Fish pond values
+        </Link>
+      </div>
+    </section>
   );
 }
 
@@ -159,7 +218,7 @@ export default function FishDetailContent({ fish, relatedFish, behaviorInfo, tac
       <nav className="flex items-center text-sm text-slate-500 mb-6 overflow-x-auto whitespace-nowrap" aria-label="Breadcrumb">
         <Link href="/" className="hover:text-blue-600 transition">Home</Link>
         <ChevronRight size={14} className="mx-2" />
-        <Link href="/fishing" className="hover:text-blue-600 transition">Fishing Guide</Link>
+        <Link href="/fishing/" className="hover:text-blue-600 transition">Fishing Guide</Link>
         <ChevronRight size={14} className="mx-2" />
         <span className="font-semibold text-slate-800">{fish.name}</span>
       </nav>
@@ -219,6 +278,13 @@ export default function FishDetailContent({ fish, relatedFish, behaviorInfo, tac
           </div>
         </div>
       </header>
+
+      <QuickAnswer
+        fish={fish}
+        prices={prices}
+        smokedPrices={smokedPrices}
+        recommendedTackle={recommendedTackle}
+      />
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
         {/* Main Content */}
@@ -620,7 +686,7 @@ export default function FishDetailContent({ fish, relatedFish, behaviorInfo, tac
             <hr className="my-4" />
 
             <Link 
-              href="/fishing"
+              href="/fishing/"
               className="flex items-center justify-center gap-2 w-full py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition font-medium"
             >
               <Fish size={16} />

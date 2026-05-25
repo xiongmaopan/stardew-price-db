@@ -2,6 +2,35 @@ import fishData from '@/data/fish.json';
 import verificationData from '@/data/verification.json';
 import FishDetailContent from './FishDetailContent';
 
+const SITE_URL = 'https://stardewpricedb.com';
+
+const metadataOverrides = {
+  'super-cucumber': {
+    title: 'Super Cucumber Stardew Valley: Location, Time & Sell Price',
+    description: 'Catch Super Cucumber in the Ocean or Ginger Island during Summer/Fall nights. See exact time, 250g base price, quality prices, uses, and tackle tips.',
+  },
+  'ice-pip': {
+    title: 'Ice Pip Stardew Valley: Mine Floor 60 Location & Price',
+    description: 'Catch Ice Pip on Mines Floor 60 in any season. See the 500g base price, quality prices, difficulty 85, dart behavior, and recommended tackle.',
+  },
+  'stonefish': {
+    title: 'Stonefish Stardew Valley: Mine Floor 20 Location & Price',
+    description: 'Catch Stonefish on Mines Floor 20 in any season. See the 300g base price, quality prices, sinker behavior, difficulty, and catch strategy.',
+  },
+  'sea-cucumber': {
+    title: 'Sea Cucumber Stardew Valley: Location, Time & Uses',
+    description: 'Catch Sea Cucumber in the Ocean during Fall/Winter from 6 AM to 7 PM. See sell prices, Lucky Lunch use, quality values, and tackle tips.',
+  },
+  pufferfish: {
+    title: 'Pufferfish Stardew Valley: Location, Weather & Sell Price',
+    description: 'Catch Pufferfish in the Ocean on sunny Summer days from noon to 4 PM. See sell prices, difficulty, Abigail gift use, and tackle tips.',
+  },
+  'midnight-carp': {
+    title: 'Midnight Carp Stardew Valley: Location, Time & Uses',
+    description: 'Catch Midnight Carp at night in the Mountain Lake or Ginger Island. See exact time, seasons, sell price, Seafoam Pudding use, and fish pond notes.',
+  },
+};
+
 // Generate static params for all fish
 export async function generateStaticParams() {
   return fishData.fish.map((fish) => ({
@@ -19,17 +48,18 @@ export async function generateMetadata({ params }) {
   }
 
   const seasonText = fish.season.length > 1 ? fish.season.join(' & ') : fish.season[0];
-  const locationText = fish.location.join(', ');
-  const difficultyText = fish.difficulty >= 90 ? 'extremely hard' : fish.difficulty >= 70 ? 'challenging' : fish.difficulty >= 50 ? 'moderate' : 'easy';
   const legendaryTag = fish.legendary ? ' (Legendary)' : '';
 
   const shortLocation = fish.location.slice(0, 2).join(', ');
-  const description = fish.legendary
+  const defaultDescription = fish.legendary
     ? `${fish.name}${legendaryTag} sells for ${fish.basePrice}g. Catch at ${shortLocation} in ${seasonText}, ${fish.time}. Difficulty ${fish.difficulty}/110.`
-    : `${fish.name} sells for ${fish.basePrice}g. Catch at ${shortLocation} in ${seasonText}, ${fish.time}. Includes quality and Angler prices.`;
+    : `${fish.name} sells for ${fish.basePrice}g. Catch at ${shortLocation} in ${seasonText}, ${fish.time}. See quality prices, smoked value, uses, and tackle tips.`;
+  const override = metadataOverrides[fish.slug];
+  const title = override?.title || `${fish.name} Stardew Valley: Location, Price & Time`;
+  const description = override?.description || defaultDescription;
 
   return {
-    title: `${fish.name} Price & Location - Stardew Valley`,
+    title,
     description,
     keywords: [
       `${fish.name} Stardew Valley`,
@@ -50,9 +80,9 @@ export async function generateMetadata({ params }) {
       canonical: `/fishing/${fish.slug}/`,
     },
     openGraph: {
-      title: `${fish.name}${legendaryTag} Sell Price & Fishing Guide - Stardew Valley`,
-      description: `${fish.name} sells for ${fish.basePrice}g. Catch it at ${locationText} during ${seasonText}. Difficulty: ${fish.difficulty}.`,
-      url: `https://stardewpricedb.com/fishing/${fish.slug}/`,
+      title,
+      description,
+      url: `${SITE_URL}/fishing/${fish.slug}/`,
       type: 'article',
       images: [
         {
@@ -65,8 +95,8 @@ export async function generateMetadata({ params }) {
     },
     twitter: {
       card: 'summary',
-      title: `${fish.name} Price - Stardew Valley Fishing Guide`,
-      description: `${fish.name} sells for ${fish.basePrice}g. Location: ${locationText}. Season: ${seasonText}.`,
+      title,
+      description,
     },
   };
 }
@@ -79,7 +109,7 @@ function generateJsonLd(fish) {
   schemas.push({
     '@context': 'https://schema.org',
     '@type': 'Article',
-    headline: `How to Catch ${fish.name} in Stardew Valley - Complete Guide`,
+    headline: `${fish.name} Stardew Valley Location, Sell Price, Time, and Catch Guide`,
     description: fish.description,
     author: {
       '@type': 'Organization',
@@ -94,8 +124,33 @@ function generateJsonLd(fish) {
     dateModified: verificationData.lastVerified.split('T')[0],
     mainEntityOfPage: {
       '@type': 'WebPage',
-      '@id': `https://stardewpricedb.com/fishing/${fish.slug}`
+      '@id': `${SITE_URL}/fishing/${fish.slug}/`
     }
+  });
+
+  schemas.push({
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: SITE_URL,
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'Fishing Guide',
+        item: `${SITE_URL}/fishing/`,
+      },
+      {
+        '@type': 'ListItem',
+        position: 3,
+        name: fish.name,
+        item: `${SITE_URL}/fishing/${fish.slug}/`,
+      },
+    ],
   });
 
   // Product Schema removed - Google Search Console error: invalid ISO 4217 currency code
@@ -126,7 +181,7 @@ function generateJsonLd(fish) {
       {
         '@type': 'HowToStep',
         name: 'Cast and catch',
-        text: `Cast your line as far as possible for better quality. ${fish.name} has ${fish.behavior} behavior - ${fish.behavior === 'dart' ? 'stay centered and react quickly' : fish.behavior === 'sinker' ? 'keep your bar low' : fish.behavior === 'floater' ? 'keep your bar high' : 'follow steadily'}.`
+        text: `Cast your line as far as possible for better quality. ${fish.name} has ${fish.behavior} behavior - ${fish.behavior?.toLowerCase() === 'dart' ? 'stay centered and react quickly' : fish.behavior?.toLowerCase() === 'sinker' ? 'keep your bar low' : fish.behavior?.toLowerCase() === 'floater' ? 'keep your bar high' : 'follow steadily'}.`
       }
     ]
   });

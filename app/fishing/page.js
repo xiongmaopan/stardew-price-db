@@ -4,8 +4,8 @@ import FishingGuideContent from './FishingGuideContent';
 
 // SEO Metadata - High Quality for Google
 export const metadata = {
-  title: 'Stardew Valley Fish and Fishing Guide 1.6.15 | Locations',
-  description: 'Find all 67 Stardew Valley fish by location, season, time, weather, difficulty, sell price, legendary fish, Night Market fish, and Crab Pot catches.',
+  title: 'Stardew Valley Fish Locations & Prices 1.6.15 | Fishing Guide',
+  description: 'Find every Stardew Valley fish location, season, time, weather, difficulty, sell price, fish pond value, legendary fish, and bundle target.',
   keywords: [
     'Stardew Valley fish',
     'Stardew Valley fish locations',
@@ -26,8 +26,8 @@ export const metadata = {
     canonical: '/fishing/',
   },
   openGraph: {
-    title: 'Stardew Valley Fish and Fishing Guide 1.6.15',
-    description: 'All 67 fish with locations, seasons, times, weather, difficulty, prices, and legendary fish.',
+    title: 'Stardew Valley Fish Locations & Prices 1.6.15',
+    description: 'All fish with locations, seasons, times, weather, difficulty, sell prices, fish pond values, and legendary fish.',
     url: 'https://stardewpricedb.com/fishing/',
     type: 'article',
     images: [
@@ -41,8 +41,8 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Stardew Valley Fish and Fishing Guide 1.6.15',
-    description: '67 fish with locations, seasons, times, weather, difficulty, prices, and legendary fish.',
+    title: 'Stardew Valley Fish Locations & Prices 1.6.15',
+    description: 'All fish with locations, seasons, time windows, weather, difficulty, sell prices, and legendary fish.',
   },
 };
 
@@ -53,8 +53,8 @@ function generateJsonLd() {
     {
       '@context': 'https://schema.org',
       '@type': 'Article',
-      headline: 'Stardew Valley Fish and Fishing Guide 1.6.15',
-      description: 'All 67 fish with exact locations, times, seasons, weather, difficulty ratings, and fishing guide links.',
+      headline: 'Stardew Valley Fish Locations and Prices 1.6.15',
+      description: 'All Stardew Valley fish with exact locations, times, seasons, weather, difficulty ratings, sell prices, fish pond notes, and fishing guide links.',
       author: {
         '@type': 'Organization',
         name: 'StardewPriceDB'
@@ -75,8 +75,8 @@ function generateJsonLd() {
     {
       '@context': 'https://schema.org',
       '@type': 'ItemList',
-      name: 'Stardew Valley Fish Database',
-      description: 'Complete list of all catchable fish in Stardew Valley',
+      name: 'Stardew Valley Fish Locations and Prices',
+      description: 'Complete list of Stardew Valley fish with catch conditions and sell prices',
       numberOfItems: fishData.fish.length,
       itemListElement: fishData.fish.slice(0, 10).map((fish, index) => ({
         '@type': 'ListItem',

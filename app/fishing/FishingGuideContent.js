@@ -4,7 +4,7 @@ import { useState, useMemo, useEffect } from 'react';
 import Link from 'next/link';
 import GameImage from '../../components/GameImage';
 import { 
-  Fish, MapPin, Calendar, Clock, Cloud, Target, ChevronRight,
+  Fish, MapPin, Calendar, Clock, Target, ChevronRight,
   Search, Filter, Crown, Droplets, Sun, Snowflake, Leaf, Flower2,
   Info, TrendingUp, ChevronUp, Sparkles, Anchor, Award, X
 } from 'lucide-react';
@@ -32,7 +32,7 @@ function FishCard({ fish }) {
   const difficultyStyle = getDifficultyColor(fish.difficulty);
 
   return (
-    <Link href={`/fishing/${fish.slug}`}>
+    <Link href={`/fishing/${fish.slug}/`}>
       <article className="group bg-white rounded-xl border border-slate-200 hover:border-blue-300 hover:shadow-lg transition-all duration-300 overflow-hidden h-full">
         <div className="p-4">
           {/* Header with Image and Name */}
@@ -121,7 +121,7 @@ function LegendaryFishCard({ fish }) {
   const [imgError, setImgError] = useState(false);
 
   return (
-    <Link href={`/fishing/${fish.slug}`}>
+    <Link href={`/fishing/${fish.slug}/`}>
       <div className="group bg-gradient-to-br from-yellow-50 to-amber-50 rounded-xl border-2 border-yellow-200 hover:border-yellow-400 p-4 hover:shadow-xl transition-all h-full">
         <div className="flex items-center gap-3 mb-3">
           <div className="w-10 h-10 bg-yellow-100 rounded-lg flex items-center justify-center border border-yellow-300">
@@ -302,6 +302,45 @@ const fishingTopicLinks = [
   },
 ];
 
+const popularFishLookups = [
+  {
+    slug: 'super-cucumber',
+    title: 'Super Cucumber',
+    answer: 'Ocean or Ginger Island, Summer/Fall, 6:00 PM to 2:00 AM, 250g base price.',
+    intent: 'location, time, sell price',
+  },
+  {
+    slug: 'ice-pip',
+    title: 'Ice Pip',
+    answer: 'Mines Floor 60, any season, any time, 500g base price, difficulty 85.',
+    intent: 'mine floor, price, hard catch',
+  },
+  {
+    slug: 'stonefish',
+    title: 'Stonefish',
+    answer: 'Mines Floor 20, any season, any time, 300g base price, sinker behavior.',
+    intent: 'mine floor, price, where to catch',
+  },
+  {
+    slug: 'sea-cucumber',
+    title: 'Sea Cucumber',
+    answer: 'Ocean, Fall/Winter, 6:00 AM to 7:00 PM, used for Lucky Lunch.',
+    intent: 'location, time, uses',
+  },
+  {
+    slug: 'pufferfish',
+    title: 'Pufferfish',
+    answer: 'Ocean, sunny Summer days, 12:00 PM to 4:00 PM, 200g base price.',
+    intent: 'weather, time, Abigail gift',
+  },
+  {
+    slug: 'midnight-carp',
+    title: 'Midnight Carp',
+    answer: 'Mountain Lake or Ginger Island, late night, used for Seafoam Pudding.',
+    intent: 'night fishing, recipe use',
+  },
+];
+
 function FishingTopicHub() {
   return (
     <section className="mb-10">
@@ -342,6 +381,42 @@ function FishingTopicHub() {
   );
 }
 
+function PopularFishLookups() {
+  return (
+    <section className="mb-10">
+      <div className="mb-5">
+        <h2 className="text-2xl font-bold text-slate-800">Popular fish lookups</h2>
+        <p className="text-slate-600 mt-1">
+          Fast answers for fish players search most often: where to catch them, when they appear, and what they sell for.
+        </p>
+      </div>
+      <div className="grid sm:grid-cols-2 xl:grid-cols-3 gap-4">
+        {popularFishLookups.map((fish) => (
+          <Link
+            key={fish.slug}
+            href={`/fishing/${fish.slug}/`}
+            className="group bg-white border border-blue-100 rounded-xl p-4 hover:border-blue-300 hover:shadow-md transition"
+          >
+            <div className="flex items-start gap-3">
+              <div className="h-12 w-12 rounded-lg bg-blue-50 border border-blue-100 flex items-center justify-center flex-shrink-0">
+                <GameImage slug={fish.slug} alt={fish.title} width={32} height={32} />
+              </div>
+              <div className="min-w-0">
+                <div className="flex items-center gap-2">
+                  <h3 className="font-bold text-slate-800 group-hover:text-blue-700">{fish.title}</h3>
+                  <ChevronRight size={15} className="text-slate-400 group-hover:text-blue-600 group-hover:translate-x-1 transition" />
+                </div>
+                <p className="mt-1 text-sm leading-6 text-slate-600">{fish.answer}</p>
+                <p className="mt-2 text-xs font-semibold uppercase tracking-wide text-blue-600">{fish.intent}</p>
+              </div>
+            </div>
+          </Link>
+        ))}
+      </div>
+    </section>
+  );
+}
+
 export default function FishingGuideContent({ fishData }) {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedSeason, setSelectedSeason] = useState('All');
@@ -366,7 +441,9 @@ export default function FishingGuideContent({ fishData }) {
     return fishData.fish.filter(fish => {
       // Search
       if (searchQuery && !fish.name.toLowerCase().includes(searchQuery.toLowerCase()) &&
-          !fish.description.toLowerCase().includes(searchQuery.toLowerCase())) {
+          !fish.description.toLowerCase().includes(searchQuery.toLowerCase()) &&
+          !fish.location.join(' ').toLowerCase().includes(searchQuery.toLowerCase()) &&
+          !fish.season.join(' ').toLowerCase().includes(searchQuery.toLowerCase())) {
         return false;
       }
       
@@ -423,14 +500,14 @@ export default function FishingGuideContent({ fishData }) {
               <Fish size={32} />
             </div>
             <div>
-              <h1 className="text-3xl md:text-4xl font-black">Stardew Valley Fish and Fishing Guide</h1>
+              <h1 className="text-3xl md:text-4xl font-black">Stardew Valley Fish Locations, Prices & Catch Guide</h1>
               <p className="text-blue-100 text-lg">Complete Database | {fishData.fish.length} Fish | Updated for 1.6.15</p>
             </div>
           </div>
             <p className="text-blue-100 max-w-3xl text-lg leading-relaxed mb-6">
-            {fishData.fish.length} catchable fish across {fishData.locations.length} locations. Includes spawn times, 
-            seasons, weather conditions, and difficulty ratings. {legendaryFish.length} legendary fish with exact 
-            catch requirements. All data verified for Stardew Valley 1.6.15.
+            Look up every Stardew Valley fish by location, season, time, weather, difficulty, and sell price.
+            Use the search table for exact catch windows, then open a fish page for quality prices, smoked value,
+            tackle advice, uses, and related fishing routes.
           </p>
 
           <div className="flex flex-wrap gap-4 text-sm">
@@ -452,6 +529,9 @@ export default function FishingGuideContent({ fishData }) {
 
       {/* Fishing Topic Hub */}
       <FishingTopicHub />
+
+      {/* Popular Fish Lookups */}
+      <PopularFishLookups />
 
       {/* Legendary Fish Showcase */}
       <LegendaryShowcase legendaryFish={legendaryFish} />
